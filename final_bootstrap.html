@@ -1,0 +1,2066 @@
+<!--
+(((((((((( نکات ))))))))
+برای همه row ها حتما mx-auto بگذار چون ممکنه صفحه scroll بگیره
+برای عیب یابی صفحات html میتونی تکه به تکه حذف کنی تا بهتر بشه پیدا کرد
+برای سایز div ها حتما از col-*-num استفاده کن . w-num باعث به ریختن در responsive میشه
+
+
+
+-->
+<!-- هنگام GET کردن به مقداری که در url میاید توجه کن-->
+// url(http://0.0.0.0:7777/exam.html?text=amir&email=dev.amir.sadeghi@gmail.com&submit=submit)
+
+
+
+<!-- فراخوانی ۴ cdn مهم برای پروژه ها در قسمت Get Started ها -->
+css(bootstrap)
+js(bootstrap)
+popper
+jquery
+
+
+class_name ***  <!-- کلاسی که حتما همراه کلاس بالاتر می آید -->
+
+
+در همه حالت ها باید حتما   class_name   را اعمال کنی ==  ***
+
+
+<button type="button">Button</button>  بهتره نزاری
+<button type="submit">submit</button>
+<button type="reset">reset</button>
+
+<input type="text"      value="any">
+<input type="password"  value="any">
+<input type="email"     value="any">
+<input type="checkbox"  value="any">
+<input type="radio"     value="any">
+<input type="range"     value="any">
+<input type="color"     value="any">
+
+<input type="file"      value="any">
+
+
+
+
+<textarea>محتوی</textarea>
+
+
+
+<nav></nav>
+
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+    </tr>
+    <tr>
+        <td>Anja</td>
+        <td>Ravendale</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+(( grid-breakpoints ))  <!-- خلاصه سایز responsive ( مخفف # )-->
+xs: <576px  <!-- دسترسی نداریم -->
+sm: 576px
+md: 768px
+lg: 992px
+xl: 1200px
+xxl: 1400px  <!-- دسترسی نداریم -->
+
+
+(( container-max-widths ))
+sm: 540px
+md: 720px
+lg: 960px
+xl: 1140px
+xxl: 1320px
+
+
+// ولی در مقدار دهی فقط از سایز sm تا xl داریم و برای سایز های کوچک تر از sm بنویسی . col-number
+
+col-num
+col-sm-num
+col-md-num
+col-lg-num
+col-xl-num
+
+
+
+
+
+1  (4px)       <!-- خلاصه سایز ( مخفف  num ) -->
+2  (8px)
+3  (16px)
+4  (24px)
+5  (48px)
+
+
+
+#  (  t  b  r  l   )    <!-- خلاصه  4  جهت -->
+
+
+// خلاصه
+مخفف    *   ( xs sm md lg xl )
+( 1 2 ... 11 12  )  num   مخفف
+مخفف    #   (  t   b   l  r  )
+
+
+<!-- جعبه ابزار Utilities-->
+
+رنگ ها //
+text-primary
+text-info
+text-success
+text-warning
+text-danger
+
+text-dark
+text-body
+text-secondary
+text-white
+text-light
+
+text-black-50
+text-white-50
+
+
+
+
+
+// vertical   : عمودی
+// horizontal : افقی
+
+
+
+
+
+// جهت ها
+x     <!-- left right -->
+y     <!-- top bottom -->
+t
+b
+r
+l
+
+
+
+
+<!--مقدار محتوی اشفال شده از لحاظ پهنا-->
+container-fluid   <!--div-->
+container
+
+container-*-num
+container-*
+
+
+
+
+
+
+row //                                    برای بیرونی قرار بده
+col // برای داخلی قرار بده  // خودش اتوماتیک تقسیم بندی میکنه
+
+row
+col
+
+
+row
+col-*
+col-*-num      number  1 -->> 12
+
+row
+row-cols-num ***
+
+
+نکته //
+<!-- استفاده همزمان از responsive ها -->
+<!-- col-sm-3  col-md-6  col-lg-4  -->
+
+
+
+col <!-- میتونی بدون row ینویسی که هر div خودش در یک col جدا است-->
+
+
+
+
+
+// padding
+p-1 -->> p-5    / p#-num
+p
+pt
+pb
+pl
+pr
+
+
+p#-sm
+p#-md
+p#-lg
+p#-xl
+
+
+//////////  p#-*-num
+p#-sm-num
+p#-md-num
+p#-lg-num
+p#-xl-num
+
+
+
+
+
+// margin
+m-2 -->> m-5
+m
+mt
+mb
+ml
+mr
+
+
+m#-sm
+m#-md
+m#-lg
+m#-xl
+
+
+//////////  m#-*-num
+m#-sm-num
+m#-md-num
+m#-lg-num
+m#-xl-num
+
+
+ml-auto    از مارجین چپ
+mx-auto   در مجور ایکس
+
+
+
+
+
+
+// border
+border-0         *** // حذف حاشیه از ۴ جهت
+border-top-0     ***
+border-right-0   ***
+border-bottom-0  ***
+border-left-0    ***
+
+
+                    <!-- color -->
+border-primary
+border-success
+border-info
+border-warning
+border-danger
+border-dark
+border-body
+border-secondary
+border-light
+border-white
+
+
+
+                    <!--Border Radius-->
+rounded-circle
+
+rounded-sm
+rounded
+rounded-lg
+
+rounded-#
+
+
+
+
+
+
+w-25    <!-- Width -->
+w-50
+w-75
+w-100
+mw-100  <!--max Width -->
+
+
+
+h-25    <!-- Height -->
+h-50
+h-75
+h-100
+mh-100  <!--max Height -->
+
+
+
+
+
+clearfix
+float-right
+float-left
+float-none
+
+float-*-right
+float-*-left
+
+
+
+
+shadow-sm    <!-- سایه -->
+shadow
+shadow-lg
+
+
+
+align-baseline  ==  align-middle    <!-- جایگاه -->
+align-top
+align-bottom
+
+align-text-top
+align-text-bottom
+
+
+
+embed-responsive         <!-- جایگاه رو  Responsive میکنه-->
+embed-responsive-item
+
+embed-responsive-21by9   <!--جایگاهی به سایز 21 به 9 ایجاد میکنه-->
+embed-responsive-16by9   <!--جایگاهی به سایز 16 به 9 ایجاد میکنه-->
+embed-responsive-4by3    <!--جایگاهی به سایز 4 به 3 ایجاد میکنه-->
+embed-responsive-1by1    <!--جایگاهی به سایز 1 به 1 ایجاد میکنه-->
+
+
+
+visible         <!-- ظاهر یا مخفی-->
+invisible
+
+
+fixed-top       <!-- Position -->
+fixed-bottom
+sticky-top
+
+
+
+( Fixed Navigation Bar )
+fixed-top              <!--nav--> ثابت شده   بالای  صفحه // پدر بزرگ
+fixed-bottom           <!--nav--> ثابت شده  پایین  صفحه // پدر بزرگ
+sticky-top             <!--nav--> بین محتوی میتواند بیاید . فقط یه ترتیب و واولویت تگ ها توجه کن // پدر بزرگ
+
+
+
+
+( close Icon ) <!--علامت ضربی که با  زدن روی ان بسته میشه که بیشتر برای modal و alert استفاده میشه-->
+close
+<button type="button" class="close">&times;</button>
+
+
+
+
+( Screenreaders )
+sr-only
+
+
+
+
+
+( Block Elements )
+d-block      <!-- در هر سایز صفحه ، یک بلاک کامل است -->
+d-sm-block   <!-- در سایز کوچک صفحه ، یک بلاک است -->
+d-md-block   <!-- در سایز متوسط صفحه ، یک بلاک است -->
+d-lg-block   <!-- در سایز بزرگ صفحه ، یک بلاک است -->
+d-xl-block   <!-- در سایز کامل صفحه ، یک بلاک است -->
+
+
+
+
+
+( Display size class )
+d-none           <!-- delete display -->
+d-inline
+d-inline-block
+
+d-table
+d-table-cell
+d-table-row
+d-flex
+d-inline-flex
+
+d-*-...
+
+
+
+
+
+
+<!--text-->
+
+display-1
+display-2
+display-3
+display-4
+display-5
+display-6
+
+font-weight-bold
+font-weight-bolder
+font-weight-normal
+font-weight-light
+font-weight-lighter
+lead
+small
+
+font-italic
+
+
+
+
+
+<!--document Typography (text/font-->
+
+text
+text-left              text-num-left
+text-right             text-num-left
+text-center            text-num-center
+text-break    (pre)    text-num-break
+text-decoration-none
+text-justify
+text-monospace
+text-nowrap
+text-lowercase
+text-reset
+text-uppercase
+text-capitalize
+initialism       زیر خط  <!--abbr-->
+list-unstyled            <!--ul-->
+
+list-inline              <!--ul-->
+list-inline-item         <!--li-->
+pre-scrollable           <!--pre-->
+
+
+
+
+
+
+<small>secondary text</small>
+<mark>highlight</mark>
+<abbr title="عنوان کامل">WHO</abbr>
+<blockquote>text</blockquote>
+<code>span</code>
+<kbd>ctrl + p</kbd>
+<pre></pre>
+
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+</dl>
+
+
+<!--color-->
+text-muted
+text-primary
+text-success
+text-info
+text-warning
+text-danger
+text-secondary
+text-white
+text-dark
+text-body
+text-light
+
+text-black-number     number  0 -->> 100
+text-white-number     number  0 -->> 100
+
+
+<!-- background -->
+bg-primary       <!-- div -->
+bg-success
+bg-info
+bg-warning
+bg-danger
+bg-secondary
+bg-darK
+bg-light
+
+
+<!--table-->  در همه حالت ها باید حتما table را اعمال کنی
+table
+table-striped       ***
+table-hover         ***
+table-dark          ***
+table-bordered      ***
+table-borderless    ***
+//////ترکیبی هم میشه///////
+
+
+
+
+table-primary     <!-- tr -->
+table-success
+table-danger
+table-info
+table-warning
+table-active
+table-secondary
+table-light
+table-dark
+//////ترکیبی هم میشه///////
+
+
+table-*
+
+
+table-responsive
+
+table-responsive-sm
+table-responsive-md
+table-responsive-lg
+table-responsive-xl
+
+
+
+
+<!--img-->
+rounded
+rounded-circle
+img-thumbnail
+float-left
+float-right
+mx-auto
+d-block (display:block)
+img-fluid
+
+
+
+
+<!--jumbotron-->     در همه حالت ها باید حتما jumbotron را اعمال کنی  <!--a big padded box for calling extra-->
+jumbotron
+jumbotron-fluid  ***
+
+jumbotron-fluid   container/container-fluid  (jumbotron without rounded borders)
+
+
+
+
+<!--alert-->    در همه حالت ها باید حتما alert را اعمال کنی  <!-- div  p  h1...h6 -->
+alert-success
+alert-info
+alert-warning
+alert-danger
+alert-primary
+alert-secondary
+alert-light
+alert-dark
+fade
+show
+
+alert-dismissible  // گزینه ضربدر در سمت راست ایجاد میشه  <!-- Button -->   data-bs-dismiss="alert"
+
+alert-link  <!-- a -->
+
+
+
+
+
+<!--btn(Button)-->  در همه حالت ها باید حتما btn را اعمال کنی
+((داخل رنگی نوشته سفید))
+btn-primary
+btn-secondary
+btn-success
+btn-info
+btn-warning
+btn-danger
+btn-dark
+btn-light
+btn-link    // نوعش لینک هستش
+
+
+
+<!--btn(Button)-->  در همه حالت ها باید حتما btn را اعمال کنی
+((داخل سفید نوشته و بوردر رنگی))
+btn-outline-primary
+btn-outline-secondary
+btn-outline-success
+btn-outline-info
+btn-outline-warning
+btn-outline-danger
+btn-outline-dark
+btn-outline-light
+
+
+btn-sm
+btn-lg
+
+
+btn-block  // یک بلاک کامل اشغال میکنه
+
+active
+disabled
+
+
+
+
+
+
+<!--((Vertical Button Groups))-->
+<!--در div پدر بنویس -->
+btn-group
+btn-group-*
+btn-group-vertical
+
+<div class="btn-group-vertical">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+</div>
+
+
+
+
+<!--((Nesting Button Groups & Dropdown Menus))-->
+<!--۴ تا ادرس زیرمانند مثال استفاده میشن-->
+dropdown/dropup        <!--div / li -->     (معمولی)
+dropdown-toggle        <!--button-->        ( همراه دکمه برای زیر شاخه ها)
+data-toggle="dropdown" <!--button--> <!-- همیشه ثابت-->
+dropdown-menu          <!--div-->
+dropdown-item          <!--a-->   خود لینک
+dropdown-divider       <!--div--> خطی که بین لینک ها است
+dropdown-header        <!--h1,6--> متنی که بین لینک ها است
+dropdown-item-text     <!--span-->
+
+
+<!--((Dropdown Position))-->
+dropdown-item  همراه( active/ disabled )
+dropdown       همراه( dropleft/ dropright )
+dropdown-menu  همراه( dropdown-menu-right )
+
+dropdown-toggle  همراه( dropdown-toggle-split ) <!-- Split Button Dropdowns مبحث-->
+
+<!--((Grouped Buttons with a Dropdown))-->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Sony
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+    </div>
+</div>
+
+
+<!--((Split Button Dropdowns))--> درکنار دراپ خود دکمه هم جدا میشه
+btn-group
+dropdown-toggle dropdown-toggle-split
+dropdown-menu
+dropdown-item
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+    </div>
+</div>
+
+
+
+
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+    </div>
+</div>
+
+
+<div class="btn-group">
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        Sony
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Tablet</a>
+        <a class="dropdown-item" href="#">Smartphone</a>
+    </div>
+</div>
+
+
+
+<!--((Button Groups Side by Side)) دکمه ها کنار هم-->
+
+<div class="btn-group">
+    <button type="button" class="btn">Apple</button>
+    <button type="button" class="btn">Samsung</button>
+    <button type="button" class="btn">Sony</button>
+</div>
+
+
+
+
+<!--span-->
+<!--badge-->  در همه حالت ها باید حتما badge را اعمال کنی
+
+badge-primary
+badge-secondary
+badge-success
+badge-info
+badge-warning
+badge-danger
+badge-dark
+badge-light
+
+badge-pill  (badges more round)
+
+
+
+<!--((Badge inside an Element))-->
+
+<button type="button" class="btn btn-primary">
+    Messages <span class="badge badge-light">4</span>
+</button>
+
+
+
+
+<!--((Progress Bars)) میله پروسه ای-->
+progress          <!-- div -->یکی  از انها هم کافیه   "style="height:40px        // میله خالی
+progress-bar ***  <!-- div -->یکی از انها هم کافیه    "style=":width20%     // پر کردن میله
+bg-color
+progress-bar-striped     // مدل دیگری از پر شدن
+progress-bar-animated    // مدل دیگری از پر شدن در حال حرکت
+
+
+<div class="progress" style="width:70%">
+    <div class="progress-bar bg-success" style="width:70%">مقدار قابل نمایش در قسمت پر شده</div>
+</div>
+
+
+
+
+
+<!--((Multiple Progress Bars)) چند میله پروسه ای کنار هم-->
+<div class="progress" style="width:70%">
+    <div class="progress-bar bg-success" style="width:10%">مقدار قابل نمایش در قسمت پر شده</div>
+    <div class="progress-bar bg-success" style="width:20%">مقدار قابل نمایش در قسمت پر شده</div>
+    <div class="progress-bar bg-success" style="width:30%">مقدار قابل نمایش در قسمت پر شده</div>
+</div>
+
+
+
+
+<!--spinner-border-->  در همه حالت ها باید حتما spinner-border/spinner-grow را اعمال کنی
+spinner-border    // مدلی برای لود کردن دایراه ای
+spinner-grow      // مدلی برای لود کردن دایراه ای
+
+spinner-border-sm // تغییر سایز
+spinner-grow-sm   // تغییر سایز
+
+
+مثال //
+<button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+</button>
+
+<button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+    Loading..
+</button>
+
+<button class="btn btn-primary" disabled>
+    <span class="spinner-border spinner-border-sm"></span>
+    Loading..
+</button>
+
+<button class="btn btn-primary" disabled>
+    <span class="spinner-grow spinner-grow-sm"></span>
+    Loading..
+</button>
+
+
+
+
+spinner-border-primary
+spinner-border-secondary
+spinner-border-success
+spinner-border-info
+spinner-border-warning
+spinner-border-danger
+spinner-border-dark
+spinner-border-light
+spinner-border-link
+
+spinner-grow-primary
+spinner-grow-secondary
+spinner-grow-success
+spinner-grow-info
+spinner-grow-warning
+spinner-grow-danger
+spinner-grow-dark
+spinner-grow-light
+spinner-grow-link
+
+
+
+
+
+
+
+<!--((pagination)) شماره گذاری اخر صفحه-->
+<!--ul , li-->
+
+
+<!-- ul-->  پدر
+pagination
+pagination-lg
+pagination-sm
+justify-content-center // محل کل صفحه بندی وسط
+justify-content-end    // محل کل صفحه بندی راست
+Breadcrumbs           <!-- item1 / item2 /  ...   خروجی  -->
+breadcrumb-item       <!-- item1                         خروجی
+                           item2
+                           ....                                -->
+
+
+<!-- li-->  فرزند
+page-item
+
+page-link
+
+disabled
+active
+
+
+
+
+<ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+
+
+disabled   // لغو وضعیت
+<ul class="pagination">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+</ul>
+
+
+
+
+
+<!--((Breadcrumbs)) شماره گذاری اخر صفحه-->
+<!--ul , li-->
+
+
+<!-- ul-->  پدر
+Breadcrumbs           <!-- item1 / item2 / item3 / ...   خروجی  -->
+breadcrumb-item       <!-- item1                         خروجی
+                           item2
+                           ....                                -->
+
+<!-- li-->  فرزند
+breadcrumb-item
+disabled
+active
+
+
+
+
+
+<!--((List Groups)) لیست بندی-->
+<!--ul , li-->
+
+
+<!-- ul-->
+list-group
+list-group-numbered     ***
+list-group-flush        ***
+list-group-horizontal   ***
+
+
+<!-- li-->
+list-group-item
+list-group-item-action   *** <!-- میتونی روی ان ها با hover روی ان action  کنی -->
+active                   ***
+disabled                 ***
+
+
+
+
+list-group-item-success     ***
+list-group-item-secondary   ***
+list-group-item-info        ***
+list-group-item-warning     ***
+list-group-item-danger      ***
+list-group-item-primary     ***
+list-group-item-dark        ***
+list-group-item-light       ***
+
+
+
+
+
+
+<!--((Cards)) -->
+<!-- div-->
+<!-- div-->
+
+
+<!-- div-->  پدر بزرگ
+card-columns         ::::
+card-deck            . . . . کارت ها جدا از هم
+Card Group           ....    کارت ها چسبیده به هم
+
+
+
+<!-- div--> پدر
+card
+
+
+<!-- div--> فرزند
+card-header
+card-body
+card-footer
+card img-fluid
+card-img-overlay // کل صفحه را میگیره
+
+
+
+card-title <!-- h1,h6-->    فرزند
+card-text  <!-- h1,h6, p--> فرزند
+card-link  <!-- a-->          فرزند
+stretched-link <!-- a-->فرزند     همراه  btn
+
+
+<!-- img-->
+card-img-top / card-img-bottom
+
+
+
+
+
+
+
+<!--((Nesting Button Groups & Dropdown Menus))-->
+<!--۴ تا ادرس زیرمانند مثال استفاده میشن-->
+dropdown/dropup        <!--div-->
+dropdown-toggle        <!--button-->
+data-toggle="dropdown" <!--button--> <!-- همیشه ثابت-->
+dropdown-menu          <!--div-->
+فرزند
+dropdown-item          <!--a-->   خود لینک
+dropdown-divider       <!--div--> خطی که بین لینک ها است
+dropdown-header        <!--h1,6--> متنی که بین لینک ها است
+dropdown-item-text     <!--span-->
+
+
+<!--((Dropdown Position))-->
+dropdown-item  همراه( active/ disabled )
+dropdown       همراه( dropleft/ dropright )
+dropdown-menu  همراه( dropdown-menu-right )
+
+dropdown-toggle  همراه( dropdown-toggle-split ) <!-- Split Button Dropdowns مبحث-->
+
+<!--((Grouped Buttons with a Dropdown))-->
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Sony
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+    </div>
+</div>
+
+
+<!--((Split Button Dropdowns))--> درکنار دراپ خود دکمه هم جدا میشه
+btn-group
+dropdown-toggle dropdown-toggle-split
+dropdown-menu
+dropdown-item
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+    </div>
+</div>
+
+
+
+
+data-target="#demo"  <!--button-->
+id="demo"            <!--div-->
+
+
+<!--((collapse)) فرو ریختن--> بازدن روی آن محتوی ریزش و با زدن دوباره به حالت اول بازمیگردد
+<!-- چون با یک دکمه سروکار داریم پس ا ز  button type="button" class="btn btn-primary    استفاده میکنیم -->
+
+
+data-toggle="collapse"   data-target="#demo" <!--button-->
+id="demo"    class="collapse"                <!--div-->
+
+<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+<div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+
+
+
+href="#demo" data-toggle="collapse"  <!--a-->
+id="demo" class="collapse"           <!--div-->
+
+<a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+<div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+
+
+
+id="demo" class="collapse show"     <!--div-->  پیشفرض آن محتوی نمایش داده شده و با زدن روی ان بسته میشود
+
+<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+<div id="demo" class="collapse show">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+
+
+
+
+
+<!--((Nav))-->              <!-- همگی در ul -->
+justify-content-center  ***
+justify-content-end     ***
+flex-column             ***   ( Vertical Nav )
+nav-tabs                ***   ( Tabs )
+nav-pills               ***   ( تبی که اولی رنگی )
+nav-justified           ***
+
+
+
+nav       <!--ul-->
+nav-item  <!--li-->
+nav-link  <!--a-->
+
+
+nav-link  همراه( disabled )
+nav-link  همراه( active )
+
+
+
+
+<!--((Pills with Dropdown ترکیبی تب و دراپ دیوون))-->
+
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a></div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+<!--((Toggleable / Dynamic Tabs ))-->
+
+<!-- Nav tabs -->
+role="tablist"                   <!--ul-->
+data-toggle="tab" href="#home"   <!--a-->
+
+<!-- Tab panes -->
+tab-content <!--پدر-->
+id="home"    class="container tab-pane active" <!--فرزند-->
+محتوی.......
+
+مثال //
+<div class="container">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--Navbar-->  در همه حالت ها باید حتما Nav را اعمال کنی
+<!--در تگ nav قرار میگیرد-->
+navbar                   <!--nav-->
+fixed-top                <!--nav-->
+navbar-expand-sm         <!--nav-->
+navbar-expand-md         <!--nav-->
+navbar-expand-lg         <!--nav-->
+navbar-expand-xl         <!--nav-->
+justify-content-center   <!--nav-->
+
+
+(رنگ بک گراند نوار)
+bg-primary               <!--nav-->
+bg-success               <!--nav-->
+bg-info                  <!--nav-->
+bg-warning               <!--nav-->
+bg-danger                <!--nav-->
+bg-secondary             <!--nav-->
+bg-dark an               <!--nav-->
+bg-light                 <!--nav-->
+
+
+(رنگ محتوی نوار)
+navbar-dark              <!--nav-->
+navbar-light             <!--nav-->
+
+
+
+navbar-nav                  <!--ul--> برای چند لینک های کنار هم
+nav-item                    <!--li-->
+nav-link      disabled      <!--a-->
+
+
+
+( Brand/Logo )
+navbar-brand              <!--a-->
+
+
+
+( img    Brand/Logo )
+navbar-brand      پدر   <!--a-->
+src="bird.jpg"   فرزند  <!--img-->
+
+<a class="navbar-brand" href="#">
+    <img src="bird.jpg" alt="Logo" style="width:40px;">
+</a>
+
+
+
+( hamber menu ) <!--button-->
+class="navbar-toggler"  data-toggle="collapse"   data-target="#iiiidddd"  <!--button-->
+navbar-toggler-icon                                                       <!--span-->اسم دلخواه
+
+
+
+id="iiiidddd"             <!--div-->
+navbar-nav                <!--ul-->
+nav-item                  <!--li-->
+nav-link      disabled    <!--a-->
+
+
+
+مثال //
+<nav>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+
+
+
+
+
+( Navbar With Dropdown )
+<!-- قسمت دراپ دییون رو نوشتم و مهمه-->
+nav-item  dropdown                                            <!--li-->  (پدر)
+dropdown-toggle"    id="navbardrop"  data-toggle="dropdown"   <!--a-->     (فرزند)
+
+dropdown-menu          <!--div-->  (پدر)
+dropdown-item          <!--div-->  (فرزند)
+
+
+مثال //
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Dropdown link
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+( نکته برای   form-control که کل \هنا برای تگ های input\textarea\select اعمال میشه)
+
+
+( Navbar Forms and Buttons )
+form-inline    action="/---.php"  <!--form-->    (پدر)
+form-control                      <!--input--> سایز مشخص و مناسب اینپوت ها   (فرزند)
+btn                               <!--button-->  (فرزند)
+
+
+
+input-group           <!--div-->
+input-group-append    <!--div-->
+input-group-text      <!--span-->
+
+
+
+( Navbar Text )
+navbar-text          <!--span-->
+
+
+
+( Fixed Navigation Bar )
+fixed-top              <!--nav--> ثابت شده   بالای  صفحه // پدر بزرگ
+fixed-bottom           <!--nav--> ثابت شده  پایین  صفحه // پدر بزرگ
+sticky-top             <!--nav--> بین محتوی میتواند بیاید . فقط یه ترتیب و واولویت تگ ها توجه کن // پدر بزرگ
+
+
+
+
+
+
+نکته : با زدن روی لیبل به switch , checkbox , textarea , text دسترسی پیدا میکنیم که این کار به کمک id , for پیاده سازی میشه
+for="id_for" <!--label-->
+id="id_for"  <!--input / textarea--> <!--email password checkbox radio Select -->
+
+
+
+<!--Forms-->
+form-inline       <!--form--> <!--تمام محتوی در یک خط میاید-->
+form-check-inline <!--form--> <!--تمام محتوی چک باکسی در یک خط میاید-->
+
+form-group        <!--div-->  <!-- برای  select , textarea , password , email  -->
+form-check        <!--div-->  <!-- checkbox ,  radio    --> (form-group) چیزی شبیه به چک باکس میاره - همراه یا جدا
+
+form-check-label  <!--label-->
+form-check-input  <!--input-->
+
+
+مثال //
+<form action="/---.php">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-group form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+نکته :یک از attribute های input است که باعث اجباری شدن ورودی میشود
+
+was-validated"    <!--form-->
+valid-feedback    <!--div-->   <!--بعد از مقدار گرفتن-->
+invalid-feedback  <!--div-->   <!--div-->
+
+
+
+( checkbox )
+checked           <!--input-->  تیک خورده
+disabled/active   (checkbox) فعال یا غیر فعال کردن چک باکس - همراه یا جدا
+
+
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Option 1
+    </label>
+</div>
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Option 2
+    </label>
+</div>
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+    </label>
+</div>
+
+
+نکته : اگر در checkbox مقدار value ها یکسان باشد . میتوان  چند تا  را انتخاب کرد
+نکته : اگر در  select  مقدار  name ها یکسان باشد . نمیتوان فقط یکی را انتخاب کرد
+
+
+
+( انواع form-control ها)
+form-control
+form-control-sm
+form-control-lg
+form-control-plaintext    <!-- اینپوت بدون حاشیه -->
+form-control-range         <!--input-->  <!--range-->
+form-control-file border   <!--input-->  <!--file-->
+
+
+
+
+
+( Input Groups )
+input-group
+input-group-prepend
+input-group-append
+input-group-text
+input-group-sm
+input-group-lg
+
+
+( Input Groups )
+<form>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Your Email">
+        <div class="input-group-append">
+            <span class="input-group-text">@example.com</span>
+        </div>
+    </div>
+</form>
+
+
+
+( Input Group with Checkboxes and Radios)
+<div>
+
+    <form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <input type="text" class="form-control" placeholder="Some text">
+        </div>
+    </form>
+
+    <form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio">
+                </div>
+            </div>
+            <input type="text" class="form-control" placeholder="Some text">
+        </div>
+    </form>
+
+</div>
+
+
+
+( Input Group Buttons )
+<div class="container mt-3">
+    <h1>Input Group Buttons</h1>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-primary" type="button">Basic Button</button>
+        </div>
+        <input type="text" class="form-control" placeholder="Some text">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Go</button>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Something clever..">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button">OK</button>
+            <button class="btn btn-danger" type="button">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+( Input Group with Checkboxes and Radios )
+<div class="container mt-3">
+    <h3>Input Groups with Dropdown Button</h3>
+    <p>Add a dropdown button in the input group. Note that you don't need the .dropdown wrapper, as you normally would.</p>
+    <form>
+        <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </div>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+    </form>
+</div>
+
+
+
+( Input Group Labels )
+<div class="container mt-3">
+    <h2>Input Group Labels</h2>
+    <p>Put labels outside of the input group, and remember that the value of the for attribute should match the id of the input.</p>
+    <p>Click on the label and it will bring focus to the input:</p>
+    <form>
+        <label for="demo">Write your email here:</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Email" id="demo" name="email">
+            <div class="input-group-append">
+                <span class="input-group-text">@example.com</span>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+<!--Custom Forms-->  در همه حالت ها باید حتما custom-control را اعمال کنی
+custom-control-inline    <!--div-->  (همه محتوی در یک سطر)
+custom-checkbox          <!--div-->     <!--type="checkbox"-->
+custom-switch            <!--div-->     <!--type="checkbox"-->
+custom-radio             <!--div-->     <!--type="checkbox"-->
+custom-file              <!--div-->     <!--type="file"-->
+
+custom-range  نکته دار   <!--input-->   <!--type="range"-->
+<input type="range">                       <!--default-->
+<input type="range" class="custom-range">  <!--custom-->
+
+
+
+custom-select             <!--select-->     <!-- سایز متوسط -->
+custom-select-sm          <!--select-->     <!-- سایز کوچک -->
+custom-select-lg          <!--select-->     <!-- سایز بزرگ -->
+selected        <!--مقدار پیشفرض است-->     <!--select-->
+
+<option value="volvo" selected>Custom Select Menu</option>
+<option value="volvo">Volvo</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+
+
+custom-control-input    <!--input-->
+custom-control-label    <!--label-->
+
+
+
+
+
+
+
+<!--Carousel-->  <!-- همان کادر چند عکسی است با قابلیت جابه جایی هر عکس میباشد -->
+<!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
+carousel
+slide   ***
+
+
+<!--Indicators  قسمت شاخص ها-->
+carousel slide    data-ride="carousel"                <!--div-->   پدربزرگ
+carousel-indicators                                   <!--ul--> پدر
+data-target="#demo" data-slide-to="0" class="active"  <!--ul--> فرزند
+
+<!-- The slideshow نمایش اسلاید -->
+carousel-inner                 <!--div-->
+carousel-item    active        <!--div-->
+src="---.jpg"                  <!--img-->
+
+carousel-caption               <!--div-->
+carousel-item                  <!--div-->
+src="---.jpg"                  <!--img-->
+
+<!-- Left and right controls دستورات جهت دادن  (nadigation)-->
+carousel-control-next         <!--a-->
+carousel-control-next-icon   <!--span-->
+
+carousel-control-prev         <!--a-->
+carousel-control-prev-icon   <!--span-->
+
+
+
+
+
+
+
+
+<!--Modal-->  <!--برای وقتی که نیازه یک محتوی یا ... را ارسال یا نمایش دهیم که این کار در همان صفحه و در یک تکه صفحه کوچک نمایش داده میشه -->
+<!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
+modal           <!--div-->
+modal-sm  ***   <!--div-->
+modal-lg  ***   <!--div-->
+modal-xl  ***   <!--div-->
+fade      ***   <!--div-->
+
+
+modal-dialog
+modal-dialog-centered   ***  <!--یک کارد مودال بزرگ-->
+modal-dialog-scrollable ***  <!--یک کارد مودال کوچک-->
+
+
+data-toggle="modal" data-target="#myModal"  <!-- button -->
+data-dismiss="modal"                        <!-- button -->
+
+<!-- The Modal -->
+modal" id="myModal  <!-- div -->  پدربزرگ
+modal-dialog        <!-- div -->  پدر
+
+modal-content      <!-- div -->   فرزند
+modal-body      <!-- div -->   نوه
+modal-footer      <!-- div -->   نوه
+
+modal-title       <!--p,h1,h6-->
+
+
+
+
+
+
+
+
+<!--tooltip-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش را که فقط قسمت content را نمایش میدهد -->
+data-toggle="tooltip"   title="محتوی مخفی"  <!-- a -->
+data-placement="top"     ***
+data-placement="bottom"  ***
+data-placement="left"    ***
+data-placement="right"   ***
+
+<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+
+
+
+
+
+
+<!--Popover-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
+data-toggle="popover        *** <!--برای باز و بسته کردن حتما کلیک کن-->
+data-trigger="focus"        *** <!--برای باز کردن کلیک کن و بسته شدن روی ان نزن-->
+data-trigger="hover"        *** <!--برای باز و بسته کردن فقط روی ان حرکت کن-->
+
+title="header محتوی"              ***
+data-content="--content محتوی--" ***
+
+data-placement="top"        ***
+data-placement="bottom"     ***
+data-placement="left"       ***
+data-placement="right"      ***
+
+<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
+
+
+
+
+
+
+<!--Toast-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
+toast
+toast-header
+toast-body
+
+data-autohide="false"   <!--div-->    <!--پیش فرض toast مخفی هستش که باعث لفو -->
+data-dismiss="toast"    <!--button--> <!--درصورتی که دکمه ای قرار بدی .با زدن روی ان کل toast بسته نمیشه -->
+
+<div class="toast" data-autohide="false">
+    <div class="toast-header">
+        <strong class="mr-auto text-primary">Toast Header</strong>
+        <small class="text-muted">5 mins ago</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+    </div>
+    <div class="toast-body">
+        Some text inside the toast body
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.toast').toast('show');
+    });
+</script>
+
+
+
+
+
+
+
+<!--Scrollspy-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
+<!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
+data-spy="scroll"         <!--body-->
+data-target=".navbar"       ***
+data-target="#myScrollspy"  ***
+
+
+
+
+
+
+
+
+
+
+
+<!--flex--> <!--لایه ها را کنترل میکنه-->  <!--div همگی در-->
+d-flex                       block  <!-- create a flexbox container  and  transform direct children into flex items -->
+d-inline-flex                       <!-- create an inline flexbox container  -->
+flex-row   (defult)   ***           <!-- display the flex items horizontally (side by side).  ( default ) -->
+flex-row-reverse      ***           <!--  -->
+flex-column           ***           <!--  -->
+flex-column-reverse   ***           <!--  -->
+
+d-*-...                <!--استفاده از responsive-->
+
+
+
+
+
+justify-content-start     ***  <!--  -->
+justify-content-end       ***  <!--  -->
+justify-content-center    ***  <!--  -->
+justify-content-between   ***  <!--  -->
+justify-content-around    ***  <!--  -->
+
+justify-content-*-...
+
+
+
+
+order         <!-- اولویت بندی یا سفارش سازی -->
+order-num
+order-*-num
+
+
+
+
+
+d-flex
+flex-fill      ***
+flex-grow-1    ***  ( تا بی انتها رشد دارد )
+flex-grow-0  ***  ( لغو بالایی )
+
+
+flex-*-fill
+flex-*-grow-0
+flex-*-grow-1
+
+
+
+
+
+
+flex-wrap           <!-- دسته بندی -->
+flex-wrap-reverse   <!-- عکس دسته بندی -->
+flex-nowrap         <!-- دسته بندی بدون ستون -->
+
+flex-*-...
+
+
+
+
+
+
+
+
+<!-- به شکل عمودی کل ایتم ها را جابه جا میکند -->
+align-content-start     ***
+align-content-end       ***
+align-content-center    ***
+align-content-between   ***
+align-content-around    ***
+align-content-stretch   ***
+
+align-content-*-...
+
+
+
+
+
+
+
+<!-- به شکل عمودی هر ردیف را جابه جا میکند -->
+align-items-start       ***
+align-items-end         ***
+align-items-center      ***
+align-items-baseline    ***
+align-items-stretch     ***     (defult)
+
+align-items-*-...
+
+
+
+
+
+
+<!-- به شکل عمودی هر دونه div را جابه جا میکند -->
+align-self-start
+align-self-end
+align-self-center
+align-self-baseline
+align-self-stretch
+
+align-self-*-...
+
+
+
+
+
+
+<!-- Icons -->   <!-- i class="fas fa-name_icon fa-numx-->
+<!-- برای دیدن همه آیکون ها به سایت fontawesome سر بزن -->
+<i class="fas   fa-cloud   fa-8x"></i>
+<i class="fab "></i>  <!-- اول بعضی fas و بغضی  fab است . نمیدونم چرا-->
+<!-- سایز     نوع    کلاس ایکون  -->
+
+
+
+
+<!-- Media Objects -->
+media               <!--div--> <!--کل کادر مدیا-->
+media-body          <!--div--> <!-- فقط بدنه یا همان نوشته ها بدون عکس-->
+
+<!-- تغییر جایگاه عکس در مدیا-->
+align-self-start    <!-- img -->
+align-self-center   <!-- img -->
+align-self-end      <!-- img -->
+
+<!--در تگ های داخلی div و img اولویت مهم است ، چرا که باعث چپ و راست شدن div و img میشود-->
+
+<div class="media border p-3">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+    <div class="media-body">
+        <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+        <p>Lorem ipsum...</p>
+    </div>
+</div>
+
+
+
+
+
+<!-- Filter Tables   -->
+
+(((( Filter Tables ))))
+
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+<br>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    </thead>
+    <tbody id="myTable">
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+    </tr>
+    <tr>
+        <td>July</td>
+        <td>Dooley</td>
+    </tr>
+    <tr>
+        <td>Anja</td>
+        <td>Ravendale</td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+
+
+(((( Filter Lists))))
+
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+<br>
+<ul class="list-group" id="myList">
+    <li class="list-group-item">First item</li>
+    <li class="list-group-item">Second item</li>
+    <li class="list-group-item">Third item</li>
+    <li class="list-group-item">Fourth</li>
+</ul>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myList li").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+
+
+(((( Filter Anything ))))
+
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+<div id="myDIV" class="mt-3">
+    <p>I am a paragraph.</p>
+    <div>I am a div element inside div.</div>
+    <button class="btn">I am a button</button>
+    <button class="btn btn-info">Another button</button>
+    <p>Another paragraph.</p>
+</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myDIV *").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+<!-- Grid System  -->
+
+<!-- مثال  row-cols-num -->
+<div class="container-fluid">
+    <h2>Row Cols</h2>
+    <p>The .row-cols-* classes are used to set the number of columns that should appear next to each other.</p>
+
+    <div class="row row-cols-1">
+        <div class="col bg-success">1 of 2</div>
+        <div class="col bg-warning">2 of 2</div>
+    </div>
+    <br>
+    <div class="row row-cols-2">
+        <div class="col bg-success">1 of 4</div>
+        <div class="col bg-warning">2 of 4</div>
+        <div class="col bg-success">3 of 4</div>
+        <div class="col bg-warning">4 of 4</div>
+    </div>
+    <br>
+    <div class="row row-cols-3">
+        <div class="col bg-success">1 of 6</div>
+        <div class="col bg-warning">2 of 6</div>
+        <div class="col bg-success">3 of 6</div>
+        <div class="col bg-warning">4 of 6</div>
+        <div class="col bg-success">5 of 6</div>
+        <div class="col bg-warning">6 of 6</div>
+    </div>
+</div>
+
+
+
+
+
+<!-- ترکیبی -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-6 col-lg-4 bg-success">col-sm-3 col-md-6 col-lg-4</div>
+        <div class="col-sm-9 col-md-6 col-lg-8 bg-warning">col-sm-9 col-md-6 col-lg-8</div>
+    </div>
+</div>
+
+
+no-gutter   (row container to remove gutters (extra space))
+<div class="container">
+    <div class="row no-gutters">
+        <div class="col-3">
+            Lorem ipsum dolor sit amet, consectetur.
+        </div>
+        <div class="col-9">
+            Lorem ipsum dolor sit amet, consectetur adipisicing.
+        </div>
+    </div>
+</div>
