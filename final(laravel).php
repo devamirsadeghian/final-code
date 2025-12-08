@@ -25,7 +25,9 @@ SESSION_DRIVER=file
 // ساخت پروژه
 composer global require laravel/installer  نصب 1 بار روی کل سیستم با لاراول
 cd desktop
-composer create-project laravel/laravel ProjectName
+composer create-project laravel/laravel ProjectName      قدیم
+laravel new ProjectName                                  جدید 
+
 
 // اجرای پروژه
 cd desktop               (دلخواه) آدرس دهی
