@@ -5,11 +5,9 @@
 برای سایز div ها حتما از col-*-num استفاده کن . w-num باعث به ریختن در responsive میشه
 
 
-
 -->
 <!-- هنگام GET کردن به مقداری که در url میاید توجه کن-->
 // url(http://0.0.0.0:7777/exam.html?text=amir&email=dev.amir.sadeghi@gmail.com&submit=submit)
-
 
 
 <!-- فراخوانی ۴ cdn مهم برای پروژه ها در قسمت Get Started ها -->
@@ -18,11 +16,22 @@ js(bootstrap)
 popper
 jquery
 
-
 class_name ***  <!-- کلاسی که حتما همراه کلاس بالاتر می آید -->
 
 
-در همه حالت ها باید حتما   class_name   را اعمال کنی ==  ***
+<!--مقدار محتوی اشفال شده از لحاظ پهنا-->
+container-fluid   <!--div-->
+container
+
+container-*-num
+container-*
+<!--مقدار محتوی اشفال شده از لحاظ پهنا-->
+container-fluid   <!--div-->
+container
+
+container-*-num
+container-*
+
 
 
 <button type="button">Button</button>  بهتره نزاری
@@ -40,40 +49,10 @@ class_name ***  <!-- کلاسی که حتما همراه کلاس بالاتر �
 <input type="file"      value="any">
 
 
-
-
 <textarea>محتوی</textarea>
 
 
-
 <nav></nav>
-
-
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-
 
 
 <table class="table table-bordered">
@@ -104,8 +83,6 @@ class_name ***  <!-- کلاسی که حتما همراه کلاس بالاتر �
 </table>
 
 
-
-
 (( grid-breakpoints ))  <!-- خلاصه سایز responsive ( مخفف # )-->
 xs: <576px  <!-- دسترسی نداریم -->
 sm: 576px
@@ -121,7 +98,7 @@ md: 720px
 lg: 960px
 xl: 1140px
 xxl: 1320px
-
+    
 
 // ولی در مقدار دهی فقط از سایز sm تا xl داریم و برای سایز های کوچک تر از sm بنویسی . col-number
 
@@ -132,15 +109,11 @@ col-lg-num
 col-xl-num
 
 
-
-
-
 1  (4px)       <!-- خلاصه سایز ( مخفف  num ) -->
 2  (8px)
 3  (16px)
 4  (24px)
 5  (48px)
-
 
 
 #  (  t  b  r  l   )    <!-- خلاصه  4  جهت -->
@@ -150,6 +123,15 @@ col-xl-num
 مخفف    *   ( xs sm md lg xl )
 ( 1 2 ... 11 12  )  num   مخفف
 مخفف    #   (  t   b   l  r  )
+
+
+// جهت ها
+x     <!-- left right -->
+y     <!-- top bottom -->
+t
+b
+r
+l
 
 
 <!-- جعبه ابزار Utilities-->
@@ -172,35 +154,8 @@ text-white-50
 
 
 
-
-
 // vertical   : عمودی
 // horizontal : افقی
-
-
-
-
-
-// جهت ها
-x     <!-- left right -->
-y     <!-- top bottom -->
-t
-b
-r
-l
-
-
-
-
-<!--مقدار محتوی اشفال شده از لحاظ پهنا-->
-container-fluid   <!--div-->
-container
-
-container-*-num
-container-*
-
-
-
 
 
 
@@ -209,7 +164,6 @@ col // برای داخلی قرار بده  // خودش اتوماتیک تقس�
 
 row
 col
-
 
 row
 col-*
@@ -228,8 +182,7 @@ row-cols-num ***
 col <!-- میتونی بدون row ینویسی که هر div خودش در یک col جدا است-->
 
 
-
-
+    
 
 // padding
 p-1 -->> p-5    / p#-num
@@ -283,8 +236,7 @@ mx-auto   در مجور ایکس
 
 
 
-
-
+    
 
 // border
 border-0         *** // حذف حاشیه از ۴ جهت
@@ -307,7 +259,6 @@ border-light
 border-white
 
 
-
                     <!--Border Radius-->
 rounded-circle
 
@@ -316,8 +267,6 @@ rounded
 rounded-lg
 
 rounded-#
-
-
 
 
 
@@ -531,13 +480,13 @@ bg-light
 
 <!--table-->  در همه حالت ها باید حتما table را اعمال کنی
 table
-table-striped       ***
-table-hover         ***
-table-dark          ***
-table-bordered      ***
-table-borderless    ***
+table-striped       
+table-hover         
+table-dark          
+table-bordered      
+table-borderless    
+table-responsive-*    
 //////ترکیبی هم میشه///////
-
 
 
 
@@ -635,9 +584,10 @@ btn-outline-light
 
 
 btn-sm
+btn
 btn-lg
 
-
+btn-sm
 btn-block  // یک بلاک کامل اشغال میکنه
 
 active
@@ -755,6 +705,8 @@ dropdown-item
 <!--span-->
 <!--badge-->  در همه حالت ها باید حتما badge را اعمال کنی
 
+badge
+
 badge-primary
 badge-secondary
 badge-success
@@ -780,17 +732,14 @@ badge-pill  (badges more round)
 <!--((Progress Bars)) میله پروسه ای-->
 progress          <!-- div -->یکی  از انها هم کافیه   "style="height:40px        // میله خالی
 progress-bar ***  <!-- div -->یکی از انها هم کافیه    "style=":width20%     // پر کردن میله
-bg-color
 progress-bar-striped     // مدل دیگری از پر شدن
 progress-bar-animated    // مدل دیگری از پر شدن در حال حرکت
-
+bg-color
+    
 
 <div class="progress" style="width:70%">
     <div class="progress-bar bg-success" style="width:70%">مقدار قابل نمایش در قسمت پر شده</div>
 </div>
-
-
-
 
 
 <!--((Multiple Progress Bars)) چند میله پروسه ای کنار هم-->
@@ -801,37 +750,12 @@ progress-bar-animated    // مدل دیگری از پر شدن در حال حر�
 </div>
 
 
-
-
 <!--spinner-border-->  در همه حالت ها باید حتما spinner-border/spinner-grow را اعمال کنی
 spinner-border    // مدلی برای لود کردن دایراه ای
 spinner-grow      // مدلی برای لود کردن دایراه ای
 
 spinner-border-sm // تغییر سایز
 spinner-grow-sm   // تغییر سایز
-
-
-مثال //
-<button class="btn btn-primary">
-    <span class="spinner-border spinner-border-sm"></span>
-</button>
-
-<button class="btn btn-primary">
-    <span class="spinner-border spinner-border-sm"></span>
-    Loading..
-</button>
-
-<button class="btn btn-primary" disabled>
-    <span class="spinner-border spinner-border-sm"></span>
-    Loading..
-</button>
-
-<button class="btn btn-primary" disabled>
-    <span class="spinner-grow spinner-grow-sm"></span>
-    Loading..
-</button>
-
-
 
 
 spinner-border-primary
@@ -854,15 +778,29 @@ spinner-grow-dark
 spinner-grow-light
 spinner-grow-link
 
+مثال //
+<button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+</button>
 
+<button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+    Loading..
+</button>
 
+<button class="btn btn-primary" disabled>
+    <span class="spinner-border spinner-border-sm"></span>
+    Loading..
+</button>
 
-
+<button class="btn btn-primary" disabled>
+    <span class="spinner-grow spinner-grow-sm"></span>
+    Loading..
+</button>
 
 
 <!--((pagination)) شماره گذاری اخر صفحه-->
 <!--ul , li-->
-
 
 <!-- ul-->  پدر
 pagination
@@ -874,17 +812,14 @@ Breadcrumbs           <!-- item1 / item2 /  ...   خروجی  -->
 breadcrumb-item       <!-- item1                         خروجی
                            item2
                            ....                                -->
-
-
 <!-- li-->  فرزند
 page-item
 
+<!-- a-->  نوه
 page-link
 
 disabled
 active
-
-
 
 
 <ul class="pagination">
@@ -902,26 +837,14 @@ disabled   // لغو وضعیت
 </ul>
 
 
-
-
-
-<!--((Breadcrumbs)) شماره گذاری اخر صفحه-->
-<!--ul , li-->
-
-
 <!-- ul-->  پدر
 Breadcrumbs           <!-- item1 / item2 / item3 / ...   خروجی  -->
-breadcrumb-item       <!-- item1                         خروجی
-                           item2
-                           ....                                -->
 
+    
 <!-- li-->  فرزند
 breadcrumb-item
 disabled
 active
-
-
-
 
 
 <!--((List Groups)) لیست بندی-->
@@ -942,8 +865,6 @@ active                   ***
 disabled                 ***
 
 
-
-
 list-group-item-success     ***
 list-group-item-secondary   ***
 list-group-item-info        ***
@@ -954,20 +875,15 @@ list-group-item-dark        ***
 list-group-item-light       ***
 
 
-
-
-
-
 <!--((Cards)) -->
 <!-- div-->
 <!-- div-->
 
-
+    
 <!-- div-->  پدر بزرگ
 card-columns         ::::
 card-deck            . . . . کارت ها جدا از هم
 Card Group           ....    کارت ها چسبیده به هم
-
 
 
 <!-- div--> پدر
@@ -982,7 +898,6 @@ card img-fluid
 card-img-overlay // کل صفحه را میگیره
 
 
-
 card-title <!-- h1,h6-->    فرزند
 card-text  <!-- h1,h6, p--> فرزند
 card-link  <!-- a-->          فرزند
@@ -993,17 +908,13 @@ stretched-link <!-- a-->فرزند     همراه  btn
 card-img-top / card-img-bottom
 
 
-
-
-
-
-
 <!--((Nesting Button Groups & Dropdown Menus))-->
 <!--۴ تا ادرس زیرمانند مثال استفاده میشن-->
 dropdown/dropup        <!--div-->
 dropdown-toggle        <!--button-->
 data-toggle="dropdown" <!--button--> <!-- همیشه ثابت-->
 dropdown-menu          <!--div-->
+    
 فرزند
 dropdown-item          <!--a-->   خود لینک
 dropdown-divider       <!--div--> خطی که بین لینک ها است
@@ -1051,8 +962,6 @@ dropdown-item
 </div>
 
 
-
-
 data-target="#demo"  <!--button-->
 id="demo"            <!--div-->
 
@@ -1071,44 +980,15 @@ id="demo"    class="collapse"                <!--div-->
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 
-
-
-
-href="#demo" data-toggle="collapse"  <!--a-->
-id="demo" class="collapse"           <!--div-->
-
-<a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
-<div id="demo" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</div>
-
-
-
-
-id="demo" class="collapse show"     <!--div-->  پیشفرض آن محتوی نمایش داده شده و با زدن روی ان بسته میشود
-
-<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-<div id="demo" class="collapse show">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</div>
-
-
-
-
-
+    
 
 <!--((Nav))-->              <!-- همگی در ul -->
 justify-content-center  ***
 justify-content-end     ***
 flex-column             ***   ( Vertical Nav )
 nav-tabs                ***   ( Tabs )
-nav-pills               ***   ( تبی که اولی رنگی )
-nav-justified           ***
-
+nav-pills               ***   (  )
+nav-justified           ***   (Justify the tabs/pills)
 
 
 nav       <!--ul-->
@@ -1118,8 +998,6 @@ nav-link  <!--a-->
 
 nav-link  همراه( disabled )
 nav-link  همراه( active )
-
-
 
 
 <!--((Pills with Dropdown ترکیبی تب و دراپ دیوون))-->
@@ -1144,9 +1022,6 @@ nav-link  همراه( active )
         </li>
     </ul>
 </div>
-
-
-
 
 
 <!--((Toggleable / Dynamic Tabs ))-->
@@ -1194,29 +1069,16 @@ id="home"    class="container tab-pane active" <!--فرزند-->
 
 
 
-
-
-
 <!--Navbar-->  در همه حالت ها باید حتما Nav را اعمال کنی
 <!--در تگ nav قرار میگیرد-->
+navbar-
 navbar                   <!--nav-->
 fixed-top                <!--nav-->
-navbar-expand-sm         <!--nav-->
+navbar-expand-sm         <!--nav-->   (responsive navbar)
 navbar-expand-md         <!--nav-->
 navbar-expand-lg         <!--nav-->
 navbar-expand-xl         <!--nav-->
 justify-content-center   <!--nav-->
-
-
-(رنگ بک گراند نوار)
-bg-primary               <!--nav-->
-bg-success               <!--nav-->
-bg-info                  <!--nav-->
-bg-warning               <!--nav-->
-bg-danger                <!--nav-->
-bg-secondary             <!--nav-->
-bg-dark an               <!--nav-->
-bg-light                 <!--nav-->
 
 
 (رنگ محتوی نوار)
@@ -1229,6 +1091,8 @@ navbar-nav                  <!--ul--> برای چند لینک های کنار �
 nav-item                    <!--li-->
 nav-link      disabled      <!--a-->
 
+
+    
 
 
 ( Brand/Logo )
@@ -1246,11 +1110,11 @@ src="bird.jpg"   فرزند  <!--img-->
 
 
 
+
+    
 ( hamber menu ) <!--button-->
 class="navbar-toggler"  data-toggle="collapse"   data-target="#iiiidddd"  <!--button-->
 navbar-toggler-icon                                                       <!--span-->اسم دلخواه
-
-
 
 id="iiiidddd"             <!--div-->
 navbar-nav                <!--ul-->
@@ -1259,35 +1123,8 @@ nav-link      disabled    <!--a-->
 
 
 
-مثال //
-<nav>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-        </ul>
-    </div>
-
-</nav>
-
-
-
-
-
-
+    
 ( Navbar With Dropdown )
 <!-- قسمت دراپ دییون رو نوشتم و مهمه-->
 nav-item  dropdown                                            <!--li-->  (پدر)
@@ -1295,36 +1132,6 @@ dropdown-toggle"    id="navbardrop"  data-toggle="dropdown"   <!--a-->     (فر
 
 dropdown-menu          <!--div-->  (پدر)
 dropdown-item          <!--div-->  (فرزند)
-
-
-مثال //
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">Logo</a>
-
-    <!-- Links -->
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-        </li>
-
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                Dropdown link
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link 1</a>
-                <a class="dropdown-item" href="#">Link 2</a>
-                <a class="dropdown-item" href="#">Link 3</a>
-            </div>
-        </li>
-    </ul>
-</nav>
 
 
 
@@ -1358,14 +1165,11 @@ sticky-top             <!--nav--> بین محتوی میتواند بیاید . 
 
 
 
-
-
-
 نکته : با زدن روی لیبل به switch , checkbox , textarea , text دسترسی پیدا میکنیم که این کار به کمک id , for پیاده سازی میشه
 for="id_for" <!--label-->
 id="id_for"  <!--input / textarea--> <!--email password checkbox radio Select -->
 
-
+    
 
 <!--Forms-->
 form-inline       <!--form--> <!--تمام محتوی در یک خط میاید-->
@@ -1377,6 +1181,7 @@ form-check        <!--div-->  <!-- checkbox ,  radio    --> (form-group) چیز�
 form-check-label  <!--label-->
 form-check-input  <!--input-->
 
+    
 
 مثال //
 <form action="/---.php">
@@ -1443,8 +1248,6 @@ form-control-file border   <!--input-->  <!--file-->
 
 
 
-
-
 ( Input Groups )
 input-group
 input-group-prepend
@@ -1470,7 +1273,6 @@ input-group-lg
         </div>
     </div>
 </form>
-
 
 
 ( Input Group with Checkboxes and Radios)
@@ -1501,7 +1303,6 @@ input-group-lg
 </div>
 
 
-
 ( Input Group Buttons )
 <div class="container mt-3">
     <h1>Input Group Buttons</h1>
@@ -1529,8 +1330,6 @@ input-group-lg
 </div>
 
 
-
-
 ( Input Group with Checkboxes and Radios )
 <div class="container mt-3">
     <h3>Input Groups with Dropdown Button</h3>
@@ -1553,7 +1352,6 @@ input-group-lg
 </div>
 
 
-
 ( Input Group Labels )
 <div class="container mt-3">
     <h2>Input Group Labels</h2>
@@ -1569,8 +1367,6 @@ input-group-lg
         </div>
     </form>
 </div>
-
-
 
 
 
@@ -1601,8 +1397,6 @@ selected        <!--مقدار پیشفرض است-->     <!--select-->
 
 custom-control-input    <!--input-->
 custom-control-label    <!--label-->
-
-
 
 
 
@@ -1641,7 +1435,6 @@ carousel-control-prev-icon   <!--span-->
 
 
 
-
 <!--Modal-->  <!--برای وقتی که نیازه یک محتوی یا ... را ارسال یا نمایش دهیم که این کار در همان صفحه و در یک تکه صفحه کوچک نمایش داده میشه -->
 <!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
 modal           <!--div-->
@@ -1672,10 +1465,6 @@ modal-title       <!--p,h1,h6-->
 
 
 
-
-
-
-
 <!--tooltip-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش را که فقط قسمت content را نمایش میدهد -->
 data-toggle="tooltip"   title="محتوی مخفی"  <!-- a -->
 data-placement="top"     ***
@@ -1690,8 +1479,6 @@ data-placement="right"   ***
         $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
-
-
 
 
 
@@ -1717,9 +1504,6 @@ data-placement="right"      ***
         $('[data-toggle="popover"]').popover();
     });
 </script>
-
-
-
 
 
 
@@ -1752,20 +1536,11 @@ data-dismiss="toast"    <!--button--> <!--درصورتی که دکمه ای قر
 
 
 
-
-
-
 <!--Scrollspy-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
 <!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
 data-spy="scroll"         <!--body-->
 data-target=".navbar"       ***
 data-target="#myScrollspy"  ***
-
-
-
-
-
-
 
 
 
@@ -1783,8 +1558,6 @@ d-*-...                <!--استفاده از responsive-->
 
 
 
-
-
 justify-content-start     ***  <!--  -->
 justify-content-end       ***  <!--  -->
 justify-content-center    ***  <!--  -->
@@ -1795,12 +1568,9 @@ justify-content-*-...
 
 
 
-
 order         <!-- اولویت بندی یا سفارش سازی -->
 order-num
 order-*-num
-
-
 
 
 
@@ -1817,15 +1587,11 @@ flex-*-grow-1
 
 
 
-
-
 flex-wrap           <!-- دسته بندی -->
 flex-wrap-reverse   <!-- عکس دسته بندی -->
 flex-nowrap         <!-- دسته بندی بدون ستون -->
 
 flex-*-...
-
-
 
 
 
@@ -1846,8 +1612,6 @@ align-content-*-...
 
 
 
-
-
 <!-- به شکل عمودی هر ردیف را جابه جا میکند -->
 align-items-start       ***
 align-items-end         ***
@@ -1860,8 +1624,6 @@ align-items-*-...
 
 
 
-
-
 <!-- به شکل عمودی هر دونه div را جابه جا میکند -->
 align-self-start
 align-self-end
@@ -1870,8 +1632,6 @@ align-self-baseline
 align-self-stretch
 
 align-self-*-...
-
-
 
 
 
@@ -2005,41 +1765,6 @@ align-self-end      <!-- img -->
         });
     });
 </script>
-
-
-
-
-
-
-<!-- Grid System  -->
-
-<!-- مثال  row-cols-num -->
-<div class="container-fluid">
-    <h2>Row Cols</h2>
-    <p>The .row-cols-* classes are used to set the number of columns that should appear next to each other.</p>
-
-    <div class="row row-cols-1">
-        <div class="col bg-success">1 of 2</div>
-        <div class="col bg-warning">2 of 2</div>
-    </div>
-    <br>
-    <div class="row row-cols-2">
-        <div class="col bg-success">1 of 4</div>
-        <div class="col bg-warning">2 of 4</div>
-        <div class="col bg-success">3 of 4</div>
-        <div class="col bg-warning">4 of 4</div>
-    </div>
-    <br>
-    <div class="row row-cols-3">
-        <div class="col bg-success">1 of 6</div>
-        <div class="col bg-warning">2 of 6</div>
-        <div class="col bg-success">3 of 6</div>
-        <div class="col bg-warning">4 of 6</div>
-        <div class="col bg-success">5 of 6</div>
-        <div class="col bg-warning">6 of 6</div>
-    </div>
-</div>
-
 
 
 
