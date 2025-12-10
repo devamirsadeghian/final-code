@@ -415,22 +415,38 @@ row
 col-*
 col-*-num      number  1 -->> 12
 
-row
-row-cols-num ***
+    
+row  row-cols-num ***
+col-*
 
-
+    
 نکته //
 <!-- استفاده همزمان از responsive ها -->
 <!-- col-sm-3  col-md-6  col-lg-4  -->
 
-<!-- ترکیبی -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-6 col-lg-4 bg-success">col-sm-3 col-md-6 col-lg-4</div>
-        <div class="col-sm-9 col-md-6 col-lg-8 bg-warning">col-sm-9 col-md-6 col-lg-8</div>
-    </div>
+
+    
+<!-- row     col-num -->
+<div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-4 bg-success">col-sm-3 col-md-6 col-lg-4</div>
+    <div class="col-sm-9 col-md-6 col-lg-8 bg-warning">col-sm-9 col-md-6 col-lg-8</div>
 </div>
 
+
+
+<!-- row  row-col-2  col   -->
+<div class="row">
+        <div class="col-4">ddd</div>
+        <div class="col-4">ddd</div>
+        <div class="col-4">ddd</div>
+    </div>
+
+    <div class="row row-col-4">
+        <div class="col">ddd</div>
+        <div class="col">ddd</div>
+        <div class="col">ddd</div>
+    </div>
+    
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -836,23 +852,12 @@ Breadcrumbs           <!-- item1 / item2 /  ...   خروجی  -->
 breadcrumb-item       <!-- item1                         خروجی
                            item2
                            ....                                -->
-<!-- li-->  فرزند
-page-item
 
-<!-- a-->  نوه
-page-link
+page-item   <!-- li -->  فرزند
+page-link   <!-- a -->    نوه
 
 disabled
 active
-
-
-<ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-</ul>
 
 
 disabled   // لغو وضعیت
@@ -1047,7 +1052,6 @@ nav-link  همراه( active )
     </ul>
 </div>
 
-\
 
 
 <!--Navbar-->  در همه حالت ها باید حتما Nav را اعمال کنی
@@ -1073,7 +1077,6 @@ nav-item                    <!--li-->
 nav-link      disabled      <!--a-->
 
 
-    
 
 
 ( img    Brand/Logo )
@@ -1083,7 +1086,6 @@ src="bird.jpg"   فرزند  <!--img-->
 <a class="navbar-brand" href="#">
     <img src="bird.jpg" alt="Logo" style="width:40px;">
 </a>
-
 
 
 
@@ -1099,7 +1101,6 @@ nav-link      disabled    <!--a-->
 
 
 
-
     
 ( Navbar With Dropdown )
 <!-- قسمت دراپ دییون رو نوشتم و مهمه-->
@@ -1110,11 +1111,8 @@ dropdown-menu          <!--div-->  (پدر)
 dropdown-item          <!--div-->  (فرزند)
 
 
-
-
-
+    
 ( نکته برای   form-control که کل \هنا برای تگ های input\textarea\select اعمال میشه)
-
 
 ( Navbar Forms and Buttons )
 form-inline    action="/---.php"  <!--form-->    (پدر)
@@ -1200,121 +1198,8 @@ form-control-plaintext    <!-- اینپوت بدون حاشیه -->
 form-control-range         <!--input-->  <!--range-->
 form-control-file border   <!--input-->  <!--file-->
 
-
-    
-( Input Groups )
-<form>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text">@</span>
-        </div>
-        <input type="text" class="form-control" placeholder="Username">
-    </div>
-
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Your Email">
-        <div class="input-group-append">
-            <span class="input-group-text">@example.com</span>
-        </div>
-    </div>
-</form>
-
-
-( Input Group with Checkboxes and Radios)
-<div>
-
-    <form>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="checkbox">
-                </div>
-            </div>
-            <input type="text" class="form-control" placeholder="Some text">
-        </div>
-    </form>
-
-    <form>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio">
-                </div>
-            </div>
-            <input type="text" class="form-control" placeholder="Some text">
-        </div>
-    </form>
-
-</div>
-
-
-( Input Group Buttons )
-<div class="container mt-3">
-    <h1>Input Group Buttons</h1>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <button class="btn btn-outline-primary" type="button">Basic Button</button>
-        </div>
-        <input type="text" class="form-control" placeholder="Some text">
-    </div>
-
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search">
-        <div class="input-group-append">
-            <button class="btn btn-success" type="submit">Go</button>
-        </div>
-    </div>
-
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Something clever..">
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="button">OK</button>
-            <button class="btn btn-danger" type="button">Cancel</button>
-        </div>
-    </div>
-</div>
-
-
-( Input Group with Checkboxes and Radios )
-<div class="container mt-3">
-    <h3>Input Groups with Dropdown Button</h3>
-    <p>Add a dropdown button in the input group. Note that you don't need the .dropdown wrapper, as you normally would.</p>
-    <form>
-        <div class="input-group mt-3 mb-3">
-            <div class="input-group-prepend">
-                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Link 1</a>
-                    <a class="dropdown-item" href="#">Link 2</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
-                </div>
-            </div>
-            <input type="text" class="form-control" placeholder="Username">
-        </div>
-    </form>
-</div>
-
-
-( Input Group Labels )
-<div class="container mt-3">
-    <h2>Input Group Labels</h2>
-    <p>Put labels outside of the input group, and remember that the value of the for attribute should match the id of the input.</p>
-    <p>Click on the label and it will bring focus to the input:</p>
-    <form>
-        <label for="demo">Write your email here:</label>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Email" id="demo" name="email">
-            <div class="input-group-append">
-                <span class="input-group-text">@example.com</span>
-            </div>
-        </div>
-    </form>
-</div>
-
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--Custom Forms-->  در همه حالت ها باید حتما custom-control را اعمال کنی
 custom-control-inline    <!--div-->  (همه محتوی در یک سطر)
@@ -1343,9 +1228,8 @@ selected        <!--مقدار پیشفرض است-->     <!--select-->
 custom-control-input    <!--input-->
 custom-control-label    <!--label-->
 
-
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--Carousel-->  <!-- همان کادر چند عکسی است با قابلیت جابه جایی هر عکس میباشد -->
 <!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
@@ -1374,11 +1258,8 @@ carousel-control-next-icon   <!--span-->
 carousel-control-prev         <!--a-->
 carousel-control-prev-icon   <!--span-->
 
-
-
-
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--Modal-->  <!--برای وقتی که نیازه یک محتوی یا ... را ارسال یا نمایش دهیم که این کار در همان صفحه و در یک تکه صفحه کوچک نمایش داده میشه -->
 <!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
@@ -1407,8 +1288,8 @@ modal-footer      <!-- div -->   نوه
 
 modal-title       <!--p,h1,h6-->
 
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--tooltip-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش را که فقط قسمت content را نمایش میدهد -->
 data-toggle="tooltip"   title="محتوی مخفی"  <!-- a -->
@@ -1417,10 +1298,8 @@ data-placement="bottom"  ***
 data-placement="left"    ***
 data-placement="right"   ***
 
-
-
-    
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--Popover-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
 data-toggle="popover        *** <!--برای باز و بسته کردن حتما کلیک کن-->
@@ -1439,6 +1318,8 @@ data-placement="right"      ***
 
 
     
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--Toast-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
 toast
@@ -1451,6 +1332,8 @@ data-dismiss="toast"    <!--button--> <!--درصورتی که دکمه ای قر
 
     
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <!--Scrollspy-->  <!-- لینکی که با رفتن روی ان محتوی مخفی اش که دارای ۲ قسمت content , header را نمایش میدهد -->
 <!--با توجه به سنگینی کد ها بهتره توابع با بلد باشی و در صورت نیاز کپی و تغییرات اعمال شود-->
@@ -1459,6 +1342,8 @@ data-target=".navbar"       ***
 data-target="#myScrollspy"  ***
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
 <!--OffCanvas-->
 offcanvas         <!-- همگی ر-->
@@ -1472,21 +1357,6 @@ offcanvas-botton
 offcanvas-header
 offcanvas-title
 data-bs-toggle="offcanvas"
-
-    
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-( Display size class )
-d-none           <!-- delete display -->
-d-inline
-d-inline-block
-
-d-table
-d-table-cell
-d-table-row
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1502,27 +1372,39 @@ order-*-num
 d-flex                       block  <!-- create a flexbox container  and  transform direct children into flex items -->
 d-inline-flex                       <!-- create an inline flexbox container  -->
 
+    
+( Display size class )
+d-none           <!-- delete display -->
+d-inline
+d-inline-block
 
+تعیین کنی کدام آیتم اجازه دارد کوچک شود یا نه
+<!-- کلاس پدر -->
 flex-row           (defult)   ***           <!-- display the flex items horizontally (side by side).  ( default ) -->
 flex-row-reverse              ***           <!--  -->
 flex-column                   ***           <!-- Vertical  -->
 flex-column-reverse           ***           <!-- Vertical  reverse -->
 
-    
+
+
 
 
 flex-fill      ***  (flex items to force them widths)
 flex-grow-1    ***  ( تا بی انتها رشد دارد )
 flex-grow-0    ***  ( لغو بالایی )
+flex-shrink-1  ***  (  تعیین کنی کدام آیتم اجازه دارد کوچک  شود )
+flex-shrink-0  ***  (  تعیین کنی کدام آیتم اجازه دارد کوچک نشود )
 flex-*-...
 
 
 
-<!-- خلاصه -->
-wrap            <!-- Control how flex items wrap in a flex container -->
-Align Content   <!-- Control the vertical alignment of gathered flex items -->
-Align Items     <!-- Control the vertical alignment of single rows of flex items -->
-Align Self      <!-- Control the vertical alignment of a specified flex item -->
+
+<!--  خلاصه چند مورد شبیه  -->
+wrap              <!-- Control how flex items wrap in a flex container -->
+justify-content   <!-- utilities on flexbox containers to change the alignment of flex items on the main axis -->
+Align Content     <!-- Control the vertical alignment of gathered flex items -->
+Align Items       <!-- Control the vertical alignment of single rows of flex items -->
+Align Self        <!-- Control the vertical alignment of a specified flex item -->
 
 
     
@@ -1558,7 +1440,6 @@ align-content-*-...
 
 
 
-
 <!-- به شکل عمودی هر ردیف را جابه جا میکند -->
 align-items-start       ***
 align-items-end         ***
@@ -1580,3 +1461,50 @@ align-self-stretch
 
 align-self-*-...
 
+
+
+float-start
+float-end
+float-none
+float-*-start
+
+
+    
+
+
+////////////////////////////////////////////////////////////////////////     ‌Bootstrap 5    //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////     ‌Bootstrap 5    //////////////////////////////////////////////////////////////////////////////
+ پیچیده        ساده
+Tooltips == Popovers
+بیشتر خاصیت هشدار دارد Toasts   == Modal     امکانات بیشتری پیاده سازی شده
+
+
+
+<!-- Accordion -->  <!-- Build vertically collapsing accordions in combination  our Collapse JavaScript plugin-->
+flush         <!-- remove the default background-color, some borders, and some rounded and ... -->                 <!-- این  -->  
+Always open   <!-- accordion-collapse to make accordion items stay open when another item is opened -->
+
+
+    
+<!-- Position -->
+
+
+position-static
+position-relative
+position-absolute
+position-fixed
+position-sticky
+
+
+<!-- مثال -->                                    
+position-relative         ( پدر )   |--------------------|
+position-absolute top-0 start-0     |#                   |
+position-absolute top-0 end-0       |                   #|
+position-absolute top-50 start-50   |         #          |
+position-absolute bottom-50 end-50  |          #         |
+position-absolute bottom-0 start-0  |#                   |
+position-absolute bottom-0 end-0    |                   #|
+<!-- تنواع اعداد 0 , 50 , 100 -->   |--------------------|
+<!-- بیشتر حالات در دایکیومنت -->
+
+    
