@@ -1,26 +1,17 @@
 /* comment */
 
-
 /* یک تگ اچ تی ام ال میتواند چندین کلاس یا ایدی داشته باشد
-
 <h1 id="h1_id_1  h1_id_2  h1_id_3" class="h1_class_1 "></h1>
 <p id="p_id_1" class="p_class_1  p_class_2  p_class_3"></p>          
 */
 
-
-
-
 body {}      /* کل محتوی */
-
 
 * {}         /* همه تگ ها */
 
-
 #id {}
 
-
 .clsss {}
-
 
 p {}
 h1 {}
@@ -29,11 +20,9 @@ span {}
 button {}
 ...  {}
 
-
 ol {}
 ol li {}
 ol li a {}
-
 
 p>a {}
 
@@ -42,16 +31,11 @@ p::first-line {}
 p::first-letter {}
 
 
-
 p:hover {}
 p:visited {}
 p:active {}
 
-
-
-
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
 css {
     direction: ltr rtl;
 
@@ -69,12 +53,9 @@ css {
     font-size: 0ex;
     font-size: 0rem;
 
-    
     line-height: 20px;
 
-
     font-family: sahel, iransans;
-
 
     
     /*  url   position/size   repeat  */
@@ -97,9 +78,6 @@ css {
     background: linear-gradient(to left right bottom top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('addres.img');
 
 
-
-
-
     /*      calc    %      px(ch em ex em)     سه معیاری برای عرض و ارتفاع */
     /*         شامل  calc  -->>>>   %     px(ch em ex em)                */
 
@@ -113,7 +91,6 @@ css {
     height: calc(100% - 0px);
 
 
-
     float: left right;
     text-align: center left right;
     align: center left right;
@@ -125,7 +102,6 @@ css {
 
     visibility: hidden;
     opacity: 0 ta 1;
-
 
 
     /*  . or #:both;     */
@@ -158,7 +134,6 @@ css {
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
-
 
 
     padding: 0px;         /*  فاصله نوشته از تگ  */
@@ -200,22 +175,17 @@ css {
     box-sizing: border-box;   /*با اعمال ان ، به همراه پدینگ ، سایز نهایی با باکس اولیه مساوی میشه*/
     
 
-
     z-index: 1;   /* عدد بیشتر اولویت بیشتر */
     z-index: 2;
     z-index: 3;
-
-
-
+    
     /*  یعنی انواع ان any
     کردن select سه مدل 
 
     div : any {} ;   div : actived {}        div : visited {}      div : hover{}  ;       selector
     div > p  {} ;                                                                         child selector
     p::any  {} ;     p::first-letter {}      p::first-line {}                     ;       sodo  selector
-
     */
-
 
     cursor: pointer;  /*با رفتن روی ان کرسر تغییر کرده*/
     
@@ -234,14 +204,13 @@ css {
             width: calc(100% - 2px);
             float: left;
         }
-
     }
     }
 
 /*
-    transform   حرکت کردن           transform  : translate  scale   rotate    skew
+    transform   حرکت کردن           transform  : translate - scale - rotate - skew
     transition  انیمسشن             transition : all     ease      0s   0s
-    animation   چند انیمشین         animation: identifier   0s    ease                 @keyframes identifier {}
+    animation   چند انیمشین         animation: identifier   0s    ease            @keyframes identifier {}
 */
     transform: translateX(0px);
     transform: translateY(0px);
@@ -261,7 +230,6 @@ css {
     transform : skewX(0deg);
     transform : skewY(0deg);
     transform : skew(0deg, 0deg);
-
     /* 
 
    transition: all     ease      0s   0s;
@@ -269,13 +237,11 @@ css {
                width   ease-out
                        linear
 
-
     animation: identifier   ease      0s    infinite both;  برای بینهایت کردن
                             ease-in   0ms   
                             ease-out
                             linear
              
-
     animation-fill-mode: forwards;  برای فیکس کردن                       
 */
 
@@ -303,30 +269,22 @@ css {
         color: var(--Danger);
     }
 
-
     /*برای خطوط*/
     p {
         text-shadow: 0px 0px 0px red;
     }
-
 
     /*برای باکس*/
     div {
         box-shadow: 0px 0px 0px 0px red;
     }
 }
-
-
 /*
 
 کار نمیده text-align: center دیگر با اعمال  display: inline-block
-
 */
-
 /* کلمه important! برای وقتی است که قراره چیزی در اولویت باشه  */
 .btn-orange{
     color: orange !important;
     border: 1px solid orange !important;
 }
-
-
