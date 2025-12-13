@@ -103,7 +103,7 @@ var b = new Array(22, 'ali', false, 4.56);
 console.log(a[0]);   // 22
 console.log(a[1]);   // ali
 
-
+----------------------------------------------------------------------------------------------------------------------
 // ARRAY متد های
 
 a.includes(val); ////ایا این مقدار در این ارایه وجود دارد یا خیر
@@ -116,11 +116,27 @@ a.push(val) /////////به اخر اضافه
 
 
 yep = a.slice() ////کپی میکنه
-a.splice('startIndex','delCount','additem1','additem2','...');  ('اختیاری','اجباری','اختیاری');
+a.splice(startIndexNum,delCountNum,'additem1','additem2','...');  ('اختیاری','اجباری','اختیاری');
 a.indexOf(value,index) ////////جست و حو مقداری از ایندکسی که مامشخص میکنیم
 a.join("")  ////////بر اساس داخل پرانتز ارایه را به  رشته تبدیل میکند
-a.split("") ////////بر اساس داخل پرانتز رشته را به ارایه تبدیل میکند
-const adults = a.filter(user => user.age >= 18, index, value);
+a.split("") //////// بر اساس داخل پرانتز رشته را به ارایه تبدیل میکند   a=string
+
+array.filter(callback(element, index, array), thisArg)
+a.filter(user => user.age >= 18, index, value);
+// example
+const users = [
+  { name: 'Ali', active: true },
+  { name: 'Reza', active: false },
+  { name: 'Sara', active: true }
+];
+
+const activeUsers = users.filter(user => user.active);          // خروجی یکسان
+const activeUsers = users.filter(user => user.active == true);  // خروجی یکسان
+
+console.log(activeUsers);
+// [{ name: 'Ali', active: true }, { name: 'Sara', active: true }]
+
+
 
 
 
@@ -244,9 +260,9 @@ if (condition) {
 
 ////////////////////////////////////////////////////////
 
-var f=5;
+var x=5;
 
-switch (f) {
+switch (x) {
     case 1:
         document.write('1');
         break;
@@ -283,22 +299,22 @@ switch (f) {
 
 var a = start;
 while (end) {    // yes -->> (true)  (number)  ()           no -->>  (false)  (0)
-    عملیات;
-    گام;
+    condition;
+    step;
 }
 
 ///////////////////////////////////////////////////////
 
 var a = start;
 do {
-    عملیات;
-    گام;
+    condition;
+    step;
 } while (end);
 
 ///////////////////////////////////////////////////////
 
-for (let a = شروع, پایان, گام) {
-
+for (let a = start , end, step) {
+    condition
 }
 
 var k = [11,22,33,44,55];
@@ -319,13 +335,13 @@ var ob = {
 }
 
 
-for (const key in object) {       // var ob
+for (const key in object) {         // object
     console.log(key);
     console.log(object[key]);
 }
 
 
-for (const value of array) {        // var ar
+for (const value of array) {        // array
     console.log(value);
 }
 
@@ -360,24 +376,23 @@ var arr_1 = [1,2,3];
 var arr_2 =[...arr_1];
 
 ////////////////////////////////////////////////////////////////////
-
+// 4 روش 
 document.getElementById('id')
 document.getElementsByClassName('class')
 document.getElementsByTagName('tag-name')
-
-
 document.querySelector('selecion')
-document.querySelectorAll('selecion')
+// document.querySelectorAll('selecion')   // کمتر استفاده میشه
 
 
 // گرفتن مقدار یک المان
 document.getElementById.value
 document.querySelector('').value
 
-//////////////////////////////////////////////////////
-
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+    
 //   ('')  ===>>>  getElementBy...    |   querySelector    |    createElement    قسمت واکشی تگ برای خلاصه کردن حذف شده
-//  خلاصه شده
+//   خلاصه شده ۴ روش بالا
 .id
 .class
 .className
@@ -390,21 +405,23 @@ document.querySelector('').value
 .classList[1]
 .classList[2]
 
+    
 
 .classList.add('any');
 .classList.remove('any');
 .classList.toggle('any');   // toggle اگر داشت ان را میگیره و اگر نداشت ان را میده
 
 
+.value
 
+    
 .attributes              // همه ویژگی ها رو میده
+
 .getAttribute('name')    // وجود یک ویژگی رو میده
 .hasAttribute('name')    // true  or  false
+    
 .setAttribute('name', 'val')
 .removeAttribute('name')
-
-
-.value
 
 
 .style
@@ -1394,3 +1411,6 @@ ad.keyup(function(e){
     fadeOut(4); // چهار ثانیه طول میکشه تا محو بشه
     fadeIn(4);  // چهار ثانیه طول میکشه تا ظاهر بشه
 });
+
+
+
