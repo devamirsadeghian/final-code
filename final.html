@@ -207,3 +207,122 @@ fa-li
 --fa-li-margin
 --fa-li-width
 
+
+
+
+////////////////////
+////////////////////
+////////////////////
+---OOP---
+
+return f"{self.name} is {self.age} years old"
+متغیرها را مستقیم داخل رشته نوشت
+عبارت‌های محاسباتی را داخل رشته قرار داد
+خروجی را خواناتر و کوتاه‌تر کرد
+
+
+
+
+class Person:
+  def __init__(self, name, age, city, country):
+    self.name = name
+    self.age = age
+    self.city = city
+    self.country = country
+
+p1 = Person("Linus", 30, "Oslo", "Norway")
+
+print(p1.name)
+print(p1.age)
+print(p1.city)
+print(p1.country)
+
+
+
+
+class Person:
+  def __init__(self, name):
+    self.name = name
+
+  def greet(self):
+    return "Hello, " + self.name
+
+  def welcome(self):
+    message = self.greet()
+    print(message + "! Welcome to our website.")
+
+p1 = Person("Tobias")
+p1.welcome()
+
+
+
+
+برای ایجاد کلاسی که عملکرد را از کلاس دیگری به ارث می‌برد، هنگام ایجاد کلاس فرزند، کلاس والد را به عنوان پارامتر ارسال کنید.
+وقتی نمی‌خواهید هیچ ویژگی یا متد دیگری به کلاس اضافه کنید، از کلمه کلیدی pass استفاده کنید.
+
+
+class ChildClass(ParentClass):
+    pass   ساختار کلی
+
+
+
+
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print(f"Hello, my name is {self.name}")
+
+
+class Student(Person):   # ارث‌بری از Person
+    def study(self):
+        print("Student is studying")
+
+
+
+با استفاده از تابع super()، لازم نیست از نام عنصر والد استفاده کنید، عنصر به طور خودکار متدها و ویژگی‌ها را از والد خود به ارث می‌برد.
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year                                                                    //  Add Properties
+
+    def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)      //  Add Methods
+
+
+
+
+
+
+class Vehicle:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Move!")
+
+class Car(Vehicle):
+  pass
+
+class Boat(Vehicle):
+  def move(self):
+    print("Sail!")
+
+class Plane(Vehicle):
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang")       #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+plane1 = Plane("Boeing", "747")     #Create a Plane object
+
+for x in (car1, boat1, plane1):
+  print(x.brand)
+  print(x.model)
+  x.move()
+    
