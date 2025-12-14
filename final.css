@@ -59,8 +59,8 @@ css {
 
     
     /*  url   position/size   repeat  */
-    background: url("addres.img") center/cover no-repeat;
-    background-image: url('addres.img') center/cover no-repeat;
+    background: #ff0022 url("addres.img") center/cover no-repeat;       // همه تنظیمات پس‌زمینه رو یک‌جا انجام بده
+    background-image: url('addres.img') center/cover no-repeat;         // فقط تصویر پس‌زمینه رو مشخص می‌کنه
 
     background-color: red;
     background-repeat: repeat no-repeat repeat-x repeat-y;
@@ -78,8 +78,8 @@ css {
     background: linear-gradient(to left right bottom top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('addres.img');
 
 
-    /*      calc    %      px(ch em ex em)     سه معیاری برای عرض و ارتفاع */
-    /*         شامل  calc  -->>>>   %     px(ch em ex em)                */
+    /*         calc    %      px(ch em ex em)     سه معیاری برای عرض و ارتفاع */
+    /*         calc------>>>>>>  %   px( ch em ex em ) */
 
     width: 0px;
     height: 0px;
@@ -172,7 +172,7 @@ css {
     opacity: 0 ta 1;
 
 
-    box-sizing: border-box;   /*با اعمال ان ، به همراه پدینگ ، سایز نهایی با باکس اولیه مساوی میشه*/
+    box-sizing: border-box;   /*   ( padding  لغو )  با اعمال ان ، به همراه پدینگ ، سایز نهایی با باکس اولیه مساوی میشه*/
     
 
     z-index: 1;   /* عدد بیشتر اولویت بیشتر */
@@ -182,9 +182,9 @@ css {
     /*  یعنی انواع ان any
     کردن select سه مدل 
 
-    div : any {} ;   div : actived {}        div : visited {}      div : hover{}  ;       selector
-    div > p  {} ;                                                                         child selector
-    p::any  {} ;     p::first-letter {}      p::first-line {}                     ;       sodo  selector
+    div : any {}  ;   div : actived {}        div : visited {}      div : hover{}  ;       selector
+    div > p  {}   ;                                                                         child selector
+    p::any  {}    ;   p::first-letter {}      p::first-line {}                     ;       sodo  selector
     */
 
     cursor: pointer;  /*با رفتن روی ان کرسر تغییر کرده*/
@@ -209,8 +209,8 @@ css {
 
 /*
     transform   حرکت کردن           transform  : translate - scale - rotate - skew
-    transition  انیمسشن             transition : all     ease      0s   0s
-    animation   چند انیمشین         animation: identifier   0s    ease            @keyframes identifier {}
+    transition  انیمسشن             transition : all        ease      0s     0s
+    animation   چند انیمشین         animation: identifier   ease      0s     @keyframes identifier {}
 */
     transform: translateX(0px);
     transform: translateY(0px);
