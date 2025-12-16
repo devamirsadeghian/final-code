@@ -784,8 +784,6 @@ is_readable($name_file);             // چک میکنه فایل قابل خوا
 
 
 
-
-
 (((((((((((((            array ('array')  ($arr)          )))))))))))))
 // برای وقتی که چند ویژگی برای یک متعییر میخای قراا بدی . از ارایه کمک بگیر
 // arr1    'array....'    $array_1
@@ -836,8 +834,6 @@ is_readable($name_file);             // چک میکنه فایل قابل خوا
 
 
 
-
-
 function odd(int $number)
 {
     if($number % 2 == 1){
@@ -877,7 +873,6 @@ error_reporting(E_WARNING);    // خطا دارد ولی اجرا میشود
 error_reporting(E_NOTICE);     // ارور کم اهمیت تر که اجرا میشه
 error_reporting(E_DEPRECATED); //
 error_reporting(E_STRICT);     //
-
 
 
 
@@ -972,7 +967,6 @@ class PDOException extends DBException{}       // مثال
 
 
 
-
 // مثال اگزپتشن دستی
 class DivisionByZeroError extends Exception{}
 
@@ -992,7 +986,6 @@ try {
 }finally{
     echo "finally";
 }
-
 
 
 
@@ -1428,7 +1421,6 @@ class Car{
 }
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////// (((( setter  getter )))))
 
@@ -1632,7 +1624,6 @@ foreach ($shapes as $data) {
 // خروجی
 $square->draw();   // مثلث
 $Circle->draw();   // دایره
-
 
 
 
@@ -2118,7 +2109,6 @@ var_dump(is_callable($obj));  // int(5)
 //                               bool(true)
 
 
-
 // overloading مفهوم
 class Sum{
     public function sum_1($a,$b){
@@ -2151,35 +2141,24 @@ class Sum{
 //   ~   package   : 
 
 
-
-
 // (((((((((((((((((((((((((((((((((((((((   نکات کلی و خلاصه در php    ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   نکات کلی و خلاصه در php    ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   نکات کلی و خلاصه در php    ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   نکات کلی و خلاصه در php    ))))))))))))))))))))))))))))))))))))))))))))))
 
 header('location:page.php'); // به فلان صفحه برو
-basename();  // مسیر فایل تا قبل خود فایل رو میده
+basename();    // مسیر فایل تا قبل خود فایل رو میده
 
+filetemp      // مسیری که فایبل باز میشه ُ دقسقا همان سرور دستی که با  php -S 0.0.0.0:1111; ساخته میشه
 
-filetemp // مسیری که فایبل باز میشه ُ دقسقا همان سرور دستی که با  php -S 0.0.0.0:1111; ساخته میشه
-
-
-prepare('sql code');     // اطلاعات ارسالی به  دیتا بیس
-bindvalue(number,$var);   //
-execute($pass , $_GET['name'] , ... );  // همان کار bindvalue را انجام میدهد
-
+prepare('sql code');                     // اطلاعات ارسالی به  دیتا بیس
+bindvalue(number,$var);                  //
+execute($pass , $_GET['name'] , ... );   // همان کار bindvalue را انجام میدهد
 
 rowcount();   // تعداد کوعری مثبت رو میده
 
-
-$statment;  //
-$results;   //
-
-
-cookie    // در مرورگر کاربر ذخیره میشه
-session   // در مروررگر و سرور ذخیره میشه
-
+cookie        // در مرورگر کاربر ذخیره میشه
+session       // در مروررگر و سرور ذخیره میشه
 
 // معمولا session به کمک  username , phone , email ذخیره میشه
 
@@ -2192,209 +2171,9 @@ session   // در مروررگر و سرور ذخیره میشه
 // در login اگر با email ثبت نام کردی . برای ورودی باید از email و password میباشد
 // در login اگر با phone ثبت نام کردی . برای ورودی باید از phone و password میباشد
 
+    
 
 // (((((((((((((((((((((((((((((((((((((((   code نمونه کد     ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   code نمونه کد     ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   code نمونه کد     ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   code نمونه کد     ))))))))))))))))))))))))))))))))))))))))))))))
-
-<?php
-if ($a == 5): ?>
-A is equal to 5
-<?php endif; ?>
-
-
-
-<?php
-if ($a == 5):
-    echo "a equals 5";
-echo "...";
-elseif ($a == 6):
-    echo "a equals 6";
-echo "!!!";
-else:
-    echo "a is neither 5 nor 6";
-endif;
-?>
-
-
-session_start();
-
-define("BASE_PATH",__DIR__);
-define("BAS_URL","http://0.0.0.0:2222/");
-define("DOMAIN",currentDomain(),"9_blog_mvc_177");
-
-define("ERROR",true);
-
-define("HOST",'localhost');
-define("DB_NAME",'9_blog_mvc_177');
-define("USERNAME",'amir');
-define("PASSWORD",'password');
-
-
-require_once 'database/database.php';
-$db = new database\Database();
-
-
-
-namespace database;
-
-use PDO;             // در بیس پی اچ پی وجود دارد
-use PDOException;    // در بیس پی اچ پی وجود دارد
-
-// برای رفع خطای        PDO
-// برای رفع خطای   PDOException
-
-class Database
-{
-    private $dbHost = HOST;
-    private $dbName = DB_NAME;
-    private $dbUsername = USERNAME;
-    private $dbPassword = PASSWORD;
-    private $conn;
-
-    public function __construct()
-{
-        try {
-            $this->conn = new PDO("mysql:host=$this->dbHost;dbname=$this->dbName", $this->dbUsername, $this->dbPassword);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "hi ";
-        } catch (PDOException $e) {
-            echo 'خطای اتصال: ' . $e->getMessage();
-}
-    return $this->conn;
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public function Select($query, $value = null)
-{
-        try {
-            $result = $this->conn->setAttribute($query);
-            if ($value == null) {
-            $result->execute();
-            } else {
-                $result->execute($value);
-    }
-        } catch (PDOException $e) {
-            echo 'خطای اتصال: ' . $e->getMessage();
-            return false;
-}
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    function Insert($table, $fields, $data)
-{
-        try {
-            $stmt = $this->conn->prepare("INSERT INTO" . $table . "(" . implode(', ', $fields) . " ,created_at) VALUES ( :" . implode(', :', $fields) . " , now() );");
-            $stmt->execute(array_combine($fields, $data));
-            return true;
-        } catch (PDOException $e) {
-            echo 'خطای اتصال: ' . $e->getMessage();
-            return false;
-}
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // $sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
-    public function Update($table,$id, $fields, $datas)
-{
-        $sql="UPDATE ".$table ."SET";
-        foreach(array_combine($fields,$datas)as $field => $data){
-        if($data){
-        $sql.="`".$field . " ` = ? ,";
-        }else{
-        $sql.="`".$field . " ` = NULL ,";
-}
-}
-
-        $sql .= " WHERE id = ?";
-        try{
-        $stmt=$this->conn->prepare($sql);
-        $stmt->execute(array_merge(array_filter(array_values($datas)), [$id]));
-        return true;
-
-        }catch (PDOException $e) {
-            echo 'خطای اتصال: ' . $e->getMessage();
-            return false;
-}
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public function Delete($table,$id)
-{
-        $sql = "DELETE FROM ". $table . "WHERE id=? ;";
-        try{
-            $stmt=$this->conn->prepare($sql);
-            $stmt->execute([$id]);
-            return true;
-
-        }catch (PDOException $e) {
-            echo 'خطای اتصال: ' . $e->getMessage();
-            return false;
-}
-}
-}
-
-
-$results = $pdo->prepare("INSERT INTO menus (title,parent,sort) VALUES ( ? , ? , ? )");
-$results = $pdo->prepare("SELECT menus      name=?      and    pass=?      and    sort=?  ");
-$results = $pdo->prepare("SELECT menus      name=:name  and   pass=:pass    and  sort=:sort  ");
-$results->bindValue(1,$title);
-$results->bindValue(2,$parent);
-$results->bindValue(3,$sort);
-$results->execute();
-$result=$smt->fetchAll();
-if(password_verify($password,$result[0]['password'])){  // [0] چون قرار بوده با دیتای اول در دیتابیس مقایسه بشه
-header('location:index.php');
-}else{
-$error=true;
-}}
-
-$msg_success = "";
-
-<?php if($msg_success){ ?>
-    <script> window.alert("ویرایش انجام شد");</script>
-<?php } ?>
-
-
-<script>
-    window.alert("<?= $errorSuccess ?>");
-</script>
-
-
-<?php if($error){ ?>
-    <script>
-        toastr.error("کاربری با چنین مشخصاتی یافت نشد     ");
-    </script>
-<?php } ?>
-
-
-<?php foreach ($menus as $menu){ ?>
-<tr>
-    <td><?= $counter++?></td>
-    <td><?= $menu['title'] ?></td>
-    <td><?php if($user['role'] == 1){ echo "کاربر عادی";}elseif ($user['role'] == 2){ echo "مدرس";}elseif ($user['role'] == 3){ echo "مدیر یا ادمین";}?></td>
-    <td>
-        <a href="deletemenu.php?id=<?= $menu['id'] ?>"  style="text-decoration: none" class="btn btn-danger btn-sm text-white">delete</a>
-        <a href="editmenu.php?id=<?= $menu['id'] ?>" style="text-decoration: none" class="btn btn-warning btn-sm text-dark">edit</a>
-    </td>
-</tr>
-<?php } ?>
-
-
-<select name="parent" class="form-select mt-2" id="category">
-    <?php foreach ($menus as $menu){ ?>
-    <option value="<?= $menu['id'] ?>"><?= $menu['id'] ?></option>
-    <?php } ?>
-</select>
-
-
-<?php
-if ($data['article']->user_id == $_SESSION['user_id']) { ?>
-<div class="d-flex justify-content-between">
-
-    <a href="" class="btn btn-dark">ویرایش</a>
-
-    <form action="<?php echo URLROOT;?>/article/delete<?php echo $data['article']->id ?>" method="POST">
-        <button class="btn btn-light" type="submit">حذف</button>
-    </form>
-</div>
-<?php } ?>
