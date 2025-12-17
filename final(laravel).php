@@ -225,7 +225,7 @@ where('id',1)->forceDelete();           // پاک کردن همیشگی
 all();                                  // global scope  (کل دیت ها رو نمایش میده )
 whitoutGlobalScope('price')->where('id','>',22)->get();    // scope لغو
 
- 
+
 $model->delete()              //   حذف نرم
 $model->restore()             //   بازیابی 
 $model->forceDelete()         //   حذف کامل
@@ -640,6 +640,14 @@ public function __construct(private UserService $userService)
 SoftDeletes  :  اطلاعات برای کاربر حذف شده ولی در دیتابیس هنوز وجود دارد
 
 return abort('404');   // ایجاد ارور ۴۰۴
+
+url()->previous()   //   blade     //  به صفحه ای که هستیم به صفحه قبلی در صورتی که وجود داشته باشد میبرد و اگر نداشت به صفحه اصلی میره
+
+return  back()     //  controller   //  بعد انجام کاری به همان صفحه برمیگردیم
+
+findOrFail      // برای edit , delete باید اعمال کنی
+
+
 
 */
 $users = User::whereHas('posts', function($q){
