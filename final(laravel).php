@@ -140,8 +140,17 @@ Route::group(["prefix"=>"course"],function () {
 @endcomponent
 
 
-//  روش 3  ( Slot پیشرفته Named Slot)
+//  روش 3  (Anonymous Component — ساده‌ترین نوع)  ( دارد view فقط فایل )
 php artisan make:component name_component -- view  // وجود view باعث میشه فایل php component دیگر ایجاد نشه چون نیازی به ان نیست
+
+         
+//  روش 4  (Class-based Component — حرفه‌ای‌تر)    ( هم دارد php فایل view علاوه بر )
+php artisan make:component name_component
+
+
+
+
+// مثال
 
 resources/components/name_component.blade.php  در مسیر  name_component  ایجاد فایل  (blade)
 app/view/components/name_component.php         در مسیر  name_component  ایجاد فایل   (php) // فایلی که با ان کاری نداریم
@@ -156,14 +165,17 @@ app/view/components/name_component.php         در مسیر  name_component  ا
     </div>
 </div>
 
-// ایجاد شده در صفحات blade باید از روش پایین استفاده کرد component  حالا برای استفاده از
 
+// ((((((  صفحه دلخواه  ))))))
+// ایجاد شده در صفحات blade باید از روش پایین استفاده کرد component  حالا برای استفاده از
 <x-name>
     <x-slot name="header">
          عنوان کارت      //  $content که در بالا استفاده شده اینجا استفاده کردیم
     </x-slot>
     محتوای کارت          //   $slot   که در بالا استفاده شده اینجا استفاده کردیم
 </x-card>
+
+
 
 //////////////////////////((((((((--------- mix laravel---------)))))))))//////////////////////////
 //////////////////////////((((((((--------- mix laravel---------)))))))))//////////////////////////
@@ -649,6 +661,7 @@ findOrFail      // برای edit , delete  ولی در صورتی که در ور
 */
 
 
+//  whereHas  مثال از تابع  
 $users = User::whereHas('posts', function($q){
     $q->where('created_at', '>=', '2015-01-01 00:00:00');
 })->get();
@@ -660,9 +673,27 @@ $orders = Order::query()->whereHas('order_details',function ($q){
 
 
 
+// این Query Builder برمی‌گرداند و هیچ رکوردی هنوز بازیابی نشده یعنی باید در ادامه یکی از موارد زیر را بزنی
+// model::query->...->...->...->...->get()
+// model::query->...->...->...->...->first()
+// model::query->...->...->...->...->paginate()
+// model::query->...->...->...->...->limit()
+
+
+// برای نمایش قیمت که سه تا سه تا با کاما جدا شده از number_format استفاده کن
+
+
+// وقتی کویری زدی در مقدار value اصلا $key قرار نده بلکه باید $car->id قرار بدی چون ممکنه
+// مقادیری که کرفتی به ترتیب در دیتابیس ثبت نشده باشند
+
+
+// Route::get("list/{car?}/{owner?}",[CarsController::class,'index'])->name(index);  دو مقدار فرستاده که نامشان دلخواه است
+// public function edit(Owner $owner) {} حتما باید نام متغییر  در ورودی تابع با نام ورودی در route برابر باشد
 
 
 
+// تابع latest() در لاراول آخرین رکوردها را بر اساس یک ستون زمانی مرتب می‌کند و به‌صورت پیش‌فرض رکوردها را از جدیدترین به قدیمی‌ترین برمی‌گرداند
+// مرتب سازی نزولی  lastest != oldest مرتب سازی صعودی
 
 
 // protected $table                                                                 نام جدول دیتابیس‌ای را مشخص می‌کند که این مدل به آن متصل است
