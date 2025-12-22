@@ -1,0 +1,1307 @@
+# \n	New Line
+# \t	Tab
+
+# پاییتون به جای ارایه ، لیست دارد 
+
+#  comment
+
+#  return f"{self.name} is {self.age} years old"
+# متغیرها را مستقیم داخل رشته نوشت
+# عبارت‌های محاسباتی را داخل رشته قرار داد
+# خروجی را خواناتر و کوتاه‌تر کرد
+
+
+x = "Hello World"     # str
+x = 20          	  # int
+x = 20.5        	  # float
+x = True/False        # bool
+x = range(6)
+
+
+# Specify a Variable Type
+y = int(2.8)       # y will be 2
+z = float("3")     # z will be 3.0
+y = str(2)         # y will be '2'
+
+
+x = ["apple", "banana", "cherry"]	  # list         #      تغییر     /        تکراری
+x = {"apple", "banana", "cherry"}	  # set          #    تغییر     /      غیر تکراری
+x = ("apple", "banana", "cherry")	  # tuple        #     غیر تغییر   /          تکراری
+x = {"name" : "John", "age" : 36}	  # dict         # تغییر    / غیر تکراری در کلید
+
+
+print("Hello, World!")
+print(x)
+print(x + y)
+
+
+
+type(x)
+type("x")
+print(len(a))
+
+
+
+def myfunc():
+  print("Python is " + x)
+
+
+
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+
+
+# -------------------------------------------------------------------
+#  (((((( string  ))))))
+a = "Hello world"
+b = "amir"
+c = a + b        # Hello world amir
+
+price = 59
+txt = f"The price is {price} dollars"
+
+
+print(a[2])        # l
+print(a[2:10])     # llo worl
+print(a[2:10,2])   # l o w r
+print(a[-10:-4,2]) # l o w r
+
+
+
+print(a.attribute())  # defult
+
+a.capitalize() # Converts the first character to upper case
+a.upper()
+a.lower()
+a.count()	   # Returns the number of times a specified value occurs in a string
+a.find("str")
+a.replace("old", "new")
+a.split()     # رشته بر اساس یک جداکننده مشخص به یک لیست تبدیل میکند
+a.strip()     # حذف غضاهای خالی یا کاراکتر های مشخص شده از ابتدا و انتهای یک رشته
+a.isdigit()   #  returns True if all the characters are digits
+a.isupper()   #  Returns True if all characters in the string are upper case
+
+
+
+# -------------------------------------------------------------------
+#  (((((( list  ))))))
+L = ["apple", "banana", "cherry"]
+l2  = [1,2,3,4]
+L3 = [True, False, False]
+
+list4 = L + l2  # append two list
+
+print(L)
+print(L[-1])
+print(L[2:5])
+print(L[:4])
+
+L[1] = "orange"
+L[3:6] = ["orange","water","apple"]
+
+
+L.remove("item")
+L.insert("item")
+L.insert(n,"item")
+
+
+L.pop()
+L.pop(1)
+L.append("item")
+
+
+L.clear()
+L.sort()
+L.sort(reverse = True)
+L.reverse()
+x = L.copy()
+x = L.index("item")
+
+
+
+mylist = L.copy()
+mylist = list(L)   # Make a copy of a list with the list() method
+print(mylist)
+
+
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
+
+
+b = ["Ford", "BMW", "Volvo"]
+a.append(b)
+
+
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.count("cherry")
+x = fruits.index("cherry")
+fruits.insert(1, "orange")
+
+
+
+
+
+# Add Items
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+
+
+# Remove Items
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+
+
+
+
+
+# loop list
+thislist = ["apple", "banana", "cherry"]
+
+for x in thislist:
+  print(x)
+
+for i in range(len(thislist)):
+  print(thislist[i])
+
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+newlist = []
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+# -------------------------------------------------------------------
+#  ((((((  Tuple  ))))))
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+tuple3 = tuple1 + tuple2
+
+print(len(thistuple))
+
+print(thistuple[2:5])  # Access Tuple Items
+print(thistuple[:4])
+print(thistuple[-4:-1])
+
+
+thistuple.count(5)
+thistuple.index(8)
+
+
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+
+
+for i in range(len(thistuple)):
+  print(thistuple[i])
+
+
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+
+
+
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+
+
+
+
+newlist = [x for x in range(10)]
+newlist = ['hello' for x in fruits]
+newlist = [x.upper() for x in fruits]
+
+
+
+
+# -------------------------------------------------------------------
+#  ((((((  set   ))))))
+s = {"apple", "banana", "cherry"}
+s = {1, 5, 7, 9, 3}
+set3 = {True, False, False}
+s = {"apple", "banana", "cherry"}
+print(s)
+print(len(s))
+
+print(set(("apple", "banana", "cherry")))  # b change set
+
+s = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+s.update(mylist)
+
+
+
+
+s.add("orange")
+s.update(mylist)
+
+s.remove("banana")
+s.discard("banana")
+
+s.pop(1)
+s.clear()
+
+
+s.add("orange")
+s.clear()
+x = s.copy()
+s.pop()
+s.remove("banana")
+
+
+for x in s:
+  print(x)
+
+
+
+
+
+
+#  (((((( dictonary  ))))))
+
+d = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+print(d)
+print(d["brand"])
+
+d.clear()
+d.keys()
+d.values()
+d.items()
+d.update({"year": 2020})
+d.pop("brand")
+d.popitem()
+
+d.get("brand")
+
+
+
+
+
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+
+for x in thisdict:
+  print(x)
+
+
+for x in thisdict:
+  print(thisdict[x])
+
+
+for x in thisdict.keys():
+  print(x)
+
+
+
+
+
+
+
+#  (((((( Boolean   ))))))
+print(10 > 9)
+
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+
+
+
+
+
+
+#  convert tuple into -->> list - set - dict
+list((1,2,'asd','fgw','eol'))
+set((1,2,'asd','fgw','eol'))
+dict((1,2,'asd','fgw','eol'))
+
+
+
+
+
+
+"""   ((((((( Operator )))))))
++
+-
+*
+/
+%
+**
+//
+
+
+=
++=
+-=
+*=
+/=
+%=
+**=
+&=
+|=
+>>=
+<<=
+
+
+
+==
+!=
+<
+>
+<=
+>=
+
+
+and
+or
+not
+
+
+is
+is not
+
+
+in
+not in
+
+
+
+&
+|
+
+
+"""
+
+
+
+
+
+
+
+
+
+
+#   LOOP   $   CONDITION
+if 5 > 2:
+  print("Five is greater than two!")
+
+
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+
+
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+
+
+if myfunc():
+  print("YES!")
+else:
+  print("NO!")
+
+
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+
+
+
+switch (variable)
+{
+    case value1:
+        // Statements that run if variable == value1
+        break;
+    case value2:
+        // Statements that run if variable == value2
+        break;
+    case value3:
+        // Statements that run if variable == value3
+        break;
+    default:
+        // Statements that run if no case matched
+}
+
+
+match variable:
+  case value1:
+    code block
+  case value2:
+    code block
+  case value3:
+    code block
+
+
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+
+
+
+
+
+# ((((((  class  ,  function  )))))
+
+def my_function():
+  print("Hello from a function")
+
+my_function()
+
+
+class myclass():
+  def __len__(self):
+    return 0
+
+
+myobj = myclass()
+print(bool(myobj))
+
+
+
+
+def my_function(x):
+  return 5 * x
+
+my_function(3) # 15
+
+
+
+
+def my_function(x):
+  print(x)
+
+my_function(3) # 3
+
+
+
+
+def my_function(animal, name):
+  print("I have a", animal)
+  print("My", animal + "'s name is", name)
+
+my_function("dog", "Buddy")
+
+
+
+x = lambda a : a + 10
+print(x(5))           # 15
+
+
+
+
+#    توابع بدون کلاس در حداقل حالت ورودی بدون ورودی باشد ######################
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+
+
+
+
+# توابع همراه کلاس در حداقل حالت ورودی .  self دارد ######################
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)  # John
+print(p1.age)   # 36
+
+p1.age = 40
+print(p1.age)   # 40
+
+
+
+
+class Car:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Drive!")
+
+
+
+
+class Boat:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Sail!")
+
+
+
+
+class Plane:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Fly!")
+
+
+car = Car("Ford", "Mustang")       #Create a Car   object
+boat = Boat("Ibiza", "Touring 20") #Create a Boat  object
+plane = Plane("Boeing", "747")     #Create a Plane object
+
+for x in (car1, boat1, plane1):
+  x.move()
+
+
+
+
+# Local Scope
+
+def myfunc():
+  x = 300
+  print(x)
+
+myfunc()
+
+
+
+# Global Scope
+def myfunc():
+  global x
+  x = 300
+
+myfunc()
+
+print(x)
+
+
+
+
+
+
+range(3, 10)     # 3   4   ..  10
+range(3, 10, 2)  # 3   5   7   9
+range(0, 10, 2)  # 
+
+
+
+
+
+# ((((( map )))))
+
+
+
+
+
+# ((((( filter )))))
+
+
+
+
+
+
+
+
+
+mystr = "banana"
+myit = iter(mystr)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+
+
+# ایجاد ماژول
+import mymodule
+import mymodule as mx
+from mymodule import person1
+
+
+
+import datetime # ماژول datetime در پایتون برای کار با تاریخ، زمان، اختلاف زمان، و قالب‌بندی تاریخ استفاده می‌شود.
+from datetime import datetime
+now = datetime.now()
+
+
+
+
+min()
+max()
+abs()
+pow()
+
+
+
+import math
+
+x = math.sqrt(64)
+
+
+
+
+x = math.ceil(1.4)
+y = math.floor(1.4)
+print(x) # returns 2
+print(y) # returns 1
+
+
+
+
+# ---------------------------------------------------
+# ---------------------------------------------------
+# ---------------------------------------------------
+
+# (((((((((---------- OOP ----------)))))))))
+
+
+
+
+class Person:
+  def __init__(self, name, age, city, country):
+    self.name = name
+    self.age = age
+    self.city = city
+    self.country = country
+
+p1 = Person("Linus", 30, "Oslo", "Norway")
+
+print(p1.name)
+print(p1.age)
+print(p1.city)
+print(p1.country)
+
+
+
+
+
+class Person:
+  def __init__(self, name):
+    self.name = name
+
+  def greet(self):
+    return "Hello, " + self.name
+
+  def welcome(self):
+    message = self.greet()
+    print(message + "! Welcome to our website.")
+
+p1 = Person("Tobias")
+p1.welcome()
+
+
+# برای ایجاد کلاسی که عملکرد را از کلاس دیگری به ارث می‌برد، هنگام ایجاد کلاس فرزند، کلاس والد را به عنوان پارامتر ارسال کنید.
+# وقتی نمی‌خواهید هیچ ویژگی یا متد دیگری به کلاس اضافه کنید، از کلمه کلیدی pass استفاده کنید.
+
+class ChildClass(ParentClass):
+    pass   ساختار کلی
+
+
+
+# Example
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print(f"Hello, my name is {self.name}")
+
+
+class Student(Person):   # ارث‌بری از Person
+    def study(self):
+        print("Student is studying")
+
+
+# با استفاده از تابع super()، لازم نیست از نام عنصر والد استفاده کنید، عنصر به طور خودکار متدها و ویژگی‌ها را از والد خود به ارث می‌برد.
+
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year                                                                    //  Add Properties
+
+    def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)      //  Add Methods
+
+
+
+class Vehicle:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Move!")
+
+
+class Car(Vehicle):
+  pass
+
+class Boat(Vehicle):
+  def move(self):
+    print("Sail!")
+
+
+class Plane(Vehicle):
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang")       #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+plane1 = Plane("Boeing", "747")     #Create a Plane object
+
+for x in (car1, boat1, plane1):
+  print(x.brand)
+  print(x.model)
+  x.move()
+
+
+
+
+
+ژول (Module) یک فایل پایتون است که شامل کدهای آماده مثل توابع، کلاس‌ها، و متغیرها می‌شود و می‌توان آن را در برنامه‌ی دیگر وارد (import) کرد تا از آن استفاده شود.
+
+import math             //  وارد کردن کل ماژول
+from math import sqrt   //  وارد کردن تنها یک تابع یا کلاس
+import numpy as np      //  تغییر نام ماژول هنگام import
+
+
+
+
+
+
+# ---------------------------------------------------
+# ---------------------------------------------------
+# ---------------------------------------------------
+
+
+class Node:
+    def __init__(self, data = None):
+        self.data = data
+        self.next = None
+
+
+    def __init__(self, data = None):
+            self.data = data
+            self.next = None
+
+
+    def __init__(self, data = None):
+            self.data = data
+            self.next = None
+
+
+    def __init__(self, data = None):
+            self.data = data
+            self.next = None
+            self.prev = None
+
+
+
+
+
+
+
+
+
+
+
+
+class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
+    def __init__(self):
+        self.top = None
+        self.size = 0
+
+
+    def __init__(self):
+            self.head = None
+            self.tail = None
+            self.size = 0
+
+
+    def __init__(self):
+            self.tail = None
+            self.size = 0
+
+
+    def __init__(self):
+            self.head = None
+            self.tail = None
+            self.size = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    def push(self, data):
+            new_node = Node(data)
+            if self.top == None:
+                self.top = new_node
+            else:
+                new_node.next = self.top
+                self.top = new_node
+            self.size += 1
+
+
+    def enqueue(self, data):
+            new_node = Node(data)
+            if self.head == None:
+                self.head = new_node
+                self.tail = new_node
+            else:
+                self.tail.next = new_node
+                self.tail = new_node
+            self.size += 1
+
+
+    def append(self, data):
+            new_node = Node(data)
+            if self.tail == None:
+                self.tail = new_node
+            else:
+                self.tail.next = new_node
+                self.tail = new_node
+            self.size += 1
+
+
+    def append(self, data):
+            new_node = Node(data)
+            if self.tail == None:
+                self.tail = new_node
+                self.head = new_node
+            else:
+                new_node.prev = self.head
+                self.head.next = new_node
+                self.head = new_node
+            self.size += 1
+
+
+
+
+
+
+
+
+
+
+
+
+    def pop(self):
+        if self.top:
+            data = self.top.data
+            if self.top.next:
+                self.top = self.top.next
+            else:
+                self.top = None
+            self.size -= 1
+            return data
+        else:
+            return None
+
+
+    def dequeue(self):
+            if self.head:
+                data = self.head.data
+                if self.head.next:
+                    self.head = self.head.next
+                else:
+                    self.head = None
+                self.size -= 1
+                return data
+            else:
+                return None
+
+
+    def delete(self):
+            data = self.tail.data
+            if self.tail.data == data:
+                self.tail = self.tail.next
+            else:
+                current = self.tail
+                prev = self.tail
+                while current:
+                    if current.data == data:
+                        prev.next = current.next
+                    prev = current
+                    current = current.next
+
+
+    def DoublyLinkedList --------------:
+
+
+
+
+
+
+
+
+
+
+
+
+    def printStack(self):
+            current = self.top
+            for _ in range(self.size): ######
+                print(current.data)
+                current = current.next
+
+
+
+    def printQueue(self):
+            current = self.head
+            while current:
+                print(current.data)
+                current = current.next
+
+
+    def printList(self):
+            current = self.head
+            while current:
+                print(current.data)
+                current = current.next
+
+
+    def printList(self):
+            current = self.head
+            while current:
+                print(current.data)
+                current = current.next
+
+
+
+
+
+
+
+obj = Stack()
+
+obj.push(1)
+obj.pop()
+obj.printStack()
+
+
+
+
+
+obj = Queue()
+
+obj.enqueue(1)
+obj.dequeue()
+
+
+
+
+obj = SinglyLinkedList()
+
+obj.append(1)
+obj.printList()
+
+
+
+
+
+obj = DoublyLinkedList()
+
+obj.append(1)
+
+
+
+
+
+# (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
+# (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
+# (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
+
+
+# درخت یک ساختار داده غیرخطی و سلسله‌مراتبی است که از مجموعه‌ای از گره‌ها شکیل شده است
+
+
+#  هر درخت فقط یک ریشه دارد
+#  هر گره (به جز ریشه) دقیقاً یک پدر دارد
+#  ممکن است صفر یا چند فرزند داشته باشد
+
+
+# ((((---- اصطلاحات مهم در درخت ----))))
+
+#  اصطلاح	توضیح
+#  Node (گره)	         هر عنصر درخت
+#  Root (ریشه)	      گره اصلی درخت
+#  Parent (پدر)       	گره بالادستی
+#  Child (فرزند)	    گره پایین‌دستی
+#  Leaf (برگ)	       گره بدون فرزند
+#  Degree	     تعداد فرزندان یک گره
+#  Level	           سطح گره از ریشه
+#  Height	          بیشترین عمق درخت
+#  Subtree                  	زیر‌درخت
+
+
+
+
+# ((((---- انواع درخت‌ ها ----))))
+
+#  1 - درخت عمومی (General Tree)
+# هر گره می‌تواند هر تعداد فرزند داشته باشد.
+
+
+#  2 - درخت دودویی (Binary Tree)
+#  هر گره حداکثر دو فرزند دارد  ، فرزند چپ و راست
+
+
+#  3 -   انواع درخت دودویی
+#  درخت دودویی کامل       (الف  (Full Binary Tree)     :‌                                هر گره یا ۰ یا ۲ فرزند دارد 
+#    درخت دودویی کامل سطحی  (ب  (Complete Binary Tree) :‌                   تمام سطوح پر هستند به جز شاید آخرین سطح
+#    درخت دودویی کامل سطحی  (ج  (Perfect Binary Tree)  :‌  همه گره‌ها دقیقاً دو فرزند دارند و همه برگ‌ها در یک سطح‌اند
+#    درخت دودویی نامتوازن   (د  (Skewed Tree)          :‌                               همه گره‌ها فقط یک فرزند دارند
+
+
+
+#  4 - درخت جستجوی دودویی (BST)
+# مقادیر سمت چپ < ریشه
+# مقادیر سمت راست > ریشه
+# پیچیدگی زمانی (در حالت متعادل) : O(log n)
+# عملیات مهم BST -->> Insert  Delete  Search
+
+
+
+
+#  5 -  پیمایش درخت (Tree Traversal)
+
+#  ((((((((-------5.1 پیمایش عمقی (DFS)------))))))))
+# 1. پیش‌گرد (Preorder)
+# Root → Left → Right
+
+# 2. میان‌گرد (Inorder)
+# Left → Root → Right
+
+# 3. پس‌گرد (Postorder)
+# Left → Right → Root
+
+
+
+
+#  ((((((((-------5.2 پیمایش سطحی (BFS / Level Order)------))))))))
+# پیمایش سطح به سطح با استفاده از صف (Queue)
+
+
+
+
+
+#  6 - پیاده‌سازی درخت دودویی
+
+
+
+
+
+
+#  7 -  درخت‌های متعادل (Balanced Trees)
+
+#  ((((((((-------7.1 درخت AVL------))))))))
+# اختلاف ارتفاع زیر‌درخت‌ها ≤ 1
+# استفاده از چرخش‌ها (Rotation)
+
+
+
+#  ((((((((-------7.2 درخت Red-Black------))))))))
+# متعادل‌سازی با رنگ‌ها
+# استفاده گسترده در کتابخانه‌ها
+
+
+
+
+#  8 -  هیپ (Heap)
+# درخت دودویی کامل با ویژگی:
+# Max Heap: پدر ≥ فرزندان
+# Min Heap: پدر ≤ فرزندان
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
+# (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
+# (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
+
+
+# . تمرین‌های مهم امتحانی (با پاسخ تشریحی)
+# تمرین 1: تشخیص اصطلاحات
+
+# درختی با 15 گره و ارتفاع 3 داریم.
+# الف) حداکثر تعداد برگ‌ها؟ ب) حداقل تعداد برگ‌ها؟
+# پاسخ: الف) حداکثر برگ‌ها در درخت دودویی کامل سطحی = 2^3 = 8 ب) حداقل برگ‌ها = 1 (درخت کاملاً مایل)
+
+
+
+
+
+# تمرین 2: پیمایش درخت
+# درخت زیر را در نظر بگیرید:
+
+  #       A
+  #     /   \
+  #    B     C
+  #   / \     \
+  #  D   E     F
+
+# الف) Preorder ب) Inorder ج) Postorder د) Level Order
+# پاسخ:
+# Preorder: A B D E C F
+# Inorder: D B E A C F
+# Postorder: D E B F C A
+# Level Order: A B C D E F
+
+
+
+
+# تمرین 3: خاصیت BST
+# درخت زیر یک BST است؟ چرا؟
+
+#         40
+#        /  \
+#      20    60
+#        \
+#         50
+
+# پاسخ: ❌ خیر چون 50 در زیر‌درخت چپ 40 قرار گرفته ولی از 40 بزرگ‌تر است.
+# تمرین 4: خروجی inorder
+# اگر inorder یک BST به صورت زیر باشد:
+# 5 10 15 20 25
+# چه نتیجه‌ای می‌گیریم؟
+# پاسخ: این دنباله حتماً به صورت صعودی مرتب است، پس درخت یک BST معتبر است.
+
+
+
+
+#   تمرین 5: محاسبه ارتفاع
+# حداقل و حداکثر ارتفاع یک درخت دودویی با 31 گره را بیابید.
+# پاسخ:
+# حداقل ارتفاع (درخت کامل): log2(31) = 4
+# حداکثر ارتفاع (مایل): 30
+
+
+
+
+#  تمرین 6: درج در BST
+# اعداد زیر را به ترتیب در یک BST درج کنید:
+# 50 , 30 , 70 , 20 , 40 , 60 , 80
+# پاسخ: درخت نهایی:
+
+#         50
+#        /  \
+#      30    70
+#     / \   / \
+#   20  40 60  80
+
+
+
+
+# تمرین 7: سوال تستی (کنکوری)
+# کدام پیمایش در BST خروجی مرتب می‌دهد؟
+
+#  A) Preorder
+#  B) Postorder
+#  C) Inorder
+#  D) Level Order
+
+# پاسخ صحیح: ✅ C
+# تمرین 8: AVL
+# اگر اختلاف ارتفاع زیر‌درخت‌های یک گره برابر 2 شود چه اتفاقی می‌افتد؟
+# پاسخ: درخت نامتعادل می‌شود و باید با چرخش (Rotation) متعادل شود.
+
+
+
+
+#  تمرین 9: Heap
+# کدام گزینه درباره Max Heap صحیح است؟
+
+#  A) فرزند از پدر بزرگ‌تر است
+#  B) درخت نامتوازن است
+#  C) بزرگ‌ترین عنصر در ریشه است
+#  D) inorder مرتب است
+
+#    پاسخ صحیح: ✅ C
+#  تمرین 10: سوال تشریحی مهم
+# تفاوت Binary Tree و BST را توضیح دهید.
+#  پاسخ کوتاه امتحانی:
+#  Binary Tree: فقط حداکثر دو فرزند دارد
+#  BST: علاوه بر آن، خاصیت ترتیب چپ < ریشه < راست را دارد
+
+
+
+
+
+# 13. جمع‌بندی شب امتحان ⭐
+#  inorder در BST همیشه مرتب است
+#  Heap حتماً کامل است
+#  AVL اختلاف ارتفاع ≤ 1
+#  BFS با Queue انجام می‌شود
+#  DFS شامل preorder, inorder, postorder است
+
+
+
+
+
+
+
+# اگر وقتت کمه:
+# تمرین‌های ۲، ۶، ۷، ۱۰ ← خیلی پرتکرار
+# حفظ کردن تفاوت‌ها (BST / Binary Tree / Heap / AVL)
