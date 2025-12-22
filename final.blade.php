@@ -95,5 +95,8 @@ by amir {{ $var }} sale .
 // (((((((((((((((((((((((((((((((((((((((   code نمونه کد     ))))))))))))))))))))))))))))))))))))))))))))))
 // (((((((((((((((((((((((((((((((((((((((   code نمونه کد     ))))))))))))))))))))))))))))))))))))))))))))))
 
-
+ <input   type="text"                    value="{{old('last_name')}}">
+ <input   type="checkbox"                value="1"   {{ old('is_special', $model->is_special ?? false) ? 'checked' : '' }}>
+ <option   selected="selected" value="{{$key}}"         {{$key == old('category_id') ? 'selected' : ''}}>{{$category}}</option>
+ <td class="text-center align-middle">       {{$owner->last_name ? 'موجود نیست' : 'asd' }}</td>
 
