@@ -708,4 +708,19 @@ $orders = Order::query()->whereHas('order_details',function ($q){
 // TIMESTAMP    تاریخ+زمان و نیاز به ذخیره UTC و auto-update      1767083400
 
 
+(( create ))
+ <input   type="text"       name="last_name"          value="{{old('last_name')}}">
+
+(( create )) 
+<input   type="checkbox"   name="is_special"         value="1"   {{ old('is_special', $model->is_special ?? false) ? 'checked' : '' }}>
+
+(( edit ))
+<option selected="selected" value="{{$key}}"         {{$key == old('category_id') ? 'selected' : ''}}>{{$category}}</option>
+
+(( edit ))
+<td class="text-center align-middle">                {{$owner->last_name ? 'موجود نیست' : 'asd' }}</td>
+
+
+
+
 
