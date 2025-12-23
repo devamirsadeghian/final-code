@@ -1,10 +1,11 @@
-/* base */
+/*  راهنمایی  */
+*  sm - md - lg - xl - 2xl
 
 
 
 
-/* Variant	CSS */
 
+/*  ابزار  */
 hover	            @media (hover: hover) { &:hover }
 focus         	   &:focus
 focus-within	     &:focus-within
@@ -61,11 +62,13 @@ backdrop         	&::backdrop
 placeholder	      &::placeholder
 
 
+
 sm	      @media (width >= 40rem)
 md	      @media (width >= 48rem)
 lg	      @media (width >= 64rem)
 xl      	@media (width >= 80rem)
 2xl	      @media (width >= 96rem)
+
 
 
 min-[...]    @media (width >= ...)
@@ -75,6 +78,7 @@ max-lg       @media (width < 64rem)
 max-xl	     @media (width < 80rem)
 max-2xl       @media (width < 96rem)
 max-[...]    @media (width < ...)
+
 
 
 @3xs	       @container (width >= 16rem)
@@ -93,6 +97,7 @@ max-[...]    @media (width < ...)
 @min-[...]	 @container (width >= ...)
 
 
+
 @max-3xs	    @container (width < 16rem)
 @max-2xs	    @container (width < 18rem)
 @max-xs   	  @container (width < 20rem)
@@ -107,6 +112,7 @@ max-[...]    @media (width < ...)
 @max-6xl  	  @container (width < 72rem)
 @max-7xl      @container (width < 80rem)
 @max-[...]	  @container (width < ...)
+
 
 
 dark	             @media (prefers-color-scheme: dark)
@@ -127,8 +133,10 @@ landscape	         @media (orientation: landscape)
 noscript	         @media (scripting: none)
 
 
+
 print              @media print 
 supports-[…]	     @supports (…)
+
 
 
 aria-busy            	&[aria-busy="true"]
@@ -151,13 +159,156 @@ starting              @starting-style
 
 
 
+max-sm	  @media (width < 40rem) { ... }
+max-md	  @media (width < 48rem) { ... }
+max-lg	  @media (width < 64rem) { ... }
+max-xl	  @media (width < 80rem) { ... }
+max-2xl	  @media (width < 96rem) { ... }
+
+
+
+
+max-[600px]:bg-sky-300
+min-[600px]:bg-sky-300
+
+
+@container
+@container/main                         
+
+                                  
+@md:flex-row
+@max-md:flex-col
+@sm:@max-md:flex-col
+                                  
+@sm/main:flex-col
+
+
+
+
+/* Using custom container sizes */
+@theme {
+  --breakpoint-* : initial;
+  
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+
+  --container-8xl: 96rem;
+  
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
+
+  
+}
 
 
 
 
 
+/* Container size reference */
+// By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
+
+
+Variant   	Minimum width	        CSS
+@3xs	        16rem (256px)	    @container (width >= 16rem) { … }
+@2xs        	18rem (288px)	    @container (width >= 18rem) { … }
+@xs	          20rem (320px)    	@container (width >= 20rem) { … }
+@sm	          24rem (384px)	    @container (width >= 24rem) { … }
+@md	          28rem (448px)    	@container (width >= 28rem) { … }
+@lg	          32rem (512px)	    @container (width >= 32rem) { … }
+@xl	          36rem (576px)    	@container (width >= 36rem) { … }
+@2xl	        42rem (672px)    	@container (width >= 42rem) { … }
+@3xl	        48rem (768px)    	@container (width >= 48rem) { … }
+@4xl	        56rem (896px)	    @container (width >= 56rem) { … }
+@5xl	        64rem (1024px)	  @container (width >= 64rem) { … }
+@6xl	        72rem (1152px)	  @container (width >= 72rem) { … }
+@7xl	        80rem (1280px)  	@container (width >= 80rem) { … }
+
+
+
+
+                                  
+/* Dark mode */
+dark:bg-gray-800
+dark:text-white
+dark:text-gray-400
+                         
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+                                  
+/* Theme variables namespaces */
+                                  
+Namespace	         Utility classes
+--color-*	         Color utilities like bg-red-500, text-sky-300, and many more
+--font-*    	     Font family utilities like font-sans
+--text-*	         Font size utilities like text-xl
+--font-weight-*	   Font weight utilities like font-bold
+--tracking-*	     Letter spacing utilities like tracking-wide
+--leading-*	       Line height utilities like leading-tight
+--breakpoint-*	   Responsive breakpoint variants like sm:*
+--container-*  	   Container query variants like @sm:* and size utilities like max-w-md
+--spacing-*   	   Spacing and sizing utilities like px-4, max-h-16, and many more
+--radius-*         Border radius utilities like rounded-sm
+--shadow-*	       Box shadow utilities like shadow-md
+--inset-shadow-*	 Inset box shadow utilities like inset-shadow-xs
+--drop-shadow-*  	 Drop shadow filter utilities like drop-shadow-md
+--blur-*	         Blur filter utilities like blur-md
+--perspective-*	   Perspective utilities like perspective-near
+--aspect-*	       Aspect ratio utilities like aspect-video
+--ease-*           Transition timing function utilities like ease-out
+--animate-*        Animation utilities like animate-spin
+
+
+                                  
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --font-poppins: Poppins, sans-serif;
+  
+}
+
+
+bg-mint-500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  
+
+
+
+
+
+                                  
 /*  Bootstrap  */
 // link-primary  مخصوص لینک چون رفتار های مخصوص لینک را پشتیبانی میکند
 // text-primary  نمیکند
 
 
+                                  
