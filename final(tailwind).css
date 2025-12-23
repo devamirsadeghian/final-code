@@ -68,45 +68,45 @@ xl      	@media (width >= 80rem)
 2xl	      @media (width >= 96rem)
 
 
-min-[...]	@media (width >= ...)
-max-sm  	@media (width < 40rem)
-max-md	  @media (width < 48rem)
-max-lg  	@media (width < 64rem)
-max-xl	  @media (width < 80rem)
-max-2xl  	@media (width < 96rem)
-max-[...]	@media (width < ...)
+min-[...]    @media (width >= ...)
+max-sm  	   @media (width < 40rem)
+max-md	     @media (width < 48rem)
+max-lg       @media (width < 64rem)
+max-xl	     @media (width < 80rem)
+max-2xl       @media (width < 96rem)
+max-[...]    @media (width < ...)
 
 
-@3xs	    @container (width >= 16rem)
-@2xs	    @container (width >= 18rem)
-@xs	      @container (width >= 20rem)
-@sm      	@container (width >= 24rem)
-@md      	@container (width >= 28rem)
-@lg	      @container (width >= 32rem)
-@xl	      @container (width >= 36rem)
-@2xl	    @container (width >= 42rem)
-@3xl	    @container (width >= 48rem)
-@4xl    	@container (width >= 56rem)
-@5xl	    @container (width >= 64rem)
-@6xl	    @container (width >= 72rem)
-@7xl	    @container (width >= 80rem)
-@min-[...]	@container (width >= ...)
+@3xs	       @container (width >= 16rem)
+@2xs	       @container (width >= 18rem)
+@xs	         @container (width >= 20rem)
+@sm          @container (width >= 24rem)
+@md          @container (width >= 28rem)
+@lg	         @container (width >= 32rem)
+@xl	         @container (width >= 36rem)
+@2xl	       @container (width >= 42rem)
+@3xl	       @container (width >= 48rem)
+@4xl         @container (width >= 56rem)
+@5xl	       @container (width >= 64rem)
+@6xl	       @container (width >= 72rem)
+@7xl	       @container (width >= 80rem)
+@min-[...]	 @container (width >= ...)
 
 
-@max-3xs	  @container (width < 16rem)
-@max-2xs	  @container (width < 18rem)
-@max-xs   	@container (width < 20rem)
-@max-sm	    @container (width < 24rem)
-@max-md	    @container (width < 28rem)
-@max-lg	    @container (width < 32rem)
-@max-xl   	@container (width < 36rem)
-@max-2xl  	@container (width < 42rem)
-@max-3xl  	@container (width < 48rem)
-@max-4xl  	@container (width < 56rem)
-@max-5xl   	@container (width < 64rem)
-@max-6xl  	@container (width < 72rem)
-@max-7xl   	@container (width < 80rem)
-@max-[...]	@container (width < ...)
+@max-3xs	    @container (width < 16rem)
+@max-2xs	    @container (width < 18rem)
+@max-xs   	  @container (width < 20rem)
+@max-sm	      @container (width < 24rem)
+@max-md	      @container (width < 28rem)
+@max-lg	      @container (width < 32rem)
+@max-xl       @container (width < 36rem)
+@max-2xl      @container (width < 42rem)
+@max-3xl      @container (width < 48rem)
+@max-4xl   	  @container (width < 56rem)
+@max-5xl      @container (width < 64rem)
+@max-6xl  	  @container (width < 72rem)
+@max-7xl      @container (width < 80rem)
+@max-[...]	  @container (width < ...)
 
 
 dark	             @media (prefers-color-scheme: dark)
@@ -125,12 +125,11 @@ any-pointer-none   @media (any-pointer: none)
 portrait	         @media (orientation: portrait)
 landscape	         @media (orientation: landscape)
 noscript	         @media (scripting: none)
-print              @media print
+
+
+print              @media print 
 supports-[…]	     @supports (…)
-//  <input   type="text"       name="last_name"    value="{{old('last_name')}}">
-//  <input   type="checkbox"   name="is_special"   value="1"   {{ old('is_special', $model->is_special ?? false) ? 'checked' : '' }}>
-//  <option selected="selected" value="{{$key}}"         {{$key == old('category_id') ? 'selected' : ''}}>{{$category}}</option>
-//  <td class="text-center align-middle">                {{$owner->last_name ? 'موجود نیست' : 'asd' }}</td>
+
 
 aria-busy            	&[aria-busy="true"]
 aria-checked        	&[aria-checked="true"]
@@ -148,6 +147,16 @@ ltr                  	&:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
 open                 	&:is([open], :popover-open, :open)
 starting              @starting-style
 
+
+
+
+
+
+
+
+
+
+/*  Bootstrap  */
 // link-primary  مخصوص لینک چون رفتار های مخصوص لینک را پشتیبانی میکند
 // text-primary  نمیکند
 
