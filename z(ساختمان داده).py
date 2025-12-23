@@ -35,17 +35,9 @@ print(x)
 print(x + y)
 
 
-
 type(x)
 type("x")
 print(len(a))
-
-
-
-def myfunc():
-  print("Python is " + x)
-
-
 
 
 def myfunc():
@@ -54,9 +46,8 @@ def myfunc():
 
 myfunc()
 
-
-
-# -------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #  (((((( string  ))))))
 a = "Hello world"
 b = "amir"
@@ -71,8 +62,6 @@ print(a[2:10])     # llo worl
 print(a[2:10,2])   # l o w r
 print(a[-10:-4,2]) # l o w r
 
-
-
 print(a.attribute())  # defult
 
 a.capitalize() # Converts the first character to upper case
@@ -86,9 +75,8 @@ a.strip()     # حذف غضاهای خالی یا کاراکتر های مشخص
 a.isdigit()   #  returns True if all the characters are digits
 a.isupper()   #  Returns True if all characters in the string are upper case
 
-
-
-# -------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #  (((((( list  ))))))
 L = ["apple", "banana", "cherry"]
 l2  = [1,2,3,4]
@@ -123,7 +111,6 @@ x = L.copy()
 x = L.index("item")
 
 
-
 mylist = L.copy()
 mylist = list(L)   # Make a copy of a list with the list() method
 print(mylist)
@@ -143,9 +130,6 @@ x = fruits.index("cherry")
 fruits.insert(1, "orange")
 
 
-
-
-
 # Add Items
 thistuple = ("apple", "banana", "cherry")
 y = list(thistuple)
@@ -158,9 +142,6 @@ thistuple = ("apple", "banana", "cherry")
 y = list(thistuple)
 y.remove("apple")
 thistuple = tuple(y)
-
-
-
 
 
 # loop list
@@ -182,7 +163,8 @@ for x in fruits:
   if "a" in x:
     newlist.append(x)
 
-# -------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #  ((((((  Tuple  ))))))
 tuple1 = ("apple", "banana", "cherry")
 tuple2 = (1, 5, 7, 9, 3)
@@ -221,15 +203,12 @@ if "apple" in thistuple:
 
 
 
-
 newlist = [x for x in range(10)]
 newlist = ['hello' for x in fruits]
 newlist = [x.upper() for x in fruits]
 
-
-
-
-# -------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #  ((((((  set   ))))))
 s = {"apple", "banana", "cherry"}
 s = {1, 5, 7, 9, 3}
@@ -243,8 +222,6 @@ print(set(("apple", "banana", "cherry")))  # b change set
 s = {"apple", "banana", "cherry"}
 mylist = ["kiwi", "orange"]
 s.update(mylist)
-
-
 
 
 s.add("orange")
@@ -267,11 +244,8 @@ s.remove("banana")
 for x in s:
   print(x)
 
-
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #  (((((( dictonary  ))))))
 
 d = {
@@ -295,9 +269,6 @@ d.popitem()
 d.get("brand")
 
 
-
-
-
 if "model" in thisdict:
   print("Yes, 'model' is one of the keys in the thisdict dictionary")
 
@@ -313,12 +284,8 @@ for x in thisdict:
 for x in thisdict.keys():
   print(x)
 
-
-
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #  (((((( Boolean   ))))))
 print(10 > 9)
 
@@ -329,20 +296,13 @@ if b > a:
   print("b is greater than a")
 
 
-
-
-
-
 #  convert tuple into -->> list - set - dict
 list((1,2,'asd','fgw','eol'))
 set((1,2,'asd','fgw','eol'))
 dict((1,2,'asd','fgw','eol'))
 
-
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 """   ((((((( Operator )))))))
 +
 -
@@ -366,7 +326,6 @@ dict((1,2,'asd','fgw','eol'))
 <<=
 
 
-
 ==
 !=
 <
@@ -388,22 +347,11 @@ in
 not in
 
 
-
 &
 |
 
-
-"""
-
-
-
-
-
-
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 #   LOOP   $   CONDITION
 if 5 > 2:
   print("Five is greater than two!")
@@ -421,7 +369,6 @@ elif a == b:
   print("a and b are equal")
 
 
-
 if myfunc():
   print("YES!")
 else:
@@ -434,8 +381,6 @@ elif a == b:
   print("a and b are equal")
 else:
   print("a is greater than b")
-
-
 
 
 switch (variable)
@@ -463,17 +408,13 @@ match variable:
     code block
 
 
-
 i = 1
 while i < 6:
   print(i)
   i += 1
 
-
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 # ((((((  class  ,  function  )))))
 
 def my_function():
@@ -500,12 +441,10 @@ my_function(3) # 15
 
 
 
-
 def my_function(x):
   print(x)
 
 my_function(3) # 3
-
 
 
 
@@ -522,7 +461,6 @@ print(x(5))           # 15
 
 
 
-
 #    توابع بدون کلاس در حداقل حالت ورودی بدون ورودی باشد ######################
 def myfunc(n):
   return lambda a : a * n
@@ -530,7 +468,6 @@ def myfunc(n):
 mydoubler = myfunc(2)
 
 print(mydoubler(11))
-
 
 
 
@@ -550,7 +487,6 @@ print(p1.age)   # 40
 
 
 
-
 class Car:
   def __init__(self, brand, model):
     self.brand = brand
@@ -561,7 +497,6 @@ class Car:
 
 
 
-
 class Boat:
   def __init__(self, brand, model):
     self.brand = brand
@@ -569,7 +504,6 @@ class Boat:
 
   def move(self):
     print("Sail!")
-
 
 
 
@@ -591,7 +525,6 @@ for x in (car1, boat1, plane1):
 
 
 
-
 # Local Scope
 
 def myfunc():
@@ -599,7 +532,6 @@ def myfunc():
   print(x)
 
 myfunc()
-
 
 
 # Global Scope
@@ -614,42 +546,44 @@ print(x)
 
 
 
-
-
 range(3, 10)     # 3   4   ..  10
 range(3, 10, 2)  # 3   5   7   9
 range(0, 10, 2)  # 
 
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------
 # ((((( map )))))
 
+doubled = map(lambda x: x * 2, numbers)
 
 
 
+def square(x):
+    return x * x
 
+squares = map(square, nums)
+-----------------------------------------------------------------------------------------------------------------
 # ((((( filter )))))
 
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
 
 
+def is_positive(x):
+    return x > 0
 
+result = filter(is_positive, numbers)
+print(list(result))
 
-
-
-
+-----------------------------------------------------------------------------------------------------------------
 
 mystr = "banana"
 myit = iter(mystr)
 
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))
-
+print(next(myit))    b
+print(next(myit))    a
+print(next(myit))    n
+print(next(myit))    a
+print(next(myit))    n
+print(next(myit))    a
 
 
 # ایجاد ماژول
@@ -658,12 +592,9 @@ import mymodule as mx
 from mymodule import person1
 
 
-
 import datetime # ماژول datetime در پایتون برای کار با تاریخ، زمان، اختلاف زمان، و قالب‌بندی تاریخ استفاده می‌شود.
 from datetime import datetime
 now = datetime.now()
-
-
 
 
 min()
@@ -672,12 +603,9 @@ abs()
 pow()
 
 
-
 import math
 
 x = math.sqrt(64)
-
-
 
 
 x = math.ceil(1.4)
@@ -685,17 +613,10 @@ y = math.floor(1.4)
 print(x) # returns 2
 print(y) # returns 1
 
-
-
-
-# ---------------------------------------------------
-# ---------------------------------------------------
-# ---------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 # (((((((((---------- OOP ----------)))))))))
-
-
-
 
 class Person:
   def __init__(self, name, age, city, country):
@@ -710,9 +631,6 @@ print(p1.name)
 print(p1.age)
 print(p1.city)
 print(p1.country)
-
-
-
 
 
 class Person:
@@ -737,8 +655,7 @@ class ChildClass(ParentClass):
     pass   ساختار کلی
 
 
-
-# Example
+# Example (مثال)
 
 class Person:
     def __init__(self, name):
@@ -762,8 +679,7 @@ class Student(Person):
     self.graduationyear = year                                                                    //  Add Properties
 
     def welcome(self):
-    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)      //  Add Methods
-
+      print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)      //  Add Methods
 
 
 class Vehicle:
@@ -796,9 +712,8 @@ for x in (car1, boat1, plane1):
   print(x.model)
   x.move()
 
-
-
-
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 ژول (Module) یک فایل پایتون است که شامل کدهای آماده مثل توابع، کلاس‌ها، و متغیرها می‌شود و می‌توان آن را در برنامه‌ی دیگر وارد (import) کرد تا از آن استفاده شود.
 
@@ -806,92 +721,46 @@ import math             //  وارد کردن کل ماژول
 from math import sqrt   //  وارد کردن تنها یک تابع یا کلاس
 import numpy as np      //  تغییر نام ماژول هنگام import
 
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+# class Node:
+#     def __init__(self, data = None):
+#         self.data = data
+#         self.next = None
+
+#     def __init__(self, data = None):
+#             self.data = data
+#             self.next = None
+
+#     def __init__(self, data = None):
+#             self.data = data
+#             self.next = None
+
+#     def __init__(self, data = None):
+#             self.data = data
+#             self.next = None
+#             self.prev = None
 
 
+# class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
+#     def __init__(self):
+#         self.top = None
+#         self.size = 0
 
+#     def __init__(self):
+#             self.head = None
+#             self.tail = None
+#             self.size = 0
 
+#     def __init__(self):
+#             self.tail = None
+#             self.size = 0
 
-# ---------------------------------------------------
-# ---------------------------------------------------
-# ---------------------------------------------------
-
-
-class Node:
-    def __init__(self, data = None):
-        self.data = data
-        self.next = None
-
-
-    def __init__(self, data = None):
-            self.data = data
-            self.next = None
-
-
-    def __init__(self, data = None):
-            self.data = data
-            self.next = None
-
-
-    def __init__(self, data = None):
-            self.data = data
-            self.next = None
-            self.prev = None
-
-
-
-
-
-
-
-
-
-
-
-
-class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
-    def __init__(self):
-        self.top = None
-        self.size = 0
-
-
-    def __init__(self):
-            self.head = None
-            self.tail = None
-            self.size = 0
-
-
-    def __init__(self):
-            self.tail = None
-            self.size = 0
-
-
-    def __init__(self):
-            self.head = None
-            self.tail = None
-            self.size = 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    def push(self, data):
-            new_node = Node(data)
-            if self.top == None:
-                self.top = new_node
-            else:
-                new_node.next = self.top
-                self.top = new_node
-            self.size += 1
+#     def __init__(self):
+#             self.head = None
+#             self.tail = None
+#             self.size = 0
 
 
     def enqueue(self, data):
@@ -902,6 +771,16 @@ class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
             else:
                 self.tail.next = new_node
                 self.tail = new_node
+            self.size += 1
+
+
+    def push(self, data):
+            new_node = Node(data)
+            if self.top == None:
+                self.top = new_node
+            else:
+                new_node.next = self.top
+                self.top = new_node
             self.size += 1
 
 
@@ -925,15 +804,6 @@ class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
                 self.head.next = new_node
                 self.head = new_node
             self.size += 1
-
-
-
-
-
-
-
-
-
 
 
 
@@ -963,7 +833,7 @@ class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
                 return None
 
 
-    def delete(self):
+    def delete(self):                                                                                      
             data = self.tail.data
             if self.tail.data == data:
                 self.tail = self.tail.next
@@ -976,19 +846,7 @@ class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
                     prev = current
                     current = current.next
 
-
     def DoublyLinkedList --------------:
-
-
-
-
-
-
-
-
-
-
-
 
     def printStack(self):
             current = self.top
@@ -1019,11 +877,6 @@ class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
                 current = current.next
 
 
-
-
-
-
-
 obj = Stack()
 
 obj.push(1)
@@ -1031,15 +884,10 @@ obj.pop()
 obj.printStack()
 
 
-
-
-
 obj = Queue()
 
 obj.enqueue(1)
 obj.dequeue()
-
-
 
 
 obj = SinglyLinkedList()
@@ -1049,20 +897,12 @@ obj.printList()
 
 
 
-
-
 obj = DoublyLinkedList()
 
 obj.append(1)
 
-
-
-
-
 # (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
 # (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
-# (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
-
 
 # درخت یک ساختار داده غیرخطی و سلسله‌مراتبی است که از مجموعه‌ای از گره‌ها شکیل شده است
 
@@ -1083,9 +923,7 @@ obj.append(1)
 #  Degree	     تعداد فرزندان یک گره
 #  Level	           سطح گره از ریشه
 #  Height	          بیشترین عمق درخت
-#  Subtree                  	زیر‌درخت
-
-
+#  Subtree                 	زیر‌درخت
 
 
 # ((((---- انواع درخت‌ ها ----))))
@@ -1105,7 +943,6 @@ obj.append(1)
 #    درخت دودویی نامتوازن   (د  (Skewed Tree)          :‌                               همه گره‌ها فقط یک فرزند دارند
 
 
-
 #  4 - درخت جستجوی دودویی (BST)
 # مقادیر سمت چپ < ریشه
 # مقادیر سمت راست > ریشه
@@ -1113,9 +950,8 @@ obj.append(1)
 # عملیات مهم BST -->> Insert  Delete  Search
 
 
-
-
 #  5 -  پیمایش درخت (Tree Traversal)
+
 
 #  ((((((((-------5.1 پیمایش عمقی (DFS)------))))))))
 # 1. پیش‌گرد (Preorder)
@@ -1128,20 +964,11 @@ obj.append(1)
 # Left → Right → Root
 
 
-
-
 #  ((((((((-------5.2 پیمایش سطحی (BFS / Level Order)------))))))))
 # پیمایش سطح به سطح با استفاده از صف (Queue)
 
 
-
-
-
 #  6 - پیاده‌سازی درخت دودویی
-
-
-
-
 
 
 #  7 -  درخت‌های متعادل (Balanced Trees)
@@ -1158,29 +985,13 @@ obj.append(1)
 
 
 
-
 #  8 -  هیپ (Heap)
 # درخت دودویی کامل با ویژگی:
 # Max Heap: پدر ≥ فرزندان
 # Min Heap: پدر ≤ فرزندان
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
 # (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
-# (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
-
 
 # . تمرین‌های مهم امتحانی (با پاسخ تشریحی)
 # تمرین 1: تشخیص اصطلاحات
@@ -1188,9 +999,6 @@ obj.append(1)
 # درختی با 15 گره و ارتفاع 3 داریم.
 # الف) حداکثر تعداد برگ‌ها؟ ب) حداقل تعداد برگ‌ها؟
 # پاسخ: الف) حداکثر برگ‌ها در درخت دودویی کامل سطحی = 2^3 = 8 ب) حداقل برگ‌ها = 1 (درخت کاملاً مایل)
-
-
-
 
 
 # تمرین 2: پیمایش درخت
@@ -1208,8 +1016,6 @@ obj.append(1)
 # Inorder: D B E A C F
 # Postorder: D E B F C A
 # Level Order: A B C D E F
-
-
 
 
 # تمرین 3: خاصیت BST
@@ -1230,13 +1036,11 @@ obj.append(1)
 
 
 
-
 #   تمرین 5: محاسبه ارتفاع
 # حداقل و حداکثر ارتفاع یک درخت دودویی با 31 گره را بیابید.
 # پاسخ:
 # حداقل ارتفاع (درخت کامل): log2(31) = 4
 # حداکثر ارتفاع (مایل): 30
-
 
 
 
@@ -1253,7 +1057,6 @@ obj.append(1)
 
 
 
-
 # تمرین 7: سوال تستی (کنکوری)
 # کدام پیمایش در BST خروجی مرتب می‌دهد؟
 
@@ -1266,8 +1069,6 @@ obj.append(1)
 # تمرین 8: AVL
 # اگر اختلاف ارتفاع زیر‌درخت‌های یک گره برابر 2 شود چه اتفاقی می‌افتد؟
 # پاسخ: درخت نامتعادل می‌شود و باید با چرخش (Rotation) متعادل شود.
-
-
 
 
 #  تمرین 9: Heap
@@ -1286,21 +1087,12 @@ obj.append(1)
 #  BST: علاوه بر آن، خاصیت ترتیب چپ < ریشه < راست را دارد
 
 
-
-
-
 # 13. جمع‌بندی شب امتحان ⭐
 #  inorder در BST همیشه مرتب است
 #  Heap حتماً کامل است
 #  AVL اختلاف ارتفاع ≤ 1
 #  BFS با Queue انجام می‌شود
 #  DFS شامل preorder, inorder, postorder است
-
-
-
-
-
-
 
 # اگر وقتت کمه:
 # تمرین‌های ۲، ۶، ۷، ۱۰ ← خیلی پرتکرار
