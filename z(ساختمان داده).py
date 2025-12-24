@@ -544,8 +544,6 @@ myfunc()
 print(x)
 
 
-
-
 range(3, 10)     # 3   4   ..  10
 range(3, 10, 2)  # 3   5   7   9
 range(0, 10, 2)  # 
@@ -585,6 +583,7 @@ print(next(myit))    a
 print(next(myit))    n
 print(next(myit))    a
 
+-----------------------------------------------------------------------------------------------------------------
 
 # ایجاد ماژول
 import mymodule
@@ -607,15 +606,13 @@ import math
 
 x = math.sqrt(64)
 
-
 x = math.ceil(1.4)
 y = math.floor(1.4)
 print(x) # returns 2
 print(y) # returns 1
 
 -----------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
-
+# (((((((((---------- OOP ----------)))))))))
 # (((((((((---------- OOP ----------)))))))))
 
 class Person:
@@ -720,186 +717,6 @@ for x in (car1, boat1, plane1):
 import math             //  وارد کردن کل ماژول
 from math import sqrt   //  وارد کردن تنها یک تابع یا کلاس
 import numpy as np      //  تغییر نام ماژول هنگام import
-
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
-
-# class Node:
-#     def __init__(self, data = None):
-#         self.data = data
-#         self.next = None
-
-#     def __init__(self, data = None):
-#             self.data = data
-#             self.next = None
-
-#     def __init__(self, data = None):
-#             self.data = data
-#             self.next = None
-
-#     def __init__(self, data = None):
-#             self.data = data
-#             self.next = None
-#             self.prev = None
-
-
-# class Stack/Queue/SinglyLinkedList/DoublyLinkedList:
-#     def __init__(self):
-#         self.top = None
-#         self.size = 0
-
-#     def __init__(self):
-#             self.head = None
-#             self.tail = None
-#             self.size = 0
-
-#     def __init__(self):
-#             self.tail = None
-#             self.size = 0
-
-#     def __init__(self):
-#             self.head = None
-#             self.tail = None
-#             self.size = 0
-
-
-    def enqueue(self, data):
-            new_node = Node(data)
-            if self.head == None:
-                self.head = new_node
-                self.tail = new_node
-            else:
-                self.tail.next = new_node
-                self.tail = new_node
-            self.size += 1
-
-
-    def push(self, data):
-            new_node = Node(data)
-            if self.top == None:
-                self.top = new_node
-            else:
-                new_node.next = self.top
-                self.top = new_node
-            self.size += 1
-
-
-    def append(self, data):
-            new_node = Node(data)
-            if self.tail == None:
-                self.tail = new_node
-            else:
-                self.tail.next = new_node
-                self.tail = new_node
-            self.size += 1
-
-
-    def append(self, data):
-            new_node = Node(data)
-            if self.tail == None:
-                self.tail = new_node
-                self.head = new_node
-            else:
-                new_node.prev = self.head
-                self.head.next = new_node
-                self.head = new_node
-            self.size += 1
-
-
-
-    def pop(self):
-        if self.top:
-            data = self.top.data
-            if self.top.next:
-                self.top = self.top.next
-            else:
-                self.top = None
-            self.size -= 1
-            return data
-        else:
-            return None
-
-
-    def dequeue(self):
-            if self.head:
-                data = self.head.data
-                if self.head.next:
-                    self.head = self.head.next
-                else:
-                    self.head = None
-                self.size -= 1
-                return data
-            else:
-                return None
-
-
-    def delete(self):                                                                                      
-            data = self.tail.data
-            if self.tail.data == data:
-                self.tail = self.tail.next
-            else:
-                current = self.tail
-                prev = self.tail
-                while current:
-                    if current.data == data:
-                        prev.next = current.next
-                    prev = current
-                    current = current.next
-
-    def DoublyLinkedList --------------:
-
-    def printStack(self):
-            current = self.top
-            for _ in range(self.size): ######
-                print(current.data)
-                current = current.next
-
-
-
-    def printQueue(self):
-            current = self.head
-            while current:
-                print(current.data)
-                current = current.next
-
-
-    def printList(self):
-            current = self.head
-            while current:
-                print(current.data)
-                current = current.next
-
-
-    def printList(self):
-            current = self.head
-            while current:
-                print(current.data)
-                current = current.next
-
-
-obj = Stack()
-
-obj.push(1)
-obj.pop()
-obj.printStack()
-
-
-obj = Queue()
-
-obj.enqueue(1)
-obj.dequeue()
-
-
-obj = SinglyLinkedList()
-
-obj.append(1)
-obj.printList()
-
-
-
-obj = DoublyLinkedList()
-
-obj.append(1)
 
 # (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
 # (((((((((((((((((((-------------------- TREE --------------------)))))))))))))))))))
@@ -1007,21 +824,19 @@ obj.append(1)
 
 
 #  8 -  هیپ (Heap)
-# درخت دودویی کامل با ویژگی:
-# Max Heap: پدر ≥ فرزندان
-# Min Heap: پدر ≤ فرزندان
+Max-Heap: (  پدر ≥ فرزندان ) مقدار هر گره بزرگ‌تر یا مساوی فرزندانش است → ریشه بیشترین مقدار را دارد.
+Min-Heap: (  پدر≤ فرزندان ) مقدار هر گره کوچک‌تر یا مساوی فرزندانش است → ریشه کمترین مقدار را دارد.
+
+توجه: Heap الزاماً مرتب کامل نیست؛ فقط رابطهٔ والد–فرزند رعایت می‌شود.
 
 # (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
 # (((((((((((((((((((-------------------- Practic --------------------)))))))))))))))))))
 
-# . تمرین‌های مهم امتحانی (با پاسخ تشریحی)
 # تمرین 1: تشخیص اصطلاحات
-
 # درختی با 15 گره و ارتفاع 3 داریم.
 # الف) حداکثر تعداد برگ‌ها؟ ب) حداقل تعداد برگ‌ها؟
 # پاسخ: الف) حداکثر برگ‌ها در درخت دودویی کامل سطحی = 2^3 = 8 ب) حداقل برگ‌ها = 1 (درخت کاملاً مایل)
-
-
+--------------------------------------------------------------------------------------------
 # تمرین 2: پیمایش درخت
 # درخت زیر را در نظر بگیرید:
 
@@ -1037,7 +852,7 @@ obj.append(1)
 # Inorder: D B E A C F
 # Postorder: D E B F C A
 # Level Order: A B C D E F
-
+--------------------------------------------------------------------------------------------
 
 # تمرین 3: خاصیت BST
 # درخت زیر یک BST است؟ چرا؟
@@ -1054,16 +869,14 @@ obj.append(1)
 # 5 10 15 20 25
 # چه نتیجه‌ای می‌گیریم؟
 # پاسخ: این دنباله حتماً به صورت صعودی مرتب است، پس درخت یک BST معتبر است.
-
-
+--------------------------------------------------------------------------------------------
 
 #   تمرین 5: محاسبه ارتفاع
 # حداقل و حداکثر ارتفاع یک درخت دودویی با 31 گره را بیابید.
 # پاسخ:
 # حداقل ارتفاع (درخت کامل): log2(31) = 4
 # حداکثر ارتفاع (مایل): 30
-
-
+--------------------------------------------------------------------------------------------
 
 #  تمرین 6: درج در BST
 # اعداد زیر را به ترتیب در یک BST درج کنید:
@@ -1075,8 +888,7 @@ obj.append(1)
 #      30    70
 #     / \   / \
 #   20  40 60  80
-
-
+--------------------------------------------------------------------------------------------
 
 # تمرین 7: سوال تستی (کنکوری)
 # کدام پیمایش در BST خروجی مرتب می‌دهد؟
@@ -1085,28 +897,7 @@ obj.append(1)
 #  B) Postorder
 #  C) Inorder
 #  D) Level Order
-
-# پاسخ صحیح: ✅ C
-# تمرین 8: AVL
-# اگر اختلاف ارتفاع زیر‌درخت‌های یک گره برابر 2 شود چه اتفاقی می‌افتد؟
-# پاسخ: درخت نامتعادل می‌شود و باید با چرخش (Rotation) متعادل شود.
-
-
-#  تمرین 9: Heap
-# کدام گزینه درباره Max Heap صحیح است؟
-
-#  A) فرزند از پدر بزرگ‌تر است
-#  B) درخت نامتوازن است
-#  C) بزرگ‌ترین عنصر در ریشه است
-#  D) inorder مرتب است
-
-#    پاسخ صحیح: ✅ C
-#  تمرین 10: سوال تشریحی مهم
-# تفاوت Binary Tree و BST را توضیح دهید.
-#  پاسخ کوتاه امتحانی:
-#  Binary Tree: فقط حداکثر دو فرزند دارد
-#  BST: علاوه بر آن، خاصیت ترتیب چپ < ریشه < راست را دارد
-
+--------------------------------------------------------------------------------------------
 
 # 13. جمع‌بندی شب امتحان ⭐
 #  inorder در BST همیشه مرتب است
