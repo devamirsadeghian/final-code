@@ -2,6 +2,17 @@
 *  sm - md - lg - xl - 2xl
 
 
+/*  فرق   @theme    و    root:   */
+root {
+      global   ( بر روی کل فایل ها اعمال میشه )
+}
+
+@theme {
+      local   ( بر روی کل فایل ها اعمال میشه )
+}
+
+
+
 ------------------------------------------- Utility -----------------------------------------------------------------
 ------------------------------------------- Utility -----------------------------------------------------------------
 
@@ -226,8 +237,8 @@ Variant   	Minimum width	        CSS
 @7xl	        80rem (1280px)  	@container (width >= 80rem) { … }
 
 
-
-
+------------------------------------------- Dark Mode -----------------------------------------------------------------
+------------------------------------------- Dark Mode -----------------------------------------------------------------
                                   
 /* Dark mode */
 dark:bg-gray-800
@@ -237,11 +248,12 @@ dark:text-gray-400
 @custom-variant dark (&:where(.dark, .dark *));
 
 
+                                  
+------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
+------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
 
-------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
-------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
-                                                                    
 Namespace	         Utility classes
+                                  
 --color-*	         Color utilities like bg-red-500, text-sky-300, and many more
 --font-*    	     Font family utilities like font-sans
 --text-*	         Font size utilities like text-xl
@@ -261,13 +273,8 @@ Namespace	         Utility classes
 --ease-*           Transition timing function utilities like ease-out
 --animate-*        Animation utilities like animate-spin
 
-
-
-
                                   
-
 /* Default theme variables */
-
 @layer theme, base, components, utilities;
 @import "./theme.css" layer(theme);
 @import "./preflight.css" layer(base);
@@ -275,8 +282,25 @@ Namespace	         Utility classes
 
 
 
+                                  
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-red-50: oklch(0.971 0.013 17.38);
+  --color-red-100: oklch(0.936 0.032 17.717);
+  --color-red-200: oklch(0.885 0.062 18.334);
+  /* ... */
+  --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  /* ... */
+}
 
 
+                                  
+                                  
 
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -541,8 +565,30 @@ Namespace	         Utility classes
 }
 
 
+                                  
+
+/* Using your theme variables */
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-red-50: oklch(0.971 0.013 17.38);
+  --color-red-100: oklch(0.936 0.032 17.717);
+  --color-red-200: oklch(0.885 0.062 18.334);
+  /* ... */
+  --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  /* ... */
+}
 
 
+------------------------------------------- Color -----------------------------------------------------------------
+------------------------------------------- Color -----------------------------------------------------------------
+
+
+                                  
 ------------------------------------------- Bootstrap -----------------------------------------------------------------
 ------------------------------------------- Bootstrap -----------------------------------------------------------------
                                
