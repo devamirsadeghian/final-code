@@ -11,8 +11,6 @@ root: {
       local   ( روی برخی فایل ها اعمال میشه )
 }
 
-
-
 ------------------------------------------- Utility -----------------------------------------------------------------
 ------------------------------------------- Utility -----------------------------------------------------------------
 
@@ -24,32 +22,32 @@ focus-visible	     &:focus-visible
 active	           &:active
 visited	           &:visited
 target	           &:target
-*	                :is(& > *)
-**	              :is(& *)
-has-[...]	        &:has(...)
-group-[...]	      &:is(:where(.group)... *)
-peer-[...]	      &:is(:where(.peer)... ~ *)
-in-[...]	        :where(...) &
-not-[...]        	&:not(...)
-inert	            &:is([inert], [inert] *)
-first	            &:first-child
-last	            &:last-child
-only	            &:only-child
-odd              	&:nth-child(odd)
-even             	&:nth-child(even)
-first-of-type    	&:first-of-type
-last-of-type    	&:last-of-type
-only-of-type	    &:only-of-type
-nth-[...]	        &:nth-child(...)
-nth-last-[...]  	&:nth-last-child(...)
-nth-of-type-[...]	&:nth-of-type(...)
+*	                 :is(& > *)
+**	                 :is(& *)
+has-[...]	           &:has(...)
+group-[...]	           &:is(:where(.group)... *)
+peer-[...]	           &:is(:where(.peer)... ~ *)
+in-[...]	           :where(...) &
+not-[...]        	      &:not(...)
+inert	                  &:is([inert], [inert] *)
+first	                  &:first-child
+last	                  &:last-child
+only	                  &:only-child
+odd              	      &:nth-child(odd)
+even             	      &:nth-child(even)
+first-of-type    	      &:first-of-type
+last-of-type    	      &:last-of-type
+only-of-type	      &:only-of-type
+nth-[...]	            &:nth-child(...)
+nth-last-[...]  	      &:nth-last-child(...)
+nth-of-type-[...]	      &:nth-of-type(...)
 nth-last-of-type-[...]             	&:nth-last-of-type(...)
-empty	            &:empty
-disabled        	&:disabled
+empty	             &:empty
+disabled          	&:disabled
 enabled	          &:enabled
 checked	          &:checked
-indeterminate   	&:indeterminate
-default          	&:default
+indeterminate    	&:indeterminate
+default          	 &:default
 optional	        &:optional
 required        	&:required
 valid	            &:valid
@@ -73,13 +71,11 @@ backdrop         	&::backdrop
 placeholder	      &::placeholder
 
 
-
 sm	      @media (width >= 40rem)
 md	      @media (width >= 48rem)
 lg	      @media (width >= 64rem)
 xl      	@media (width >= 80rem)
 2xl	      @media (width >= 96rem)
-
 
 
 min-[...]    @media (width >= ...)
@@ -89,7 +85,6 @@ max-lg       @media (width < 64rem)
 max-xl	     @media (width < 80rem)
 max-2xl       @media (width < 96rem)
 max-[...]    @media (width < ...)
-
 
 
 @3xs	       @container (width >= 16rem)
@@ -108,7 +103,6 @@ max-[...]    @media (width < ...)
 @min-[...]	 @container (width >= ...)
 
 
-
 @max-3xs	    @container (width < 16rem)
 @max-2xs	    @container (width < 18rem)
 @max-xs   	  @container (width < 20rem)
@@ -123,7 +117,6 @@ max-[...]    @media (width < ...)
 @max-6xl  	  @container (width < 72rem)
 @max-7xl      @container (width < 80rem)
 @max-[...]	  @container (width < ...)
-
 
 
 dark	             @media (prefers-color-scheme: dark)
@@ -144,10 +137,8 @@ landscape	         @media (orientation: landscape)
 noscript	         @media (scripting: none)
 
 
-
 print              @media print 
 supports-[…]	     @supports (…)
-
 
 
 aria-busy            	&[aria-busy="true"]
@@ -167,16 +158,11 @@ open                 	&:is([open], :popover-open, :open)
 starting              @starting-style
 
 
-
-
-
 max-sm	  @media (width < 40rem) { ... }
 max-md	  @media (width < 48rem) { ... }
 max-lg	  @media (width < 64rem) { ... }
 max-xl	  @media (width < 80rem) { ... }
 max-2xl	  @media (width < 96rem) { ... }
-
-
 
 
 max-[600px]:bg-sky-300
@@ -189,11 +175,8 @@ min-[600px]:bg-sky-300
                                   
 @md:flex-row
 @max-md:flex-col
-@sm:@max-md:flex-col
-                                  
+@sm:@max-md:flex-col                                  
 @sm/main:flex-col
-
-
 
 
 /* Using custom container sizes */
@@ -202,18 +185,13 @@ min-[600px]:bg-sky-300
   
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 100rem;
-  --breakpoint-3xl: 120rem;
-
+  .................
   --container-8xl: 96rem;
   
   --breakpoint-tablet: 40rem;
   --breakpoint-laptop: 64rem;
   --breakpoint-desktop: 80rem;
-
-  
 }
-
-
 
 
 
@@ -221,21 +199,19 @@ min-[600px]:bg-sky-300
 // By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
 
 
-Variant   	Minimum width	        CSS
-@3xs	        16rem (256px)	    @container (width >= 16rem) { … }
-@2xs        	18rem (288px)	    @container (width >= 18rem) { … }
-@xs	          20rem (320px)    	@container (width >= 20rem) { … }
-@sm	          24rem (384px)	    @container (width >= 24rem) { … }
-@md	          28rem (448px)    	@container (width >= 28rem) { … }
-@lg	          32rem (512px)	    @container (width >= 32rem) { … }
-@xl	          36rem (576px)    	@container (width >= 36rem) { … }
-@2xl	        42rem (672px)    	@container (width >= 42rem) { … }
-@3xl	        48rem (768px)    	@container (width >= 48rem) { … }
-@4xl	        56rem (896px)	    @container (width >= 56rem) { … }
-@5xl	        64rem (1024px)	  @container (width >= 64rem) { … }
-@6xl	        72rem (1152px)	  @container (width >= 72rem) { … }
-@7xl	        80rem (1280px)  	@container (width >= 80rem) { … }
-
+@3xs	       16rem (256px)	    @container (width >= 16rem) { … }
+@2xs         18rem (288px)	    @container (width >= 18rem) { … }
+@xs	       20rem (320px)    	@container (width >= 20rem) { … }
+@sm	       24rem (384px)	    @container (width >= 24rem) { … }
+@md          28rem (448px)    	@container (width >= 28rem) { … }
+@lg          32rem (512px)	    @container (width >= 32rem) { … }
+@xl          36rem (576px)    	@container (width >= 36rem) { … }
+@2xl	       42rem (672px)    	@container (width >= 42rem) { … }
+@3xl	       48rem (768px)    	@container (width >= 48rem) { … }
+@4xl	       56rem (896px)	    @container (width >= 56rem) { … }
+@5xl	       64rem (1024px)	  @container (width >= 64rem) { … }
+@6xl	       72rem (1152px)	  @container (width >= 72rem) { … }
+@7xl	       80rem (1280px)  	@container (width >= 80rem) { … }
 
 ------------------------------------------- Dark Mode -----------------------------------------------------------------
 ------------------------------------------- Dark Mode -----------------------------------------------------------------
@@ -246,13 +222,9 @@ dark:text-white
 dark:text-gray-400
                          
 @custom-variant dark (&:where(.dark, .dark *));
-
-
-                                  
+                      
 ------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
 ------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
-
-Namespace	         Utility classes
                                   
 --color-*	         Color utilities like bg-red-500, text-sky-300, and many more
 --font-*    	     Font family utilities like font-sans
@@ -280,10 +252,7 @@ Namespace	         Utility classes
 @import "./preflight.css" layer(base);
 @import "./utilities.css" layer(utilities);
 
-
-
-                                  
-
+                                      
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -297,11 +266,7 @@ Namespace	         Utility classes
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   /* ... */
 }
-
-
-                                  
-                                  
-
+                                
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -399,7 +364,6 @@ Namespace	         Utility classes
   --color-black: #000;
   --color-white: #fff;
 
-
   
   /* spacing */
   --spacing: 0.25rem;
@@ -414,7 +378,6 @@ Namespace	         Utility classes
   --container-7xl: 80rem;
 
 
-  
   /* text */
   --text-xs: 0.75rem;
   --text-base: 1rem;
@@ -426,7 +389,6 @@ Namespace	         Utility classes
   --text-xs--line-height: calc(1 / 0.75);
   --text-base--line-height: calc(1.5 / 1);
   --text-9xl--line-height: 1;
-
 
   
   /* font-weight-^      ^     ==>>    thin  extralight   light   normal   medium   semibold   bold  xtrabold   black   */
@@ -457,7 +419,6 @@ Namespace	         Utility classes
   --leading-normal: 1.5;
   --leading-relaxed: 1.625;
   --leading-loose: 2;
-
 
   
   /* radius */
@@ -496,15 +457,13 @@ Namespace	         Utility classes
   --text-shadow-md: 0px 1px 1px rgb(0 0 0 / 0.1), 0px 1px 2px rgb(0 0 0 / 0.1), 0px 2px 4px rgb(0 0 0 / 0.1);
   --text-shadow-lg: 0px 1px 2px rgb(0 0 0 / 0.1), 0px 3px 2px rgb(0 0 0 / 0.1), 0px 4px 8px rgb(0 0 0 / 0.1);
 
-
   
   /*  blur  */
   --blur-xs: 4px;
   --blur-md: 12px;
   --blur-3xl: 64px;
 
-
-  
+ 
   /*  perspective  */
   --perspective-dramatic: 100px;
   --perspective-near: 300px;
@@ -513,12 +472,10 @@ Namespace	         Utility classes
   --perspective-distant: 1200px;
 
 
-  
   /* aspect */
   --aspect-video: 16 / 9;
 
   
-
   /*  ease  */
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -564,9 +521,7 @@ Namespace	         Utility classes
   }
 }
 
-
-                                  
-
+                                      
 /* Using your theme variables */
 
 :root {
@@ -591,7 +546,1077 @@ red   orange   yellow   green   blue   purple   pink   red   red
 amber   lime   emerald   teal   cyan   sky   indigo   violet   fuchsia
 rose   slate   gray   zinc   neutral   stone
 
+
+50    100    200     300    400     500     600    700    800    900     950
+
+                                      
+bg-sky-400
+bg-zinc-950
+
+
+/* Here's a full list of utilities that use your color palette: */
+
+bg-*	            Sets the background color of an element
+text-*	      Sets the text color of an element
+decoration-*      Sets the text decoration color of an element
+border-*	      Sets the border color of an element
+outline-*	      Sets the outline color of an element
+shadow-*	      Sets the color of box shadows
+inset-shadow-*    Sets the color of inset box shadows
+ring-*	      Sets the color of ring shadows
+inset-ring-*      Sets the color of inset ring shadows
+accent-*	      Sets the accent color of form controls
+caret-*	      Sets the caret color in form controls
+fill-*	      Sets the fill color of SVG elements
+stroke-*	      Sets the stroke color of SVG elements
+
+---------------------(((((((((((((((((((((( Layout ))))))))))))))))))))))) -------------------------------------------
+---------------------(((((((((((((((((((((( Layout ))))))))))))))))))))))) -------------------------------------------
+
+Class   :   مستقیم در تگ به کار میره
+Styles  : (بهتره ) به عنوان ویژگی استایل در تگ به کار میره
+                                      
+------------------------------------------- aspect-ratio -------------------------------------------------------------
+------------------------------------------- aspect-ratio -------------------------------------------------------------
+
+/*      کنترل نسبت ابعاد یک عنصر     */
+                                      
+aspect-<ratio>           aspect-ratio: <ratio>;
+aspect-square            aspect-ratio: 1 / 1;
+aspect-video             aspect-ratio: var(--aspect-video); /* 16 / 9 */
+aspect-auto              aspect-ratio: auto;
+aspect-(<custom-prope>)  aspect-ratio: var(<custom-property>);
+aspect-[<value>]         aspect-ratio: <value>;
+
+md:aspect-square ( Responsive design )
+
+/* نوع استفاده */
+aspect-[calc(4*3+1)/3]             ( 1 - Using a custom value )
+aspect-(--my-aspect-ratio)         ( 2 - CSS variables )
+@theme {--aspect-retro: 4 / 3; }   ( 3 - Customizing your theme )
+
+------------------------------------------- columns -------------------------------------------------------------
+------------------------------------------- columns -------------------------------------------------------------
+
+columns-<number>     columns: <number>;     /*   بیشتر استفاد شده   */
+
+columns-3xs          columns: var(--container-3xs); /* 16rem (256px) */
+columns-2xs          columns: var(--container-2xs); /* 18rem (288px) */
+columns-xs           columns: var(--container-xs); /* 20rem (320px) */
+columns-sm           columns: var(--container-sm); /* 24rem (384px) */
+columns-md           columns: var(--container-md); /* 28rem (448px) */
+columns-lg           columns: var(--container-lg); /* 32rem (512px) */
+columns-xl           columns: var(--container-xl); /* 36rem (576px) */
+columns-2xl          columns: var(--container-2xl); /* 42rem (672px) */
+columns-3xl          columns: var(--container-3xl); /* 48rem (768px) */
+columns-4xl          columns: var(--container-4xl); /* 56rem (896px) */
+columns-5xl          columns: var(--container-5xl); /* 64rem (1024px) */
+columns-6xl          columns: var(--container-6xl); /* 72rem (1152px) */
+columns-7xl          columns: var(--container-7xl); /* 80rem (1280px) */
+columns-auto         columns: auto;
+columns-(<custom-property>)     columns: var(<custom-property>);
+columns-[<value>]    columns: <value>;                               
+
+-------------------------------------   break-after  &   break-before  &  break-inside   ------------------------------------------
+-------------------------------------   break-after  &   break-before  &  break-inside   ------------------------------------------
+                                      
+/*     auto    avoid    all    avoid-page    page    left    right    column     */
+/*    ###  ===>>>   after  before   inside   */
+                                      
+break-after-auto        break-after: auto;
+break-after-avoid       break-after: avoid;
+break-after-all         break-after: all;
+break-after-avoid-page  break-after: avoid-page;
+break-after-page        break-after: page;
+break-after-left        break-after: left;
+break-after-right       break-after: right;
+break-after-column      break-after: column;
+
+
+break-before-auto        break-before: auto;
+break-before-avoid       break-before: avoid;
+break-before-all         break-before: all;
+break-before-avoid-page  break-before: avoid-page;
+break-before-page        break-before: page;
+break-before-left        break-before: left;
+break-before-right       break-before: right;
+break-before-column      break-before: column;
+
                                   
+break-inside-auto            break-inside: auto;
+break-inside-avoid           break-inside: avoid;
+break-inside-avoid-page      break-inside: avoid-page;
+break-inside-avoid-column    break-inside: avoid-column;
+
+                                      
+md:break-###-%%%    ( Responsive design )
+
+استفاده کن  break-inside  و break-before  از break-after  در همه موارد بالا به جای
+
+------------------------------------------- box-decoration-break -------------------------------------------------------------
+------------------------------------------- box-decoration-break -------------------------------------------------------------
+                                      
+/*       نحوه‌ی رندر شدن بخش‌هایی از عناصر در چندین خط، ستون یا صفحه      */
+
+box-decoration-clone      box-decoration-break: clone;
+box-decoration-slice      box-decoration-break: slice;
+
+------------------------------------------- box-sizing -------------------------------------------------------------
+------------------------------------------- box-sizing -------------------------------------------------------------
+
+/*        نحوه محاسبه اندازه کل یک عنصر توسط مرورگر      */
+
+box-border         box-sizing: border-box;            /* است content + padding + border عرض و ارتفاع شامل */
+box-content        box-sizing: content-box; (defult)  /* عرض و ارتفاع فقط شامل محتو است */
+
+------------------------------------------- display -------------------------------------------------------------
+------------------------------------------- display -------------------------------------------------------------
+
+/*        نوع کادر نمایش یک عنصر      */
+                                      
+inline               display: inline;
+block                display: block;
+inline-block         display: inline-block;
+flow-root            display: flow-root;
+flex                 display: flex;
+inline-flex          display: inline-flex;
+grid                 display: grid;
+inline-grid          display: inline-grid;
+contents             display: contents;
+table                display: table;
+inline-table         display: inline-table;
+table-caption        display: table-caption;
+table-cell           display: table-cell;
+table-column         display: table-column;
+table-column-group   display: table-column-group;
+table-footer-group   display: table-footer-group;
+table-header-group   display: table-header-group;
+table-row-group      display: table-row-group;
+table-row            display: table-row;
+list-item            display: list-item;
+hidden               display: none;
+
+
+sr-only           position: absolute;
+                  width: 1px;
+                  height: 1px;
+                  padding: 0;
+                  margin: -1px;
+                  overflow: hidden;
+                  clip-path: inset(50%);
+                  white-space: nowrap;
+                  border-width: 0;
+                                      
+
+not-sr-only       position: static;
+                  width: auto;
+                  height: auto;
+                  padding: 0;
+                  margin: 0;
+                  overflow: visible;
+                  clip: auto;
+                  white-space: normal;
+
+------------------------------------------- float -------------------------------------------------------------
+------------------------------------------- float -------------------------------------------------------------
+
+/*        نحوه‌ی قرارگیری محتوا در اطراف یک عنصر      */
+                                      
+float-right     float: right;
+float-left      float: left;
+float-start     float: inline-start;
+float-end       float: inline-end;
+float-none      float: none;;
+
+------------------------------------------- clear -------------------------------------------------------------
+------------------------------------------- clear -------------------------------------------------------------
+
+/*        نحوه‌ی قرارگیری محتوا در اطراف یک عنصر      */
+
+clear-left     clear: left;
+clear-right    clear: right;
+clear-both     clear: both;
+clear-start    clear: inline-start;
+clear-end      clear: inline-end;
+clear-none     clear: none;
+                                      
+------------------------------------------- isolation -------------------------------------------------------------
+------------------------------------------- isolation -------------------------------------------------------------
+
+/*      آیا یک عنصر باید صریحاً یک زمینه انباشت جدید ایجاد کند یا خیر      */
+                                      
+isolate           isolation: isolate;
+isolation-auto    isolation: auto;;
+
+------------------------------------------- object-fit -------------------------------------------------------------
+------------------------------------------- object-fit -------------------------------------------------------------
+
+/* چگونگی تغییر اندازه محتوای یک عنصر جایگزین شده        */
+                                      
+object-contain       object-fit: contain;
+object-cover         object-fit: cover;
+object-fill          object-fit: fill;
+object-none          object-fit: none;
+object-scale-down    object-fit: scale-down;
+
+------------------------------------------- object-position -------------------------------------------------------------
+------------------------------------------- object-position -------------------------------------------------------------
+
+/*     نحوه قرارگیری محتوای یک عنصر جایگزین شده در ظرف آن     */
+
+object-top-left             object-position: top left;
+object-top                  object-position: top;
+object-top-right            object-position: top right;
+object-left                 object-position: left;
+object-center               object-position: center;
+object-right                object-position: right;
+object-bottom-left          object-position: bottom left;
+object-bottom               object-position: bottom;
+object-bottom-right         object-position: bottom right;
+object-(<custom-property>)  object-position: var(<custom-property>);
+object-[<value>]            object-position: <value>;
+
+------------------------------------------- overflow -------------------------------------------------------------
+------------------------------------------- overflow -------------------------------------------------------------
+
+/*      نحوه‌ی مدیریت محتوایی که برای محفظه‌ی آن بیش از حد بزرگ است       */
+                                      
+overflow-auto         overflow: auto;
+overflow-hidden       overflow: hidden;
+overflow-clip         overflow: clip;
+overflow-visible      overflow: visible;
+overflow-scroll       overflow: scroll;
+overflow-x-auto       overflow-x: auto;
+overflow-y-auto       overflow-y: auto;
+overflow-x-hidden     overflow-x: hidden;
+overflow-y-hidden     overflow-y: hidden;
+overflow-x-clip       overflow-x: clip;
+overflow-y-clip       overflow-y: clip;
+overflow-x-visible    overflow-x: visible;
+overflow-y-visible    overflow-y: visible;
+overflow-x-scroll     overflow-x: scroll;
+overflow-y-scroll     overflow-y: scroll;
+
+------------------------------------------- overscroll-behavior -------------------------------------------------------------
+------------------------------------------- overscroll-behavior -------------------------------------------------------------
+
+/*     نحوه رفتار مرورگر هنگام رسیدن به مرز ناحیه پیمایش       */
+
+overscroll-auto         overscroll-behavior: auto;
+overscroll-contain      overscroll-behavior: contain;
+overscroll-none         overscroll-behavior: none;
+overscroll-x-auto       overscroll-behavior-x: auto;
+overscroll-x-contain    overscroll-behavior-x: contain;
+overscroll-x-none       overscroll-behavior-x: none;
+overscroll-y-auto       overscroll-behavior-y: auto;
+overscroll-y-contain    overscroll-behavior-y: contain;
+overscroll-y-none       overscroll-behavior-y: none;
+
+------------------------------------------- position -------------------------------------------------------------
+------------------------------------------- position -------------------------------------------------------------
+
+/*     نحوه قرارگیری یک عنصر در سند       */
+
+static     position: static;
+fixed      position: fixed;
+absolute   position: absolute;
+relative   position: relative;
+sticky     position: sticky;
+
+------------------------------------------- top / right / bottom / left -------------------------------------------------------------
+------------------------------------------- top / right / bottom / left -------------------------------------------------------------
+
+/*     قرارگیری عناصر موقعیت‌یابی‌شده      */
+
+inset-<number>            inset: calc(var(--spacing) * <number>);
+-inset-<number>           inset: calc(var(--spacing) * -<number>);
+inset-<fraction>          inset: calc(<fraction> * 100%);
+-inset-<fraction>         inset: calc(<fraction> * -100%);
+inset-px                  inset: 1px;
+-inset-px                 inset: -1px;
+inset-full                inset: 100%;
+-inset-full               inset: -100%;
+inset-auto                inset: auto;
+inset-(<custom-property>) inset: var(<custom-property>);
+inset-[<value>]           inset: <value>;
+inset-x-<number>          inset-inline: calc(var(--spacing) * <number>);
+-inset-x-<number>         inset-inline: calc(var(--spacing) * -<number>);
+inset-x-<fraction>        inset-inline: calc(<fraction> * 100%);
+-inset-x-<fraction>       inset-inline: calc(<fraction> * -100%);
+inset-x-px                inset-inline: 1px;
+-inset-x-px               inset-inline: -1px;
+inset-x-full              inset-inline: 100%;
+-inset-x-full             inset-inline: -100%;
+inset-x-auto              inset-inline: auto;
+inset-x-(<custom-property>)   inset-inline: var(<custom-property>);
+inset-x-[<value>]         inset-inline: <value>;
+inset-y-<number>          inset-block: calc(var(--spacing) * <number>);
+-inset-y-<number>         inset-block: calc(var(--spacing) * -<number>);
+inset-y-<fraction>        inset-block: calc(<fraction> * 100%);
+-inset-y-<fraction>       inset-block: calc(<fraction> * -100%);
+inset-y-px                inset-block: 1px;
+-inset-y-px               inset-block: -1px;
+inset-y-full              inset-block: 100%;
+-inset-y-full             inset-block: -100%;
+inset-y-auto              inset-block: auto;
+inset-y-(<custom-property>)     inset-block: var(<custom-property>);
+inset-y-[<value>]        inset-block: <value>;
+start-<number>           inset-inline-start: calc(var(--spacing) * <number>);
+-start-<number>          inset-inline-start: calc(var(--spacing) * -<number>);
+start-<fraction>         inset-inline-start: calc(<fraction> * 100%);
+-start-<fraction>        inset-inline-start: calc(<fraction> * -100%);
+start-px                 inset-inline-start: 1px;
+-start-px                inset-inline-start: -1px;
+start-full               inset-inline-start: 100%;
+-start-full              inset-inline-start: -100%;
+start-auto               inset-inline-start: auto;
+start-(<custom-property>)    inset-inline-start: var(<custom-property>);
+start-[<value>]         inset-inline-start: <value>;
+end-<number>            inset-inline-end: calc(var(--spacing) * <number>);
+-end-<number>           inset-inline-end: calc(var(--spacing) * -<number>);
+end-<fraction>          inset-inline-end: calc(<fraction> * 100%);
+-end-<fraction>         inset-inline-end: calc(<fraction> * -100%);
+end-px                  inset-inline-end: 1px;
+-end-px                 inset-inline-end: -1px;
+end-full                inset-inline-end: 100%;
+-end-full               inset-inline-end: -100%;
+end-auto                inset-inline-end: auto;
+end-(<custom-property>)     inset-inline-end: var(<custom-property>);
+end-[<value>]           inset-inline-end: <value>;
+top-<number>            top: calc(var(--spacing) * <number>);
+-top-<number>           top: calc(var(--spacing) * -<number>);
+top-<fraction>          top: calc(<fraction> * 100%);
+-top-<fraction>         top: calc(<fraction> * -100%);
+top-px                  top: 1px;
+-top-px                 top: -1px;
+top-full                top: 100%;
+-top-full               top: -100%;
+top-auto                top: auto;
+top-(<custom-property>)   top: var(<custom-property>);
+top-[<value>]            top: <value>;
+right-<number>           right: calc(var(--spacing) * <number>);
+-right-<number>          right: calc(var(--spacing) * -<number>);
+right-<fraction>         right: calc(<fraction> * 100%);
+-right-<fraction>        right: calc(<fraction> * -100%);
+right-px                 right: 1px;
+-right-px                right: -1px;
+right-full               right: 100%;
+-right-full               right: -100%;
+right-auto               right: auto;
+right-(<custom-property>)    right: var(<custom-property>);
+right-[<value>]          right: <value>;
+bottom-<number>          bottom: calc(var(--spacing) * <number>);
+-bottom-<number>         bottom: calc(var(--spacing) * -<number>);
+bottom-<fraction>        bottom: calc(<fraction> * 100%);
+-bottom-<fraction>       bottom: calc(<fraction> * -100%);
+bottom-px                bottom: 1px;
+-bottom-px               bottom: -1px;
+bottom-full              bottom: 100%;
+-bottom-full             bottom: -100%;
+bottom-auto              bottom: auto;
+bottom-(<custom-property>)      bottom: var(<custom-property>);
+bottom-[<value>]         bottom: <value>;
+left-<number>            left: calc(var(--spacing) * <number>);
+-left-<number>           left: calc(var(--spacing) * -<number>);
+left-<fraction>          left: calc(<fraction> * 100%);
+-left-<fraction>         left: calc(<fraction> * -100%);
+left-px                  left: 1px;
+-left-px                 left: -1px;
+left-full                left: 100%;
+-left-full               left: -100%;
+left-auto                left: auto;
+left-(<custom-property>)  left: var(<custom-property>);
+left-[<value>]           left: <value>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------------------------- Bootstrap -----------------------------------------------------------------
 ------------------------------------------- Bootstrap -----------------------------------------------------------------
                                
