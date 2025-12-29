@@ -1371,91 +1371,72 @@ pl-[<value>]               padding-left: <value>;
 space-   // فاصله مثبت
 -space-  // فاصله منفی
 
-m-<number>       margin: calc(var(--spacing) * <number>);
--m-<number>      margin: calc(var(--spacing) * -<number>);
-m-auto           margin: auto;
-m-px             margin: 1px;
--m-px             margin: -1px;
-m-(<custom-property>)   margin: var(<custom-property>);
-m-[<value>]        margin: <value>;
-mx-<number>        margin-inline: calc(var(--spacing) * <number>);
--mx-<number>       margin-inline: calc(var(--spacing) * -<number>);
-mx-auto            margin-inline: auto;
-mx-px              margin-inline: 1px;
--mx-px            margin-inline: -1px;
-mx-(<custom-property>)      margin-inline: var(<custom-property>);
-mx-[<value>]             margin-inline: <value>;
-my-<number>              margin-block: calc(var(--spacing) * <number>);
--my-<number>            margin-block: calc(var(--spacing) * -<number>);
-my-auto                  margin-block: auto;
-my-px                   margin-block: 1px;
--my-px                  margin-block: -1px;
-my-(<custom-property>)  margin-block: var(<custom-property>);
-my-[<value>]            margin-block: <value>;
-ms-<number>             margin-inline-start: calc(var(--spacing) * <number>);
--ms-<number>            margin-inline-start: calc(var(--spacing) * -<number>);
-ms-auto                  margin-inline-start: auto;
-ms-px                    margin-inline-start: 1px;
--ms-px                        margin-inline-start: -1px;
-ms-(<custom-property>)     margin-inline-start: var(<custom-property>);
-ms-[<value>]            margin-inline-start: <value>;
-me-<number>            margin-inline-end: calc(var(--spacing) * <number>);
--me-<number>            margin-inline-end: calc(var(--spacing) * -<number>);
-me-auto                  margin-inline-end: auto;
+m-<number>                   margin: calc(var(--spacing) * <number>);
+-m-<number>                  margin: calc(var(--spacing) * -<number>);
+m-auto                       margin: auto;
+m-px                         margin: 1px;
+-m-px                        margin: -1px;
+m-(<custom-property>)        margin: var(<custom-property>);
+m-[<value>]                  margin: <value>;
+mx-<number>                  margin-inline: calc(var(--spacing) * <number>);
+-mx-<number>                 margin-inline: calc(var(--spacing) * -<number>);
+mx-auto                      margin-inline: auto;
+mx-px                        margin-inline: 1px;
+-mx-px                       margin-inline: -1px;
+mx-(<custom-property>)       margin-inline: var(<custom-property>);
+mx-[<value>]                 margin-inline: <value>;
+my-<number>                  margin-block: calc(var(--spacing) * <number>);
+-my-<number>                 margin-block: calc(var(--spacing) * -<number>);
+my-auto                      margin-block: auto;
+my-px                        margin-block: 1px;
+-my-px                       margin-block: -1px;
+my-(<custom-property>)       margin-block: var(<custom-property>);
+my-[<value>]                 margin-block: <value>;
+ms-<number>                  margin-inline-start: calc(var(--spacing) * <number>);
+-ms-<number>                 margin-inline-start: calc(var(--spacing) * -<number>);
+ms-auto                      margin-inline-start: auto;
+ms-px                        margin-inline-start: 1px;
+-ms-px                       margin-inline-start: -1px;
+ms-(<custom-property>)       margin-inline-start: var(<custom-property>);
+ms-[<value>]                 margin-inline-start: <value>;
+me-<number>                  margin-inline-end: calc(var(--spacing) * <number>);
+-me-<number>                 margin-inline-end: calc(var(--spacing) * -<number>);
+me-auto                      margin-inline-end: auto;
 me-px                        margin-inline-end: 1px;
--me-px                        margin-inline-end: -1px;
-me-(<custom-property>)            margin-inline-end: var(<custom-property>);
-me-[<value>]                  margin-inline-end: <value>;
+-me-px                       margin-inline-end: -1px;
+me-(<custom-property>)       margin-inline-end: var(<custom-property>);
+me-[<value>]                 margin-inline-end: <value>;
 mt-<number>                  margin-top: calc(var(--spacing) * <number>);
--mt-<number>            margin-top: calc(var(--spacing) * -<number>);
-mt-auto            margin-top: auto;
-mt-px                  margin-top: 1px;
--mt-px                  margin-top: -1px;
-mt-(<custom-property>)                  margin-top: var(<custom-property>);
-mt-[<value>]
-margin-top: <value>;
-mr-<number>
-margin-right: calc(var(--spacing) * <number>);
--mr-<number>
-margin-right: calc(var(--spacing) * -<number>);
-mr-auto
-margin-right: auto;
-mr-px
-margin-right: 1px;
--mr-px
-margin-right: -1px;
-mr-(<custom-property>)
-margin-right: var(<custom-property>);
-mr-[<value>]
-margin-right: <value>;
-mb-<number>
-margin-bottom: calc(var(--spacing) * <number>);
--mb-<number>
-margin-bottom: calc(var(--spacing) * -<number>);
-mb-auto
-margin-bottom: auto;
-mb-px
-margin-bottom: 1px;
--mb-px
-margin-bottom: -1px;
-mb-(<custom-property>)
-margin-bottom: var(<custom-property>);
-mb-[<value>]
-margin-bottom: <value>;
-ml-<number>
-margin-left: calc(var(--spacing) * <number>);
--ml-<number>
-margin-left: calc(var(--spacing) * -<number>);
-ml-auto
-margin-left: auto;
-ml-px
-margin-left: 1px;
--ml-px
-margin-left: -1px;
-ml-(<custom-property>)
-margin-left: var(<custom-property>);
-ml-[<value>]
-margin-left: <value>;
+-mt-<number>                 margin-top: calc(var(--spacing) * -<number>);
+mt-auto                      margin-top: auto;
+mt-px                        margin-top: 1px;
+-mt-px                       margin-top: -1px;
+mt-(<custom-property>)       margin-top: var(<custom-property>);
+mt-[<value>]                 margin-top: <value>;
+mr-<number>                  margin-right: calc(var(--spacing) * <number>);
+-mr-<number>                 margin-right: calc(var(--spacing) * -<number>);
+mr-auto                      margin-right: auto;
+mr-px                        margin-right: 1px;
+-mr-px                       margin-right: -1px;
+mr-(<custom-property>)       margin-right: var(<custom-property>);
+mr-[<value>]                 margin-right: <value>;
+mb-<number>                  margin-bottom: calc(var(--spacing) * <number>);
+-mb-<number>                 margin-bottom: calc(var(--spacing) * -<number>);
+mb-auto                      margin-bottom: auto;
+mb-px                        margin-bottom: 1px;
+-mb-px                       margin-bottom: -1px;
+mb-(<custom-property>)       margin-bottom: var(<custom-property>);
+mb-[<value>]                 margin-bottom: <value>;
+ml-<number>                  margin-left: calc(var(--spacing) * <number>);
+-ml-<number>                 margin-left: calc(var(--spacing) * -<number>);
+ml-auto                      margin-left: auto;
+ml-px                        argin-left: 1px;
+-ml-px                       margin-left: -1px;
+ml-(<custom-property>)       margin-left: var(<custom-property>);
+ml-[<value>]                 margin-left: <value>;
+
+
+
 
 
 
@@ -1465,11 +1446,6 @@ space-x-<number>     & > :not(:last-child) {
                       margin-inline-start: calc(calc(var(--spacing) * <number>) * var(--tw-space-x-reverse));
                       margin-inline-end: calc(calc(var(--spacing) * <number>) * calc(1 - var(--tw-space-x-reverse)));
 };
-
-
-
-
-
 -space-x-<number>      & > :not(:last-child) {
                       --tw-space-x-reverse: 0;
                         margin-inline-start: calc(calc(var(--spacing) * -<number>) * var(--tw-space-x-reverse));
@@ -1478,14 +1454,15 @@ space-x-<number>     & > :not(:last-child) {
 
 
 
+
+
+
+
 space-x-px       & > :not(:last-child) {
                     --tw-space-x-reverse: 0;
                     margin-inline-start: calc(1px * var(--tw-space-x-reverse));
                     margin-inline-end: calc(1px * calc(1 - var(--tw-space-x-reverse)));
 };
-
-
-
 -space-x-px       & > :not(:last-child) {
                     --tw-space-x-reverse: 0;
                     margin-inline-start: calc(-1px * var(--tw-space-x-reverse));
@@ -1494,215 +1471,379 @@ space-x-px       & > :not(:last-child) {
 
 
 
-space-x-(<custom-property>)
-& > :not(:last-child) {
-  --tw-space-x-reverse: 0;
-  margin-inline-start: calc(var(<custom-property>) * var(--tw-space-x-reverse));
-  margin-inline-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-x-reverse)));
+
+
+
+
+
+space-x-(<custom-property>)   & > :not(:last-child) {
+                              --tw-space-x-reverse: 0;
+                                margin-inline-start: calc(var(<custom-property>) * var(--tw-space-x-reverse));
+                                margin-inline-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-x-reverse)));
+};
+space-x-[<value>]            & > :not(:last-child) {
+                           --tw-space-x-reverse: 0;
+                           margin-inline-start: calc(<value> * var(--tw-space-x-reverse));
+                            margin-inline-end: calc(<value> * calc(1 - var(--tw-space-x-reverse)));
 };
 
 
-space-x-[<value>]
-& > :not(:last-child) {
-  --tw-space-x-reverse: 0;
-  margin-inline-start: calc(<value> * var(--tw-space-x-reverse));
-  margin-inline-end: calc(<value> * calc(1 - var(--tw-space-x-reverse)));
-};
 
-space-y-<number>
-& > :not(:last-child) {
-  --tw-space-y-reverse: 0;
-  margin-block-start: calc(calc(var(--spacing) * <number>) * var(--tw-space-y-reverse));
-  margin-block-end: calc(calc(var(--spacing) * <number>) * calc(1 - var(--tw-space-y-reverse)));
-};
 
--space-y-<number>
-& > :not(:last-child) {
-  --tw-space-y-reverse: 0;
-  margin-block-start: calc(calc(var(--spacing) * -<number>) * var(--tw-space-y-reverse));
-  margin-block-end: calc(calc(var(--spacing) * -<number>) * calc(1 - var(--tw-space-y-reverse)));
+
+
+
+space-y-<number>       & > :not(:last-child) {
+                       --tw-space-y-reverse: 0;
+                          margin-block-start: calc(calc(var(--spacing) * <number>) * var(--tw-space-y-reverse));
+                          margin-block-end: calc(calc(var(--spacing) * <number>) * calc(1 - var(--tw-space-y-reverse)));
+};
+-space-y-<number>      & > :not(:last-child) {
+                    --tw-space-y-reverse: 0;
+                    margin-block-start: calc(calc(var(--spacing) * -<number>) * var(--tw-space-y-reverse));
+                    margin-block-end: calc(calc(var(--spacing) * -<number>) * calc(1 - var(--tw-space-y-reverse)));
 };
 
 
-space-y-px
-& > :not(:last-child) {
-  --tw-space-y-reverse: 0;
-  margin-block-start: calc(1px * var(--tw-space-y-reverse));
-  margin-block-end: calc(1px * calc(1 - var(--tw-space-y-reverse)));
+
+
+
+
+
+space-y-px     & > :not(:last-child) {
+                    --tw-space-y-reverse: 0;
+                    margin-block-start: calc(1px * var(--tw-space-y-reverse));
+                    margin-block-end: calc(1px * calc(1 - var(--tw-space-y-reverse)));
+};
+-space-y-px      & > :not(:last-child) {
+                    --tw-space-y-reverse: 0;
+                    margin-block-start: calc(-1px * var(--tw-space-y-reverse));
+                  margin-block-end: calc(-1px * calc(1 - var(--tw-space-y-reverse)));
 };
 
 
--space-y-px
-& > :not(:last-child) {
-  --tw-space-y-reverse: 0;
-  margin-block-start: calc(-1px * var(--tw-space-y-reverse));
-  margin-block-end: calc(-1px * calc(1 - var(--tw-space-y-reverse)));
+
+
+
+
+
+space-y-(<custom-property>)      & > :not(:last-child) {
+                                --tw-space-y-reverse: 0;
+                                margin-block-start: calc(var(<custom-property>) * var(--tw-space-y-reverse));
+                                margin-block-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-y-reverse)));
 };
 
 
-space-y-(<custom-property>)
-& > :not(:last-child) {
-  --tw-space-y-reverse: 0;
-  margin-block-start: calc(var(<custom-property>) * var(--tw-space-y-reverse));
-  margin-block-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-y-reverse)));
+
+space-y-[<value>]            & > :not(:last-child) {
+                              --tw-space-y-reverse: 0;
+                                margin-block-start: calc(<value> * var(--tw-space-y-reverse));
+                                margin-block-end: calc(<value> * calc(1 - var(--tw-space-y-reverse)));
 };
 
 
-space-y-[<value>]
-& > :not(:last-child) {
-  --tw-space-y-reverse: 0;
-  margin-block-start: calc(<value> * var(--tw-space-y-reverse));
-  margin-block-end: calc(<value> * calc(1 - var(--tw-space-y-reverse)));
-};
 
-
-space-x-reverse
-& > :not(:last-child)) {
-  --tw-space-x-reverse: 1;
+space-x-reverse      & > :not(:last-child)) {
+                    --tw-space-x-reverse: 1;
 }
 
 
 
-space-y-reverse
-& > :not(:last-child)) {
-  --tw-space-y-reverse: 1;
+space-y-reverse         & > :not(:last-child)) {
+                        --tw-space-y-reverse: 1;
 }
 
 
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  Sizing  /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+------------------------------------------- width -------------------------------------------------------------
+------------------------------------------- width -------------------------------------------------------------
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+w-<number>       width: calc(var(--spacing) * <number>);
+w-<fraction>     width: calc(<fraction> * 100%);
+w-3xs            width: var(--container-3xs); /* 16rem (256px) */
+w-2xs            width: var(--container-2xs); /* 18rem (288px) */
+w-xs             width: var(--container-xs); /* 20rem (320px) */
+w-sm             width: var(--container-sm); /* 24rem (384px) */
+w-md             width: var(--container-md); /* 28rem (448px) */
+w-lg             width: var(--container-lg); /* 32rem (512px) */
+w-xl             width: var(--container-xl); /* 36rem (576px) */
+w-2xl            width: var(--container-2xl); /* 42rem (672px) */
+w-3xl            width: var(--container-3xl); /* 48rem (768px) */
+w-4xl            width: var(--container-4xl); /* 56rem (896px) */
+w-5xl            width: var(--container-5xl); /* 64rem (1024px) */
+w-6xl            width: var(--container-6xl); /* 72rem (1152px) */
+w-7xl            width: var(--container-7xl); /* 80rem (1280px) */
+w-auto           width: auto;
+w-px             width: 1px;
+w-full           width: 100%;
+w-screen         width: 100vw;
+w-dvw            width: 100dvw;
+w-dvh            width: 100dvh;
+w-lvw            width: 100lvw;
+w-lvh            width: 100lvh;
+w-svw            width: 100svw;
+w-svh            width: 100svh;
+w-min            width: min-content;
+w-max            width: max-content;
+w-fit            width: fit-content;
 
-/*        میزان نمایش یک عنصر        */
 
+w-(<custom-property>)  width: var(<custom-property>);
+w-[<value>]            width: <value>;
 
 
+size-<number>     width: calc(var(--spacing) * <number>);
+                  height: calc(var(--spacing) * <number>);
 
 
+size-<fraction>   width: calc(<fraction> * 100%);
+                  height: calc(<fraction> * 100%);
 
 
+size-auto         width: auto;
+                  height: auto;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+size-px           width: 1px;
+                  height: 1px;
 
 
+size-full         width: 100%;
+                  height: 100%;
 
 
+size-dvw          width: 100dvw;
+                  height: 100dvw;
 
 
+size-dvh          width: 100dvh;
+                  height: 100dvh;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+size-lvw          width: 100lvw;
+                  height: 100lvw;
 
 
+size-lvh          width: 100lvh;
+                  height: 100lvh;
 
 
+size-svw          width: 100svw;
+                  height: 100svw;
 
 
+size-svh          width: 100svh;
+                  height: 100svh;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+size-min          width: min-content;
+                  height: min-content;
 
 
+size-max          width: max-content;
+                  height: max-content;
 
 
+size-fit          width: fit-content;
+                  height: fit-content;
 
 
+size-(<custom-property>)      width: var(<custom-property>);
+                              height: var(<custom-property>);
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+size-[<value>]    width: <value>;
+                  height: <value>;
 
-/*        میزان نمایش یک عنصر        */
+---------------------------------------------------------------------------------------
 
+min-w-<number>        min-width: calc(var(--spacing) * <number>);
+min-w-<fraction>      min-width: calc(<fraction> * 100%);
+min-w-3xs             min-width: var(--container-3xs); /* 16rem (256px) */
+min-w-2xs             min-width: var(--container-2xs); /* 18rem (288px) */
+min-w-xs              min-width: var(--container-xs); /* 20rem (320px) */
+min-w-sm              min-width: var(--container-sm); /* 24rem (384px) */
+min-w-md              min-width: var(--container-md); /* 28rem (448px) */
+min-w-lg              min-width: var(--container-lg); /* 32rem (512px) */
+min-w-xl              min-width: var(--container-xl); /* 36rem (576px) */
+min-w-2xl             min-width: var(--container-2xl); /* 42rem (672px) */
+min-w-3xl             min-width: var(--container-3xl); /* 48rem (768px) */
+min-w-4xl             min-width: var(--container-4xl); /* 56rem (896px) */
+min-w-5xl             min-width: var(--container-5xl); /* 64rem (1024px) */
+min-w-6xl             min-width: var(--container-6xl); /* 72rem (1152px) */
+min-w-7xl             min-width: var(--container-7xl); /* 80rem (1280px) */
 
 
 
+min-w-px              min-width: 1px;
+min-w-full            min-width: 100%;
+min-w-screen          min-width: 100vw;
+min-w-dvw             min-width: 100dvw;
+min-w-dvh             min-width: 100dvh;
+min-w-lvw             min-width: 100lvw;
+min-w-lvh             min-width: 100lvh;
+min-w-svw             min-width: 100svw;
+min-w-svh             min-width: 100svh;
+min-w-min             min-width: min-content;
+min-w-max             min-width: max-content;
+min-w-fit             min-width: fit-content;
 
 
+min-w-(<custom-property>)      min-width: var(<custom-property>);
+min-w-[<value>]       min-width: <value>;
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+/*         max , min تنها تفاوت      */
+min-w-auto            min-width: auto;             ((  ندارد )) 
+((  ندارد ))                              max-w-none            max-width: none;
 
 
 
+------------------------------------------- height -------------------------------------------------------------
+------------------------------------------- height -------------------------------------------------------------
 
+h-<number>             height: calc(var(--spacing) * <number>);
+h-<fraction>           height: calc(<fraction> * 100%);
+h-auto                 height: auto;
+h-px                   height: 1px;
+h-full                 height: 100%;
+h-screen               height: 100vh;
+h-dvh                  height: 100dvh;
+h-dvw                  height: 100dvw;
+h-lvh                  height: 100lvh;
+h-lvw                  height: 100lvw;
+h-svh                  height: 100svh;
+h-svw                  height: 100svw;
+h-min                  height: min-content;
+h-max                  height: max-content;
+h-fit                  height: fit-content;
+h-lh                   height: 1lh;
+h-(<custom-property>)  height: var(<custom-property>);
+h-[<value>]            height: <value>;
 
 
+size-<number>        width: calc(var(--spacing) * <number>);
+                     height: calc(var(--spacing) * <number>);
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+size-<fraction>      width: calc(<fraction> * 100%);
+                     height: calc(<fraction> * 100%);
 
 
+size-auto            width: auto;
+                     height: auto;
 
 
+size-px              width: 1px;
+                     height: 1px;
 
 
+size-full            width: 100%;
+                     height: 100%;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+size-dvw             width: 100dvw;
+                     height: 100dvw;
 
 
+size-dvh            width: 100dvh;
+                    height: 100dvh;
 
 
+size-lvw            width: 100lvw;
+                    height: 100lvw;
 
 
+size-lvh            width: 100lvh;
+                    height: 100lvh;
 
+size-svw            width: 100svw;
+                    height: 100svw;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+size-svh            width: 100svh;
+                    height: 100svh;
 
 
+size-min            width: min-content;
+                    height: min-content;
 
 
+size-max            width: max-content;
+                    height: max-content;
 
 
+size-fit            width: fit-content;
+                    height: fit-content;
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+size-(<custom-property>)    width: var(<custom-property>);
+                            height: var(<custom-property>);
 
-/*        میزان نمایش یک عنصر        */
 
+size-[<value>]      width: <value>;
+                    height: <value>;
 
+---------------------------------------------------------------------------------------
 
+min-h-<number>           min-height: calc(var(--spacing) * <number>);
+min-h-<fraction>         min-height: calc(<fraction> * 100%);
+min-h-px                 min-height: 1px;
+min-h-full               min-height: 100%;
+min-h-screen             min-height: 100vh;
+min-h-dvh                min-height: 100dvh;
+min-h-dvw                min-height: 100dvw;
+min-h-lvh                min-height: 100lvh;
+min-h-lvw                min-height: 100lvw;
+min-h-svw                min-height: 100svw;
+min-h-svh                min-height: 100svh;
+min-h-auto               min-height: auto;
+min-h-min                min-height: min-content;
+min-h-max                min-height: max-content;
+min-h-fit                min-height: fit-content;
+min-h-lh                 min-height: 1lh;
+min-h-(<custom-propety>)      min-height: var(<custom-property>);
+min-h-[<value>]         min-height: <value>;
 
+---------------------------------------------------------------------------------------
 
+max-h-<number>             max-height: calc(var(--spacing) * <number>);
+max-h-<fraction>           max-height: calc(<fraction> * 100%);
+max-h-none                 max-height: none;
+max-h-px                   max-height: 1px;
+max-h-full                 max-height: 100%;
+max-h-screen               max-height: 100vh;
+max-h-dvh                  max-height: 100dvh;
+max-h-dvw                  max-height: 100dvw;
+max-h-lvh                  max-height: 100lvh;
+max-h-lvw                  max-height: 100lvw;
+max-h-svh                  max-height: 100svh;
+max-h-svw                  max-height: 100svw;
+max-h-min                  max-height: min-content;
+max-h-max                  max-height: max-content;
+max-h-fit                  max-height: fit-content;
+max-h-lh                   max-height: 1lh;
+max-h-(<custom-propety>)   max-height: var(<custom-property>);
+max-h-[<value>]            max-height: <value>;
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1710,187 +1851,435 @@ space-y-reverse
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////  Typography  ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*         کلاس‌های پایه‌ای تلویند         */
 
+font-sans      font-family: var(--font-sans); /* ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' */
+font-serif     font-family: var(--font-serif); /* ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif */
+font-mono      font-family: var(--font-mono); /* ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace */
+font-(family-name:<custom-property>)      font-family: var(<custom-property>);
+font-[<value>]                              font-family: <value>;
 
+---------------------------------------------------------------------------------------
 
+text-xs       font-size: var(--text-xs); /* 0.75rem (12px) */ 
+text-sm       font-size: var(--text-sm); /* 0.875rem (14px) */ 
+text-base     font-size: var(--text-base); /* 1rem (16px) */ 
+text-lg       font-size: var(--text-lg); /* 1.125rem (18px) */ 
+text-xl       font-size: var(--text-xl); /* 1.25rem (20px) */ 
+text-2xl      font-size: var(--text-2xl); /* 1.5rem (24px) */ 
+text-3xl      font-size: var(--text-3xl); /* 1.875rem (30px) */ 
+text-4xl      font-size: var(--text-4xl); /* 2.25rem (36px) */ 
+text-5xl      font-size: var(--text-5xl); /* 3rem (48px) */ 
+text-6xl      font-size: var(--text-6xl); /* 3.75rem (60px) */ 
+text-7xl      font-size: var(--text-7xl); /* 4.5rem (72px) */ 
+text-8xl      font-size: var(--text-8xl); /* 6rem (96px) */ 
+text-9xl      font-size: var(--text-9xl); /* 8rem (128px) */ 
 
+text-(length:<custom-property>)    font-size: var(<custom-property>);
+text-[<value>]                     font-size: <value>;
 
+---------------------------------------------------------------------------------------
 
+ntialiased              -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+subpixel-antialiased    -webkit-font-smoothing: auto;
+                        -moz-osx-font-smoothing: auto;
 
-/*        میزان نمایش یک عنصر        */
+---------------------------------------------------------------------------------------
 
+italic            font-style: italic;
+not-italic      font-style: normal;
 
+---------------------------------------------------------------------------------------
 
+font-thin                   font-weight: 100;
+font-extralight             font-weight: 200;
+font-light                  font-weight: 300;
+font-normal                 font-weight: 400;
+font-medium                 font-weight: 500;
+font-semibold               font-weight: 600;
+font-bold                   font-weight: 700;
+font-extrabold              font-weight: 800;
+font-black                  font-weight: 900;
+font-(<custom-property>)    font-weight: var(<custom-property>);
+font-[<value>]              font-weight: <value>;
 
+---------------------------------------------------------------------------------------
 
+font-stretch-ultra-condensed       font-stretch: ultra-condensed; /* 50% */
+font-stretch-extra-condensed       font-stretch: extra-condensed; /* 62.5% */
+font-stretch-condensed             font-stretch: condensed; /* 75% */
+font-stretch-semi-condensed        font-stretch: semi-condensed; /* 87.5% */
+font-stretch-normal                font-stretch: normal; /* 100% */
+font-stretch-semi-expanded         font-stretch: semi-expanded; /* 112.5% */
+font-stretch-expanded              font-stretch: expanded; /* 125% */
+font-stretch-extra-expanded        font-stretch: extra-expanded; /* 150% */
+font-stretch-ultra-expanded        font-stretch: ultra-expanded; /* 200% */
+font-stretch-<percentage>          font-stretch: <percentage>;
+font-stretch-(<custom-property>)   font-stretch: var(<custom-property>);
+font-stretch-[<value>]             font-stretch: <value>;
 
+---------------------------------------------------------------------------------------
 
+normal-nums           font-variant-numeric: normal;
+ordinal               font-variant-numeric: ordinal;
+slashed-zero          font-variant-numeric: slashed-zero;
+lining-nums           font-variant-numeric: lining-nums;
+oldstyle-nums         font-variant-numeric: oldstyle-nums;
+proportional-nums     font-variant-numeric: proportional-nums;
+tabular-nums          font-variant-numeric: tabular-nums;
+diagonal-fractions    font-variant-numeric: diagonal-fractions;
+stacked-fractions     font-variant-numeric: stacked-fractions;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+---------------------------------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+tracking-tighter              letter-spacing: var(--tracking-tighter); /* -0.05em */
+tracking-tight                letter-spacing: var(--tracking-tight); /* -0.025em */
+tracking-normal               letter-spacing: var(--tracking-normal); /* 0em */
+tracking-wide                 letter-spacing: var(--tracking-wide); /* 0.025em */
+tracking-wider                letter-spacing: var(--tracking-wider); /* 0.05em */
+tracking-widest               letter-spacing: var(--tracking-widest); /* 0.1em */
+tracking-(<custom-proerty>)   letter-spacing: var(<custom-property>);
+tracking-[<value>]            letter-spacing: <value>;
 
+---------------------------------------------------------------------------------------
 
+line-clamp-<number>           overflow: hidden;
+                              display: -webkit-box;
+                              -webkit-box-orient: vertical;
+                              -webkit-line-clamp: <number>;
 
 
+line-clamp-none                overflow: visible;
+                               display: block;
+                               -webkit-box-orient: horizontal;
+                               -webkit-line-clamp: unset;
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+line-clamp-(<custom-property>) overflow: hidden;
+                              display: -webkit-box;
+                              -webkit-box-orient: vertical;
+                              -webkit-line-clamp: var(<custom-property>);
 
-/*        میزان نمایش یک عنصر        */
 
+line-clamp-[<value>]           overflow: hidden;
+                               display: -webkit-box;
+                              -webkit-box-orient: vertical;
+                              -webkit-line-clamp: <value>;
 
+---------------------------------------------------------------------------------------
 
+text-<size>/<number>              font-size: <size>;
+text-<size>/(<custom-property>)   font-size: <size>;
+text-<size>/[<value>]             font-size: <size>;
+leading-none                      line-height: 1;
+leading-<number>                  line-height: calc(var(--spacing) * <number>);
+leading-(<custom-property>)       line-height: var(<custom-property>);
+leading-[<value>]                 line-height: <value>;
 
+---------------------------------------------------------------------------------------
 
+list-image-[<value>]              list-style-image: <value>;
+list-image-(<custom-property>)    list-style-image: var(<custom-property>);
+list-image-none                   list-style-image: none;
 
+---------------------------------------------------------------------------------------
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+list-inside       list-style-position: inside;
+list-outside      list-style-position: outside;
 
-/*        میزان نمایش یک عنصر        */
+---------------------------------------------------------------------------------------
 
+list-disc                  list-style-type: disc;
+list-decimal               list-style-type: decimal;
+list-none                  list-style-type: none;
+list-(<custom-property>)   list-style-type: var(<custom-property>);
+list-[<value>]             list-style-type: <value>;
 
+---------------------------------------------------------------------------------------
 
+text-left        text-align: left;
+text-center      text-align: center;
+text-right       text-align: right;
+text-justify     text-align: justify;
+text-start       text-align: start;
+text-end         text-align: end;
 
+---------------------------------------------------------------------------------------
 
+text-inherit                color: inherit;
+text-current                color: currentColor;
+text-transparent            color: transparent;
+text-black                  color: var(--color-black);
+text-white                  color: var(--color-white);
 
+text-(<custom-property>)    color: var(<custom-property>);
+text-[<value>]              color: <value>;
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+text-red-50                    color: var(--color-red-50); /* oklch(97.1% 0.013 */
+text-color-( 50 ta 950 )       color: var(--color-red-( 50 ta 950 )); /* oklch(97.1% 0.013 */
 
-/*        میزان نمایش یک عنصر        */
+---------------------------------------------------------------------------------------
 
+underline            text-decoration-line: underline;
+overline             text-decoration-line: overline;
+line-through         text-decoration-line: line-through;
+no-underline         text-decoration-line: none;
 
+---------------------------------------------------------------------------------------
 
+decoration-inherit                text-decoration-color: inherit;
+decoration-current                text-decoration-color: currentColor;
+decoration-transparent            text-decoration-color: transparent;
+decoration-black                  text-decoration-color: var(--color-black);
+decoration-white                  text-decoration-color: var(--color-white);
 
+decoration-(<custom-property>)    text-decoration-color: var(<custom-property>);
+decoration-[<value>]              text-decoration-color: <value>;
 
 
+decoration-red-50                 text-decoration-color: var(--color-red-50); /* oklch(97.1% 0.013 */
+decoration-color-( 50 ta 950 )    text-decoration-color: var(--color-red-( 50 ta 950 )); /* oklch(97.1% 0.013 */
 
+---------------------------------------------------------------------------------------
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+decoration-solid       text-decoration-style: solid;
+decoration-double      text-decoration-style: double;
+decoration-dotted      text-decoration-style: dotted;
+decoration-dashed      text-decoration-style: dashed;
+decoration-wavy        text-decoration-style: wavy;
 
-/*        میزان نمایش یک عنصر        */
+---------------------------------------------------------------------------------------
 
+decoration-<number>                    text-decoration-thickness: <number>px;
+decoration-from-font                   text-decoration-thickness: from-font;
+decoration-auto                        text-decoration-thickness: auto;
+decoration-(length:<custom-property>)  text-decoration-thickness: var(<custom-property>);
+decoration-[<value>]                   text-decoration-thickness: <value>;
 
+---------------------------------------------------------------------------------------
 
+underline-offset-<number>              text-underline-offset: <number>px;
+-underline-offset-<number>             text-underline-offset: calc(<number>px * -1);
+underline-offset-auto                  text-underline-offset: auto;
+underline-offset-(<custom-property>)   text-underline-offset: var(<custom-property>);
+underline-offset-[<value>]             text-underline-offset: <value>;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+---------------------------------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+uppercase       text-transform: uppercase;
+lowercase       text-transform: lowercase;
+capitalize      text-transform: capitalize;
+normal-case     text-transform: none;
 
+---------------------------------------------------------------------------------------
 
+truncate            overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
 
 
+text-ellipsis      text-overflow: ellipsis;
+text-clip          text-overflow: clip;
 
+---------------------------------------------------------------------------------------
 
+text-wrap         text-wrap: wrap;
+text-nowrap       text-wrap: nowrap;
+text-balance      text-wrap: balance;
+text-pretty       text-wrap: pretty;
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+---------------------------------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+indent-<number>               text-indent: calc(var(--spacing) * <number>);
+-indent-<number>              text-indent: calc(var(--spacing) * -<number>);
+indent-px                     text-indent: 1px;
+-indent-px                    text-indent: -1px;
+indent-(<custom-property>)    text-indent: var(<custom-property>);
+indent-[<value>]              text-indent: <value>;
 
+---------------------------------------------------------------------------------------
 
+align-baseline             vertical-align: baseline;
+align-top                  vertical-align: top;
+align-middle               vertical-align: middle;
+align-bottom               vertical-align: bottom;
+align-text-top             vertical-align: text-top;
+align-text-bottom          vertical-align: text-bottom;
+align-sub                  vertical-align: sub;
+align-super                vertical-align: super;
+align-(<custom-property>)  vertical-align: var(<custom-property>);
+align-[<value>]            vertical-align: <value>;
 
+---------------------------------------------------------------------------------------
 
+whitespace-normal          white-space: normal;
+whitespace-nowrap          white-space: nowrap;
+whitespace-pre             white-space: pre;
+whitespace-pre-line        white-space: pre-line;
+whitespace-pre-wrap        white-space: pre-wrap;
+whitespace-break-spaces    white-space: break-spaces;
 
+---------------------------------------------------------------------------------------
 
+break-normal     word-break: normal;
+break-all        word-break: break-all;
+break-keep       word-break: keep-all;
 
+---------------------------------------------------------------------------------------
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+wrap-break-word    overflow-wrap: break-word;
+wrap-anywhere      overflow-wrap: anywhere;
+wrap-normal        overflow-wrap: normal;
 
-/*        میزان نمایش یک عنصر        */
+---------------------------------------------------------------------------------------
 
+hyphens-none       hyphens: none;
+hyphens-manual     hyphens: manual;
+hyphens-auto       hyphens: auto;
 
+---------------------------------------------------------------------------------------
 
+content-[<value>]              content: <value>;
+content-(<custom-property>)    content: var(<custom-property>);
+content-none                   content: none;
 
 
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////  Backgrounds  ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
 
+bg-fixed            background-attachment: fixed;
+bg-local            background-attachment: local;
+bg-scroll           background-attachment: scroll;
 
 
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+bg-clip-border       background-clip: border-box;
+bg-clip-padding      background-clip: padding-box;
+bg-clip-content      background-clip: content-box;
+bg-clip-text         background-clip: text;
 
 
 
 
 
 
+bg-inherit          background-color: inherit;
+bg-current          background-color: currentColor;
+bg-transparent      background-color: transparent;
+bg-black            background-color: var(--color-black); /* #000 */
+bg-white            background-color: var(--color-white); /* #fff */
 
+bg-color-( 50 ta 950 )    background-color: var(--color-color-( 50 ta 950 ); /* oklch(97.1
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
+bg-(<custom-property>)    background-color: var(<custom-property>);
+bg-[<value>]              background-color: <value>;
 
-/*        میزان نمایش یک عنصر        */
 
 
+                                                
 
 
+bg-[<value>]                     background-image: <value>;
+bg-(image:<custom-property>)     background-image: var(<custom-property>);
+bg-none                          background-image: none;
+bg-linear-to-t                   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+bg-linear-to-tr                  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+bg-linear-to-r                   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+bg-linear-to-br                  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+bg-linear-to-b                   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+bg-linear-to-bl                  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
+bg-linear-to-l                   background-image: linear-gradient(to left, var(--tw-gradient-stops));
+bg-linear-to-tl                  background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+bg-linear-<angle>                background-image: linear-gradient(<angle> in oklab, var(--tw-gradient-stops));
+-bg-linear-<angle>               background-image: linear-gradient(-<angle> in oklab, var(--tw-gradient-stops));
+bg-linear-(<custom-property>)    background-image: linear-gradient(var(--tw-gradient-stops, var(<custom-property>)));
+bg-linear-[<value>]              background-image: linear-gradient(var(--tw-gradient-stops, <value>));
+bg-radial                        background-image: radial-gradient(in oklab, var(--tw-gradient-stops));
+bg-radial-(<custom-property>)    background-image: radial-gradient(var(--tw-gradient-stops,  var(<custom-property>)));
+bg-radial-[<value>]              background-image: radial-gradient(var(--tw-gradient-stops, <value>));
+bg-conic-<angle>                 background-image: conic-gradient(from <angle> in oklab, var(--tw-gradient-stops));
+-bg-conic-<angle>                background-image: conic-gradient(from -<angle> in oklab, var(--tw-gradient-stops));
+bg-conic-(<custom-property>)     background-image: var(<custom-property>);
+bg-conic-[<value>]               background-image: <value>;
+from-<color>                     --tw-gradient-from: <color>;
+from-<percentage>                --tw-gradient-from-position: <percentage>;
+from-(<custom-property>)         --tw-gradient-from: var(<custom-property>);
+from-[<value>]                   --tw-gradient-from: <value>;
+via-<color>                      --tw-gradient-via: <color>;
+via-<percentage>                 --tw-gradient-via-position: <percentage>;
+via-(<custom-property>)          --tw-gradient-via: var(<custom-property>);
+via-[<value>]                    --tw-gradient-via: <value>;
+to-<color>                       --tw-gradient-to: <color>;
+to-<percentage>                  --tw-gradient-to-position: <percentage>;
+to-(<custom-property>)           --tw-gradient-to: var(<custom-property>);
+to-[<value>]                     --tw-gradient-to: <value>;
 
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
 
+bg-origin-border       background-origin: border-box;
+bg-origin-padding      background-origin: padding-box;
+bg-origin-content      background-origin: content-box;
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
 
 
+g-top-left                      background-position: top left;
+bg-top                          background-position: top;
+bg-top-right                    background-position: top right;
+bg-left                         background-position: left;
+bg-center                       background-position: center;
+bg-right                        background-position: right;
+bg-bottom-left                  background-position: bottom left;
+bg-bottom                       background-position: bottom;
+bg-bottom-right                 background-position: bottom right;
+bg-position-(<custom-roperty>)  background-position: var(<custom-property>);
+bg-position-[<value>]           background-position: <value>;
 
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
+bg-repeat              background-repeat: repeat;
+bg-repeat-x            background-repeat: repeat-x;
+bg-repeat-y            background-repeat: repeat-y;
+bg-repeat-space        background-repeat: space;
+bg-repeat-round        background-repeat: round;
+bg-no-repeat           background-repeat: no-repeat;
 
 
 
@@ -1898,10 +2287,12 @@ space-y-reverse
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
+bg-auto                        background-size: auto;
+bg-cover                       background-size: cover;
+bg-contain                     background-size: contain;
+bg-size-(<custom-property>)    background-size: var(<custom-property>);
+bg-size-[<value>]              background-size: <value>;
 
 
 
@@ -1910,107 +2301,13 @@ space-y-reverse
 
 
 
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
 
-/*        میزان نمایش یک عنصر        */
 
-
-
-
-
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
-
-/*        میزان نمایش یک عنصر        */
-
-
-
-
-
-
-
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
-
-/*        میزان نمایش یک عنصر        */
-
-
-
-
-
-
-
-
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
-
-/*        میزان نمایش یک عنصر        */
-
-
-
-
-
-
-
-
-------------------------------------------- visibility -------------------------------------------------------------
-------------------------------------------- visibility -------------------------------------------------------------
-
-/*        میزان نمایش یک عنصر        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////  Borders  /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
