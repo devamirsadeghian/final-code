@@ -14,9 +14,15 @@ root: {
 ------------------------------------------- Utility -----------------------------------------------------------------
 ------------------------------------------- Utility -----------------------------------------------------------------
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////  Utility  ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /*  ابزار  */
-hover	            @media (hover: hover) { &:hover }
-focus         	   &:focus
+hover	                 @media (hover: hover) { &:hover }
+focus         	     &:focus
 focus-within	     &:focus-within
 focus-visible	     &:focus-visible
 active	           &:active
@@ -42,33 +48,33 @@ nth-[...]	            &:nth-child(...)
 nth-last-[...]  	      &:nth-last-child(...)
 nth-of-type-[...]	      &:nth-of-type(...)
 nth-last-of-type-[...]             	&:nth-last-of-type(...)
-empty	             &:empty
+empty	                  &:empty
 disabled          	&:disabled
-enabled	          &:enabled
-checked	          &:checked
-indeterminate    	&:indeterminate
-default          	 &:default
-optional	        &:optional
-required        	&:required
-valid	            &:valid
-invalid	          &:invalid
-user-valid	      &:user-valid
-user-invalid     	&:user-invalid
-in-range	        &:in-range
-out-of-range	    &:out-of-range
-placeholder-shown	&:placeholder-shown
-details-content	  &:details-content
-autofill	        &:autofill
-read-only        	&:read-only
-before	          &::before
-after            	&::after
-first-letter	    &::first-letter
-first-line	      &::first-line
-marker          	&::marker, & *::marker
-selection        	&::selection
-file            	&::file-selector-button
-backdrop         	&::backdrop
-placeholder	      &::placeholder
+enabled	            &:enabled
+checked	            &:checked
+indeterminate       	&:indeterminate
+default                 &:default
+optional	            &:optional
+required        	      &:required
+valid	                  &:valid
+invalid                 &:invalid
+user-valid	            &:user-valid
+user-invalid     	      &:user-invalid
+in-range	            &:in-range
+out-of-range	      &:out-of-range
+placeholder-shown	      &:placeholder-shown
+details-content	      &:details-content
+autofill                &:autofill
+read-only        	      &:read-only
+before	            &::before
+after            	      &::afte
+first-letter	      &::first-letter
+first-line	            &::first-line
+marker                	&::marker, & *::marker
+selection              	&::selection
+file                  	&::file-selector-button
+backdrop               	&::backdrop
+placeholder	            &::placeholder
 
 
 sm	      @media (width >= 40rem)
@@ -79,21 +85,21 @@ xl      	@media (width >= 80rem)
 
 
 min-[...]    @media (width >= ...)
-max-sm  	   @media (width < 40rem)
-max-md	     @media (width < 48rem)
+max-sm  	 @media (width < 40rem)
+max-md       @media (width < 48rem)
 max-lg       @media (width < 64rem)
-max-xl	     @media (width < 80rem)
-max-2xl       @media (width < 96rem)
+max-xl       @media (width < 80rem)
+max-2xl      @media (width < 96rem)
 max-[...]    @media (width < ...)
 
 
 @3xs	       @container (width >= 16rem)
 @2xs	       @container (width >= 18rem)
-@xs	         @container (width >= 20rem)
+@xs	       @container (width >= 20rem)
 @sm          @container (width >= 24rem)
 @md          @container (width >= 28rem)
-@lg	         @container (width >= 32rem)
-@xl	         @container (width >= 36rem)
+@lg	       @container (width >= 32rem)
+@xl          @container (width >= 36rem)
 @2xl	       @container (width >= 42rem)
 @3xl	       @container (width >= 48rem)
 @4xl         @container (width >= 56rem)
@@ -103,12 +109,12 @@ max-[...]    @media (width < ...)
 @min-[...]	 @container (width >= ...)
 
 
-@max-3xs	    @container (width < 16rem)
-@max-2xs	    @container (width < 18rem)
+@max-3xs	  @container (width < 16rem)
+@max-2xs      @container (width < 18rem)
 @max-xs   	  @container (width < 20rem)
-@max-sm	      @container (width < 24rem)
-@max-md	      @container (width < 28rem)
-@max-lg	      @container (width < 32rem)
+@max-sm       @container (width < 24rem)
+@max-md       @container (width < 28rem)
+@max-lg       @container (width < 32rem)
 @max-xl       @container (width < 36rem)
 @max-2xl      @container (width < 42rem)
 @max-3xl      @container (width < 48rem)
@@ -119,43 +125,43 @@ max-[...]    @media (width < ...)
 @max-[...]	  @container (width < ...)
 
 
-dark	             @media (prefers-color-scheme: dark)
+dark	                   @media (prefers-color-scheme: dark)
 motion-safe 	     @media (prefers-reduced-motion: no-preference)
 motion-reduce	     @media (prefers-reduced-motion: reduce)
 contrast-more	     @media (prefers-contrast: more)
 contrast-less	     @media (prefers-contrast: less)
 forced-colors	     @media (forced-colors: active)
-inverted-colors	   @media (inverted-colors: inverted)
+inverted-colors	     @media (inverted-colors: inverted)
 pointer-fine	     @media (pointer: fine)
-pointer-coarse	   @media (pointer: coarse)
+pointer-coarse	     @media (pointer: coarse)
 pointer-none	     @media (pointer: none)
-any-pointer-fine	 @media (any-pointer: fine)
-any-pointer-coarse @media (any-pointer: coarse)
-any-pointer-none   @media (any-pointer: none)
-portrait	         @media (orientation: portrait)
-landscape	         @media (orientation: landscape)
-noscript	         @media (scripting: none)
+any-pointer-fine	     @media (any-pointer: fine)
+any-pointer-coarse     @media (any-pointer: coarse)
+any-pointer-none       @media (any-pointer: none)
+portrait	           @media (orientation: portrait)
+landscape	           @media (orientation: landscape)
+noscript	           @media (scripting: none)
 
 
-print              @media print 
+print                  @media print 
 supports-[…]	     @supports (…)
 
 
-aria-busy            	&[aria-busy="true"]
-aria-checked        	&[aria-checked="true"]
+aria-busy              	  &[aria-busy="true"]
+aria-checked          	  &[aria-checked="true"]
 aria-disabled	        &[aria-disabled="true"]
 aria-expanded	        &[aria-expanded="true"]
-aria-hidden	          &[aria-hidden="true"]
+aria-hidden	              &[aria-hidden="true"]
 aria-pressed	        &[aria-pressed="true"]
 aria-readonly	        &[aria-readonly="true"]
 aria-required	        &[aria-required="true"]
 aria-selected	        &[aria-selected="true"]
-aria-[…]	            &[aria-…]
-data-[…]	            &[data-…]
-rtl                  	&:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *)
-ltr                  	&:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
-open                 	&:is([open], :popover-open, :open)
-starting              @starting-style
+aria-[…]	              &[aria-…]
+data-[…]	              &[data-…]
+rtl                  	  &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *)
+ltr                  	  &:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
+open                 	  &:is([open], :popover-open, :open)
+starting                  @starting-style
 
 
 max-sm	  @media (width < 40rem) { ... }
@@ -227,23 +233,23 @@ dark:text-gray-400
 ------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
                                   
 --color-*	         Color utilities like bg-red-500, text-sky-300, and many more
---font-*    	     Font family utilities like font-sans
+--font-*             Font family utilities like font-sans
 --text-*	         Font size utilities like text-xl
 --font-weight-*	   Font weight utilities like font-bold
---tracking-*	     Letter spacing utilities like tracking-wide
---leading-*	       Line height utilities like leading-tight
+--tracking-*	   Letter spacing utilities like tracking-wide
+--leading-*	         Line height utilities like leading-tight
 --breakpoint-*	   Responsive breakpoint variants like sm:*
 --container-*  	   Container query variants like @sm:* and size utilities like max-w-md
 --spacing-*   	   Spacing and sizing utilities like px-4, max-h-16, and many more
---radius-*         Border radius utilities like rounded-sm
---shadow-*	       Box shadow utilities like shadow-md
---inset-shadow-*	 Inset box shadow utilities like inset-shadow-xs
---drop-shadow-*  	 Drop shadow filter utilities like drop-shadow-md
+--radius-*           Border radius utilities like rounded-sm
+--shadow-*	         Box shadow utilities like shadow-md
+--inset-shadow-*	   Inset box shadow utilities like inset-shadow-xs
+--drop-shadow-*  	   Drop shadow filter utilities like drop-shadow-md
 --blur-*	         Blur filter utilities like blur-md
 --perspective-*	   Perspective utilities like perspective-near
---aspect-*	       Aspect ratio utilities like aspect-video
---ease-*           Transition timing function utilities like ease-out
---animate-*        Animation utilities like animate-spin
+--aspect-*	         Aspect ratio utilities like aspect-video
+--ease-*             Transition timing function utilities like ease-out
+--animate-*         Animation utilities like animate-spin
 
                                   
 /* Default theme variables */
@@ -266,7 +272,8 @@ dark:text-gray-400
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   /* ... */
 }
-                                
+
+                                      
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -2196,7 +2203,7 @@ bg-transparent      background-color: transparent;
 bg-black            background-color: var(--color-black); /* #000 */
 bg-white            background-color: var(--color-white); /* #fff */
 
-bg-color-( 50 ta 950 )    background-color: var(--color-color-( 50 ta 950 ); /* oklch(97.1
+bg-color-( 50 ta 950 )    background-color: var(--color-color-( 50 ta 950 ); /* oklch(97.1 ) */
 
 bg-(<custom-property>)    background-color: var(<custom-property>);
 bg-[<value>]              background-color: <value>;
@@ -2302,28 +2309,126 @@ bg-size-[<value>]              background-size: <value>;
 
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////  Borders  /////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+rounded-xs                    border-radius: var(--radius-xs); /* 0.125rem (2px) */
+rounded-sm                    border-radius: var(--radius-sm); /* 0.25rem (4px) */
+rounded-md                    border-radius: var(--radius-md); /* 0.375rem (6px) */
+rounded-lg                    border-radius: var(--radius-lg); /* 0.5rem (8px) */
+rounded-xl                    border-radius: var(--radius-xl); /* 0.75rem (12px) */
+rounded-2xl                   border-radius: var(--radius-2xl); /* 1rem (16px) */
+rounded-3xl                   border-radius: var(--radius-3xl); /* 1.5rem (24px) */
+rounded-4xl                   border-radius: var(--radius-4xl); /* 2rem (32px) */
+rounded-none                  border-radius: 0;
+rounded-full                  border-radius: calc(infinity * 1px);
+rounded-(<custom-property>)   border-radius: var(<custom-property>);
+rounded-[<value>]             border-radius: <value>;
+
+
+---------------------------------------------------------------------------------------
+
+
+rounded-s-xs                 border-start-start-radius: var(--radius-xs); /* 0.125rem (2px) */
+rounded-s-sm                 border-start-start-radius: var(--radius-sm); /* 0.25rem (4px) */
+rounded-s-md                 border-start-start-radius: var(--radius-md); /* 0.375rem (6px) */
+rounded-s-lg                 border-start-start-radius: var(--radius-lg); /* 0.5rem (8px) */
+rounded-s-xl                 border-start-start-radius: var(--radius-xl); /* 0.75rem (12px) */
+rounded-s-2xl                border-start-start-radius: var(--radius-2xl); /* 1rem (16px) */
+rounded-s-3xl                border-start-start-radius: var(--radius-3xl); /* 1.5rem (24px) */
+rounded-s-4xl                border-start-start-radius: var(--radius-4xl); /* 2rem (32px) */
+rounded-s-none               border-start-start-radius: 0;
+rounded-s-full               border-start-start-radius: calc(infinity * 1px);
+rounded-s-(<custom-property>) border-start-start-radius: var(<custom-property>);
+rounded-s-[<value>]          border-start-start-radius: <value>;
+rounded-e-xs                 border-start-end-radius: var(--radius-xs); /* 0.125rem (2px) */
+rounded-e-sm                 border-start-end-radius: var(--radius-sm); /* 0.25rem (4px) */
+rounded-e-md                 border-start-end-radius: var(--radius-md); /* 0.375rem (6px) */
+rounded-e-lg                 border-start-end-radius: var(--radius-lg); /* 0.5rem (8px) */
+rounded-e-xl                 border-start-end-radius: var(--radius-xl); /* 0.75rem (12px) */
+rounded-e-2xl                border-start-end-radius: var(--radius-2xl); /* 1rem (16px) */
+rounded-e-3xl                border-start-end-radius: var(--radius-3xl); /* 1.5rem (24px) */
+rounded-e-4xl                border-start-end-radius: var(--radius-4xl); /* 2rem (32px) */
+rounded-e-none               border-start-end-radius: 0;
+rounded-e-full               border-start-end-radius: calc(infinity * 1px);
+rounded-e-(<custom-property>) border-start-end-radius: var(<custom-property>);
+rounded-e-[<value>]          border-start-end-radius: <value>;
+
+
+------------------------------------------- start ------------------------------------------------
+------------------------------------------- start ------------------------------------------------
+
+(((((      xs    sm     md    lg    xl    2xl    3xl    4xl      ))))))
+
+rounded-s-xs
+border-start-start-radius: var(--radius-xs); /* 0.125rem (2px) */
+border-end-start-radius: var(--radius-xs); /* 0.125rem (2px) */
 
 
 
 
 
 
+(((((        none       full        (<custom-property>)      [<value>]       ))))))
+
+rounded-s-none
+border-start-start-radius: 0;
+border-end-start-radius: 0;
+
+rounded-s-full
+border-start-start-radius: calc(infinity * 1px);
+border-end-start-radius: calc(infinity * 1px);
+
+rounded-s-(<custom-property>)
+border-start-start-radius: var(<custom-property>);
+border-end-start-radius: var(<custom-property>);
+
+rounded-s-[<value>]
+border-start-start-radius: <value>;
+border-end-start-radius: <value>;
 
 
 
 
 
 
+------------------------------------------- end ------------------------------------------------
+------------------------------------------- end ------------------------------------------------
+
+(((((      xs    sm     md    lg    xl    2xl    3xl    4xl      ))))))
+
+rounded-e-xs
+border-start-end-radius: var(--radius-xs); /* 0.125rem (2px) */
+border-end-end-radius: var(--radius-xs); /* 0.125rem (2px) */
 
 
 
+
+
+
+(((((        none       full        (<custom-property>)      [<value>]       ))))))
+
+rounded-e-none
+border-start-end-radius: 0;
+border-end-end-radius: 0;
+
+rounded-e-full
+border-start-end-radius: calc(infinity * 1px);
+border-end-end-radius: calc(infinity * 1px);
+
+rounded-e-(<custom-property>)
+border-start-end-radius: var(<custom-property>);
+border-end-end-radius: var(<custom-property>);
+
+rounded-e-[<value>]
+border-start-end-radius: <value>;
+border-end-end-radius: <value>;
+
+
+---------------------------------------------------------------------------------------
 
 
 
