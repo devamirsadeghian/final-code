@@ -520,7 +520,6 @@ dark:text-gray-400
     }
   }
 }
-
                                       
 /* Using your theme variables */
 
@@ -537,7 +536,6 @@ dark:text-gray-400
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   /* ... */
 }
-
 
 ------------------------------------------- Color -----------------------------------------------------------------
 ------------------------------------------- Color -----------------------------------------------------------------
@@ -570,12 +568,23 @@ caret-*	      Sets the caret color in form controls
 fill-*	      Sets the fill color of SVG elements
 stroke-*	      Sets the stroke color of SVG elements
 
----------------------(((((((((((((((((((((( Layout ))))))))))))))))))))))) -------------------------------------------
----------------------(((((((((((((((((((((( Layout ))))))))))))))))))))))) -------------------------------------------
+
+
+
+
+
+                                      
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////  Layout  ///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Class   :   مستقیم در تگ به کار میره
 Styles  : (بهتره ) به عنوان ویژگی استایل در تگ به کار میره
-                                      
+
+Class                    Styles
+
 ------------------------------------------- aspect-ratio -------------------------------------------------------------
 ------------------------------------------- aspect-ratio -------------------------------------------------------------
 
@@ -928,10 +937,27 @@ left-auto                  left: auto;
 left-(<custom-property>)   left: var(<custom-property>);
 left-[<value>]             left: <value>;
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
+                                      
+visible        visibility: visible;
+invisible      visibility: hidden;
+collapse       visibility: collapse;
 
+------------------------------------------- z-index -------------------------------------------------------------
+------------------------------------------- z-index -------------------------------------------------------------
 
+/*        ترتیب قرارگیری یک عنصر در پشته         */
 
+z-<number>
+z-index: <number>;
+z-auto
+z-index: auto;
+z-[<value>]
+z-index: <value>;
+z-(<custom-property>)
 
 
 
@@ -946,35 +972,610 @@ left-[<value>]             left: <value>;
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////  Flexbox & Grid  ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+------------------------------------------- flex-basis -------------------------------------------------------------
+------------------------------------------- flex-basis -------------------------------------------------------------
 
+/*         flex اندازه اولیه آیتم‌های         */
 
+basis-<number>       flex-basis: calc(var(--spacing) * <number>);
+basis-<fraction>     flex-basis: calc(<fraction> * 100%);
+basis-full           flex-basis: 100%;
+basis-auto           flex-basis: auto;
+basis-3xs            flex-basis: var(--container-3xs); /* 16rem (256px) */
+basis-2xs            flex-basis: var(--container-2xs); /* 18rem (288px) */
+basis-xs             flex-basis: var(--container-xs); /* 20rem (320px) */
+basis-sm             flex-basis: var(--container-sm); /* 24rem (384px) */
+basis-md             flex-basis: var(--container-md); /* 28rem (448px) */
+basis-lg             flex-basis: var(--container-lg); /* 32rem (512px) */
+basis-xl             flex-basis: var(--container-xl); /* 36rem (576px) */
+basis-2xl            flex-basis: var(--container-2xl); /* 42rem (672px) */
+basis-3xl            flex-basis: var(--container-3xl); /* 48rem (768px) */
+basis-4xl            flex-basis: var(--container-4xl); /* 56rem (896px) */
+basis-5xl            flex-basis: var(--container-5xl); /* 64rem (1024px) */
+basis-6xl            flex-basis: var(--container-6xl); /* 72rem (1152px) */
+basis-7xl            flex-basis: var(--container-7xl); /* 80rem (1280px) */
+basis-(<custom-property>)    flex-basis: var(<custom-property>);
+basis-[<value>]      flex-basis: <value>;
 
+------------------------------------------- flex-direction -------------------------------------------------------------
+------------------------------------------- flex-direction -------------------------------------------------------------
 
+/*       جهت آیتم‌های انعطاف‌پذیر       */
 
+flex-row            flex-direction: row;
+flex-row-reverse    flex-direction: row-reverse;
+flex-col            flex-direction: column;
+flex-col-reverse    flex-direction: column-reverse;
 
+------------------------------------------- flex-wrap -------------------------------------------------------------
+------------------------------------------- flex-wrap -------------------------------------------------------------
 
+/*      flex  نحوه‌ی چینش آیتم‌های         */
 
+flex-nowrap
+flex-wrap: nowrap;
+flex-wrap
+flex-wrap: wrap;
+flex-wrap-reverse
+flex-wrap: wrap-reverse;
 
+------------------------------------------- flex -------------------------------------------------------------
+------------------------------------------- flex -------------------------------------------------------------
 
+/*          flex چگونگی بزرگ و کوچک شدن آیتم‌های         */
 
+flex-<number>             flex: <number>;
+flex-<fraction>           flex: calc(<fraction> * 100%);
+flex-auto                 flex: auto;
+flex-initial              flex: 0 auto;
+flex-none                 flex: none;
+flex-(<custom-property>)  flex: var(<custom-property>);
+flex-[<value>]            flex: <value>;
+
+
+------------------------------------------- flex-grow -------------------------------------------------------------
+------------------------------------------- flex-grow -------------------------------------------------------------
+
+/*        نحوه رشد آیتم‌های انعطاف‌پذیر        */
+
+grow              flex-grow: 1;
+grow-<number>     flex-grow: <number>;
+grow-[<value>]    flex-grow: <value>;
+grow-(<custom-property>)               flex-grow: var(<custom-property>);
+
+------------------------------------------- flex-shrink -------------------------------------------------------------
+------------------------------------------- flex-shrink -------------------------------------------------------------
+
+/*         flex   نحوه کوچک شدن آیتم‌های         */
+
+shrink              flex-shrink: 1;
+shrink-<number>     flex-shrink: <number>;
+shrink-[<value>]    flex-shrink: <value>;
+shrink-(<custom-property>)      flex-shrink: var(<custom-property>);
+
+------------------------------------------- order -------------------------------------------------------------
+------------------------------------------- order -------------------------------------------------------------
+
+/*          ترتیب آیتم‌های فلکس و گرید          */
+
+order-<number>        order: <number>;
+-order-<number>       order: calc(<number> * -1);
+order-first           order: -9999;
+order-last            order: 9999;
+order-none            order: 0;
+order-(<custom-property>)     order: var(<custom-property>);
+order-[<value>]       order: <value>;
+
+------------------------------------------- grid-template-columns ---------------------------------------------------
+------------------------------------------- grid-template-columns ---------------------------------------------------
+
+/*          برای مشخص کردن ستون‌ها در طرح‌بندی شبکه‌ای         */
+
+grid-cols-<number>               grid-template-columns: repeat(<number>, minmax(0, 1fr));
+grid-cols-none                   grid-template-columns: none;
+grid-cols-subgrid                grid-template-columns: subgrid;
+grid-cols-[<value>]              grid-template-columns: <value>;
+grid-cols-(<custom-property>)    grid-template-columns: var(<custom-property>);
+
+------------------------------------------- grid-column -------------------------------------------------------------
+------------------------------------------- grid-column -------------------------------------------------------------
+
+/*         نحوه اندازه‌گذاری و قرارگیری عناصر در ستون‌های شبکه          */
+
+col-span-<number>               grid-column: span <number> / span <number>;
+col-span-full                   grid-column: 1 / -1;
+col-span-(<custom-property>)    grid-column: span var(<custom-property>) / span var(<custom-property>);
+col-span-[<value>]              grid-column: span <value> / span <value>;
+col-start-<number>              grid-column-start: <number>;
+-col-start-<number>             grid-column-start: calc(<number> * -1);
+col-start-auto                  grid-column-start: auto;
+col-start-(<custom-property>)   grid-column-start: var(<custom-property>);
+col-start-[<value>]             grid-column-start: <value>;
+col-end-<number>                grid-column-end: <number>;
+-col-end-<number>               grid-column-end: calc(<number> * -1);
+col-end-auto                    grid-column-end: auto;
+col-end-(<custom-property>)     grid-column-end: var(<custom-property>);
+col-end-[<value>]               grid-column-end: <value>;
+col-auto                        grid-column: auto;
+col-<number>                    grid-column: <number>;
+-col-<number>                   grid-column: calc(<number> * -1);
+col-(<custom-property>)         grid-column: var(<custom-property>);
+col-[<value>]                   grid-column: <value>;
+
+------------------------------------------- grid-template-rows -------------------------------------------------------------
+------------------------------------------- grid-template-rows -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+grid-rows-<number>             grid-template-rows: repeat(<number>, minmax(0, 1fr));
+grid-rows-none                 grid-template-rows: none;
+grid-rows-subgrid              grid-template-rows: subgrid;
+grid-rows-[<value>]            grid-template-rows: <value>;
+grid-rows-(<custom-property>)  grid-template-rows: var(<custom-property>);
+
+------------------------------------------- grid-row -------------------------------------------------------------
+------------------------------------------- grid-row -------------------------------------------------------------
+
+/*          ابزارهایی برای کنترل اندازه و قرارگیری عناصر در ردیف‌های شبکه          */
+
+row-span-<number>             grid-row: span <number> / span <number>;
+row-span-full                 grid-row: 1 / -1;
+row-span-(<custom-property>)  grid-row: span var(<custom-property>) / span var(<custom-property>);
+row-span-[<value>]            grid-row: span <value> / span <value>;
+row-start-<number>            grid-row-start: <number>;
+-row-start-<number>           grid-row-start: calc(<number> * -1);
+row-start-auto                grid-row-start: auto;
+row-start-(<custom-property>) grid-row-start: var(<custom-property>);
+row-start-[<value>]           grid-row-start: <value>;
+row-end-<number>              grid-row-end: <number>;
+-row-end-<number>             grid-row-end: calc(<number> * -1);
+row-end-auto                  grid-row-end: auto;
+row-end-(<custom-property>)   grid-row-end: var(<custom-property>);
+row-end-[<value>]             grid-row-end: <value>;
+row-aut                       grid-row: auto;
+row-<number>                  grid-row: <number>;
+-row-<number>                 grid-row: calc(<number> * -1);
+row-(<custom-property>)       grid-row: var(<custom-property>);
+row-[<value>]                 grid-row: <value>;
+
+------------------------------------------- grid-auto-flow -------------------------------------------------------------
+------------------------------------------- grid-auto-flow -------------------------------------------------------------
+
+/*       رای کنترل نحوه قرارگیری خودکار عناصر در یک شبکه       */
+
+grid-flow-row         grid-auto-flow: row;
+grid-flow-col         grid-auto-flow: column;
+grid-flow-dense       grid-auto-flow: dense;
+grid-flow-row-dense   grid-auto-flow: row dense;
+grid-flow-col-dense   grid-auto-flow: column dense;
+
+------------------------------------------- grid-auto-columns -------------------------------------------------------------
+------------------------------------------- grid-auto-columns -------------------------------------------------------------
+
+/*       برای کنترل اندازه ستون‌های شبکه‌ای که به صورت ضمنی ایجاد شده‌اند        */
+
+auto-cols-auto                 grid-auto-columns: auto;
+auto-cols-min                  grid-auto-columns: min-content;
+auto-cols-max                  grid-auto-columns: max-content;
+auto-cols-fr                   grid-auto-columns: minmax(0, 1fr);
+auto-cols-(<custom-property>)  grid-auto-columns: var(<custom-property>);
+auto-cols-[<value>]            grid-auto-columns: <value>;
+
+------------------------------------------- grid-auto-rows -------------------------------------------------------------
+------------------------------------------- grid-auto-rows -------------------------------------------------------------
+
+/*          برای کنترل اندازه ردیف‌های شبکه‌ای که به صورت ضمنی ایجاد شده‌اند         */
+
+auto-rows-auto         grid-auto-rows: auto;
+auto-rows-min          grid-auto-rows: min-content;
+auto-rows-max          grid-auto-rows: max-content;
+auto-rows-fr           grid-auto-rows: minmax(0, 1fr);
+auto-rows-(<custom-property>)       grid-auto-rows: var(<custom-property>);
+auto-rows-[<value>]    grid-auto-rows: <value>;
+
+------------------------------------------- gap -------------------------------------------------------------
+------------------------------------------- gap -------------------------------------------------------------
+
+/*         برای کنترل ناودان‌ها بین آیتم‌های گرید و فلکس‌باکس         */
+
+gap-<number>               gap: calc(var(--spacing) * <value>);
+gap-(<custom-property>)    gap: var(<custom-property>);
+gap-[<value>]              gap: <value>;
+gap-x-<number>             column-gap: calc(var(--spacing) * <value>);
+gap-x-(<custom-property>)  column-gap: var(<custom-property>);
+gap-x-[<value>]            column-gap: <value>;
+gap-y-<number>             row-gap: calc(var(--spacing) * <value>);
+gap-y-(<custom-property>)  row-gap: var(<custom-property>);
+gap-y-[<value>]            row-gap: <value>;
+
+------------------------------------------- justify-content -------------------------------------------------------------
+------------------------------------------- justify-content -------------------------------------------------------------
+
+/*        container  در امتداد محور اصلی یک  flex و grid  برای کنترل نحوه قرارگیری آیتم‌های       */
+ 
+justify-start        justify-content: flex-start;
+justify-end          justify-content: flex-end;
+justify-end-safe     justify-content: safe flex-end;
+justify-center       justify-content: center;
+justify-center-safe  justify-content: safe center;
+justify-between      justify-content: space-between;
+justify-around       justify-content: space-around;
+justify-evenly       justify-content: space-evenly;
+justify-stretch      justify-content: stretch;
+justify-baseline     justify-content: baseline;
+justify-normal       justify-content: normal;
+
+------------------------------------------- justify-items -------------------------------------------------------------
+------------------------------------------- justify-items -------------------------------------------------------------
+
+/*         نحوه ترازبندی آیتم‌های شبکه‌ای در امتداد محور درون‌خطی آنها         */
+
+justify-items-start        justify-items: start;
+justify-items-end          justify-items: end;
+justify-items-end-safe     justify-items: safe end;
+justify-items-center       justify-items: center;
+justify-items-center-safe  justify-items: safe center;
+justify-items-stretch      justify-items: stretch;
+justify-items-normal       justify-items: normal;
+
+------------------------------------------- justify-self -------------------------------------------------------------
+------------------------------------------- justify-self -------------------------------------------------------------
+
+/*       نحوه ترازبندی یک آیتم شبکه‌ای مجزا در امتداد محور درون‌خطی آن        */
+
+justify-self-auto          justify-self: auto;
+justify-self-start         justify-self: start;
+justify-self-center        justify-self: center;
+justify-self-center-safe   justify-self: safe center;
+justify-self-end           justify-self: end;
+justify-self-end-safe      justify-self: safe end;
+justify-self-stretch       justify-self: stretch;
+
+------------------------------------------- align-content -------------------------------------------------------------
+------------------------------------------- align-content -------------------------------------------------------------
+
+/*         flex و grid   نحوه قرارگیری ردیف‌ها در کانتینرهای چند ردیفی       */
+
+content-normal       align-content: normal;
+content-center      align-content: center;
+content-start       align-content: flex-start;
+content-end         align-content: flex-end;
+content-between     align-content: space-between;
+content-around      align-content: space-around;
+content-evenl       align-content: space-evenly;
+content-baseline    align-content: baseline;
+content-stretch     align-content: stretch;
+
+------------------------------------------- align-items -------------------------------------------------------------
+------------------------------------------- align-items -------------------------------------------------------------
+
+/*        container  در امتداد محور متقاطع یک  flex و grid   نحوه قرارگیری ردیف‌ها در کانتینرهای چند ردیفی       */
+
+items-start            align-items: flex-start;
+items-end              align-items: flex-end;
+items-end-safe         align-items: safe flex-end;
+items-center           align-items: center;
+items-center-safe      align-items: safe center;
+items-baseline         align-items: baseline;
+items-baseline-last    align-items: last baseline;
+items-stretch          align-items: stretch;
+
+------------------------------------------- align-self -------------------------------------------------------------
+------------------------------------------- align-self -------------------------------------------------------------
+
+/*        نحوه قرارگیری یک آیتم فلکس یا گرید در امتداد محور متقاطع نگهدارنده آن        */
+
+self-auto      align-self: auto;
+self-start     align-self: flex-start;
+self-end       align-self: flex-end;
+self-end-safe  align-self: safe flex-end;
+self-center    align-self: center;
+self-center-safe     align-self: safe center;
+self-stretch         align-self: stretch;
+self-baseline        align-self: baseline;
+self-baseline-last   align-self: last baseline;
+
+------------------------------------------- place-content -------------------------------------------------------------
+------------------------------------------- place-content -------------------------------------------------------------
+
+/*        کنترل همزمان نحوه‌ی ترازبندی و تنظیم محتوا       */
+
+place-content-center         place-content: center;
+place-content-center-safe   place-content: safe center;
+place-content-start         place-content: start;
+place-content-end           place-content: end;
+place-content-end-safe      place-content: safe end;
+place-content-between       place-content: space-between;
+place-content-around        place-content: space-around;
+place-content-evenly        place-content: space-evenly;
+place-content-baselin       place-content: baseline;
+place-content-stretch       place-content: stretch;
+
+------------------------------------------- place-items -------------------------------------------------------------
+------------------------------------------- place-items -------------------------------------------------------------
+
+/*       کنترل نحوه‌ی ترازبندی و تنظیم همزمان آیتم‌ها        */
+
+place-items-start        place-items: start;
+place-items-end          place-items: end;
+place-items-end-safe     place-items: safe end;
+place-items-center       place-items: center;
+place-items-center-safe  place-items: safe center;
+place-items-baseline     place-items: baseline;
+place-items-stretch      place-items: stretch;
+
+------------------------------------------- place-self -------------------------------------------------------------
+------------------------------------------- place-self -------------------------------------------------------------
+
+/*         کنترل نحوه‌ی ترازبندی و تنظیم همزمان یک آیتم منفرد         */
+
+place-self-auto          place-self: auto;
+place-self-start         place-self: start;
+place-self-end           place-self: end;
+place-self-end-safe      place-self: safe end;
+place-self-center        place-self: center;
+place-self-center-safe   place-self: safe center;
+place-self-stretch       place-self: stretch;
+
+------------------------------------------- padding -------------------------------------------------------------
+------------------------------------------- padding -------------------------------------------------------------
+
+p-<number>                 padding: calc(var(--spacing) * <number>);
+p-px                       padding: 1px;
+p-(<custom-property>)      padding: var(<custom-property>);
+p-[<value>]                padding: <value>;
+px-<number>                padding-inline: calc(var(--spacing) * <number>);
+px-px                      padding-inline: 1px;
+px-(<custom-property>)     padding-inline: var(<custom-property>);
+px-[<value>]               padding-inline: <value>;
+py-<number>                padding-block: calc(var(--spacing) * <number>);
+py-px                      padding-block: 1px;
+py-(<custom-property>)     padding-block: var(<custom-property>);
+py-[<value>]               padding-block: <value>;
+ps-<number>                padding-inline-start: calc(var(--spacing) * <number>);
+ps-px                      padding-inline-start: 1px;
+ps-(<custom-property>)     padding-inline-start: var(<custom-property>);
+ps-[<value>]               padding-inline-start: <value>;
+pe-<number>                padding-inline-end: calc(var(--spacing) * <number>);
+pe-px                      padding-inline-end: 1px;
+pe-(<custom-property>)     padding-inline-end: var(<custom-property>);
+pe-[<value>]               padding-inline-end: <value>;
+pt-<number>                padding-top: calc(var(--spacing) * <number>);
+pt-px                      padding-top: 1px;
+pt-(<custom-property>)     padding-top: var(<custom-property>);
+pt-[<value>]               padding-top: <value>;
+pr-<number>                padding-right: calc(var(--spacing) * <number>);
+pr-px                      padding-right: 1px;
+pr-(<custom-property>)     padding-right: var(<custom-property>);
+pr-[<value>]               padding-right: <value>;
+pb-<number>                padding-bottom: calc(var(--spacing) * <number>);
+pb-px                      padding-bottom: 1px;
+pb-(<custom-property>)     padding-bottom: var(<custom-property>);
+pb-[<value>]               padding-bottom: <value>;
+pl-<number>                padding-left: calc(var(--spacing) * <number>);
+pl-px                      padding-left: 1px;
+pl-(<custom-property>)     padding-left: var(<custom-property>);
+pl-[<value>]               padding-left: <value>;
+
+------------------------------------------- margin -------------------------------------------------------------
+------------------------------------------- margin -------------------------------------------------------------
+
+space-   // فاصله مثبت
+-space-  // فاصله منفی
+
+m-<number>       margin: calc(var(--spacing) * <number>);
+-m-<number>      margin: calc(var(--spacing) * -<number>);
+m-auto           margin: auto;
+m-px             margin: 1px;
+-m-px             margin: -1px;
+m-(<custom-property>)   margin: var(<custom-property>);
+m-[<value>]        margin: <value>;
+mx-<number>        margin-inline: calc(var(--spacing) * <number>);
+-mx-<number>       margin-inline: calc(var(--spacing) * -<number>);
+mx-auto            margin-inline: auto;
+mx-px              margin-inline: 1px;
+-mx-px            margin-inline: -1px;
+mx-(<custom-property>)      margin-inline: var(<custom-property>);
+mx-[<value>]             margin-inline: <value>;
+my-<number>              margin-block: calc(var(--spacing) * <number>);
+-my-<number>            margin-block: calc(var(--spacing) * -<number>);
+my-auto                  margin-block: auto;
+my-px                   margin-block: 1px;
+-my-px                  margin-block: -1px;
+my-(<custom-property>)  margin-block: var(<custom-property>);
+my-[<value>]            margin-block: <value>;
+ms-<number>             margin-inline-start: calc(var(--spacing) * <number>);
+-ms-<number>            margin-inline-start: calc(var(--spacing) * -<number>);
+ms-auto                  margin-inline-start: auto;
+ms-px                    margin-inline-start: 1px;
+-ms-px                        margin-inline-start: -1px;
+ms-(<custom-property>)     margin-inline-start: var(<custom-property>);
+ms-[<value>]            margin-inline-start: <value>;
+me-<number>            margin-inline-end: calc(var(--spacing) * <number>);
+-me-<number>            margin-inline-end: calc(var(--spacing) * -<number>);
+me-auto                  margin-inline-end: auto;
+me-px                        margin-inline-end: 1px;
+-me-px                        margin-inline-end: -1px;
+me-(<custom-property>)            margin-inline-end: var(<custom-property>);
+me-[<value>]                  margin-inline-end: <value>;
+mt-<number>                  margin-top: calc(var(--spacing) * <number>);
+-mt-<number>            margin-top: calc(var(--spacing) * -<number>);
+mt-auto            margin-top: auto;
+mt-px                  margin-top: 1px;
+-mt-px                  margin-top: -1px;
+mt-(<custom-property>)                  margin-top: var(<custom-property>);
+mt-[<value>]
+margin-top: <value>;
+mr-<number>
+margin-right: calc(var(--spacing) * <number>);
+-mr-<number>
+margin-right: calc(var(--spacing) * -<number>);
+mr-auto
+margin-right: auto;
+mr-px
+margin-right: 1px;
+-mr-px
+margin-right: -1px;
+mr-(<custom-property>)
+margin-right: var(<custom-property>);
+mr-[<value>]
+margin-right: <value>;
+mb-<number>
+margin-bottom: calc(var(--spacing) * <number>);
+-mb-<number>
+margin-bottom: calc(var(--spacing) * -<number>);
+mb-auto
+margin-bottom: auto;
+mb-px
+margin-bottom: 1px;
+-mb-px
+margin-bottom: -1px;
+mb-(<custom-property>)
+margin-bottom: var(<custom-property>);
+mb-[<value>]
+margin-bottom: <value>;
+ml-<number>
+margin-left: calc(var(--spacing) * <number>);
+-ml-<number>
+margin-left: calc(var(--spacing) * -<number>);
+ml-auto
+margin-left: auto;
+ml-px
+margin-left: 1px;
+-ml-px
+margin-left: -1px;
+ml-(<custom-property>)
+margin-left: var(<custom-property>);
+ml-[<value>]
+margin-left: <value>;
+
+
+
+
+space-x-<number>     & > :not(:last-child) {
+                    --tw-space-x-reverse: 0;
+                      margin-inline-start: calc(calc(var(--spacing) * <number>) * var(--tw-space-x-reverse));
+                      margin-inline-end: calc(calc(var(--spacing) * <number>) * calc(1 - var(--tw-space-x-reverse)));
+};
+
+
+
+
+
+-space-x-<number>      & > :not(:last-child) {
+                      --tw-space-x-reverse: 0;
+                        margin-inline-start: calc(calc(var(--spacing) * -<number>) * var(--tw-space-x-reverse));
+                        margin-inline-end: calc(calc(var(--spacing) * -<number>) * calc(1 - var(--tw-space-x-reverse)));
+};
+
+
+
+space-x-px       & > :not(:last-child) {
+                    --tw-space-x-reverse: 0;
+                    margin-inline-start: calc(1px * var(--tw-space-x-reverse));
+                    margin-inline-end: calc(1px * calc(1 - var(--tw-space-x-reverse)));
+};
+
+
+
+-space-x-px       & > :not(:last-child) {
+                    --tw-space-x-reverse: 0;
+                    margin-inline-start: calc(-1px * var(--tw-space-x-reverse));
+                    margin-inline-end: calc(-1px * calc(1 - var(--tw-space-x-reverse)));
+};
+
+
+
+space-x-(<custom-property>)
+& > :not(:last-child) {
+  --tw-space-x-reverse: 0;
+  margin-inline-start: calc(var(<custom-property>) * var(--tw-space-x-reverse));
+  margin-inline-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-x-reverse)));
+};
+
+
+space-x-[<value>]
+& > :not(:last-child) {
+  --tw-space-x-reverse: 0;
+  margin-inline-start: calc(<value> * var(--tw-space-x-reverse));
+  margin-inline-end: calc(<value> * calc(1 - var(--tw-space-x-reverse)));
+};
+
+space-y-<number>
+& > :not(:last-child) {
+  --tw-space-y-reverse: 0;
+  margin-block-start: calc(calc(var(--spacing) * <number>) * var(--tw-space-y-reverse));
+  margin-block-end: calc(calc(var(--spacing) * <number>) * calc(1 - var(--tw-space-y-reverse)));
+};
+
+-space-y-<number>
+& > :not(:last-child) {
+  --tw-space-y-reverse: 0;
+  margin-block-start: calc(calc(var(--spacing) * -<number>) * var(--tw-space-y-reverse));
+  margin-block-end: calc(calc(var(--spacing) * -<number>) * calc(1 - var(--tw-space-y-reverse)));
+};
+
+
+space-y-px
+& > :not(:last-child) {
+  --tw-space-y-reverse: 0;
+  margin-block-start: calc(1px * var(--tw-space-y-reverse));
+  margin-block-end: calc(1px * calc(1 - var(--tw-space-y-reverse)));
+};
+
+
+-space-y-px
+& > :not(:last-child) {
+  --tw-space-y-reverse: 0;
+  margin-block-start: calc(-1px * var(--tw-space-y-reverse));
+  margin-block-end: calc(-1px * calc(1 - var(--tw-space-y-reverse)));
+};
 
 
+space-y-(<custom-property>)
+& > :not(:last-child) {
+  --tw-space-y-reverse: 0;
+  margin-block-start: calc(var(<custom-property>) * var(--tw-space-y-reverse));
+  margin-block-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-y-reverse)));
+};
 
 
+space-y-[<value>]
+& > :not(:last-child) {
+  --tw-space-y-reverse: 0;
+  margin-block-start: calc(<value> * var(--tw-space-y-reverse));
+  margin-block-end: calc(<value> * calc(1 - var(--tw-space-y-reverse)));
+};
 
 
+space-x-reverse
+& > :not(:last-child)) {
+  --tw-space-x-reverse: 1;
+}
 
 
 
+space-y-reverse
+& > :not(:last-child)) {
+  --tw-space-y-reverse: 1;
+}
 
 
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -983,7 +1584,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -992,7 +1596,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1000,7 +1607,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1008,7 +1618,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1017,7 +1630,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1026,7 +1642,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1034,7 +1653,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1042,7 +1664,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1051,7 +1676,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1060,7 +1688,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1068,7 +1699,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1076,7 +1710,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1085,7 +1722,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1094,14 +1734,20 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1109,7 +1755,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1118,7 +1767,10 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
 
@@ -1127,9 +1779,185 @@ left-[<value>]             left: <value>;
 
 
 
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
 
+/*        میزان نمایش یک عنصر        */
 
 
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
+
+
+
+
+
+
+
+
+------------------------------------------- visibility -------------------------------------------------------------
+------------------------------------------- visibility -------------------------------------------------------------
+
+/*        میزان نمایش یک عنصر        */
 
 
 
