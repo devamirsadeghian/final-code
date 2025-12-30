@@ -2621,6 +2621,8 @@ outline-offset-[<value>]              outline-offset: <value>;
 ------------------------------------------- box-shadow -------------------------------------------------------------
 ------------------------------------------- box-shadow -------------------------------------------------------------
 
+/*         کنترل سایه جعبه یک عنصر        */
+
 shadow-2xs      box-shadow: var(--shadow-2xs); /* 0 1px rgb(0 0 0 / 0.05) */
 shadow-xs       box-shadow: var(--shadow-xs); /* 0 1px 2px 0 rgb(0 0 0 / 0.05) */
 shadow-sm       box-shadow: var(--shadow-sm); /* 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) */
@@ -2644,8 +2646,7 @@ shadow-white           --tw-shadow-color: var(--color-white); /* #fff */
 
 shadow-red-(50 ta 950) --tw-shadow-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
-
-
+----------------------------------------------------------------------------------------------------------------------------
 
 inset-shadow-2xs                   box-shadow: var(--inset-shadow-2xs); /* inset 0 1px rgb(0 0 0 / 0.05) */
 inset-shadow-xs                    box-shadow: var(--inset-shadow-xs); /* inset 0 1px 1px rgb(0 0 0 / 0.05) */
@@ -2660,14 +2661,36 @@ inset-shadow-current      --tw-inset-shadow-color: currentColor;
 inset-shadow-transparent  --tw-inset-shadow-color: transparent;
 inset-shadow-black        --tw-inset-shadow-color: var(--color-black); /* #000 */
 inset-shadow-white        --tw-inset-shadow-color: var(--color-white); /* #fff */
-inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
+inset-shadow-red-(50 ta 950)  --tw-inset-shadow-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
+----------------------------------------------------------------------------------------------------------------------------
 
+ring                       --tw-ring-shadow: 0 0 0 1px;
+ring-<number>              --tw-ring-shadow: 0 0 0 <number>px;
+ring-(<custom-property>)   --tw-ring-shadow: 0 0 0 var(<custom-property>);
+ring-[<value>]             --tw-ring-shadow: 0 0 0 <value>;
+ring-inherit               --tw-ring-color: inherit;
+ring-current               --tw-ring-color: currentColor;
+ring-transparent           --tw-ring-color: transparent;
+ring-black                 --tw-ring-color: var(--color-black); /* #000 */
+ring-white                 --tw-ring-color: var(--color-white); /* #fff */
 
+ring-red-(50 ta 950)        --tw-ring-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
+----------------------------------------------------------------------------------------------------------------------------
 
+inset-ring                     --tw-inset-ring-shadow: inset 0 0 0 1px
+inset-ring-<number>            --tw-inset-ring-shadow: inset 0 0 0 <number>px
+inset-ring-(<custom-property>) --tw-inset-ring-shadow: inset 0 0 0 var(<custom-property>);
+inset-ring-[<value>]           --tw-inset-ring-shadow: inset 0 0 0 <value>;
+inset-ring-inherit             --tw-inset-ring-color: inherit;
+inset-ring-current             --tw-inset-ring-color: currentColor;
+inset-ring-transparent         --tw-inset-ring-color: transparent;
+inset-ring-black               --tw-inset-ring-color: var(--color-black); /* #000 */
+inset-ring-white               --tw-inset-ring-color: var(--color-white); /* #fff */
 
+inset-ring-red-(50 ta 950)     --tw-inset-ring-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
 
 
@@ -2678,19 +2701,43 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+------------------------------------------- text-shadow -------------------------------------------------------------
+------------------------------------------- text-shadow -------------------------------------------------------------
 
+/*        کنترل سایه یک عنصر متنی         */
 
+text-shadow-2xs           text-shadow: var(--text-shadow-2xs); /* 0px 1px 0px rgb(0 0 0 / 0.15) */
+text-shadow-xs            text-shadow: var(--text-shadow-xs); /* 0px 1px 1px rgb(0 0 0 / 0.2) */
+text-shadow-sm            text-shadow: var(--text-shadow-sm); /* 0px 1px 0px rgb(0 0 0 / 0.075), 0px 1px 1px rgb(0 0 0 / 0.075), 0px 2px 2px rgb(0 0 0 / 0.075) */
+text-shadow-md            text-shadow: var(--text-shadow-md); /* 0px 1px 1px rgb(0 0 0 / 0.1), 0px 1px 2px rgb(0 0 0 / 0.1), 0px 2px 4px rgb(0 0 0 / 0.1) */
+text-shadow-lg            text-shadow: var(--text-shadow-lg); /* 0px 1px 2px rgb(0 0 0 / 0.1), 0px 3px 2px rgb(0 0 0 / 0.1), 0px 4px 8px rgb(0 0 0 / 0.1) */
+text-shadow-none          text-shadow: none;
+text-shadow-(<custom-property>)                  text-shadow: var(<custom-property>);
+text-shadow-(color:<custom-property>)            --tw-shadow-color var(<custom-property>);
+text-shadow-[<value>]     text-shadow: <value>;
 
 
+text-shadow-inherit       --tw-shadow-color inherit;
+text-shadow-current       --tw-shadow-color currentColor;
+text-shadow-transparent   --tw-shadow-color transparent;
+text-shadow-black         --tw-text-shadow-color var(--color-black); /* #000 */
+text-shadow-white         --tw-text-shadow-color var(--color-white); /* #fff */
 
+text-shadow-red-(50 ta 950) --tw-text-shadow-color var(--color-red-(50 ta 950) ); /* oklch(97.1% 0.013 17.38) */
 
 
 
 
 
 
+------------------------------------------- opacity -------------------------------------------------------------
+------------------------------------------- opacity -------------------------------------------------------------
 
+/*        کنترل میزان شفافیت یک عنصر       */
 
+opacity-<number>              opacity: <number>%;
+opacity-(<custom-property>)   opacity: var(<custom-property>);
+opacity-[<value>]             opacity: <value>;
 
 
 
@@ -2698,8 +2745,29 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+------------------------------------------- mix-blend-mode -------------------------------------------------------------
+------------------------------------------- mix-blend-mode -------------------------------------------------------------
 
+/*         کنترل نحوه ترکیب یک عنصر با پس‌زمینه        */
 
+mix-blend-normal          mix-blend-mode: normal;
+mix-blend-multiply        mix-blend-mode: multiply;
+mix-blend-screen          mix-blend-mode: screen;
+mix-blend-overlay         mix-blend-mode: overlay;
+mix-blend-darken          mix-blend-mode: darken;
+mix-blend-lighten         mix-blend-mode: lighten;
+mix-blend-color-dodge     mix-blend-mode: color-dodge;
+mix-blend-color-burn      mix-blend-mode: color-burn;
+mix-blend-hard-light      mix-blend-mode: hard-light;
+mix-blend-soft-light      mix-blend-mode: soft-light;
+mix-blend-difference      mix-blend-mode: difference;
+mix-blend-exclusion       mix-blend-mode: exclusion;
+mix-blend-hue             mix-blend-mode: hue;
+mix-blend-saturation      mix-blend-mode: saturation;
+mix-blend-color           mix-blend-mode: color;
+mix-blend-luminosity      mix-blend-mode: luminosity;
+mix-blend-plus-darker     mix-blend-mode: plus-darker;
+mix-blend-plus-lighter    mix-blend-mode: plus-lighter;
 
 
 
@@ -2708,8 +2776,27 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+------------------------------------------- background-blend-mode -------------------------------------------------------------
+------------------------------------------- background-blend-mode -------------------------------------------------------------
 
+/*      کنترل چگونگی ترکیب تصویر پس‌زمینه یک عنصر با رنگ پس‌ زمینه آن     */
 
+bg-blend-normal         background-blend-mode: normal;
+bg-blend-multiply       background-blend-mode: multiply;
+bg-blend-screen         background-blend-mode: screen;
+bg-blend-overlay        background-blend-mode: overlay;
+bg-blend-darken         background-blend-mode: darken;
+bg-blend-lighten        background-blend-mode: lighten;
+bg-blend-color-dodge    background-blend-mode: color-dodge;
+bg-blend-color-burn     background-blend-mode: color-burn;
+bg-blend-hard-light     background-blend-mode: hard-light;
+bg-blend-soft-light     background-blend-mode: soft-light;
+bg-blend-difference     background-blend-mode: difference;
+bg-blend-exclusion      background-blend-mode: exclusion;
+bg-blend-hue            background-blend-mode: hue;
+bg-blend-saturation     background-blend-mode: saturation;
+bg-blend-color          background-blend-mode: color;
+bg-blend-luminosity     background-blend-mode: luminosity;
 
 
 
@@ -2718,15 +2805,31 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+------------------------------------------- mask-clip -------------------------------------------------------------
+------------------------------------------- mask-clip -------------------------------------------------------------
 
+/*        کنترل کادر اطراف ماسک یک عنصر      */
 
+mask-clip-border     mask-clip: border-box;
+mask-clip-padding    mask-clip: padding-box;
+mask-clip-content    mask-clip: content-box;
+mask-clip-fill       mask-clip: fill-box;
+mask-clip-stroke     mask-clip: stroke-box;
+mask-clip-view       mask-clip: view-box;
+mask-no-clip         mask-clip: no-clip;
 
 
 
 
 
 
+------------------------------------------- mask-composite -------------------------------------------------------------
+------------------------------------------- mask-composite -------------------------------------------------------------
 
+mask-add           mask-composite: add;
+mask-subtract      mask-composite: subtract;
+mask-intersect     mask-composite: intersect;
+mask-exclude       mask-composite: exclude;
 
 
 
@@ -2735,14 +2838,74 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+------------------------------------------- mask-image -------------------------------------------------------------
+------------------------------------------- mask-image -------------------------------------------------------------
 
+/* کنترل تصویر ماسک یک عنصر */
 
+mask-[<value>]                  mask-image: <value>;
+mask-(<custom-property>)        mask-image: var(<custom-property>);
+mask-none                       mask-image: none;
+mask-linear-<number>            mask-image: linear-gradient(<number>deg, black var(--tw-mask-linear-from)), transparent var(--tw-mask-linear-to));
+-mask-linear-<number>           mask-image: linear-gradient(calc(<number>deg * -1), black var(--tw-mask-linear-from)), transparent var(--tw-mask-linear-to));
+mask-linear-from-<number>       mask-image: linear-gradient(var(--tw-mask-linear-position), black calc(var(--spacing) * <number>), transparent var(--tw-mask-linear-to));
+mask-linear-from-<percentage>   mask-image: linear-gradient(var(--tw-mask-linear-position), black <percentage>, transparent var(--tw-mask-linear-to));
+mask-linear-from-<color>        mask-image: linear-gradient(var(--tw-mask-linear-position), <color> var(--tw-mask-linear-from), transparent var(--tw-mask-linear-to));
 
+mask-linear-from-(<custom-property>)      mask-image: linear-gradient(var(--tw-mask-linear-position), black <custom-property>, transparent var(--tw-mask-linear-to));
+mask-linear-from-[<value>]                mask-image: linear-gradient(var(--tw-mask-linear-position), black <value>, transparent var(--tw-mask-linear-to));
+mask-linear-to-<number>                   mask-image: linear-gradient(var(--tw-mask-linear-position), black var(--tw-mask-linear-from), transparent calc(var(--spacing) * <number>));
+mask-linear-to-<percentage>               mask-image: linear-gradient(var(--tw-mask-linear-position), black var(--tw-mask-linear-from), transparent <percentage>);
+mask-linear-to-<color>                    mask-image: linear-gradient(var(--tw-mask-linear-position), black var(--tw-mask-linear-from), <color> var(--tw-mask-linear-to));
+mask-linear-to-(<custom-property>)        mask-image: linear-gradient(var(--tw-mask-linear-position), black var(--tw-mask-linear-from), transparent var(<custom-property>));
+mask-linear-to-[<value>]                  mask-image: linear-gradient(var(--tw-mask-linear-position), black var(--tw-mask-linear-from), transparent <value>);
 
 
+mask-#$-from-<number>      mask-image: linear-gradient(to top, black calc(var(--spacing) * <number>), transparent var(--tw-mask-top-to));
+mask-t-from-<number>      mask-image: linear-gradient(to top, black calc(var(--spacing) * <number>), transparent var(--tw-mask-top-to));
 
 
 
+mask-radial-[<value>]                 mask-image: radial-gradient(<value>);
+mask-radial-[<size>]                  --tw-mask-radial-size: <size>;
+mask-radial-[<size>_<size>]           --tw-mask-radial-size: <size> <size>;
+mask-radial-from-<number>             mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black calc(var(--spacing) * <number>), transparent var(--tw-mask-radial-to));
+mask-radial-from-<percentage>         mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black <percentage>, transparent var(--tw-mask-radial-to));
+mask-radial-from-<color>              mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), <color> var(--tw-mask-radial-from), transparent var(--tw-mask-radial-to));
+mask-radial-from-(<custom-property>)  mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black var(<custom-property>), transparent var(--tw-mask-radial-to));
+mask-radial-from-[<value>]            mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black <value>, transparent var(--tw-mask-radial-to));
+mask-radial-to-<number>               mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black var(--tw-mask-radial-from), transparent calc(var(--spacing) * <number>));
+mask-radial-to-<percentage>           mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black var(--tw-mask-radial-from), transparent <percentage>);
+mask-radial-to-<color>                mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black var(--tw-mask-radial-from), <color> var(--tw-mask-radial-to));
+mask-radial-to-(<custom-property>)    mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black var(--tw-mask-radial-from), transparent var(<custom-property>));
+mask-radial-to-[<value>]              mask-image: radial-gradient(var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), black var(--tw-mask-radial-from), transparent <value>);
+mask-circle                           --tw-mask-radial-shape: circle;
+mask-ellipse                          --tw-mask-radial-shape: ellipse;
+mask-radial-closest-corner            --tw-mask-radial-size: closest-corner;
+mask-radial-closest-side              --tw-mask-radial-size: closest-side;
+mask-radial-farthest-corner           --tw-mask-radial-size: farthest-corner;
+mask-radial-farthest-side            --tw-mask-radial-size: farthest-side;
+mask-radial-at-top-left              --tw-mask-radial-position: top left;
+mask-radial-at-top                   --tw-mask-radial-position: top;
+mask-radial-at-top-right             --tw-mask-radial-position: top right;
+mask-radial-at-left                  --tw-mask-radial-position: left;
+mask-radial-at-center                --tw-mask-radial-position: center;
+mask-radial-at-right                 --tw-mask-radial-position: right;
+mask-radial-at-bottom-left           --tw-mask-radial-position: bottom left;
+mask-radial-at-bottom                --tw-mask-radial-position: bottom;
+mask-radial-at-bottom-right          --tw-mask-radial-position: bottom right;
+mask-conic-<number>                  mask-image: conic-gradient(from <number>deg, black var(--tw-mask-conic-from), transparent var(--tw-mask-conic-to));
+-mask-conic-<number>                 mask-image: conic-gradient(from calc(<number>deg * -1), black var(--tw-mask-conic-from), transparent var(--tw-mask-conic-to));
+mask-conic-from-<number>             mask-image: conic-gradient(from var(--tw-mask-conic-position), black calc(var(--spacing) * <number>), transparent var(--tw-mask-conic-to));
+mask-conic-from-<percentage>         mask-image: conic-gradient(from var(--tw-mask-conic-position), black <percentage>, transparent var(--tw-mask-conic-to));
+mask-conic-from-<color>              mask-image: conic-gradient(from var(--tw-mask-conic-position), <color> var(--tw-mask-conic-from), transparent var(--tw-mask-conic-to));
+mask-conic-from-(<custom-property>)  mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(<custom-property>), transparent var(--tw-mask-conic-to));
+mask-conic-from-[<value>]            mask-image: conic-gradient(from var(--tw-mask-conic-position), black <value>, transparent var(--tw-mask-conic-to));
+mask-conic-to-<number>               mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), transparent calc(var(--spacing) * <number>));
+mask-conic-to-<percentage>           mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), transparent <percentage>);
+mask-conic-to-<color>                mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), <color> var(--tw-mask-conic-to);
+mask-conic-to-(<custom-property>)    mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), transparent var(<custom-property>);
+mask-conic-to-[<value>]              mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), transparent <value>);
 
 
 
@@ -2750,33 +2913,85 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+                                                                
+------------------------------------------- mask-mode -------------------------------------------------------------
+------------------------------------------- mask-mode -------------------------------------------------------------
 
+/*       کنترل حالت ماسک یک عنصر       */
+mask-alpha        mask-mode: alpha;
+mask-luminance    mask-mode: luminance;
+mask-match        mask-mode: match-source;
 
 
 
 
 
+                                                                
+------------------------------------------- mask-origin -------------------------------------------------------------
+------------------------------------------- mask-origin -------------------------------------------------------------
 
+/*         کنترل نحوه قرارگیری تصویر ماسک یک عنصر نسبت به حاشیه‌ها، فاصله‌گذاری و محتوا      */
+                                                                
+mask-origin-border      mask-origin: border-box;
+mask-origin-padding     mask-origin: padding-box;
+mask-origin-content     mask-origin: content-box;
+mask-origin-fill        mask-origin: fill-box;
+mask-origin-stroke      mask-origin: stroke-box;
+mask-origin-view        mask-origin: view-box;
 
 
 
 
 
 
+------------------------------------------- mask-position -------------------------------------------------------------
+------------------------------------------- mask-position -------------------------------------------------------------
 
+/*        کنترل موقعیت تصویر ماسک یک عنص      */
+     
 
+mask-top-left        mask-position: top left;
+mask-top             mask-position: top;
+mask-top-right       mask-position: top right;
+mask-left            mask-position: left;
+mask-center          mask-position: center;
+mask-right           mask-position: right;
+mask-bottom-left     mask-position: bottom left;
+mask-bottom          mask-position: bottom;
+mask-bottom-right    mask-position: bottom right;
+mask-position-(<custom-property>)   mask-position: var(<custom-property>);
+mask-position-[<value>]             mask-position: <value>;
 
 
 
 
 
+------------------------------------------- mask-repeat -------------------------------------------------------------
+------------------------------------------- mask-repeat -------------------------------------------------------------
 
+/*        کنترل تکرار تصویر ماسک یک عنصر       */
+     
+mask-repeat          mask-repeat: repeat;
+mask-no-repeat       mask-repeat: no-repeat;
+mask-repeat-x        mask-repeat: repeat-x;
+mask-repeat-y        mask-repeat: repeat-y;
+mask-repeat-space    mask-repeat: space;
+mask-repeat-round    mask-repeat: round;
 
 
 
 
 
+------------------------------------------- mask-size -------------------------------------------------------------
+------------------------------------------- mask-size -------------------------------------------------------------
 
+/*          کنترل اندازه تصویر ماسک یک عنصر        */
+     
+mask-auto                      mask-size: auto;
+mask-cover                     mask-size: cover;
+mask-contain                   mask-size: contain;
+mask-size-(<custom-property>)  mask-size: var(<custom-property>);
+mask-size-[<value>]            mask-size: <value>;
 
 
 
@@ -2784,7 +2999,13 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+------------------------------------------- mask-type -------------------------------------------------------------
+------------------------------------------- mask-type -------------------------------------------------------------
 
+/*         SVG کنترل نحوه تفسیر ماسک       */
+     
+mask-type-alpha        mask-type: alpha;
+mask-type-luminance    mask-type: luminance;
 
 
 
@@ -2797,23 +3018,372 @@ inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch
 
 
 
+                                                                
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////  Filters  /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+//////////////////////////////////////////////  Filter  /////////////////////////////////////////////////
 
+------------------------------------------- filter -------------------------------------------------------------
+------------------------------------------- filter -------------------------------------------------------------
 
+/*       اعمال فیلترها روی یک عنصر      */
 
+filter-none                filter: none;
+filter-(<custom-property>) filter: var(<custom-property>);
+filter-[<value>]           filter: <value>;
 
 
 
 
 
 
+------------------------------------------- blur -------------------------------------------------------------
+------------------------------------------- blur -------------------------------------------------------------
 
+/*       فیلترهای تاری      */
 
+blur-xs             filter: blur(var(--blur-xs)); /* 4px */
+blur-sm             filter: blur(var(--blur-sm)); /* 8px */
+blur-md             filter: blur(var(--blur-md)); /* 12px */
+blur-lg             filter: blur(var(--blur-lg)); /* 16px */
+blur-xl             filter: blur(var(--blur-xl)); /* 24px */
+blur-2xl            filter: blur(var(--blur-2xl)); /* 40px */
+blur-3xl            filter: blur(var(--blur-3xl)); /* 64px */
+blur-none           filter: ;
+blur-(<custom-property>)      filter: blur(var(<custom-property>));
+blur-[<value>]     filter: blur(<value>);
 
 
 
+
+
+
+------------------------------------------- brightness -------------------------------------------------------------
+------------------------------------------- brightness -------------------------------------------------------------
+
+brightness-<number>              filter: brightness(<number>%);
+brightness-(<custom-property>)   filter: brightness(var(<custom-property>));
+brightness-[<value>]             filter: brightness(<value>);
+
+
+
+
+------------------------------------------- contrast -------------------------------------------------------------
+------------------------------------------- contrast -------------------------------------------------------------
+
+/*         فیلترهای کنتراست        */
+
+contrast-<number>      filter: contrast(<number>%);
+contrast-(<custom-property>)      filter: contrast(var(<custom-property>));
+contrast-[<value>]      filter: contrast(<value>);
+ 
+
+
+------------------------------------------- drop-shadow -------------------------------------------------------------
+------------------------------------------- drop-shadow -------------------------------------------------------------
+
+/*         فیلترهای سایه        */
+
+drop-shadow-xs          filter: drop-shadow(var(--drop-shadow-xs)); /* 0 1px 1px rgb(0 0 0 / 0.05) */
+drop-shadow-sm          filter: drop-shadow(var(--drop-shadow-sm)); /* 0 1px 2px rgb(0 0 0 / 0.15) */
+drop-shadow-md          filter: drop-shadow(var(--drop-shadow-md)); /* 0 3px 3px rgb(0 0 0 / 0.12) */
+drop-shadow-lg          filter: drop-shadow(var(--drop-shadow-lg)); /* 0 4px 4px rgb(0 0 0 / 0.15) */
+drop-shadow-xl          filter: drop-shadow(var(--drop-shadow-xl); /* 0 9px 7px rgb(0 0 0 / 0.1) */
+drop-shadow-2xl         filter: drop-shadow(var(--drop-shadow-2xl)); /* 0 25px 25px rgb(0 0 0 / 0.15) */
+drop-shadow-none        filter: drop-shadow(0 0 #0000);
+drop-shadow-(<custom-property>)            filter: drop-shadow(var(<custom-property>));
+drop-shadow-(color:<custom-property>)      --tw-drop-shadow-color: var(<custom-property>);
+drop-shadow-[<value>]    filter: drop-shadow(<value>);
+
+
+
+
+drop-shadow-inherit       --tw-drop-shadow-color: inherit;
+drop-shadow-current       --tw-drop-shadow-color: crrentColor;
+drop-shadow-transparent   --tw-drop-shadow-color: transparent;
+drop-shadow-black         --tw-drop-shadow-color: var(--color-black); /* #000 */
+drop-shadow-white         --tw-drop-shadow-color: var(--color-white); /* #fff */
+
+drop-shadow-red-(50 ta 950)  --tw-drop-shadow-color: var(--color-red-(50 ta 950) ); /* oklch(97.1% 0.013 17.38) */
+
+
+------------------------------------------- grayscale -------------------------------------------------------------
+------------------------------------------- grayscale -------------------------------------------------------------
+
+/*         فیلترهای خاکستری        */
+
+grayscale      filter: grayscale(100%);
+grayscale-<number>               filter: grayscale(<number>%);
+grayscale-(<custom-property>)    filter: grayscale(var(<custom-property>));
+grayscale-[<value>]              filter: grayscale(<value>);
+
+
+
+
+
+------------------------------------------- hue-rotate -------------------------------------------------------------
+------------------------------------------- hue-rotate -------------------------------------------------------------
+
+/*         فیلترهای چرخش        */
+
+hue-rotate-<number>              filter: hue-rotate(<number>deg);
+-hue-rotate-<number>             filter: hue-rotate(calc(<number>deg * -1));  /* مقادیر منفی */
+hue-rotate-(<custom-property>)   filter: hue-rotate(var(<custom-property>));
+hue-rotate-[<value>]             filter: hue-rotate(<value>);
+
+
+
+
+
+
+------------------------------------------- invert -------------------------------------------------------------
+------------------------------------------- invert -------------------------------------------------------------
+
+/*          فیلترهای معکوس       */
+
+invert            filter: invert(100%);
+invert-<number>              filter: invert(<number>%);
+invert-(<custom-property>)   filter: invert(var(<custom-property>));
+invert-[<value>]             filter: invert(<value>);
+
+
+
+
+
+------------------------------------------- saturate -------------------------------------------------------------
+------------------------------------------- saturate -------------------------------------------------------------
+
+/*          فیلترهای اشباع        */
+
+saturate-<number>               filter: saturate(<number>%);
+saturate-(<custom-property>)    filter: saturate(var(<custom-property>));
+saturate-[<value>]              filter: saturate(<value>);
+
+
+
+
+------------------------------------------- sepia -------------------------------------------------------------
+------------------------------------------- sepia -------------------------------------------------------------
+
+/*        فیلترهای سپیا         */
+
+sepia                      filter: sepia(100%);
+sepia-<number>             filter: sepia(<number>%);
+sepia-(<custom-property>)  filter: sepia(var(<custom-property>));
+sepia-[<value>]            filter: sepia(<value>);
+
+
+
+
+
+------------------------------------------- backdrop-filter -------------------------------------------------------------
+------------------------------------------- backdrop-filter -------------------------------------------------------------
+
+/*          فیلترهای پس‌زمینه پشت یک المان     */
+
+باشهSD (bg-white/30 یا bg-black/20) برای اینکه کار کند ، المان باید شفاف
+
+backdrop-filter-none                  backdrop-filter: none;
+backdrop-filter-(<custom-property>)   backdrop-filter: var(<custom-property>);
+backdrop-filter-[<value>]             backdrop-filter: <value>;
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////  backdrop-filter  /////////////////////////////////////////////////
+
+
+------------------------------------------- blur -------------------------------------------------------------
+------------------------------------------- blur -------------------------------------------------------------
+
+/*              */
+
+backdrop-blur-xs       backdrop-filter: blur(var(--blur-xs)); /* 4px */
+backdrop-blur-sm       backdrop-filter: blur(var(--blur-sm)); /* 8px */
+backdrop-blur-md       backdrop-filter: blur(var(--blur-md)); /* 12px */
+backdrop-blur-lg       backdrop-filter: blur(var(--blur-lg)); /* 16px */
+backdrop-blur-xl       backdrop-filter: blur(var(--blur-xl)); /* 24px */
+backdrop-blur-2xl      backdrop-filter: blur(var(--blur-2xl)); /* 40px */
+backdrop-blur-3xl      backdrop-filter: blur(var(--blur-3xl)); /* 64px */
+backdrop-blur-none     backdrop-filter: ;
+backdrop-blur-(<custom-property>)   backdrop-filter: blur(var(<custom-property>));
+backdrop-blur-[<value>]            backdrop-filter: blur(<value>);
+
+
+
+
+------------------------------------------- brightness -------------------------------------------------------------
+------------------------------------------- brightness -------------------------------------------------------------
+
+backdrop-brightness-<number>               backdrop-filter: brightness(<number>%);
+backdrop-brightness-(<custom-property>)    backdrop-filter: brightness(var(<custom-property>));
+backdrop-brightness-[<value>]              backdrop-filter: brightness(<value>);
+
+
+
+
+
+
+------------------------------------------- contrast -------------------------------------------------------------
+------------------------------------------- contrast -------------------------------------------------------------
+
+backdrop-contrast-<number>              backdrop-filter: contrast(<number>%);
+backdrop-contrast-(<custom-property>)   backdrop-filter: contrast(var(<custom-property>));
+backdrop-contrast-[<value>]             backdrop-filter: contrast(<value>);
+
+
+
+
+
+
+------------------------------------------- grayscale -------------------------------------------------------------
+------------------------------------------- grayscale -------------------------------------------------------------
+
+backdrop-grayscale                      backdrop-filter: grayscale(100%);
+backdrop-grayscale-<number>             backdrop-filter: grayscale(<number>%);
+backdrop-grayscale-(<custom-property>)  backdrop-filter: grayscale(var(<custom-property>));
+backdrop-grayscale-[<value>]            backdrop-filter: grayscale(<value>);
+
+
+
+
+
+------------------------------------------- hue-rotate -------------------------------------------------------------
+------------------------------------------- hue-rotate -------------------------------------------------------------
+
+backdrop-hue-rotate-<number>             backdrop-filter: hue-rotate(<number>deg);
+-backdrop-hue-rotate-<number>            backdrop-filter: hue-rotate(calc(<number>deg * -1));
+backdrop-hue-rotate-(<custom-property>)  backdrop-filter: hue-rotate(var(<custom-property>));
+backdrop-hue-rotate-[<value>]            backdrop-filter: hue-rotate(<value>);
+
+
+
+
+
+------------------------------------------- invert -------------------------------------------------------------
+------------------------------------------- invert -------------------------------------------------------------
+
+backdrop-invert                       backdrop-filter: invert(100%);
+backdrop-invert-<number>              backdrop-filter: invert(<number>%);
+backdrop-invert-(<custom-property>)   backdrop-filter: invert(var(<custom-property>))
+backdrop-invert-[<value>]             backdrop-filter: invert(<value>);
+
+
+
+
+
+------------------------------------------- opacity -------------------------------------------------------------
+------------------------------------------- opacity -------------------------------------------------------------
+
+backdrop-opacity-<number>             backdrop-filter: opacity(<number>%);
+backdrop-opacity-(<custom-property>)  backdrop-filter: opacity(var(<custom-property>));
+backdrop-opacity-[<value>]            backdrop-filter: opacity(<value>);
+
+
+
+
+
+------------------------------------------- saturate -------------------------------------------------------------
+------------------------------------------- saturate -------------------------------------------------------------
+
+backdrop-saturate-<number>             backdrop-filter: saturate(<number>%);
+backdrop-saturate-(<custom-property>)  backdrop-filter: saturate(var(<custom-property>));
+backdrop-saturate-[<value>]            backdrop-filter: saturate(<value>);
+
+
+
+------------------------------------------- sepia -------------------------------------------------------------
+------------------------------------------- sepia -------------------------------------------------------------
+
+backdrop-sepia                       backdrop-filter: sepia(100%);
+backdrop-sepia-<number>              backdrop-filter: sepia(<number>%);
+backdrop-sepia-(<custom-property>)   backdrop-filter: sepia(var(<custom-property>));
+backdrop-sepia-[<value>]             backdrop-filter: sepia(<value>);
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////  Tables  /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+------------------------------------------- border-collapse -------------------------------------------------------------
+------------------------------------------- border-collapse -------------------------------------------------------------
+
+/*       حاشیه‌های جدول باید جمع شوند یا از هم جدا شوند        */
+
+border-collapse      border-collapse: collapse;
+border-separate      border-collapse: separate;
+
+
+
+
+
+
+------------------------------------------- border-spacing -------------------------------------------------------------
+------------------------------------------- border-spacing -------------------------------------------------------------
+
+/*       فاصله بین حاشیه‌های جدول       */
+
+border-spacing-<number>                  border-spacing: calc(var(--spacing) * <number>);
+border-spacing-(<custom-property>)       border-spacing: var(<custom-property>);
+border-spacing-[<value>]                 border-spacing: <value>;
+border-spacing-x-<number>                border-spacing: calc(var(--spacing) * <number>) var(--tw-border-spacing-y);
+border-spacing-x-(<custom-property>)     border-spacing: var(<custom-property>) var(--tw-border-spacing-y);
+border-spacing-x-[<value>]               border-spacing: <value> var(--tw-border-spacing-y);
+border-spacing-y-<number>                border-spacing: var(--tw-border-spacing-x) calc(var(--spacing) * <number>);
+border-spacing-y-(<custom-property>)     border-spacing: var(--tw-border-spacing-x) var(<custom-property>);
+border-spacing-y-[<value>]               border-spacing: var(--tw-border-spacing-x) <value>;
+
+
+
+
+------------------------------------------- table-layout -------------------------------------------------------------
+------------------------------------------- table-layout -------------------------------------------------------------
+
+/*      کنترل الگوریتم طرح‌بندی جدول   */
+
+table-auto       table-layout: auto;
+table-fixed      table-layout: fixed;
+
+
+
+
+------------------------------------------- caption-side -------------------------------------------------------------
+------------------------------------------- caption-side -------------------------------------------------------------
+
+/*     کنترل ترازبندی یک عنصر عنوان درون یک جدول    */
+
+caption-top         aption-side: top;
+caption-bottom      caption-side: bottom;
+
+
+
+------------------------------------------- border-spacing -------------------------------------------------------------
+------------------------------------------- border-spacing -------------------------------------------------------------
+
+/*         */
 
 
 
