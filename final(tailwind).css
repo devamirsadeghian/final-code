@@ -2,6 +2,7 @@
 *  sm - md - lg - xl - 2xl
 
 
+
 /*  فرق   @theme    و    root:   */
 root: {
       global   ( روی کل فایل ها اعمال میشه )
@@ -11,8 +12,27 @@ root: {
       local   ( روی برخی فایل ها اعمال میشه )
 }
 
-------------------------------------------- Utility -----------------------------------------------------------------
-------------------------------------------- Utility -----------------------------------------------------------------
+
+
+
+#  (  s  e   )
+#  ( start  end )
+
+
+##  (  s  e  t  b  r  l   )
+##  ( start  end  top  botton  right  left )
+
+
+#$  (  x  y  t  b  r  l   )
+#$  (  x  y  top  botton  right  left )
+
+
+###  (  s  e  t  b  r  l  ss   se  ee  es  tl  rl  br  bl )
+###  ( start  end  top  botton  right  left  start/start stert/end  ...)
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -262,7 +282,7 @@ dark:text-gray-400
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: ui-mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", mono;
   --color-red-50: oklch(0.971 0.013 17.38);
   --color-red-100: oklch(0.936 0.032 17.717);
   --color-red-200: oklch(0.885 0.062 18.334);
@@ -277,7 +297,7 @@ dark:text-gray-400
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: ui-mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", mono;
 
   
   --color-red-50: oklch(97.1% 0.013 17.38);
@@ -533,7 +553,7 @@ dark:text-gray-400
 :root {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: ui-mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", mono;
   --color-red-50: oklch(0.971 0.013 17.38);
   --color-red-100: oklch(0.936 0.032 17.717);
   --color-red-200: oklch(0.885 0.062 18.334);
@@ -720,7 +740,7 @@ sr-only           position: absolute;
                   margin: -1px;
                   overflow: hidden;
                   clip-path: inset(50%);
-                  white-space: nowrap;
+                  white-: nowrap;
                   border-width: 0;
                                       
 
@@ -1375,8 +1395,16 @@ pl-[<value>]               padding-left: <value>;
 ------------------------------------------- margin -------------------------------------------------------------
 ------------------------------------------- margin -------------------------------------------------------------
 
+
 space-   // فاصله مثبت
 -space-  // فاصله منفی
+
+
+/* نیز میشوند  m  mx  my mt  mr  mb  ml   شامل موارد  */
+space-x-num    // برای ایجاد فاصله افقی بین فرزندان مستقیم یک کانتینر
+mx-num         //    برای ایجاد فاصله افقی در هر فرزند باید اعمال بشه  
+
+
 
 m-<number>                   margin: calc(var(--spacing) * <number>);
 -m-<number>                  margin: calc(var(--spacing) * -<number>);
@@ -2280,16 +2308,12 @@ bg-position-[<value>]           background-position: <value>;
 
 
 
-
 bg-repeat              background-repeat: repeat;
 bg-repeat-x            background-repeat: repeat-x;
 bg-repeat-y            background-repeat: repeat-y;
 bg-repeat-space        background-repeat: space;
 bg-repeat-round        background-repeat: round;
 bg-no-repeat           background-repeat: no-repeat;
-
-
-
 
 
 
@@ -2309,84 +2333,58 @@ bg-size-[<value>]              background-size: <value>;
 
 
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////  Borders  /////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-rounded-xs                    border-radius: var(--radius-xs); /* 0.125rem (2px) */
-rounded-sm                    border-radius: var(--radius-sm); /* 0.25rem (4px) */
-rounded-md                    border-radius: var(--radius-md); /* 0.375rem (6px) */
-rounded-lg                    border-radius: var(--radius-lg); /* 0.5rem (8px) */
-rounded-xl                    border-radius: var(--radius-xl); /* 0.75rem (12px) */
-rounded-2xl                   border-radius: var(--radius-2xl); /* 1rem (16px) */
-rounded-3xl                   border-radius: var(--radius-3xl); /* 1.5rem (24px) */
-rounded-4xl                   border-radius: var(--radius-4xl); /* 2rem (32px) */
-rounded-none                  border-radius: 0;
-rounded-full                  border-radius: calc(infinity * 1px);
-rounded-(<custom-property>)   border-radius: var(<custom-property>);
-rounded-[<value>]             border-radius: <value>;
+------------------------------------------- border-radius -------------------------------------------------------------
+------------------------------------------- border-radius -------------------------------------------------------------
 
+
+rounded-##-xs                    border-radius: var(--radius-xs); /* 0.125rem (2px) */
+(     # -> میتونه باشه یا نه )  
+
+rounded-##-xs                    border-radius: var(--radius-xs); /* 0.125rem (2px) */
+rounded-##_sm                    border-radius: var(--radius-sm); /* 0.25rem (4px) */
+rounded-##_md                    border-radius: var(--radius-md); /* 0.375rem (6px) */
+rounded-##-lg                    border-radius: var(--radius-lg); /* 0.5rem (8px) */
+rounded-##-xl                    border-radius: var(--radius-xl); /* 0.75rem (12px) */
+rounded-##-2xl                   border-radius: var(--radius-2xl); /* 1rem (16px) */
+rounded-##-3xl                   border-radius: var(--radius-3xl); /* 1.5rem (24px) */
+rounded-##-4xl                   border-radius: var(--radius-4xl); /* 2rem (32px) */
+rounded-##-none                  border-radius: 0;
+rounded-##-full                  border-radius: calc(infinity * 1px);
+rounded-##-(<custom-property>)   border-radius: var(<custom-property>);
+rounded-##-[<value>]             border-radius: <value>;
 
 ---------------------------------------------------------------------------------------
 
-
-rounded-s-xs                 border-start-start-radius: var(--radius-xs); /* 0.125rem (2px) */
-rounded-s-sm                 border-start-start-radius: var(--radius-sm); /* 0.25rem (4px) */
-rounded-s-md                 border-start-start-radius: var(--radius-md); /* 0.375rem (6px) */
-rounded-s-lg                 border-start-start-radius: var(--radius-lg); /* 0.5rem (8px) */
-rounded-s-xl                 border-start-start-radius: var(--radius-xl); /* 0.75rem (12px) */
-rounded-s-2xl                border-start-start-radius: var(--radius-2xl); /* 1rem (16px) */
-rounded-s-3xl                border-start-start-radius: var(--radius-3xl); /* 1.5rem (24px) */
-rounded-s-4xl                border-start-start-radius: var(--radius-4xl); /* 2rem (32px) */
-rounded-s-none               border-start-start-radius: 0;
-rounded-s-full               border-start-start-radius: calc(infinity * 1px);
-rounded-s-(<custom-property>) border-start-start-radius: var(<custom-property>);
-rounded-s-[<value>]          border-start-start-radius: <value>;
-rounded-e-xs                 border-start-end-radius: var(--radius-xs); /* 0.125rem (2px) */
-rounded-e-sm                 border-start-end-radius: var(--radius-sm); /* 0.25rem (4px) */
-rounded-e-md                 border-start-end-radius: var(--radius-md); /* 0.375rem (6px) */
-rounded-e-lg                 border-start-end-radius: var(--radius-lg); /* 0.5rem (8px) */
-rounded-e-xl                 border-start-end-radius: var(--radius-xl); /* 0.75rem (12px) */
-rounded-e-2xl                border-start-end-radius: var(--radius-2xl); /* 1rem (16px) */
-rounded-e-3xl                border-start-end-radius: var(--radius-3xl); /* 1.5rem (24px) */
-rounded-e-4xl                border-start-end-radius: var(--radius-4xl); /* 2rem (32px) */
-rounded-e-none               border-start-end-radius: 0;
-rounded-e-full               border-start-end-radius: calc(infinity * 1px);
-rounded-e-(<custom-property>) border-start-end-radius: var(<custom-property>);
-rounded-e-[<value>]          border-start-end-radius: <value>;
-
-
-------------------------------------------- start ------------------------------------------------
-------------------------------------------- start ------------------------------------------------
-
 (((((      xs    sm     md    lg    xl    2xl    3xl    4xl      ))))))
 
-rounded-s-xs
+rounded-###-xs
 border-start-start-radius: var(--radius-xs); /* 0.125rem (2px) */
 border-end-start-radius: var(--radius-xs); /* 0.125rem (2px) */
 
-
-
-
-
+---------------------------------------------------------------------------------------
 
 (((((        none       full        (<custom-property>)      [<value>]       ))))))
 
-rounded-s-none
+rounded-##-none
 border-start-start-radius: 0;
 border-end-start-radius: 0;
 
-rounded-s-full
+rounded-##-full
 border-start-start-radius: calc(infinity * 1px);
 border-end-start-radius: calc(infinity * 1px);
 
-rounded-s-(<custom-property>)
+rounded-##-(<custom-property>)
 border-start-start-radius: var(<custom-property>);
 border-end-start-radius: var(<custom-property>);
 
-rounded-s-[<value>]
+rounded-##-[<value>]
 border-start-start-radius: <value>;
 border-end-start-radius: <value>;
 
@@ -2395,44 +2393,61 @@ border-end-start-radius: <value>;
 
 
 
-------------------------------------------- end ------------------------------------------------
-------------------------------------------- end ------------------------------------------------
 
-(((((      xs    sm     md    lg    xl    2xl    3xl    4xl      ))))))
 
-rounded-e-xs
-border-start-end-radius: var(--radius-xs); /* 0.125rem (2px) */
-border-end-end-radius: var(--radius-xs); /* 0.125rem (2px) */
+------------------------------------------- border-width -------------------------------------------------------------
+------------------------------------------- border-width -------------------------------------------------------------
 
+border                                 border-width: 1px;
+border-<number>                        border-width: <number>px;
+border-(length:<custom-property>)      border-width: var(<custom-property>);
+border-[<value>]                       border-width: <value>;
 
+border-#                               border-inline-width: 1px;
+border-#-<number>                      border-inline-width: <number>px;
+border-#-(length:<custom-property>)    border-inline-width: var(<custom-property>);
+border-#-[<value>]                     border-inline-width: <value>;
 
 
 
+divide-x-num   ( برای ایجاد خط جداکننده افقی بین فرزندان مستقیم یک کانتینر )
 
-(((((        none       full        (<custom-property>)      [<value>]       ))))))
 
-rounded-e-none
-border-start-end-radius: 0;
-border-end-end-radius: 0;
+divide-x                  & > :not(:last-child) {
+                          border-inline-start-width: 0px;
+                          border-inline-end-width: 1px;  }
 
-rounded-e-full
-border-start-end-radius: calc(infinity * 1px);
-border-end-end-radius: calc(infinity * 1px);
+divide-x-<number>         & > :not(:last-child) {
+                          border-inline-start-width: 0px;
+                          border-inline-end-width: <number>px;  }
 
-rounded-e-(<custom-property>)
-border-start-end-radius: var(<custom-property>);
-border-end-end-radius: var(<custom-property>);
+divide-x-(length:<custom-property>) & > :not(:last-child) {
+                                    border-inline-start-width: 0px;
+                                    border-inline-end-width: var(<custom-property>); }
 
-rounded-e-[<value>]
-border-start-end-radius: <value>;
-border-end-end-radius: <value>;
+divide-x-[<value>]        & > :not(:last-child) {
+                          border-inline-start-width: 0px;
+                          border-inline-end-width: <value>;  }
 
+divide-y                  & > :not(:last-child) {
+                          border-top-width: 0px;
+                          border-bottom-width: 1px;  }
 
----------------------------------------------------------------------------------------
+divide-y-<number>         & > :not(:last-child) {
+                          border-top-width: 0px;
+                          border-bottom-width: <number>px;  }
 
+divide-y-(length:<custom-property>)  & > :not(:last-child) {
+                                     border-top-width: 0px;
+                                     border-bottom-width: var(<custom-property>);  }
 
+divide-y-[<value>]        & > :not(:last-child) {
+                          border-top-width: 0px;
+                          border-bottom-width: <value>;  }
 
 
+divide-x-reverse      --tw-divide-x-reverse: 1;
+divide-y-reverse      --tw-divide-y-reverse: 1;
 
 
 
@@ -2440,29 +2455,85 @@ border-end-end-radius: <value>;
 
 
 
+------------------------------------------- border-color -------------------------------------------------------------
+------------------------------------------- border-color -------------------------------------------------------------
 
+border-inherit          border-color: inherit;
+border-current          border-color: currentColor;
+border-transparent      border-color: transparent;
+border-black            border-color: var(--color-black); /* #000 */
+border-white            border-color: var(--color-white); /* #fff */
 
+/* #$ میتونه باشه یا نه */
+border-#$-color-( 50 ta 950 )  border-#$-color: var(--color-slate-950);
+                                     همین کلمه کالر
 
 
+divide-inherit            & > :not(:last-child) {
+                          border-color: inherit;
+}
 
+divide-current
+                        & > :not(:last-child) {
+                        border-color: currentColor;
+}
 
+divide-transparent      & > :not(:last-child) {
+                        border-color: transparent;
+}
 
+divide-black            & > :not(:last-child) {
+                        border-color: var(--color-black); /* #000 */
+}
 
+divide-white            & > :not(:last-child) {
+                        border-color: var(--color-white); /* #fff */
+}
 
+/* #$ میتونه باشه یا نه */
+divide-color-( 50 ta 950 )        & > :not(:last-child) {
+                                  border-#$-color: var(--color-red-( 50 ta 950 )); /* oklch(97.1% 0.013 17.38) */
+}
 
 
 
 
 
 
+------------------------------------------- border-style -------------------------------------------------------------
+------------------------------------------- border-style -------------------------------------------------------------
 
+border-solid       border-style: solid;
+border-dashed      border-style: dashed;
+border-dotted      border-style: dotted;
+border-double      border-style: double;
+border-hidden      border-style: hidden;
+border-none        border-style: none;
 
 
+divide-solid       & > :not(:last-child) {
+                    border-style: solid;
+}
 
+divide-dashed      & > :not(:last-child) {
+                    border-style: dashed;
+}
 
+divide-dotted      & > :not(:last-child) {
+                    border-style: dotted;
+}
 
+divide-double      & > :not(:last-child) {
+                    border-style: double;
+}
 
+divide-hidden      & > :not(:last-child) {
+                    border-style: hidden;
+}
 
+divide-none      & > :not(:last-child) {
+                    border-style: none;
+}
 
 
 
@@ -2472,7 +2543,13 @@ border-end-end-radius: <value>;
 
 
 
+------------------------------------------- outline-width -------------------------------------------------------------
+------------------------------------------- outline-width -------------------------------------------------------------
 
+outline                             outline-width: 1px;
+outline-<number>                    outline-width: <number>px;
+outline-(length:<custom-property>)  outline-width: var(<custom-property>);
+outline-[<value>]                   outline-width: <value>;
 
 
 
@@ -2481,9 +2558,17 @@ border-end-end-radius: <value>;
 
 
 
+------------------------------------------- outline-color -------------------------------------------------------------
+------------------------------------------- outline-color -------------------------------------------------------------
 
+outline-inherit          outline-color: inherit;
+outline-current          outline-color: currentColor;
+outline-transparent      outline-color: transparent;
+outline-black            outline-color: var(--color-black); /* #000 */
+outline-white            outline-color: var(--color-white); /* #fff */
 
 
+outline-color-(50 ta 950)         outline-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
 
 
@@ -2492,13 +2577,28 @@ border-end-end-radius: <value>;
 
 
 
+------------------------------------------- outline-style -------------------------------------------------------------
+------------------------------------------- outline-style -------------------------------------------------------------
 
+outline-solid       outline-style: solid;
+outline-dashed      outline-style: dashed;
+outline-dotted      outline-style: dotted;
+outline-double      outline-style: double;
+outline-none        outline-style: none;
+outline-hidden      outline: 2px solid transparent;
+                    outline-offset: 2px;
 
 
 
 
 
+------------------------------------------- outline-offset -------------------------------------------------------------
+------------------------------------------- outline-offset -------------------------------------------------------------
 
+outline-offset-<number>               outline-offset: <number>px;
+-outline-offset-<number>              outline-offset: calc(<number>px * -1);
+outline-offset-(<custom-property>)    outline-offset: var(<custom-property>);
+outline-offset-[<value>]              outline-offset: <value>;
 
 
 
@@ -2511,125 +2611,56 @@ border-end-end-radius: <value>;
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////  Effects  /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+------------------------------------------- box-shadow -------------------------------------------------------------
+------------------------------------------- box-shadow -------------------------------------------------------------
 
+shadow-2xs      box-shadow: var(--shadow-2xs); /* 0 1px rgb(0 0 0 / 0.05) */
+shadow-xs       box-shadow: var(--shadow-xs); /* 0 1px 2px 0 rgb(0 0 0 / 0.05) */
+shadow-sm       box-shadow: var(--shadow-sm); /* 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) */
+shadow-md       box-shadow: var(--shadow-md); /* 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) */
+shadow-lg       box-shadow: var(--shadow-lg); /* 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) */
+shadow-xl       box-shadow: var(--shadow-xl); /* 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) */
+shadow-2xl      box-shadow: var(--shadow-2xl); /* 0 25px 50px -12px rg */
+shadow-none     box-shadow: 0 0 #0000;
+shadow-(<custom-property>)            box-shadow: var(<custom-property>);
+shadow-(color:<custom-property>)      --tw-shadow-color: var(<custom-property>);
+shadow-[<value>]                      box-shadow: <value>;
 
 
 
 
+shadow-inherit         --tw-shadow-color: inherit;
+shadow-current         --tw-shadow-color: currentColor;
+shadow-transparent     --tw-shadow-color: transparent;
+shadow-black           --tw-shadow-color: var(--color-black); /* #000 */
+shadow-white           --tw-shadow-color: var(--color-white); /* #fff */
 
+shadow-red-(50 ta 950) --tw-shadow-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
 
 
 
+inset-shadow-2xs                   box-shadow: var(--inset-shadow-2xs); /* inset 0 1px rgb(0 0 0 / 0.05) */
+inset-shadow-xs                    box-shadow: var(--inset-shadow-xs); /* inset 0 1px 1px rgb(0 0 0 / 0.05) */
+inset-shadow-sm                    box-shadow: var(--inset-shadow-sm); /* inset 0 2px 4px rgb(0 0 0 / 0.05) */
+inset-shadow-none                  box-shadow: inset 0 0 #0000;
+inset-shadow-(<custom-property>)   box-shadow: var(<custom-property>);
+inset-shadow-[<value>]             box-shadow: <value>;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+inset-shadow-inherit      --tw-inset-shadow-color: inherit;
+inset-shadow-current      --tw-inset-shadow-color: currentColor;
+inset-shadow-transparent  --tw-inset-shadow-color: transparent;
+inset-shadow-black        --tw-inset-shadow-color: var(--color-black); /* #000 */
+inset-shadow-white        --tw-inset-shadow-color: var(--color-white); /* #fff */
+inset-shadow-red-50       --tw-inset-shadow-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
 
 
