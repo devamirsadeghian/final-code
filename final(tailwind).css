@@ -73,18 +73,18 @@ xl        @media (width >= 80rem)
 /*     استاندارد نیست
 @3xs	       @container (width >= 16rem)
 @2xs	       @container (width >= 18rem)
-@xs	       @container (width >= 20rem)
-@sm          @container (width >= 24rem)
-@md          @container (width >= 28rem)
-@lg	       @container (width >= 32rem)
-@xl          @container (width >= 36rem)
+@xs	           @container (width >= 20rem)
+@sm            @container (width >= 24rem)
+@md            @container (width >= 28rem)
+@lg	           @container (width >= 32rem)
+@xl            @container (width >= 36rem)
 @2xl	       @container (width >= 42rem)
 @3xl	       @container (width >= 48rem)
-@4xl         @container (width >= 56rem)
+@4xl           @container (width >= 56rem)
 @5xl	       @container (width >= 64rem)
 @6xl	       @container (width >= 72rem)
 @7xl	       @container (width >= 80rem)
-@min-[...]	 @container (width >= ...) */
+@min-[...]	   @container (width >= ...) */
 
 
 
@@ -219,7 +219,6 @@ dark:text-gray-400
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*                                           خیلی پر استفاده هستند              */
-
 
 --color-*	         Color utilities like bg-red-500, text-sky-300, and many more
 --font-*             Font family utilities like font-sans
