@@ -942,7 +942,6 @@ z-(<custom-property>)
 
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Flexbox & Grid  ///////////////////////////////////////////
@@ -1242,11 +1241,11 @@ items-stretch          align-items: stretch;
 
 /*        نحوه قرارگیری یک آیتم فلکس یا گرید در امتداد محور متقاطع نگهدارنده آن        */
 
-self-auto      align-self: auto;
-self-start     align-self: flex-start;
-self-end       align-self: flex-end;
-self-end-safe  align-self: safe flex-end;
-self-center    align-self: center;
+self-auto            align-self: auto;
+self-start           align-self: flex-start;
+self-end             align-self: flex-end;
+self-end-safe        align-self: safe flex-end;
+self-center          align-self: center;
 self-center-safe     align-self: safe center;
 self-stretch         align-self: stretch;
 self-baseline        align-self: baseline;
@@ -1495,7 +1494,6 @@ space-y-[<value>]            & > :not(:last-child) {
 
 
 
-
 space-x-reverse      & > :not(:last-child)) {
                     --tw-space-x-reverse: 1;
 }
@@ -1503,8 +1501,6 @@ space-x-reverse      & > :not(:last-child)) {
 space-y-reverse         & > :not(:last-child)) {
                         --tw-space-y-reverse: 1;
 }
-
-
 
 
 
@@ -1783,9 +1779,6 @@ max-h-fit                  max-height: fit-content;
 max-h-lh                   max-height: 1lh;
 max-h-(<custom-propety>)   max-height: var(<custom-property>);
 max-h-[<value>]            max-height: <value>;
-
-
-
 
 
 
@@ -2098,8 +2091,6 @@ content-none                   content: none;
 
 
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////  Backgrounds  ///////////////////////////////////////////////
@@ -2171,8 +2162,6 @@ to-[<value>]                     --tw-gradient-to: <value>;
 
 
 
-
-
 bg-origin-border       background-origin: border-box;
 bg-origin-padding      background-origin: padding-box;
 bg-origin-content      background-origin: content-box;
@@ -2209,8 +2198,6 @@ bg-cover                       background-size: cover;
 bg-contain                     background-size: contain;
 bg-size-(<custom-property>)    background-size: var(<custom-property>);
 bg-size-[<value>]              background-size: <value>;
-
-
 
 
 
@@ -2318,7 +2305,6 @@ divide-y-(length:<custom-property>)  & > :not(:last-child) {
 divide-y-[<value>]        & > :not(:last-child) {
                           border-top-width: 0px;
                           border-bottom-width: <value>;  }
-
 
 divide-x-reverse      --tw-divide-x-reverse: 1;
 divide-y-reverse      --tw-divide-y-reverse: 1;
@@ -2450,7 +2436,6 @@ outline-offset-[<value>]              outline-offset: <value>;
 //////////////////////////////////////////////  Effects  /////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 ------------------------------------------- box-shadow -------------------------------------------------------------
 ------------------------------------------- box-shadow -------------------------------------------------------------
@@ -2764,11 +2749,7 @@ mask-type-luminance    mask-type: luminance;
 
 
 
-
-
-
-
-                                                                
+                   
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2908,8 +2889,6 @@ backdrop-filter-[<value>]             backdrop-filter: <value>;
 
 
 
-
-
 //////////////////////////////////////////////  backdrop-filter  /////////////////////////////////////////////////
 ------------------------------------------- blur -------------------------------------------------------------
 ------------------------------------------- blur -------------------------------------------------------------
@@ -2991,9 +2970,6 @@ backdrop-sepia-[<value>]             backdrop-filter: sepia(<value>);
 
 
 
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////  Tables  /////////////////////////////////////////////////
@@ -3031,9 +3007,6 @@ border-spacing-y-[<value>]               border-spacing: var(--tw-border-spacing
 table-auto       table-layout: auto;
 table-fixed      table-layout: fixed;
 
-
-
-
 ------------------------------------------- caption-side -------------------------------------------------------------
 ------------------------------------------- caption-side -------------------------------------------------------------
 
@@ -3046,18 +3019,11 @@ caption-bottom      caption-side: bottom;
 
 
 
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////  Transitions & Animation  /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 ------------------------------------------- transition-property -------------------------------------------------------------
 ------------------------------------------- transition-property -------------------------------------------------------------
@@ -3094,7 +3060,7 @@ transition-transform    transition-property: transform, translate, scale, rotate
                         transition-duration: var(--default-transition-duration); /* 150ms */
 
 
-transition-none                  transition-property: none;
+transition-none         transition-property: none;
 
 
 transition-(<custom-property>)   transition-property: var(<custom-property>);
@@ -3107,21 +3073,11 @@ transition-[<value>]       transition-property: <value>;
                            transition-duration: var(--default-transition-duration); /* 150ms */
 
 
-
-
-
-
-
-
 ------------------------------------------- transition-behavior -------------------------------------------------------------
 ------------------------------------------- transition-behavior -------------------------------------------------------------
 
 transition-normal        transition-behavior: normal;
 transition-discrete      transition-behavior: allow-discrete;
-
-
-
-
 
 ------------------------------------------- transition-duration -------------------------------------------------------------
 ------------------------------------------- transition-duration -------------------------------------------------------------
@@ -3130,10 +3086,6 @@ duration-<number>             transition-duration: <number>ms;
 duration-initial              transition-duration: initial;
 duration-(<custom-property>)  transition-duration: var(<custom-property>);
 duration-[<value>]            transition-duration: <value>;
-
-
-
-
 
 ------------------------------------------- transition-timing-function -------------------------------------------------------------
 ------------------------------------------- transition-timing-function -------------------------------------------------------------
@@ -3146,8 +3098,6 @@ ease-initial              transition-timing-function: initial;
 ease-(<custom-property>)  transition-timing-function: var(<custom-property>);
 ease-[<value>]            transition-timing-function: <value>;
 
-
-
 ------------------------------------------- transition-delay -------------------------------------------------------------
 ------------------------------------------- transition-delay -------------------------------------------------------------
 
@@ -3155,15 +3105,8 @@ delay-<number>             transition-delay: <number>ms;
 delay-(<custom-property>)  transition-delay: var(<custom-property>);
 delay-[<value>]            transition-delay: <value>;
 
-
-
-
-
-
-
 ------------------------------------------- animation -------------------------------------------------------------
 ------------------------------------------- animation -------------------------------------------------------------
-
 
 animate-none                  animation: none;
 animate-(<custom-property>)   animation: var(<custom-property>);
@@ -3179,7 +3122,6 @@ animate-spin      animation: var(--animate-spin); /* spin 1s linear infinite */
                         }
 
 
-
 animate-ping      animation: var(--animate-ping); /* ping 1s cubic-bezier(0, 0, 0.2, 1) infinite */
 
                   @keyframes ping {
@@ -3190,7 +3132,6 @@ animate-ping      animation: var(--animate-ping); /* ping 1s cubic-bezier(0, 0, 
                   }
 
 
-
 animate-pulse      animation: var(--animate-pulse); /* pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite */
 
                   @keyframes pulse {
@@ -3198,7 +3139,6 @@ animate-pulse      animation: var(--animate-pulse); /* pulse 2s cubic-bezier(0.4
                       opacity: 0.5;
                     }
                   }
-
 
 
 animate-bounce      animation: var(--animate-bounce); /* bounce 1s infinite */
@@ -3216,16 +3156,11 @@ animate-bounce      animation: var(--animate-bounce); /* bounce 1s infinite */
 
 
 
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////  Transforms  //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 ------------------------------------------- backface-visibility -------------------------------------------------------------
 ------------------------------------------- backface-visibility -------------------------------------------------------------
@@ -3234,9 +3169,6 @@ animate-bounce      animation: var(--animate-bounce); /* bounce 1s infinite */
 
 backface-hidden      backface-visibility: hidden;
 backface-visible     backface-visibility: visible;
-
-
-
 
 ------------------------------------------- perspective -------------------------------------------------------------
 ------------------------------------------- perspective -------------------------------------------------------------
@@ -3403,21 +3335,12 @@ translate-none                   translate: none;
 
 
 
-
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////  Interactivity  /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* یعنی تعامل کاربر با المان‌ها (هاور، فوکوس، کلیک، فعال بودن و …) رو فقط با کلاس‌ها کنترل کنی */
-
-
 
 ------------------------------------------- accent-color -------------------------------------------------------------
 ------------------------------------------- accent-color -------------------------------------------------------------
@@ -3704,11 +3627,6 @@ will-change-[<value>]           will-change: <value>;
 
 
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////  SVG  //////////////////////////////////////////
@@ -3752,24 +3670,3 @@ stroke-red-50       stroke: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 stroke-<number>                    stroke-width: <number>;
 stroke-(length:<custom-property>)  stroke-width: var(<custom-property>);
 stroke-[<value>]                   stroke-width: <value>;
-
-
-
-
-
-
-
-
-
-
-
-
-
-------------------------------------------- Bootstrap -----------------------------------------------------------------
-------------------------------------------- Bootstrap -----------------------------------------------------------------
-                               
-// link-primary  مخصوص لینک چون رفتار های مخصوص لینک را پشتیبانی میکند
-// text-primary  نمیکند
-
-
-                                  
