@@ -943,8 +943,6 @@ z-(<custom-property>)
 
 
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Flexbox & Grid  ///////////////////////////////////////////
@@ -1339,15 +1337,12 @@ pl-[<value>]               padding-left: <value>;
 ------------------------------------------- margin -------------------------------------------------------------
 ------------------------------------------- margin -------------------------------------------------------------
 
-
 space-   // فاصله مثبت
 -space-  // فاصله منفی
-
 
 /* نیز میشوند  m  mx  my mt  mr  mb  ml   شامل موارد  */
 space-x-num    // برای ایجاد فاصله افقی بین فرزندان مستقیم یک کانتینر
 mx-num         //    برای ایجاد فاصله افقی در هر فرزند باید اعمال بشه  
-
 
 
 m-<number>                   margin: calc(var(--spacing) * <number>);
@@ -1417,9 +1412,6 @@ ml-[<value>]                 margin-left: <value>;
 
 
 
-
-
-
 space-x-<number>     & > :not(:last-child) {
                     --tw-space-x-reverse: 0;
                       margin-inline-start: calc(calc(var(--spacing) * <number>) * var(--tw-space-x-reverse));
@@ -1430,9 +1422,6 @@ space-x-<number>     & > :not(:last-child) {
                         margin-inline-start: calc(calc(var(--spacing) * -<number>) * var(--tw-space-x-reverse));
                         margin-inline-end: calc(calc(var(--spacing) * -<number>) * calc(1 - var(--tw-space-x-reverse)));
 };
-
-
-
 
 
 
@@ -1451,10 +1440,6 @@ space-x-px       & > :not(:last-child) {
 
 
 
-
-
-
-
 space-x-(<custom-property>)   & > :not(:last-child) {
                               --tw-space-x-reverse: 0;
                                 margin-inline-start: calc(var(<custom-property>) * var(--tw-space-x-reverse));
@@ -1465,9 +1450,6 @@ space-x-[<value>]            & > :not(:last-child) {
                            margin-inline-start: calc(<value> * var(--tw-space-x-reverse));
                             margin-inline-end: calc(<value> * calc(1 - var(--tw-space-x-reverse)));
 };
-
-
-
 
 
 
@@ -1486,9 +1468,6 @@ space-y-<number>       & > :not(:last-child) {
 
 
 
-
-
-
 space-y-px     & > :not(:last-child) {
                     --tw-space-y-reverse: 0;
                     margin-block-start: calc(1px * var(--tw-space-y-reverse));
@@ -1502,17 +1481,11 @@ space-y-px     & > :not(:last-child) {
 
 
 
-
-
-
-
 space-y-(<custom-property>)      & > :not(:last-child) {
                                 --tw-space-y-reverse: 0;
                                 margin-block-start: calc(var(<custom-property>) * var(--tw-space-y-reverse));
                                 margin-block-end: calc(var(<custom-property>) * calc(1 - var(--tw-space-y-reverse)));
 };
-
-
 
 space-y-[<value>]            & > :not(:last-child) {
                               --tw-space-y-reverse: 0;
@@ -1522,18 +1495,14 @@ space-y-[<value>]            & > :not(:last-child) {
 
 
 
+
 space-x-reverse      & > :not(:last-child)) {
                     --tw-space-x-reverse: 1;
 }
 
-
-
 space-y-reverse         & > :not(:last-child)) {
                         --tw-space-y-reverse: 1;
 }
-
-
-
 
 
 
@@ -1547,10 +1516,8 @@ space-y-reverse         & > :not(:last-child)) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 ------------------------------------------- width -------------------------------------------------------------
 ------------------------------------------- width -------------------------------------------------------------
-
 
 w-<number>       width: calc(var(--spacing) * <number>);
 w-<fraction>     width: calc(<fraction> * 100%);
@@ -1668,7 +1635,6 @@ min-w-6xl             min-width: var(--container-6xl); /* 72rem (1152px) */
 min-w-7xl             min-width: var(--container-7xl); /* 80rem (1280px) */
 
 
-
 min-w-px              min-width: 1px;
 min-w-full            min-width: 100%;
 min-w-screen          min-width: 100vw;
@@ -1687,12 +1653,9 @@ min-w-(<custom-property>)      min-width: var(<custom-property>);
 min-w-[<value>]       min-width: <value>;
 
 
-
 /*         max , min تنها تفاوت      */
 min-w-auto            min-width: auto;             ((  ندارد )) 
 ((  ندارد ))                              max-w-none            max-width: none;
-
-
 
 ------------------------------------------- height -------------------------------------------------------------
 ------------------------------------------- height -------------------------------------------------------------
@@ -1829,8 +1792,6 @@ max-h-[<value>]            max-height: <value>;
 
 
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Typography  ///////////////////////////////////////////////
@@ -1908,15 +1869,15 @@ font-stretch-[<value>]             font-stretch: <value>;
 
 ---------------------------------------------------------------------------------------
 
-normal-nums           font-variant-numeric: normal;
-ordinal               font-variant-numeric: ordinal;
-slashed-zero          font-variant-numeric: slashed-zero;
-lining-nums           font-variant-numeric: lining-nums;
-oldstyle-nums         font-variant-numeric: oldstyle-nums;
-proportional-nums     font-variant-numeric: proportional-nums;
-tabular-nums          font-variant-numeric: tabular-nums;
-diagonal-fractions    font-variant-numeric: diagonal-fractions;
-stacked-fractions     font-variant-numeric: stacked-fractions;
+normal-nums             font-variant-numeric: normal;
+ordinal                 font-variant-numeric: ordinal;
+slashed-zero            font-variant-numeric: slashed-zero;
+lining-nums             font-variant-numeric: lining-nums;
+oldstyle-nums           font-variant-numeric: oldstyle-nums;
+proportional-nums       font-variant-numeric: proportional-nums;
+tabular-nums            font-variant-numeric: tabular-nums;
+diagonal-fractions      font-variant-numeric: diagonal-fractions;
+stacked-fractions       font-variant-numeric: stacked-fractions;
 
 ---------------------------------------------------------------------------------------
 
@@ -2139,23 +2100,15 @@ content-none                   content: none;
 
 
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////  Backgrounds  ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
 bg-fixed            background-attachment: fixed;
 bg-local            background-attachment: local;
 bg-scroll           background-attachment: scroll;
-
-
-
 
 
 
@@ -2167,22 +2120,18 @@ bg-clip-text         background-clip: text;
 
 
 
-
-
 bg-inherit          background-color: inherit;
 bg-current          background-color: currentColor;
 bg-transparent      background-color: transparent;
 bg-black            background-color: var(--color-black); /* #000 */
 bg-white            background-color: var(--color-white); /* #fff */
 
+
 bg-color-( 50 ta 950 )    background-color: var(--color-color-( 50 ta 950 ); /* oklch(97.1 ) */
 
+                                                
 bg-(<custom-property>)    background-color: var(<custom-property>);
 bg-[<value>]              background-color: <value>;
-
-
-
-                                                
 
 
 bg-[<value>]                     background-image: <value>;
@@ -2224,8 +2173,6 @@ to-[<value>]                     --tw-gradient-to: <value>;
 
 
 
-
-
 bg-origin-border       background-origin: border-box;
 bg-origin-padding      background-origin: padding-box;
 bg-origin-content      background-origin: content-box;
@@ -2233,10 +2180,7 @@ bg-origin-content      background-origin: content-box;
 
 
 
-
-
-
-g-top-left                      background-position: top left;
+bg-top-left                      background-position: top left;
 bg-top                          background-position: top;
 bg-top-right                    background-position: top right;
 bg-left                         background-position: left;
@@ -2250,15 +2194,12 @@ bg-position-[<value>]           background-position: <value>;
 
 
 
-
-
 bg-repeat              background-repeat: repeat;
 bg-repeat-x            background-repeat: repeat-x;
 bg-repeat-y            background-repeat: repeat-y;
 bg-repeat-space        background-repeat: space;
 bg-repeat-round        background-repeat: round;
 bg-no-repeat           background-repeat: no-repeat;
-
 
 
 
@@ -2275,9 +2216,6 @@ bg-size-[<value>]              background-size: <value>;
 
 
 
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////  Borders  /////////////////////////////////////////////////
@@ -2286,7 +2224,6 @@ bg-size-[<value>]              background-size: <value>;
 
 ------------------------------------------- border-radius -------------------------------------------------------------
 ------------------------------------------- border-radius -------------------------------------------------------------
-
 
 rounded-##-xs                    border-radius: var(--radius-xs); /* 0.125rem (2px) */
 (     # -> میتونه باشه یا نه )  
@@ -2331,13 +2268,6 @@ border-end-start-radius: var(<custom-property>);
 rounded-##-[<value>]
 border-start-start-radius: <value>;
 border-end-start-radius: <value>;
-
-
-
-
-
-
-
 
 ------------------------------------------- border-width -------------------------------------------------------------
 ------------------------------------------- border-width -------------------------------------------------------------
@@ -2393,12 +2323,6 @@ divide-y-[<value>]        & > :not(:last-child) {
 divide-x-reverse      --tw-divide-x-reverse: 1;
 divide-y-reverse      --tw-divide-y-reverse: 1;
 
-
-
-
-
-
-
 ------------------------------------------- border-color -------------------------------------------------------------
 ------------------------------------------- border-color -------------------------------------------------------------
 
@@ -2439,11 +2363,6 @@ divide-color-( 50 ta 950 )        & > :not(:last-child) {
                                   border-#$-color: var(--color-red-( 50 ta 950 )); /* oklch(97.1% 0.013 17.38) */
 }
 
-
-
-
-
-
 ------------------------------------------- border-style -------------------------------------------------------------
 ------------------------------------------- border-style -------------------------------------------------------------
 
@@ -2479,14 +2398,6 @@ divide-none      & > :not(:last-child) {
                     border-style: none;
 }
 
-
-
-
-
-
-
-
-
 ------------------------------------------- outline-width -------------------------------------------------------------
 ------------------------------------------- outline-width -------------------------------------------------------------
 
@@ -2494,12 +2405,6 @@ outline                             outline-width: 1px;
 outline-<number>                    outline-width: <number>px;
 outline-(length:<custom-property>)  outline-width: var(<custom-property>);
 outline-[<value>]                   outline-width: <value>;
-
-
-
-
-
-
 
 
 ------------------------------------------- outline-color -------------------------------------------------------------
@@ -2515,12 +2420,6 @@ outline-white            outline-color: var(--color-white); /* #fff */
 outline-color-(50 ta 950)         outline-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
 
-
-
-
-
-
-
 ------------------------------------------- outline-style -------------------------------------------------------------
 ------------------------------------------- outline-style -------------------------------------------------------------
 
@@ -2533,9 +2432,6 @@ outline-hidden      outline: 2px solid transparent;
                     outline-offset: 2px;
 
 
-
-
-
 ------------------------------------------- outline-offset -------------------------------------------------------------
 ------------------------------------------- outline-offset -------------------------------------------------------------
 
@@ -2543,12 +2439,6 @@ outline-offset-<number>               outline-offset: <number>px;
 -outline-offset-<number>              outline-offset: calc(<number>px * -1);
 outline-offset-(<custom-property>)    outline-offset: var(<custom-property>);
 outline-offset-[<value>]              outline-offset: <value>;
-
-
-
-
-
-
 
 
 
@@ -2578,8 +2468,6 @@ shadow-none     box-shadow: 0 0 #0000;
 shadow-(<custom-property>)            box-shadow: var(<custom-property>);
 shadow-(color:<custom-property>)      --tw-shadow-color: var(<custom-property>);
 shadow-[<value>]                      box-shadow: <value>;
-
-
 
 
 shadow-inherit         --tw-shadow-color: inherit;
@@ -2636,15 +2524,6 @@ inset-ring-white               --tw-inset-ring-color: var(--color-white); /* #ff
 
 inset-ring-red-(50 ta 950)     --tw-inset-ring-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
-
-
-
-
-
-
-
-
-
 ------------------------------------------- text-shadow -------------------------------------------------------------
 ------------------------------------------- text-shadow -------------------------------------------------------------
 
@@ -2669,11 +2548,6 @@ text-shadow-white         --tw-text-shadow-color var(--color-white); /* #fff */
 
 text-shadow-red-(50 ta 950) --tw-text-shadow-color var(--color-red-(50 ta 950) ); /* oklch(97.1% 0.013 17.38) */
 
-
-
-
-
-
 ------------------------------------------- opacity -------------------------------------------------------------
 ------------------------------------------- opacity -------------------------------------------------------------
 
@@ -2682,12 +2556,6 @@ text-shadow-red-(50 ta 950) --tw-text-shadow-color var(--color-red-(50 ta 950) )
 opacity-<number>              opacity: <number>%;
 opacity-(<custom-property>)   opacity: var(<custom-property>);
 opacity-[<value>]             opacity: <value>;
-
-
-
-
-
-
 
 ------------------------------------------- mix-blend-mode -------------------------------------------------------------
 ------------------------------------------- mix-blend-mode -------------------------------------------------------------
@@ -2713,13 +2581,6 @@ mix-blend-luminosity      mix-blend-mode: luminosity;
 mix-blend-plus-darker     mix-blend-mode: plus-darker;
 mix-blend-plus-lighter    mix-blend-mode: plus-lighter;
 
-
-
-
-
-
-
-
 ------------------------------------------- background-blend-mode -------------------------------------------------------------
 ------------------------------------------- background-blend-mode -------------------------------------------------------------
 
@@ -2742,13 +2603,6 @@ bg-blend-saturation     background-blend-mode: saturation;
 bg-blend-color          background-blend-mode: color;
 bg-blend-luminosity     background-blend-mode: luminosity;
 
-
-
-
-
-
-
-
 ------------------------------------------- mask-clip -------------------------------------------------------------
 ------------------------------------------- mask-clip -------------------------------------------------------------
 
@@ -2762,11 +2616,6 @@ mask-clip-stroke     mask-clip: stroke-box;
 mask-clip-view       mask-clip: view-box;
 mask-no-clip         mask-clip: no-clip;
 
-
-
-
-
-
 ------------------------------------------- mask-composite -------------------------------------------------------------
 ------------------------------------------- mask-composite -------------------------------------------------------------
 
@@ -2774,13 +2623,6 @@ mask-add           mask-composite: add;
 mask-subtract      mask-composite: subtract;
 mask-intersect     mask-composite: intersect;
 mask-exclude       mask-composite: exclude;
-
-
-
-
-
-
-
 
 ------------------------------------------- mask-image -------------------------------------------------------------
 ------------------------------------------- mask-image -------------------------------------------------------------
@@ -2807,7 +2649,6 @@ mask-linear-to-[<value>]                  mask-image: linear-gradient(var(--tw-m
 
 mask-#$-from-<number>      mask-image: linear-gradient(to top, black calc(var(--spacing) * <number>), transparent var(--tw-mask-top-to));
 mask-t-from-<number>      mask-image: linear-gradient(to top, black calc(var(--spacing) * <number>), transparent var(--tw-mask-top-to));
-
 
 
 mask-radial-[<value>]                 mask-image: radial-gradient(<value>);
@@ -2850,14 +2691,7 @@ mask-conic-to-<percentage>           mask-image: conic-gradient(from var(--tw-ma
 mask-conic-to-<color>                mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), <color> var(--tw-mask-conic-to);
 mask-conic-to-(<custom-property>)    mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), transparent var(<custom-property>);
 mask-conic-to-[<value>]              mask-image: conic-gradient(from var(--tw-mask-conic-position), black var(--tw-mask-conic-from), transparent <value>);
-
-
-
-
-
-
-
-                                                                
+                                                     
 ------------------------------------------- mask-mode -------------------------------------------------------------
 ------------------------------------------- mask-mode -------------------------------------------------------------
 
@@ -2865,11 +2699,6 @@ mask-conic-to-[<value>]              mask-image: conic-gradient(from var(--tw-ma
 mask-alpha        mask-mode: alpha;
 mask-luminance    mask-mode: luminance;
 mask-match        mask-mode: match-source;
-
-
-
-
-
                                                                 
 ------------------------------------------- mask-origin -------------------------------------------------------------
 ------------------------------------------- mask-origin -------------------------------------------------------------
@@ -2882,11 +2711,6 @@ mask-origin-content     mask-origin: content-box;
 mask-origin-fill        mask-origin: fill-box;
 mask-origin-stroke      mask-origin: stroke-box;
 mask-origin-view        mask-origin: view-box;
-
-
-
-
-
 
 ------------------------------------------- mask-position -------------------------------------------------------------
 ------------------------------------------- mask-position -------------------------------------------------------------
@@ -2906,10 +2730,6 @@ mask-bottom-right    mask-position: bottom right;
 mask-position-(<custom-property>)   mask-position: var(<custom-property>);
 mask-position-[<value>]             mask-position: <value>;
 
-
-
-
-
 ------------------------------------------- mask-repeat -------------------------------------------------------------
 ------------------------------------------- mask-repeat -------------------------------------------------------------
 
@@ -2922,10 +2742,6 @@ mask-repeat-y        mask-repeat: repeat-y;
 mask-repeat-space    mask-repeat: space;
 mask-repeat-round    mask-repeat: round;
 
-
-
-
-
 ------------------------------------------- mask-size -------------------------------------------------------------
 ------------------------------------------- mask-size -------------------------------------------------------------
 
@@ -2937,12 +2753,6 @@ mask-contain                   mask-size: contain;
 mask-size-(<custom-property>)  mask-size: var(<custom-property>);
 mask-size-[<value>]            mask-size: <value>;
 
-
-
-
-
-
-
 ------------------------------------------- mask-type -------------------------------------------------------------
 ------------------------------------------- mask-type -------------------------------------------------------------
 
@@ -2950,10 +2760,6 @@ mask-size-[<value>]            mask-size: <value>;
      
 mask-type-alpha        mask-type: alpha;
 mask-type-luminance    mask-type: luminance;
-
-
-
-
 
 
 
@@ -2971,10 +2777,6 @@ mask-type-luminance    mask-type: luminance;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-//////////////////////////////////////////////  Filter  /////////////////////////////////////////////////
-
 ------------------------------------------- filter -------------------------------------------------------------
 ------------------------------------------- filter -------------------------------------------------------------
 
@@ -2983,11 +2785,6 @@ mask-type-luminance    mask-type: luminance;
 filter-none                filter: none;
 filter-(<custom-property>) filter: var(<custom-property>);
 filter-[<value>]           filter: <value>;
-
-
-
-
-
 
 ------------------------------------------- blur -------------------------------------------------------------
 ------------------------------------------- blur -------------------------------------------------------------
@@ -3005,20 +2802,12 @@ blur-none           filter: ;
 blur-(<custom-property>)      filter: blur(var(<custom-property>));
 blur-[<value>]     filter: blur(<value>);
 
-
-
-
-
-
 ------------------------------------------- brightness -------------------------------------------------------------
 ------------------------------------------- brightness -------------------------------------------------------------
 
 brightness-<number>              filter: brightness(<number>%);
 brightness-(<custom-property>)   filter: brightness(var(<custom-property>));
 brightness-[<value>]             filter: brightness(<value>);
-
-
-
 
 ------------------------------------------- contrast -------------------------------------------------------------
 ------------------------------------------- contrast -------------------------------------------------------------
@@ -3028,7 +2817,6 @@ brightness-[<value>]             filter: brightness(<value>);
 contrast-<number>      filter: contrast(<number>%);
 contrast-(<custom-property>)      filter: contrast(var(<custom-property>));
 contrast-[<value>]      filter: contrast(<value>);
- 
 
 
 ------------------------------------------- drop-shadow -------------------------------------------------------------
@@ -3049,7 +2837,6 @@ drop-shadow-[<value>]    filter: drop-shadow(<value>);
 
 
 
-
 drop-shadow-inherit       --tw-drop-shadow-color: inherit;
 drop-shadow-current       --tw-drop-shadow-color: crrentColor;
 drop-shadow-transparent   --tw-drop-shadow-color: transparent;
@@ -3057,7 +2844,6 @@ drop-shadow-black         --tw-drop-shadow-color: var(--color-black); /* #000 */
 drop-shadow-white         --tw-drop-shadow-color: var(--color-white); /* #fff */
 
 drop-shadow-red-(50 ta 950)  --tw-drop-shadow-color: var(--color-red-(50 ta 950) ); /* oklch(97.1% 0.013 17.38) */
-
 
 ------------------------------------------- grayscale -------------------------------------------------------------
 ------------------------------------------- grayscale -------------------------------------------------------------
@@ -3069,10 +2855,6 @@ grayscale-<number>               filter: grayscale(<number>%);
 grayscale-(<custom-property>)    filter: grayscale(var(<custom-property>));
 grayscale-[<value>]              filter: grayscale(<value>);
 
-
-
-
-
 ------------------------------------------- hue-rotate -------------------------------------------------------------
 ------------------------------------------- hue-rotate -------------------------------------------------------------
 
@@ -3082,11 +2864,6 @@ hue-rotate-<number>              filter: hue-rotate(<number>deg);
 -hue-rotate-<number>             filter: hue-rotate(calc(<number>deg * -1));  /* مقادیر منفی */
 hue-rotate-(<custom-property>)   filter: hue-rotate(var(<custom-property>));
 hue-rotate-[<value>]             filter: hue-rotate(<value>);
-
-
-
-
-
 
 ------------------------------------------- invert -------------------------------------------------------------
 ------------------------------------------- invert -------------------------------------------------------------
@@ -3098,10 +2875,6 @@ invert-<number>              filter: invert(<number>%);
 invert-(<custom-property>)   filter: invert(var(<custom-property>));
 invert-[<value>]             filter: invert(<value>);
 
-
-
-
-
 ------------------------------------------- saturate -------------------------------------------------------------
 ------------------------------------------- saturate -------------------------------------------------------------
 
@@ -3110,9 +2883,6 @@ invert-[<value>]             filter: invert(<value>);
 saturate-<number>               filter: saturate(<number>%);
 saturate-(<custom-property>)    filter: saturate(var(<custom-property>));
 saturate-[<value>]              filter: saturate(<value>);
-
-
-
 
 ------------------------------------------- sepia -------------------------------------------------------------
 ------------------------------------------- sepia -------------------------------------------------------------
@@ -3123,9 +2893,6 @@ sepia                      filter: sepia(100%);
 sepia-<number>             filter: sepia(<number>%);
 sepia-(<custom-property>)  filter: sepia(var(<custom-property>));
 sepia-[<value>]            filter: sepia(<value>);
-
-
-
 
 
 ------------------------------------------- backdrop-filter -------------------------------------------------------------
@@ -3143,17 +2910,11 @@ backdrop-filter-[<value>]             backdrop-filter: <value>;
 
 
 
-
-
-
-
 //////////////////////////////////////////////  backdrop-filter  /////////////////////////////////////////////////
-
-
 ------------------------------------------- blur -------------------------------------------------------------
 ------------------------------------------- blur -------------------------------------------------------------
 
-/*              */
+/*       محو       */
 
 backdrop-blur-xs       backdrop-filter: blur(var(--blur-xs)); /* 4px */
 backdrop-blur-sm       backdrop-filter: blur(var(--blur-sm)); /* 8px */
@@ -3166,19 +2927,12 @@ backdrop-blur-none     backdrop-filter: ;
 backdrop-blur-(<custom-property>)   backdrop-filter: blur(var(<custom-property>));
 backdrop-blur-[<value>]            backdrop-filter: blur(<value>);
 
-
-
-
 ------------------------------------------- brightness -------------------------------------------------------------
 ------------------------------------------- brightness -------------------------------------------------------------
 
 backdrop-brightness-<number>               backdrop-filter: brightness(<number>%);
 backdrop-brightness-(<custom-property>)    backdrop-filter: brightness(var(<custom-property>));
 backdrop-brightness-[<value>]              backdrop-filter: brightness(<value>);
-
-
-
-
 
 
 ------------------------------------------- contrast -------------------------------------------------------------
@@ -3188,11 +2942,6 @@ backdrop-contrast-<number>              backdrop-filter: contrast(<number>%);
 backdrop-contrast-(<custom-property>)   backdrop-filter: contrast(var(<custom-property>));
 backdrop-contrast-[<value>]             backdrop-filter: contrast(<value>);
 
-
-
-
-
-
 ------------------------------------------- grayscale -------------------------------------------------------------
 ------------------------------------------- grayscale -------------------------------------------------------------
 
@@ -3200,10 +2949,6 @@ backdrop-grayscale                      backdrop-filter: grayscale(100%);
 backdrop-grayscale-<number>             backdrop-filter: grayscale(<number>%);
 backdrop-grayscale-(<custom-property>)  backdrop-filter: grayscale(var(<custom-property>));
 backdrop-grayscale-[<value>]            backdrop-filter: grayscale(<value>);
-
-
-
-
 
 ------------------------------------------- hue-rotate -------------------------------------------------------------
 ------------------------------------------- hue-rotate -------------------------------------------------------------
@@ -3213,10 +2958,6 @@ backdrop-hue-rotate-<number>             backdrop-filter: hue-rotate(<number>deg
 backdrop-hue-rotate-(<custom-property>)  backdrop-filter: hue-rotate(var(<custom-property>));
 backdrop-hue-rotate-[<value>]            backdrop-filter: hue-rotate(<value>);
 
-
-
-
-
 ------------------------------------------- invert -------------------------------------------------------------
 ------------------------------------------- invert -------------------------------------------------------------
 
@@ -3225,10 +2966,6 @@ backdrop-invert-<number>              backdrop-filter: invert(<number>%);
 backdrop-invert-(<custom-property>)   backdrop-filter: invert(var(<custom-property>))
 backdrop-invert-[<value>]             backdrop-filter: invert(<value>);
 
-
-
-
-
 ------------------------------------------- opacity -------------------------------------------------------------
 ------------------------------------------- opacity -------------------------------------------------------------
 
@@ -3236,18 +2973,12 @@ backdrop-opacity-<number>             backdrop-filter: opacity(<number>%);
 backdrop-opacity-(<custom-property>)  backdrop-filter: opacity(var(<custom-property>));
 backdrop-opacity-[<value>]            backdrop-filter: opacity(<value>);
 
-
-
-
-
 ------------------------------------------- saturate -------------------------------------------------------------
 ------------------------------------------- saturate -------------------------------------------------------------
 
 backdrop-saturate-<number>             backdrop-filter: saturate(<number>%);
 backdrop-saturate-(<custom-property>)  backdrop-filter: saturate(var(<custom-property>));
 backdrop-saturate-[<value>]            backdrop-filter: saturate(<value>);
-
-
 
 ------------------------------------------- sepia -------------------------------------------------------------
 ------------------------------------------- sepia -------------------------------------------------------------
@@ -3263,14 +2994,11 @@ backdrop-sepia-[<value>]             backdrop-filter: sepia(<value>);
 
 
 
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////  Tables  /////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 ------------------------------------------- border-collapse -------------------------------------------------------------
 ------------------------------------------- border-collapse -------------------------------------------------------------
@@ -3279,11 +3007,6 @@ backdrop-sepia-[<value>]             backdrop-filter: sepia(<value>);
 
 border-collapse      border-collapse: collapse;
 border-separate      border-collapse: separate;
-
-
-
-
-
 
 ------------------------------------------- border-spacing -------------------------------------------------------------
 ------------------------------------------- border-spacing -------------------------------------------------------------
@@ -3299,9 +3022,6 @@ border-spacing-x-[<value>]               border-spacing: <value> var(--tw-border
 border-spacing-y-<number>                border-spacing: var(--tw-border-spacing-x) calc(var(--spacing) * <number>);
 border-spacing-y-(<custom-property>)     border-spacing: var(--tw-border-spacing-x) var(<custom-property>);
 border-spacing-y-[<value>]               border-spacing: var(--tw-border-spacing-x) <value>;
-
-
-
 
 ------------------------------------------- table-layout -------------------------------------------------------------
 ------------------------------------------- table-layout -------------------------------------------------------------
