@@ -1,18 +1,13 @@
 Class                    Styles
 
 Class   :   مستقیم در تگ به کار میره
-Styles  : (بهتره ) به عنوان ویژگی استایل در تگ به کار میره
+Styles  : (بهتره )  برای کاستم کردن استایل ها بی نظیر است )  به عنوان ویژگی استایل در تگ به کار میره
 
 
 بهترین راه همزمان ریسپانسیو و استفاده از کلاس ها به شکل زیر است
 ressponsive:class
     md:flex
     sm:grow
-
-
-/*  راهنمایی  */
-*  sm - md - lg - xl - 2xl
-
 
 
 /*  فرق   @theme    و    root:   */
@@ -23,6 +18,10 @@ root: {
 @theme {
       local   ( روی برخی فایل ها اعمال میشه )
 }
+
+
+
+*  sm - md - lg - xl - 2xl
 
 
 
@@ -67,7 +66,7 @@ sm:  = واکنش به صفحه
 sm	      @media (width >= 40rem)
 md	      @media (width >= 48rem)
 lg	      @media (width >= 64rem)
-xl      	@media (width >= 80rem)
+xl        @media (width >= 80rem)
 2xl	      @media (width >= 96rem)
 
 
@@ -93,12 +92,12 @@ xl      	@media (width >= 80rem)
 // By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
 
 @3xs	       16rem (256px)	 @container (width >= 16rem) { … }
-@2xs         18rem (288px)     @container (width >= 18rem) { … }
-@xs	       20rem (320px)     @container (width >= 20rem) { … }
-@sm	       24rem (384px)	 @container (width >= 24rem) { … }
-@md          28rem (448px)     @container (width >= 28rem) { … }
-@lg          32rem (512px)	 @container (width >= 32rem) { … }
-@xl          36rem (576px)     @container (width >= 36rem) { … }
+@2xs          18rem (288px)      @container (width >= 18rem) { … }
+@xs	          20rem (320px)      @container (width >= 20rem) { … }
+@sm	          24rem (384px)	     @container (width >= 24rem) { … }
+@md           28rem (448px)      @container (width >= 28rem) { … }
+@lg           32rem (512px)	     @container (width >= 32rem) { … }
+@xl           36rem (576px)      @container (width >= 36rem) { … }
 @2xl	       42rem (672px)     @container (width >= 42rem) { … }
 @3xl	       48rem (768px)     @container (width >= 48rem) { … }
 @4xl	       56rem (896px)	 @container (width >= 56rem) { … }
@@ -109,84 +108,84 @@ xl      	@media (width >= 80rem)
               
 
 /*  ابزار  */
-hover	                  @media (hover: hover) { &:hover }
-focus         	      &:focus
-focus-within	      &:focus-within
-focus-visible	      &:focus-visible
-active	            &:active
-visited	            &:visited
-target	            &:target
-*	                  :is(& > *)
-**	                  :is(& *)
-has-[...]	            &:has(...)
-group-[...]	            &:is(:where(.group)... *)
-peer-[...]	            &:is(:where(.peer)... ~ *)
+hover	               @media (hover: hover) { &:hover }
+focus         	       &:focus
+focus-within	       &:focus-within
+focus-visible	       &:focus-visible
+active	               &:active
+visited	               &:visited
+target	               &:target
+*	                   :is(& > *)
+**	                   :is(& *)
+has-[...]	           &:has(...)
+group-[...]	           &:is(:where(.group)... *)
+peer-[...]	           &:is(:where(.peer)... ~ *)
 in-[...]	           :where(...) &
-not-[...]        	      &:not(...)
-inert	                  &:is([inert], [inert] *)
-first	                  &:first-child
-last	                  &:last-child
-only	                  &:only-child
-odd              	      &:nth-child(odd)
-even             	      &:nth-child(even)
-first-of-type    	      &:first-of-type
-last-of-type    	      &:last-of-type
-only-of-type	      &:only-of-type
-nth-[...]	            &:nth-child(...)
-nth-last-[...]  	      &:nth-last-child(...)
-nth-of-type-[...]	      &:nth-of-type(...)
-nth-last-of-type-[...]             	&:nth-last-of-type(...)
-empty	                  &:empty
-disabled          	&:disabled
-enabled	            &:enabled
-checked	            &:checked
-indeterminate       	&:indeterminate
-default                 &:default
-optional	            &:optional
-required        	      &:required
-valid	                  &:valid
-invalid                 &:invalid
-user-valid	            &:user-valid
-user-invalid     	      &:user-invalid
-in-range	            &:in-range
-out-of-range	      &:out-of-range
-placeholder-shown	      &:placeholder-shown
-details-content	      &:details-content
-autofill                &:autofill
-read-only        	      &:read-only
-before	            &::before
-after            	      &::afte
-first-letter	      &::first-letter
-first-line	            &::first-line
-marker                	&::marker, & *::marker
-selection              	&::selection
-file                  	&::file-selector-button
-backdrop               	&::backdrop
-placeholder	            &::placeholder
+not-[...]        	   &:not(...)
+inert	               &:is([inert], [inert] *)
+first	               &:first-child
+last	               &:last-child
+only                   &:only-child
+odd              	   &:nth-child(odd)
+even                   &:nth-child(even)
+first-of-type          &:first-of-type
+last-of-type           &:last-of-type
+only-of-type	       &:only-of-type
+nth-[...]	           &:nth-child(...)
+nth-last-[...]         &:nth-last-child(...)
+nth-of-type-[...]      &:nth-of-type(...)
+nth-last-of-type-[...] &:nth-last-of-type(...)
+empty	               &:empty
+disabled          	   &:disabled
+enabled	               &:enabled
+checked	               &:checked
+indeterminate          &:indeterminate
+default                &:default
+optional	           &:optional
+required               &:required
+valid	               &:valid
+invalid                &:invalid
+user-valid	           &:user-valid
+user-invalid     	   &:user-invalid
+in-range	           &:in-range
+out-of-range	       &:out-of-range
+placeholder-shown	   &:placeholder-shown
+details-content	       &:details-content
+autofill               &:autofill
+read-only              &:read-only
+before	               &::before
+after                  &::afte
+first-letter	       &::first-letter
+first-line	           &::first-line
+marker                 &::marker, & *::marker
+selection              &::selection
+file                   &::file-selector-button
+backdrop               &::backdrop
+placeholder	           &::placeholder
 
 
-dark	                 @media (prefers-color-scheme: dark)
-motion-safe 	     @media (prefers-reduced-motion: no-preference)
-motion-reduce	     @media (prefers-reduced-motion: reduce)
-contrast-more	     @media (prefers-contrast: more)
-contrast-less	     @media (prefers-contrast: less)
-forced-colors	     @media (forced-colors: active)
-inverted-colors	     @media (inverted-colors: inverted)
-pointer-fine	     @media (pointer: fine)
-pointer-coarse	     @media (pointer: coarse)
-pointer-none	     @media (pointer: none)
-any-pointer-fine	     @media (any-pointer: fine)
+dark	               @media (prefers-color-scheme: dark)
+motion-safe 	       @media (prefers-reduced-motion: no-preference)
+motion-reduce	       @media (prefers-reduced-motion: reduce)
+contrast-more	       @media (prefers-contrast: more)
+contrast-less	       @media (prefers-contrast: less)
+forced-colors	       @media (forced-colors: active)
+inverted-colors	       @media (inverted-colors: inverted)
+pointer-fine	       @media (pointer: fine)
+pointer-coarse	       @media (pointer: coarse)
+pointer-none	       @media (pointer: none)
+any-pointer-fine	   @media (any-pointer: fine)
 any-pointer-coarse     @media (any-pointer: coarse)
 any-pointer-none       @media (any-pointer: none)
 portrait	           @media (orientation: portrait)
 landscape	           @media (orientation: landscape)
 noscript	           @media (scripting: none)
 print                  @media print 
-supports-[…]	     @supports (…)
+supports-[…]	       @supports (…)
 
 
-aria-busy        	  &[aria-busy="true"]
-aria-checked     	  &[aria-checked="true"]
+aria-busy        	&[aria-busy="true"]
+aria-checked     	&[aria-checked="true"]
 aria-disabled       &[aria-disabled="true"]
 aria-expanded       &[aria-expanded="true"]
 aria-hidden         &[aria-hidden="true"]
