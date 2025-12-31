@@ -1,3 +1,15 @@
+Class                    Styles
+
+Class   :   مستقیم در تگ به کار میره
+Styles  : (بهتره ) به عنوان ویژگی استایل در تگ به کار میره
+
+
+بهترین راه همزمان ریسپانسیو و استفاده از کلاس ها به شکل زیر است
+ressponsive:class
+    md:flex
+    sm:grow
+
+
 /*  راهنمایی  */
 *  sm - md - lg - xl - 2xl
 
@@ -11,7 +23,6 @@ root: {
 @theme {
       local   ( روی برخی فایل ها اعمال میشه )
 }
-
 
 
 
@@ -32,7 +43,14 @@ root: {
 
 
 
+/*  فرق   @sm    و    sm:   */
+sm:  = واکنش به صفحه
+@sm: = واکنش به کانتینر
 
+
+
+/*  فرق     max-sm    و    sm   */
+است max-width مبنا max-sm  ولی در sm است یعنی min-width  عکس یکدیگر اند و تلویند بر پایه
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,19 +58,69 @@ root: {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+@container
+@container/main      
+
+------------------------------------------- responsive -----------------------------------------------------------------
+------------------------------------------- responsive -----------------------------------------------------------------
+
+sm	      @media (width >= 40rem)
+md	      @media (width >= 48rem)
+lg	      @media (width >= 64rem)
+xl      	@media (width >= 80rem)
+2xl	      @media (width >= 96rem)
+
+
+/*     استاندارد نیست
+@3xs	       @container (width >= 16rem)
+@2xs	       @container (width >= 18rem)
+@xs	       @container (width >= 20rem)
+@sm          @container (width >= 24rem)
+@md          @container (width >= 28rem)
+@lg	       @container (width >= 32rem)
+@xl          @container (width >= 36rem)
+@2xl	       @container (width >= 42rem)
+@3xl	       @container (width >= 48rem)
+@4xl         @container (width >= 56rem)
+@5xl	       @container (width >= 64rem)
+@6xl	       @container (width >= 72rem)
+@7xl	       @container (width >= 80rem)
+@min-[...]	 @container (width >= ...) */
+
+
+
+/* Container size reference */
+// By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
+
+@3xs	       16rem (256px)	 @container (width >= 16rem) { … }
+@2xs         18rem (288px)     @container (width >= 18rem) { … }
+@xs	       20rem (320px)     @container (width >= 20rem) { … }
+@sm	       24rem (384px)	 @container (width >= 24rem) { … }
+@md          28rem (448px)     @container (width >= 28rem) { … }
+@lg          32rem (512px)	 @container (width >= 32rem) { … }
+@xl          36rem (576px)     @container (width >= 36rem) { … }
+@2xl	       42rem (672px)     @container (width >= 42rem) { … }
+@3xl	       48rem (768px)     @container (width >= 48rem) { … }
+@4xl	       56rem (896px)	 @container (width >= 56rem) { … }
+@5xl	       64rem (1024px)	 @container (width >= 64rem) { … }
+@6xl	       72rem (1152px)	 @container (width >= 72rem) { … }
+@7xl	       80rem (1280px)  	 @container (width >= 80rem) { … }
+                   
+              
+
 /*  ابزار  */
-hover	                 @media (hover: hover) { &:hover }
-focus         	     &:focus
-focus-within	     &:focus-within
-focus-visible	     &:focus-visible
-active	           &:active
-visited	           &:visited
-target	           &:target
-*	                 :is(& > *)
-**	                 :is(& *)
-has-[...]	           &:has(...)
-group-[...]	           &:is(:where(.group)... *)
-peer-[...]	           &:is(:where(.peer)... ~ *)
+hover	                  @media (hover: hover) { &:hover }
+focus         	      &:focus
+focus-within	      &:focus-within
+focus-visible	      &:focus-visible
+active	            &:active
+visited	            &:visited
+target	            &:target
+*	                  :is(& > *)
+**	                  :is(& *)
+has-[...]	            &:has(...)
+group-[...]	            &:is(:where(.group)... *)
+peer-[...]	            &:is(:where(.peer)... ~ *)
 in-[...]	           :where(...) &
 not-[...]        	      &:not(...)
 inert	                  &:is([inert], [inert] *)
@@ -97,55 +165,7 @@ backdrop               	&::backdrop
 placeholder	            &::placeholder
 
 
-sm	      @media (width >= 40rem)
-md	      @media (width >= 48rem)
-lg	      @media (width >= 64rem)
-xl      	@media (width >= 80rem)
-2xl	      @media (width >= 96rem)
-
-
-min-[...]    @media (width >= ...)
-max-sm  	 @media (width < 40rem)
-max-md       @media (width < 48rem)
-max-lg       @media (width < 64rem)
-max-xl       @media (width < 80rem)
-max-2xl      @media (width < 96rem)
-max-[...]    @media (width < ...)
-
-
-@3xs	       @container (width >= 16rem)
-@2xs	       @container (width >= 18rem)
-@xs	       @container (width >= 20rem)
-@sm          @container (width >= 24rem)
-@md          @container (width >= 28rem)
-@lg	       @container (width >= 32rem)
-@xl          @container (width >= 36rem)
-@2xl	       @container (width >= 42rem)
-@3xl	       @container (width >= 48rem)
-@4xl         @container (width >= 56rem)
-@5xl	       @container (width >= 64rem)
-@6xl	       @container (width >= 72rem)
-@7xl	       @container (width >= 80rem)
-@min-[...]	 @container (width >= ...)
-
-
-@max-3xs	  @container (width < 16rem)
-@max-2xs      @container (width < 18rem)
-@max-xs   	  @container (width < 20rem)
-@max-sm       @container (width < 24rem)
-@max-md       @container (width < 28rem)
-@max-lg       @container (width < 32rem)
-@max-xl       @container (width < 36rem)
-@max-2xl      @container (width < 42rem)
-@max-3xl      @container (width < 48rem)
-@max-4xl   	  @container (width < 56rem)
-@max-5xl      @container (width < 64rem)
-@max-6xl  	  @container (width < 72rem)
-@max-7xl      @container (width < 80rem)
-@max-[...]	  @container (width < ...)
-
-
-dark	                   @media (prefers-color-scheme: dark)
+dark	                 @media (prefers-color-scheme: dark)
 motion-safe 	     @media (prefers-reduced-motion: no-preference)
 motion-reduce	     @media (prefers-reduced-motion: reduce)
 contrast-more	     @media (prefers-contrast: more)
@@ -161,83 +181,25 @@ any-pointer-none       @media (any-pointer: none)
 portrait	           @media (orientation: portrait)
 landscape	           @media (orientation: landscape)
 noscript	           @media (scripting: none)
-
-
 print                  @media print 
 supports-[…]	     @supports (…)
 
 
-aria-busy              	  &[aria-busy="true"]
-aria-checked          	  &[aria-checked="true"]
-aria-disabled	        &[aria-disabled="true"]
-aria-expanded	        &[aria-expanded="true"]
-aria-hidden	              &[aria-hidden="true"]
-aria-pressed	        &[aria-pressed="true"]
-aria-readonly	        &[aria-readonly="true"]
-aria-required	        &[aria-required="true"]
-aria-selected	        &[aria-selected="true"]
-aria-[…]	              &[aria-…]
-data-[…]	              &[data-…]
-rtl                  	  &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *)
-ltr                  	  &:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
-open                 	  &:is([open], :popover-open, :open)
-starting                  @starting-style
-
-
-max-sm	  @media (width < 40rem) { ... }
-max-md	  @media (width < 48rem) { ... }
-max-lg	  @media (width < 64rem) { ... }
-max-xl	  @media (width < 80rem) { ... }
-max-2xl	  @media (width < 96rem) { ... }
-
-
-max-[600px]:bg-sky-300
-min-[600px]:bg-sky-300
-
-
-@container
-@container/main                         
-
-                                  
-@md:flex-row
-@max-md:flex-col
-@sm:@max-md:flex-col                                  
-@sm/main:flex-col
-
-
-/* Using custom container sizes */
-@theme {
-  --breakpoint-* : initial;
-  
-  --breakpoint-xs: 30rem;
-  --breakpoint-2xl: 100rem;
-  .................
-  --container-8xl: 96rem;
-  
-  --breakpoint-tablet: 40rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 80rem;
-}
-
-
-
-/* Container size reference */
-// By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
-
-
-@3xs	       16rem (256px)	    @container (width >= 16rem) { … }
-@2xs         18rem (288px)	    @container (width >= 18rem) { … }
-@xs	       20rem (320px)    	@container (width >= 20rem) { … }
-@sm	       24rem (384px)	    @container (width >= 24rem) { … }
-@md          28rem (448px)    	@container (width >= 28rem) { … }
-@lg          32rem (512px)	    @container (width >= 32rem) { … }
-@xl          36rem (576px)    	@container (width >= 36rem) { … }
-@2xl	       42rem (672px)    	@container (width >= 42rem) { … }
-@3xl	       48rem (768px)    	@container (width >= 48rem) { … }
-@4xl	       56rem (896px)	    @container (width >= 56rem) { … }
-@5xl	       64rem (1024px)	  @container (width >= 64rem) { … }
-@6xl	       72rem (1152px)	  @container (width >= 72rem) { … }
-@7xl	       80rem (1280px)  	@container (width >= 80rem) { … }
+aria-busy        	  &[aria-busy="true"]
+aria-checked     	  &[aria-checked="true"]
+aria-disabled       &[aria-disabled="true"]
+aria-expanded       &[aria-expanded="true"]
+aria-hidden         &[aria-hidden="true"]
+aria-pressed        &[aria-pressed="true"]
+aria-readonly       &[aria-readonly="true"]
+aria-required       &[aria-required="true"]
+aria-selected       &[aria-selected="true"]
+aria-[…]            &[aria-…]
+data-[…]            &[data-…]
+rtl                 &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *)
+ltr                 &:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
+open                &:is([open], :popover-open, :open)
+starting            @starting-style
 
 ------------------------------------------- Dark Mode -----------------------------------------------------------------
 ------------------------------------------- Dark Mode -----------------------------------------------------------------
@@ -248,10 +210,18 @@ dark:text-white
 dark:text-gray-400
                          
 @custom-variant dark (&:where(.dark, .dark *));
-                      
-------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
-------------------------------------------- Theme Variables Namespaces -----------------------------------------------------------------
-                                  
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////  Theme Variables Namespaces  /////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*                                           خیلی پر استفاده هستند              */
+
+
 --color-*	         Color utilities like bg-red-500, text-sky-300, and many more
 --font-*             Font family utilities like font-sans
 --text-*	         Font size utilities like text-xl
@@ -456,26 +426,18 @@ dark:text-gray-400
   
   /* shadow */
   --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 1px rgb(0 0 0 / 0.12));
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
 
   /*  inset-shadow  */
   --inset-shadow-2xs: inset 0 1px rgb(0 0 0 / 0.05);
-  --inset-shadow-xs: inset 0 1px 1px rgb(0 0 0 / 0.05);
   --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.05);
 
 
   /*  drop-shadow  */
   --drop-shadow-xs: 0 1px 1px rgb(0 0 0 / 0.05);
-  --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.15);
   --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 0.12);
-  --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
-  --drop-shadow-xl: 0 9px 7px rgb(0 0 0 / 0.1);
   --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
 
 
@@ -491,7 +453,7 @@ dark:text-gray-400
   --blur-3xl: 64px;
 
  
-  /*  perspective  */
+  /* perspective-$          $  ===>>>  dramatic     near     normal     midrange     distant     */
   --perspective-dramatic: 100px;
   --perspective-near: 300px;
   --perspective-normal: 500px;
@@ -571,16 +533,13 @@ red   orange   yellow   green   blue   purple   pink   red   red
 amber   lime   emerald   teal   cyan   sky   indigo   violet   fuchsia
 rose   slate   gray   zinc   neutral   stone
 
-
-50    100    200     300    400     500     600    700    800    900     950
-
-                                      
+50 - 100 - 200 - 300 - 400 - 500 - 600 - 700 - 800 - 900 - 950   <<--  محدوده
+                        
 bg-sky-400
 bg-zinc-950
 
 
 /* Here's a full list of utilities that use your color palette: */
-
 bg-*	            Sets the background color of an element
 text-*	      Sets the text color of an element
 decoration-*      Sets the text decoration color of an element
@@ -598,19 +557,12 @@ stroke-*	      Sets the stroke color of SVG elements
 
 
 
-
-
                                       
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Layout  ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-Class   :   مستقیم در تگ به کار میره
-Styles  : (بهتره ) به عنوان ویژگی استایل در تگ به کار میره
-
-Class                    Styles
 
 ------------------------------------------- aspect-ratio -------------------------------------------------------------
 ------------------------------------------- aspect-ratio -------------------------------------------------------------
@@ -655,10 +607,12 @@ columns-[<value>]    columns: <value>;
 
 -------------------------------------   break-after  &   break-before  &  break-inside   ------------------------------------------
 -------------------------------------   break-after  &   break-before  &  break-inside   ------------------------------------------
-                                      
+
+/*       بهتره استفاده نکنی چون ساهتار رو به هم میریزه       */
+
 /*     auto    avoid    all    avoid-page    page    left    right    column     */
-/*    ###  ===>>>   after  before   inside   */
                                       
+/* 
 break-after-auto        break-after: auto;
 break-after-avoid       break-after: avoid;
 break-after-all         break-after: all;
@@ -682,11 +636,9 @@ break-before-column      break-before: column;
 break-inside-auto            break-inside: auto;
 break-inside-avoid           break-inside: avoid;
 break-inside-avoid-page      break-inside: avoid-page;
-break-inside-avoid-column    break-inside: avoid-column;
+break-inside-avoid-column    break-inside: avoid-column; */
 
                                       
-md:break-###-%%%    ( Responsive design )
-
 استفاده کن  break-inside  و break-before  از break-after  در همه موارد بالا به جای
 
 ------------------------------------------- box-decoration-break -------------------------------------------------------------
@@ -993,19 +945,11 @@ z-(<custom-property>)
 
 
 
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Flexbox & Grid  ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 ------------------------------------------- flex-basis -------------------------------------------------------------
 ------------------------------------------- flex-basis -------------------------------------------------------------
@@ -3579,322 +3523,161 @@ backface-visible     backface-visibility: visible;
 
 /*       کنترل پرسپکتیو یک عنصر هنگام قرار گرفتن در فضای سه بعدی      */
 
-perspective-dramatic
-perspective: var(--perspective-dramatic); /* 100px */
-perspective-near
-perspective: var(--perspective-near); /* 300px */
-perspective-normal
-perspective: var(--perspective-normal); /* 500px */
-perspective-midrange
-perspective: var(--perspective-midrange); /* 800px */
-perspective-distant
-perspective: var(--perspective-distant); /* 1200px */
-perspective-none
-perspective: none;
-perspective-(<custom-property>)
-perspective: var(<custom-property>);
-perspective-[<value>]
-perspective: <value>;
-
-
-
-
-
+perspective-dramatic             perspective: var(--perspective-dramatic); /* 100px */
+perspective-near                 perspective: var(--perspective-near); /* 300px */
+perspective-normal               perspective: var(--perspective-normal); /* 500px */
+perspective-midrange             perspective: var(--perspective-midrange); /* 800px */
+perspective-distant              perspective: var(--perspective-distant); /* 1200px */
+perspective-none                 perspective: none;
+perspective-(<custom-property>)  perspective: var(<custom-property>);
+perspective-[<value>]            perspective: <value>;
 
 ------------------------------------------- perspective-origin -------------------------------------------------------------
 ------------------------------------------- perspective-origin -------------------------------------------------------------
 
 /*      کنترل مبدأ پرسپکتیو یک عنصر هنگام قرار گرفتن در فضای سه‌بعدی      */
 
-perspective-origin-center
-perspective-origin: center;
-perspective-origin-top
-perspective-origin: top;
-perspective-origin-top-right
-perspective-origin: top right;
-perspective-origin-right
-perspective-origin: right;
-perspective-origin-bottom-right
-perspective-origin: bottom right;
-perspective-origin-bottom
-perspective-origin: bottom;
-perspective-origin-bottom-left
-perspective-origin: bottom left;
-perspective-origin-left
-perspective-origin: left;
-perspective-origin-top-left
-perspective-origin: top left;
-perspective-origin-(<custom-property>)
-perspective-origin: var(<custom-property>);
-perspective-origin-[<value>]
-perspective-origin: <value>;
-
-
-
-
-
-
+perspective-origin-center           perspective-origin: center;
+perspective-origin-top              perspective-origin: top;
+perspective-origin-top-right        perspective-origin: top right;
+perspective-origin-right            perspective-origin: right;
+perspective-origin-bottom-right     perspective-origin: bottom right;
+perspective-origin-bottom           perspective-origin: bottom;
+perspective-origin-bottom-left      perspective-origin: bottom left;
+perspective-origin-left             perspective-origin: left;
+perspective-origin-top-left         perspective-origin: top left;
+perspective-origin-(<custom-property>)  perspective-origin: var(<custom-property>);
+perspective-origin-[<value>]        perspective-origin: <value>;
 
 ------------------------------------------- rotate -------------------------------------------------------------
 ------------------------------------------- rotate -------------------------------------------------------------
 
-rotate-none
-rotate: none;
-rotate-<number>
-rotate: <number>deg;
--rotate-<number>
-rotate: calc(<number>deg * -1);
-rotate-(<custom-property>)
-rotate: var(<custom-property>);
-rotate-[<value>]
-rotate: <value>;
-rotate-x-<number>
-transform: rotateX(<number>deg) var(--tw-rotate-y);
--rotate-x-<number>
-transform: rotateX(-<number>deg) var(--tw-rotate-y);
-rotate-x-(<custom-property>)
-transform: rotateX(var(<custom-property>)) var(--tw-rotate-y);
-rotate-x-[<value>]
-transform: rotateX(<value>) var(--tw-rotate-y);
-rotate-y-<number>
-transform: var(--tw-rotate-x) rotateY(<number>deg);
--rotate-y-<number>
-transform: var(--tw-rotate-x) rotateY(-<number>deg);
-rotate-y-(<custom-property>)
-transform: var(--tw-rotate-x) rotateY(var(<custom-property>));
-rotate-y-[<value>]
-transform: var(--tw-rotate-x) rotateY(<value>);
-rotate-z-<number>
-transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(<number>deg);
--rotate-z-<number>
-transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(-<number>deg);
-rotate-z-(<custom-property>)
-transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(var(<custom-property>));
-rotate-z-[<value>]
-transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(<value>);
-
-
-
-
-
+rotate-none                    rotate: none;
+rotate-<number>                rotate: <number>deg;
+-rotate-<number>               rotate: calc(<number>deg * -1);
+rotate-(<custom-property>)     rotate: var(<custom-property>);
+rotate-[<value>]               rotate: <value>;
+rotate-x-<number>              transform: rotateX(<number>deg) var(--tw-rotate-y);
+-rotate-x-<number>             transform: rotateX(-<number>deg) var(--tw-rotate-y);
+rotate-x-(<custom-property>)   transform: rotateX(var(<custom-property>)) var(--tw-rotate-y);
+rotate-x-[<value>]             transform: rotateX(<value>) var(--tw-rotate-y);
+rotate-y-<number>              transform: var(--tw-rotate-x) rotateY(<number>deg);
+-rotate-y-<number>             transform: var(--tw-rotate-x) rotateY(-<number>deg);
+rotate-y-(<custom-property>)   transform: var(--tw-rotate-x) rotateY(var(<custom-property>));
+rotate-y-[<value>]             transform: var(--tw-rotate-x) rotateY(<value>);
+rotate-z-<number>              transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(<number>deg);
+-rotate-z-<number>             transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(-<number>deg);
+rotate-z-(<custom-property>)   transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(var(<custom-property>));
+rotate-z-[<value>]             transform: var(--tw-rotate-x) var(--tw-rotate-y) rotateZ(<value>);
 
 ------------------------------------------- scale -------------------------------------------------------------
 ------------------------------------------- scale -------------------------------------------------------------
 
-scale-none
-scale: none;
-scale-<number>
-scale: <number>% <number>%;
--scale-<number>
-scale: calc(<number>% * -1) calc(<number>% * -1);
-scale-(<custom-property>)
-scale: var(<custom-property>) var(<custom-property>);
-scale-[<value>]
-scale: <value>;
-scale-x-<number>
-scale: <number>% var(--tw-scale-y);
--scale-x-<number>
-scale: calc(<number>% * -1) var(--tw-scale-y);
-scale-x-(<custom-property>)
-scale: var(<custom-property>) var(--tw-scale-y);
-scale-x-[<value>]
-scale: <value> var(--tw-scale-y);
-scale-y-<number>
-scale: var(--tw-scale-x) <number>%;
--scale-y-<number>
-scale: var(--tw-scale-x) calc(<number>% * -1);
-scale-y-(<custom-property>)
-scale: var(--tw-scale-x) var(<custom-property>);
-scale-y-[<value>]
-scale: var(--tw-scale-x) <value>;
-scale-z-<number>
-scale: var(--tw-scale-x) var(--tw-scale-y) <number>%;
--scale-z-<number>
-scale: var(--tw-scale-x) var(--tw-scale-y) calc(<number>% * -1);
-scale-z-(<custom-property>)
-scale: var(--tw-scale-x) var(--tw-scale-y) var(<custom-property>);
-scale-z-[<value>]
-scale: var(--tw-scale-x) var(--tw-scale-y) <value>;
-scale-3d
-scale: var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z);
-
-
-
-
+scale-none                     scale: none;
+scale-<number>                 scale: <number>% <number>%;
+-scale-<number>                scale: calc(<number>% * -1) calc(<number>% * -1);
+scale-(<custom-property>)      scale: var(<custom-property>) var(<custom-property>);
+scale-[<value>]                scale: <value>;
+scale-x-<number>               scale: <number>% var(--tw-scale-y);
+-scale-x-<number>              scale: calc(<number>% * -1) var(--tw-scale-y);
+scale-x-(<custom-property>)    scale: var(<custom-property>) var(--tw-scale-y);
+scale-x-[<value>]              scale: <value> var(--tw-scale-y);
+scale-y-<number>               scale: var(--tw-scale-x) <number>%;
+-scale-y-<number>              scale: var(--tw-scale-x) calc(<number>% * -1);
+scale-y-(<custom-property>)    scale: var(--tw-scale-x) var(<custom-property>);
+scale-y-[<value>]              scale: var(--tw-scale-x) <value>;
+scale-z-<number>               scale: var(--tw-scale-x) var(--tw-scale-y) <number>%;
+-scale-z-<number>              scale: var(--tw-scale-x) var(--tw-scale-y) calc(<number>% * -1);
+scale-z-(<custom-property>)    scale: var(--tw-scale-x) var(--tw-scale-y) var(<custom-property>);
+scale-z-[<value>]              scale: var(--tw-scale-x) var(--tw-scale-y) <value>;
+scale-3d                       scale: var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z);
 
 ------------------------------------------- skew -------------------------------------------------------------
 ------------------------------------------- skew -------------------------------------------------------------
 
-skew-<number>
-transform: skewX(<number>deg) skewY(<number>deg);
--skew-<number>
-transform: skewX(-<number>deg) skewY(-<number>deg);
-skew-(<custom-property>)
-transform: skewX(var(<custom-property>)) skewY(var(<custom-property>));
-skew-[<value>]
-transform: skewX(<value>) skewY(<value>);
-skew-x-<number>
-transform: skewX(<number>deg));
--skew-x-<number>
-transform: skewX(-<number>deg));
-skew-x-(<custom-property>)
-transform: skewX(var(<custom-property>));
-skew-x-[<value>]
-transform: skewX(<value>));
-skew-y-<number>
-transform: skewY(<number>deg);
--skew-y-<number>
-transform: skewY(-<number>deg);
-skew-y-(<custom-property>)
-transform: skewY(var(<custom-property>));
-skew-y-[<value>]
-transform: skewY(<value>);
-
-
-
-
+skew-<number>                 transform: skewX(<number>deg) skewY(<number>deg);
+-skew-<number>                transform: skewX(-<number>deg) skewY(-<number>deg);
+skew-(<custom-property>)      transform: skewX(var(<custom-property>)) skewY(var(<custom-property>));
+skew-[<value>]                transform: skewX(<value>) skewY(<value>);
+skew-x-<number>               transform: skewX(<number>deg));
+-skew-x-<number>              transform: skewX(-<number>deg));
+skew-x-(<custom-property>)    transform: skewX(var(<custom-property>));
+skew-x-[<value>]              transform: skewX(<value>));
+skew-y-<number>               transform: skewY(<number>deg);
+-skew-y-<number>              transform: skewY(-<number>deg);
+skew-y-(<custom-property>)    transform: skewY(var(<custom-property>));
+skew-y-[<value>]              transform: skewY(<value>);
 
 ------------------------------------------- transform -------------------------------------------------------------
 ------------------------------------------- transform -------------------------------------------------------------
 
-transform-(<custom-property>)
-transform: var(<custom-property>);
-transform-[<value>]
-transform: <value>;
-transform-none
-transform: none;
-transform-gpu
-transform: translateZ(0) var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
-transform-cpu
-transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
-
-
-
-
-
+transform-(<custom-property>)   transform: var(<custom-property>);
+transform-[<value>]             transform: <value>;
+transform-none                  transform: none;
+transform-gpu                   transform: translateZ(0) var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+transform-cpu                   transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
 
 ------------------------------------------- transform-origin -------------------------------------------------------------
 ------------------------------------------- transform-origin -------------------------------------------------------------
 
-origin-center
-transform-origin: center;
-origin-top
-transform-origin: top;
-origin-top-right
-transform-origin: top right;
-origin-right
-transform-origin: right;
-origin-bottom-right
-transform-origin: bottom right;
-origin-bottom
-transform-origin: bottom;
-origin-bottom-left
-transform-origin: bottom left;
-origin-left
-transform-origin: left;
-origin-top-left
-transform-origin: top left;
-origin-(<custom-property>)
-transform-origin: var(<custom-property>);
-origin-[<value>]
-transform-origin: <value>;
-
-
-
-
-
+origin-center                transform-origin: center;
+origin-top                   transform-origin: top;
+origin-top-right             transform-origin: top right;
+origin-right                 transform-origin: right;
+origin-bottom-right          transform-origin: bottom right;
+origin-bottom                transform-origin: bottom;
+origin-bottom-left           transform-origin: bottom left;
+origin-left                  transform-origin: left;
+origin-top-left              transform-origin: top left;
+origin-(<custom-property>)   transform-origin: var(<custom-property>);
+origin-[<value>]             transform-origin: <value>;
 
 ------------------------------------------- transform-style -------------------------------------------------------------
 ------------------------------------------- transform-style -------------------------------------------------------------
 
-transform-3d
-transform-style: preserve-3d;
-transform-flat
-transform-style: flat;
-
-
-
-
-
-
+transform-3d      transform-style: preserve-3d;
+transform-flat    transform-style: flat;
 
 ------------------------------------------- translate -------------------------------------------------------------
 ------------------------------------------- translate -------------------------------------------------------------
 
-translate-<number>
-translate: calc(var(--spacing) * <number>) calc(var(--spacing) * <number>);
--translate-<number>
-translate: calc(var(--spacing) * -<number>) calc(var(--spacing) * -<number>);
-translate-<fraction>
-translate: calc(<fraction> * 100%) calc(<fraction> * 100%);
--translate-<fraction>
-translate: calc(<fraction> * -100%) calc(<fraction> * -100%);
-translate-full
-translate: 100% 100%;
--translate-full
-translate: -100% -100%;
-translate-px
-translate: 1px 1px;
--translate-px
-translate: -1px -1px;
-translate-(<custom-property>)
-translate: var(<custom-property>) var(<custom-property>);
-translate-[<value>]
-translate: <value> <value>;
-translate-x-<number>
-translate: calc(var(--spacing) * <number>) var(--tw-translate-y);
--translate-x-<number>
-translate: calc(var(--spacing) * -<number>) var(--tw-translate-y);
-translate-x-<fraction>
-translate: calc(<fraction> * 100%) var(--tw-translate-y);
--translate-x-<fraction>
-translate: calc(<fraction> * -100%) var(--tw-translate-y);
-translate-x-full
-translate: 100% var(--tw-translate-y);
--translate-x-full
-translate: -100% var(--tw-translate-y);
-translate-x-px
-translate: 1px var(--tw-translate-y);
--translate-x-px
-translate: -1px var(--tw-translate-y);
-translate-x-(<custom-property>)
-translate: var(<custom-property>) var(--tw-translate-y);
-translate-x-[<value>]
-translate: <value> var(--tw-translate-y);
-translate-y-<number>
-translate: var(--tw-translate-x) calc(var(--spacing) * <number>);
--translate-y-<number>
-translate: var(--tw-translate-x) calc(var(--spacing) * -<number>);
-translate-y-<fraction>
-translate: var(--tw-translate-x) calc(<fraction> * 100%);
--translate-y-<fraction>
-translate: var(--tw-translate-x) calc(<fraction> * -100%);
-translate-y-full
-translate: var(--tw-translate-x) 100%;
--translate-y-full
-translate: var(--tw-translate-x) -100%;
-translate-y-px
-translate: var(--tw-translate-x) 1px;
--translate-y-px
-translate: var(--tw-translate-x) -1px;
-translate-y-(<custom-property>)
-translate: var(--tw-translate-x) var(<custom-property>);
-translate-y-[<value>]
-translate: var(--tw-translate-x) <value>;
-translate-z-<number>
-translate: var(--tw-translate-x) var(--tw-translate-y) calc(var(--spacing) * <number>);
--translate-z-<number>
-translate: var(--tw-translate-x) var(--tw-translate-y) calc(var(--spacing) * -<number>);
-translate-z-px
-translate: var(--tw-translate-x) var(--tw-translate-y) 1px;
--translate-z-px
-translate: var(--tw-translate-x) var(--tw-translate-y) -1px;
-translate-z-(<custom-property>)
-translate: var(--tw-translate-x) var(--tw-translate-y) var(<custom-property>);
-translate-z-[<value>]
-translate: var(--tw-translate-x) var(--tw-translate-y) <value>;
-translate-none
-translate: none;
+translate-<number>               translate: calc(var(--spacing) * <number>) calc(var(--spacing) * <number>);
+-translate-<number>              translate: calc(var(--spacing) * -<number>) calc(var(--spacing) * -<number>);
+translate-<fraction>             translate: calc(<fraction> * 100%) calc(<fraction> * 100%);
+-translate-<fraction>            translate: calc(<fraction> * -100%) calc(<fraction> * -100%);
+translate-full                   translate: 100% 100%;
+-translate-full                  translate: -100% -100%;
+translate-px                     translate: 1px 1px;
+-translate-px                    translate: -1px -1px;
+translate-(<custom-property>)    translate: var(<custom-property>) var(<custom-property>);
+translate-[<value>]              translate: <value> <value>;
+translate-x-<number>             translate: calc(var(--spacing) * <number>) var(--tw-translate-y);
+-translate-x-<number>            translate: calc(var(--spacing) * -<number>) var(--tw-translate-y);
+translate-x-<fraction>           translate: calc(<fraction> * 100%) var(--tw-translate-y);
+-translate-x-<fraction>          translate: calc(<fraction> * -100%) var(--tw-translate-y);
+translate-x-full                 translate: 100% var(--tw-translate-y);
+-translate-x-full                translate: -100% var(--tw-translate-y);
+translate-x-px                   translate: 1px var(--tw-translate-y);
+-translate-x-px                  translate: -1px var(--tw-translate-y);
+translate-x-(<custom-property>)  translate: var(<custom-property>) var(--tw-translate-y);
+translate-x-[<value>]            translate: <value> var(--tw-translate-y);
+translate-y-<number>             translate: var(--tw-translate-x) calc(var(--spacing) * <number>);
+-translate-y-<number>            translate: var(--tw-translate-x) calc(var(--spacing) * -<number>);
+translate-y-<fraction>           translate: var(--tw-translate-x) calc(<fraction> * 100%);
+-translate-y-<fraction>          translate: var(--tw-translate-x) calc(<fraction> * -100%);
+translate-y-full                 translate: var(--tw-translate-x) 100%;
+-translate-y-full                translate: var(--tw-translate-x) -100%;
+translate-y-px                   translate: var(--tw-translate-x) 1px;
+-translate-y-px                  translate: var(--tw-translate-x) -1px;
+translate-y-(<custom-property>)  translate: var(--tw-translate-x) var(<custom-property>);
+translate-y-[<value>]            translate: var(--tw-translate-x) <value>;
+translate-z-<number>             translate: var(--tw-translate-x) var(--tw-translate-y) calc(var(--spacing) * <number>);
+-translate-z-<number>            translate: var(--tw-translate-x) var(--tw-translate-y) calc(var(--spacing) * -<number>);
+translate-z-px                   translate: var(--tw-translate-x) var(--tw-translate-y) 1px;
+-translate-z-px                  translate: var(--tw-translate-x) var(--tw-translate-y) -1px;
+translate-z-(<custom-property>)  translate: var(--tw-translate-x) var(--tw-translate-y) var(<custom-property>);
+translate-z-[<value>]            translate: var(--tw-translate-x) var(--tw-translate-y) <value>;
+translate-none                   translate: none;
 
 
 
@@ -3921,1205 +3704,334 @@ translate: none;
 
 /*        کنترل رنگ برجسته یک کنترل فرم     */
 
-accent-inherit
-accent-color: inherit;
-accent-current
-accent-color: currentColor;
-accent-transparent
-accent-color: transparent;
-accent-black
-accent-color: var(--color-black); /* #000 */
-accent-white
-accent-color: var(--color-white); /* #fff */
-accent-red-50
-accent-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
+accent-inherit          accent-color: inherit;
+accent-current          accent-color: currentColor;
+accent-transparent      accent-color: transparent;
+accent-black            accent-color: var(--color-black); /* #000 */
+accent-white            accent-color: var(--color-white); /* #fff */
+accent-red-50           accent-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
 
-
-accent-<custom-property>
-accent-color: var(<custom-property>);
-accent-[<value>]
-accent-color: <value>;
-
-
+accent-<custom-property>      accent-color: var(<custom-property>);
+accent-[<value>]              accent-color: <value>;
 
 ------------------------------------------- perspective -------------------------------------------------------------
 ------------------------------------------- perspective -------------------------------------------------------------
 
 /*       برای سرکوب استایل‌دهی کنترل فرم بومی     */
 
-appearance-none
-appearance: none;
-appearance-auto
-appearance: auto;
-
-
-
-
+appearance-none      appearance: none;
+appearance-auto      appearance: auto;
 
 ------------------------------------------- caret-color -------------------------------------------------------------
 ------------------------------------------- caret-color -------------------------------------------------------------
 
 /*        رنگ مکان‌نمای ورودی متن      */
 
-caret-inherit
-caret-color: inherit;
-caret-current
-caret-color: currentColor;
-caret-transparent
-caret-color: transparent;
-caret-black
-caret-color: var(--color-black); /* #000 */
-caret-white
-caret-color: var(--color-white); /* #fff */
-caret-red-50
-caret-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
+caret-inherit          caret-color: inherit;
+caret-current          caret-color: currentColor;
+caret-transparent      caret-color: transparent;
+caret-black            caret-color: var(--color-black); /* #000 */
+caret-white            caret-color: var(--color-white); /* #fff */
+caret-red-50           caret-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
 
-caret-<custom-property>
-caret-color: var(<custom-property>);
-caret-[<value>]
-caret-color: <value>;
-
-
+caret-<custom-property>      caret-color: var(<custom-property>);
+caret-[<value>]            caret-color: <value>;
 
 ------------------------------------------- color-scheme -------------------------------------------------------------
 ------------------------------------------- color-scheme -------------------------------------------------------------
 
 /*       طرح رنگ یک عنصر       */
 
-scheme-normal
-color-scheme: normal;
-scheme-dark
-color-scheme: dark;
-scheme-light
-color-scheme: light;
-scheme-light-dark
-color-scheme: light dark;
-scheme-only-dark
-color-scheme: only dark;
-scheme-only-light
-color-scheme: only light;
-
-
-
-
+scheme-normal            color-scheme: normal;
+scheme-dark                  color-scheme: dark;
+scheme-light                  color-scheme: light;
+scheme-light-dark            color-scheme: light dark;
+scheme-only-dark            color-scheme: only dark;
+scheme-only-light            color-scheme: only light;
 
 ------------------------------------------- cursor -------------------------------------------------------------
 ------------------------------------------- cursor -------------------------------------------------------------
 
 /*         سبک مکان‌نما هنگام قرار گرفتن ماوس روی یک عنصر      */
 
-cursor-auto
-cursor: auto;
-cursor-default
-cursor: default;
-cursor-pointer
-cursor: pointer;
-cursor-wait
-cursor: wait;
-cursor-text
-cursor: text;
-cursor-move
-cursor: move;
-cursor-help
-cursor: help;
-cursor-not-allowed
-cursor: not-allowed;
-cursor-none
-cursor: none;
-cursor-context-menu
-cursor: context-menu;
-cursor-progress
-cursor: progress;
-cursor-cell
-cursor: cell;
-cursor-crosshair
-cursor: crosshair;
-cursor-vertical-text
-cursor: vertical-text;
-cursor-alias
-cursor: alias;
-cursor-copy
-cursor: copy;
-cursor-no-drop
-cursor: no-drop;
-cursor-grab
-cursor: grab;
-cursor-grabbing
-cursor: grabbing;
-cursor-all-scroll
-cursor: all-scroll;
-cursor-col-resize
-cursor: col-resize;
-cursor-row-resize
-cursor: row-resize;
-cursor-n-resize
-cursor: n-resize;
-cursor-e-resize
-cursor: e-resize;
-cursor-s-resize
-cursor: s-resize;
-cursor-w-resize
-cursor: w-resize;
-cursor-ne-resize
-cursor: ne-resize;
-cursor-nw-resize
-cursor: nw-resize;
-cursor-se-resize
-cursor: se-resize;
-cursor-sw-resize
-cursor: sw-resize;
-cursor-ew-resize
-cursor: ew-resize;
-cursor-ns-resize
-cursor: ns-resize;
-cursor-nesw-resize
-cursor: nesw-resize;
-cursor-nwse-resize
-cursor: nwse-resize;
-cursor-zoom-in
-cursor: zoom-in;
-cursor-zoom-out
-cursor: zoom-out;
-cursor-(<custom-property>)
-cursor: var(<custom-property>);
-cursor-[<value>]
-cursor: <value>;
-
-
-
-
+cursor-auto             cursor: auto;
+cursor-default          cursor: default;
+cursor-pointer          cursor: pointer;
+cursor-wait             cursor: wait;
+cursor-text             cursor: text;
+cursor-move             cursor: move;
+cursor-help             cursor: help;
+cursor-not-allowed      cursor: not-allowed;
+cursor-none             cursor: none;
+cursor-context-menu     cursor: context-menu;
+cursor-progress         cursor: progress;
+cursor-cell             cursor: cell;
+cursor-crosshair        cursor: crosshair;
+cursor-vertical-text    cursor: vertical-text;
+cursor-alias            cursor: alias;
+cursor-copy             cursor: copy;
+cursor-no-drop          cursor: no-drop;
+cursor-grab             cursor: grab;
+cursor-grabbing         cursor: grabbing;
+cursor-all-scroll       cursor: all-scroll;
+cursor-col-resize       cursor: col-resize;
+cursor-row-resize       cursor: row-resize;
+cursor-n-resize         cursor: n-resize;
+cursor-e-resize         cursor: e-resize;
+cursor-s-resize         cursor: s-resize;
+cursor-w-resize         cursor: w-resize;
+cursor-ne-resize        cursor: ne-resize;
+cursor-nw-resize        cursor: nw-resize;
+cursor-se-resize        cursor: se-resize;
+cursor-sw-resize        cursor: sw-resize;
+cursor-ew-resize        cursor: ew-resize;
+cursor-ns-resize        cursor: ns-resize;
+cursor-nesw-resize      cursor: nesw-resize;
+cursor-nwse-resize      cursor: nwse-resize;
+cursor-zoom-in          cursor: zoom-in;
+cursor-zoom-out         cursor: zoom-out;
+cursor-(<custom-property>)  cursor: var(<custom-property>);
+cursor-[<value>]         cursor: <value>;
 
 ------------------------------------------- field-sizing -------------------------------------------------------------
 ------------------------------------------- field-sizing -------------------------------------------------------------
 
 /*         اندازه کنترل‌های فرم       */
 
-field-sizing-fixed
-field-sizing: fixed;
-field-sizing-content
-field-sizing: content;
-
-
-
-
+field-sizing-fixed        field-sizing: fixed;
+field-sizing-content      field-sizing: content;
 
 ------------------------------------------- pointer-events -------------------------------------------------------------
 ------------------------------------------- pointer-events -------------------------------------------------------------
 
 /*        اینکه آیا یک عنصر به رویدادهای اشاره‌گر پاسخ می‌دهد یا خیر        */
 
-pointer-events-auto
-pointer-events: auto;
-pointer-events-none
-pointer-events: none;
-
-
-
-
+pointer-events-auto      pointer-events: auto;
+pointer-events-none      pointer-events: none;
 
 ------------------------------------------- resize -------------------------------------------------------------
 ------------------------------------------- resize -------------------------------------------------------------
 
 /*         نحوه تغییر اندازه یک عنصر       */
 
-resize-none
-resize: none;
-resize
-resize: both;
-resize-y
-resize: vertical;
-resize-x
-resize: horizontal;
-
-
-
-
+resize-none        resize: none;
+resize             resize: both;
+resize-y           resize: vertical;
+resize-x           resize: horizontal;
 
 ------------------------------------------- scroll-behavior -------------------------------------------------------------
 ------------------------------------------- scroll-behavior -------------------------------------------------------------
 
 /*        رفتار اسکرول یک عنصر        */
 
-scroll-auto
-scroll-behavior: auto;
-scroll-smooth
-scroll-behavior: smooth;
-
-
-
-
+scroll-auto      scroll-behavior: auto;
+scroll-smooth    scroll-behavior: smooth;
 
 ------------------------------------------- scroll-margin -------------------------------------------------------------
 ------------------------------------------- scroll-margin -------------------------------------------------------------
 
 /*        جابجایی اسکرول در اطراف آیتم‌ها در یک ظرف اسنپ        */
 
-scroll-m-<number>
-scroll-margin: calc(var(--spacing) * <number>);
--scroll-m-<number>
-scroll-margin: calc(var(--spacing) * -<number>);
-scroll-m-(<custom-property>)
-scroll-margin: var(<custom-property>);
-scroll-m-[<value>]
-scroll-margin: <value>;
-scroll-mx-<number>
-scroll-margin-inline: calc(var(--spacing) * <number>);
--scroll-mx-<number>
-scroll-margin-inline: calc(var(--spacing) * -<number>);
-scroll-mx-(<custom-property>)
-scroll-margin-inline: var(<custom-property>);
-scroll-mx-[<value>]
-scroll-margin-inline: <value>;
-scroll-my-<number>
-scroll-margin-block: calc(var(--spacing) * <number>);
--scroll-my-<number>
-scroll-margin-block: calc(var(--spacing) * -<number>);
-scroll-my-(<custom-property>)
-scroll-margin-block: var(<custom-property>);
-scroll-my-[<value>]
-scroll-margin-block: <value>;
-scroll-ms-<number>
-scroll-margin-inline-start: calc(var(--spacing) * <number>);
--scroll-ms-<number>
-scroll-margin-inline-start: calc(var(--spacing) * -<number>);
-scroll-ms-(<custom-property>)
-scroll-margin-inline-start: var(<custom-property>);
-scroll-ms-[<value>]
-scroll-margin-inline-start: <value>;
-scroll-me-<number>
-scroll-margin-inline-end: calc(var(--spacing) * <number>);
--scroll-me-<number>
-scroll-margin-inline-end: calc(var(--spacing) * -<number>);
-scroll-me-(<custom-property>)
-scroll-margin-inline-end: var(<custom-property>);
-scroll-me-[<value>]
-scroll-margin-inline-end: <value>;
-scroll-mt-<number>
-scroll-margin-top: calc(var(--spacing) * <number>);
--scroll-mt-<number>
-scroll-margin-top: calc(var(--spacing) * -<number>);
-scroll-mt-(<custom-property>)
-scroll-margin-top: var(<custom-property>);
-scroll-mt-[<value>]
-scroll-margin-top: <value>;
-scroll-mr-<number>
-scroll-margin-right: calc(var(--spacing) * <number>);
--scroll-mr-<number>
-scroll-margin-right: calc(var(--spacing) * -<number>);
-scroll-mr-(<custom-property>)
-scroll-margin-right: var(<custom-property>);
-scroll-mr-[<value>]
-scroll-margin-right: <value>;
-scroll-mb-<number>
-scroll-margin-bottom: calc(var(--spacing) * <number>);
--scroll-mb-<number>
-scroll-margin-bottom: calc(var(--spacing) * -<number>);
-scroll-mb-(<custom-property>)
-scroll-margin-bottom: var(<custom-property>);
-scroll-mb-[<value>]
-scroll-margin-bottom: <value>;
-scroll-ml-<number>
-scroll-margin-left: calc(var(--spacing) * <number>);
--scroll-ml-<number>
-scroll-margin-left: calc(var(--spacing) * -<number>);
-scroll-ml-(<custom-property>)
-scroll-margin-left: var(<custom-property>);
-scroll-ml-[<value>]
-scroll-margin-left: <value>;
-
-
-
-
+scroll-m-<number>                scroll-margin: calc(var(--spacing) * <number>);
+-scroll-m-<number>               scroll-margin: calc(var(--spacing) * -<number>);
+scroll-m-(<custom-property>)     scroll-margin: var(<custom-property>);
+scroll-m-[<value>]               scroll-margin: <value>;
+scroll-mx-<number>               scroll-margin-inline: calc(var(--spacing) * <number>);
+-scroll-mx-<number>              scroll-margin-inline: calc(var(--spacing) * -<number>);
+scroll-mx-(<custom-property>)    scroll-margin-inline: var(<custom-property>);
+scroll-mx-[<value>]              scroll-margin-inline: <value>;
+scroll-my-<number>               scroll-margin-block: calc(var(--spacing) * <number>);
+-scroll-my-<number>              scroll-margin-block: calc(var(--spacing) * -<number>);
+scroll-my-(<custom-property>)    scroll-margin-block: var(<custom-property>);
+scroll-my-[<value>]              scroll-margin-block: <value>;
+scroll-ms-<number>               scroll-margin-inline-start: calc(var(--spacing) * <number>);
+-scroll-ms-<number>              scroll-margin-inline-start: calc(var(--spacing) * -<number>);
+scroll-ms-(<custom-property>)    scroll-margin-inline-start: var(<custom-property>);
+scroll-ms-[<value>]              scroll-margin-inline-start: <value>;
+scroll-me-<number>               scroll-margin-inline-end: calc(var(--spacing) * <number>);
+-scroll-me-<number>              scroll-margin-inline-end: calc(var(--spacing) * -<number>);
+scroll-me-(<custom-property>)    scroll-margin-inline-end: var(<custom-property>);
+scroll-me-[<value>]              scroll-margin-inline-end: <value>;
+scroll-mt-<number>               scroll-margin-top: calc(var(--spacing) * <number>);
+-scroll-mt-<number>              scroll-margin-top: calc(var(--spacing) * -<number>);
+scroll-mt-(<custom-property>)    scroll-margin-top: var(<custom-property>);
+scroll-mt-[<value>]              scroll-margin-top: <value>;
+scroll-mr-<number>               scroll-margin-right: calc(var(--spacing) * <number>);
+-scroll-mr-<number>              scroll-margin-right: calc(var(--spacing) * -<number>);
+scroll-mr-(<custom-property>)    scroll-margin-right: var(<custom-property>);
+scroll-mr-[<value>]              scroll-margin-right: <value>;
+scroll-mb-<number>               scroll-margin-bottom: calc(var(--spacing) * <number>);
+-scroll-mb-<number>              scroll-margin-bottom: calc(var(--spacing) * -<number>);
+scroll-mb-(<custom-property>)    scroll-margin-bottom: var(<custom-property>);
+scroll-mb-[<value>]              scroll-margin-bottom: <value>;
+scroll-ml-<number>               scroll-margin-left: calc(var(--spacing) * <number>);
+-scroll-ml-<number>              scroll-margin-left: calc(var(--spacing) * -<number>);
+scroll-ml-(<custom-property>)    scroll-margin-left: var(<custom-property>);
+scroll-ml-[<value>]              scroll-margin-left: <value>;
 
 ------------------------------------------- scroll-padding -------------------------------------------------------------
 ------------------------------------------- scroll-padding -------------------------------------------------------------
 
 /*        جابجایی اسکرول یک عنصر در یک ظرف اسنپ        */
 
-scroll-p-<number>
-scroll-padding: calc(var(--spacing) * <number>);
--scroll-p-<number>
-scroll-padding: calc(var(--spacing) * -<number>);
-scroll-p-(<custom-property>)
-scroll-padding: var(<custom-property>);
-scroll-p-[<value>]
-scroll-padding: <value>;
-scroll-px-<number>
-scroll-padding-inline: calc(var(--spacing) * <number>);
--scroll-px-<number>
-scroll-padding-inline: calc(var(--spacing) * -<number>);
-scroll-px-(<custom-property>)
-scroll-padding-inline: var(<custom-property>);
-scroll-px-[<value>]
-scroll-padding-inline: <value>;
-scroll-py-<number>
-scroll-padding-block: calc(var(--spacing) * <number>);
--scroll-py-<number>
-scroll-padding-block: calc(var(--spacing) * -<number>);
-scroll-py-(<custom-property>)
-scroll-padding-block: var(<custom-property>);
-scroll-py-[<value>]
-scroll-padding-block: <value>;
-scroll-ps-<number>
-scroll-padding-inline-start: calc(var(--spacing) * <number>);
--scroll-ps-<number>
-scroll-padding-inline-start: calc(var(--spacing) * -<number>);
-scroll-ps-(<custom-property>)
-scroll-padding-inline-start: var(<custom-property>);
-scroll-ps-[<value>]
-scroll-padding-inline-start: <value>;
-scroll-pe-<number>
-scroll-padding-inline-end: calc(var(--spacing) * <number>);
--scroll-pe-<number>
-scroll-padding-inline-end: calc(var(--spacing) * -<number>);
-scroll-pe-(<custom-property>)
-scroll-padding-inline-end: var(<custom-property>);
-scroll-pe-[<value>]
-scroll-padding-inline-end: <value>;
-scroll-pt-<number>
-scroll-padding-top: calc(var(--spacing) * <number>);
--scroll-pt-<number>
-scroll-padding-top: calc(var(--spacing) * -<number>);
-scroll-pt-(<custom-property>)
-scroll-padding-top: var(<custom-property>);
-scroll-pt-[<value>]
-scroll-padding-top: <value>;
-scroll-pr-<number>
-scroll-padding-right: calc(var(--spacing) * <number>);
--scroll-pr-<number>
-scroll-padding-right: calc(var(--spacing) * -<number>);
-scroll-pr-(<custom-property>)
-scroll-padding-right: var(<custom-property>);
-scroll-pr-[<value>]
-scroll-padding-right: <value>;
-scroll-pb-<number>
-scroll-padding-bottom: calc(var(--spacing) * <number>);
--scroll-pb-<number>
-scroll-padding-bottom: calc(var(--spacing) * -<number>);
-scroll-pb-(<custom-property>)
-scroll-padding-bottom: var(<custom-property>);
-scroll-pb-[<value>]
-scroll-padding-bottom: <value>;
-scroll-pl-<number>
-scroll-padding-left: calc(var(--spacing) * <number>);
--scroll-pl-<number>
-scroll-padding-left: calc(var(--spacing) * -<number>);
-scroll-pl-(<custom-property>)
-scroll-padding-left: var(<custom-property>);
-scroll-pl-[<value>]
-scroll-padding-left: <value>;
-
-
-
-
+scroll-p-<number>                scroll-padding: calc(var(--spacing) * <number>);
+-scroll-p-<number>               scroll-padding: calc(var(--spacing) * -<number>);
+scroll-p-(<custom-property>)     scroll-padding: var(<custom-property>);
+scroll-p-[<value>]               scroll-padding: <value>;
+scroll-px-<number>               scroll-padding-inline: calc(var(--spacing) * <number>);
+-scroll-px-<number>              scroll-padding-inline: calc(var(--spacing) * -<number>);
+scroll-px-(<custom-property>)    scroll-padding-inline: var(<custom-property>);
+scroll-px-[<value>]              scroll-padding-inline: <value>;
+scroll-py-<number>               scroll-padding-block: calc(var(--spacing) * <number>);
+-scroll-py-<number>              scroll-padding-block: calc(var(--spacing) * -<number>);
+scroll-py-(<custom-property>)    scroll-padding-block: var(<custom-property>);
+scroll-py-[<value>]              scroll-padding-block: <value>;
+scroll-ps-<number>               scroll-padding-inline-start: calc(var(--spacing) * <number>);
+-scroll-ps-<number>              scroll-padding-inline-start: calc(var(--spacing) * -<number>);
+scroll-ps-(<custom-property>)    scroll-padding-inline-start: var(<custom-property>);
+scroll-ps-[<value>]              scroll-padding-inline-start: <value>;
+scroll-pe-<number>               scroll-padding-inline-end: calc(var(--spacing) * <number>);
+-scroll-pe-<number>              scroll-padding-inline-end: calc(var(--spacing) * -<number>);
+scroll-pe-(<custom-property>)    scroll-padding-inline-end: var(<custom-property>);
+scroll-pe-[<value>]              scroll-padding-inline-end: <value>;
+scroll-pt-<number>               scroll-padding-top: calc(var(--spacing) * <number>);
+-scroll-pt-<number>              scroll-padding-top: calc(var(--spacing) * -<number>);
+scroll-pt-(<custom-property>)    scroll-padding-top: var(<custom-property>);
+scroll-pt-[<value>]              scroll-padding-top: <value>;
+scroll-pr-<number>               scroll-padding-right: calc(var(--spacing) * <number>);
+-scroll-pr-<number>              scroll-padding-right: calc(var(--spacing) * -<number>);
+scroll-pr-(<custom-property>)    scroll-padding-right: var(<custom-property>);
+scroll-pr-[<value>]              scroll-padding-right: <value>;
+scroll-pb-<number>               scroll-padding-bottom: calc(var(--spacing) * <number>);
+-scroll-pb-<number>              scroll-padding-bottom: calc(var(--spacing) * -<number>);
+scroll-pb-(<custom-property>)    scroll-padding-bottom: var(<custom-property>);
+scroll-pb-[<value>]              scroll-padding-bottom: <value>;
+scroll-pl-<number>               scroll-padding-left: calc(var(--spacing) * <number>);
+-scroll-pl-<number>              scroll-padding-left: calc(var(--spacing) * -<number>);
+scroll-pl-(<custom-property>)    scroll-padding-left: var(<custom-property>);
+scroll-pl-[<value>]              scroll-padding-left: <value>;
 
 ------------------------------------------- scroll-snap-align -------------------------------------------------------------
 ------------------------------------------- scroll-snap-align -------------------------------------------------------------
 
 /*        ترازبندی اسکرول اسنپ یک عنصر        */
 
-snap-start
-scroll-snap-align: start;
-snap-end
-scroll-snap-align: end;
-snap-center
-scroll-snap-align: center;
-snap-align-none
-scroll-snap-align: none;
-
-
-
-
+snap-start         scroll-snap-align: start;
+snap-end           scroll-snap-align: end;
+snap-center        scroll-snap-align: center;
+snap-align-none    scroll-snap-align: none;
 
 ------------------------------------------- scroll-snap-stop -------------------------------------------------------------
 ------------------------------------------- scroll-snap-stop -------------------------------------------------------------
 
 /*        اینکه آیا می‌توانید از موقعیت‌های اسنپ احتمالی عبور کنید یا خیر        */
 
-snap-normal
-scroll-snap-stop: normal;
-snap-always
-scroll-snap-stop: always;
-
-
-
-
+snap-normal      scroll-snap-stop: normal;
+snap-always      scroll-snap-stop: always;
 
 ------------------------------------------- scroll-snap-type -------------------------------------------------------------
 ------------------------------------------- scroll-snap-type -------------------------------------------------------------
 
 /*       یزان اعمال دقیق نقاط snap در یک ظرف snap       */
 
-snap-none
-scroll-snap-type: none;
-snap-x
-scroll-snap-type: x var(--tw-scroll-snap-strictness);
-snap-y
-scroll-snap-type: y var(--tw-scroll-snap-strictness);
-snap-both
-scroll-snap-type: both var(--tw-scroll-snap-strictness);
-snap-mandatory
---tw-scroll-snap-strictness: mandatory;
-snap-proximity
---tw-scroll-snap-strictness: proximity;
+snap-none         scroll-snap-type: none;
+snap-x            scroll-snap-type: x var(--tw-scroll-snap-strictness);
+snap-y            scroll-snap-type: y var(--tw-scroll-snap-strictness);
+snap-both         scroll-snap-type: both var(--tw-scroll-snap-strictness);
+snap-mandatory    --tw-scroll-snap-strictness: mandatory;
+snap-proximity    --tw-scroll-snap-strictness: proximity;
 
+------------------------------------------- touch-action -------------------------------------------------------------
+------------------------------------------- touch-action -------------------------------------------------------------
 
+/*        نحوه پیمایش و بزرگنمایی یک عنصر در صفحات لمسی        */
 
+touch-auto           touch-action: auto;
+touch-none           touch-action: none;
+touch-pan-x          touch-action: pan-x;
+touch-pan-left       touch-action: pan-left;
+touch-pan-right      touch-action: pan-right;
+touch-pan-y          touch-action: pan-y;
+touch-pan-up         touch-action: pan-up;
+touch-pan-down       touch-action: pan-down;
+touch-pinch-zoom     touch-action: pinch-zoom;
+touch-manipulation   touch-action: manipulation;
 
+------------------------------------------- user-select -------------------------------------------------------------
+------------------------------------------- user-select -------------------------------------------------------------
 
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
+/*        Utilities for controlling whether the user can select text in an element       */
 
-/*              */
+select-none    user-select: none;
+select-text    user-select: text;
+select-all     user-select: all;
+select-auto    user-select: auto;
 
+------------------------------------------- will-change -------------------------------------------------------------
+------------------------------------------- will-change -------------------------------------------------------------
 
+/*       بهینه‌سازی انیمیشن‌های آینده عناصری که انتظار می‌رود تغییر کنند        */
 
+will-change-auto                will-change: auto;
+will-change-scroll              will-change: scroll-position;
+will-change-contents            will-change: contents;
+will-change-transform           will-change: transform;
+will-change-<custom-property>   will-change: var(<custom-property>);
+will-change-[<value>]           will-change: <value>;
 
 
 
 
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
 
-/*              */
 
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////  SVG  //////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+------------------------------------------- fill -------------------------------------------------------------
+------------------------------------------- fill -------------------------------------------------------------
 
+/*        SVG    برای استایل‌دهی به عناصر       */
 
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
+fill-none         fill: none;
+fill-inherit      fill: inherit;
+fill-current      fill: currentColor;
+fill-transparent  fill: transparent;
+fill-black        fill: var(--color-black); /* #000 */
+fill-white        fill: var(--color-white); /* #fff */
+fill-red-50       fill: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
-/*              */
+fill-(<custom-property>)     fill: var(<custom-property>);
+fill-[<color>]    fill: <color>;
 
+------------------------------------------- stroke -------------------------------------------------------------
+------------------------------------------- stroke -------------------------------------------------------------
 
+/*       SVG   استایل‌دهی به خطوط عناصر      */
 
+stroke-none         stroke: none;
+stroke-inherit      stroke: inherit;
+stroke-current      stroke: currentColor;
+stroke-transparent  stroke: transparent;
+stroke-black        stroke: var(--color-black); /* #000 */
+stroke-white        stroke: var(--color-white); /* #fff */
+stroke-red-50       stroke: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
+------------------------------------------- stroke-width -------------------------------------------------------------
+------------------------------------------- stroke-width -------------------------------------------------------------
 
+/*        عناصر    stroke   استایل‌دهی به عرض     */
 
-
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
-
-/*              */
-
-
-
-
-
-
-
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
-
-/*              */
-
-
-
-
-
-
-
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
-
-/*              */
-
-
-
-
-
-
-
-------------------------------------------- asd -------------------------------------------------------------
-------------------------------------------- asd -------------------------------------------------------------
-
-/*              */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+stroke-<number>                    stroke-width: <number>;
+stroke-(length:<custom-property>)  stroke-width: var(<custom-property>);
+stroke-[<value>]                   stroke-width: <value>;
 
 
 
