@@ -56,22 +56,21 @@ sm:  = واکنش به صفحه
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////  Utility  ///////////////////////////////////////////
+/////////////////////////////////////////////////  Utility  /////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+------------------------------------------- responsive -----------------------------------------------------------------
+------------------------------------------- responsive -----------------------------------------------------------------
 
 @container
-@container/main      
-
-------------------------------------------- responsive -----------------------------------------------------------------
-------------------------------------------- responsive -----------------------------------------------------------------
+@container/main    
 
 sm	      @media (width >= 40rem)
 md	      @media (width >= 48rem)
 lg	      @media (width >= 64rem)
 xl        @media (width >= 80rem)
 2xl	      @media (width >= 96rem)
-
 
 /*     استاندارد نیست
 @3xs	       @container (width >= 16rem)
@@ -212,7 +211,6 @@ dark:text-white
 dark:text-gray-400
                          
 @custom-variant dark (&:where(.dark, .dark *));
-
 
 
 
@@ -414,7 +412,6 @@ dark:text-gray-400
   --font-poppins: Poppins, sans-serif;
 
 
-
     
 ------------------------------------------- Color -----------------------------------------------------------------
 ------------------------------------------- Color -----------------------------------------------------------------
@@ -425,8 +422,8 @@ rose   slate   gray   zinc   neutral   stone
 
 50 - 100 - 200 - 300 - 400 - 500 - 600 - 700 - 800 - 900 - 950   <<--  محدوده
                         
-bg-sky-400
-bg-zinc-950
+bg-sky-400      bg-zinc-950
+
 
 
 /* Here's a full list of utilities that use your color palette: */
@@ -446,8 +443,7 @@ stroke-*	     Sets the stroke color of SVG elements
 
 
 
-
-                                      
+             
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Layout  ///////////////////////////////////////////////////
@@ -476,7 +472,7 @@ aspect-(--my-aspect-ratio)         ( 2 - CSS variables )
 ------------------------------------------- columns -------------------------------------------------------------
 ------------------------------------------- columns -------------------------------------------------------------
 
-columns-<number>     columns: <number>;     /*   بیشتر استفاد شده   */
+columns-<number>     columns: <number>;     /*   بیشتر استفاد شده   */      columns-2    columns-5
 
 columns-3xs          columns: var(--container-3xs); /* 16rem (256px) */
 columns-2xs          columns: var(--container-2xs); /* 18rem (288px) */
@@ -498,8 +494,7 @@ columns-[<value>]    columns: <value>;
 -------------------------------------   break-after  &   break-before  &  break-inside   ------------------------------------------
 -------------------------------------   break-after  &   break-before  &  break-inside   ------------------------------------------
 
-/*       بهتره استفاده نکنی چون ساهتار رو به هم میریزه       */
-
+/*       بهتره استفاده نکنی چون ساختار رو به هم میریزه       */
 /*     auto    avoid    all    avoid-page    page    left    right    column     */
                                       
 /* 
@@ -528,9 +523,6 @@ break-inside-avoid           break-inside: avoid;
 break-inside-avoid-page      break-inside: avoid-page;
 break-inside-avoid-column    break-inside: avoid-column; */
 
-                                      
-استفاده کن  break-inside  و break-before  از break-after  در همه موارد بالا به جای
-
 ------------------------------------------- box-decoration-break -------------------------------------------------------------
 ------------------------------------------- box-decoration-break -------------------------------------------------------------
                                       
@@ -557,10 +549,11 @@ block                display: block;
 inline-block         display: inline-block;
 flow-root            display: flow-root;
 flex                 display: flex;
-inline-flex          display: inline-flex;
 grid                 display: grid;
+inline-flex          display: inline-flex;
 inline-grid          display: inline-grid;
 contents             display: contents;
+
 table                display: table;
 inline-table         display: inline-table;
 table-caption        display: table-caption;
@@ -642,15 +635,17 @@ object-scale-down    object-fit: scale-down;
 
 /*     نحوه قرارگیری محتوای یک عنصر جایگزین شده در ظرف آن     */
 
-object-top-left             object-position: top left;
 object-top                  object-position: top;
-object-top-right            object-position: top right;
-object-left                 object-position: left;
-object-center               object-position: center;
 object-right                object-position: right;
-object-bottom-left          object-position: bottom left;
+object-left                 object-position: left;
 object-bottom               object-position: bottom;
+object-center               object-position: center;
+
+object-top-left             object-position: top left;
+object-top-right            object-position: top right;
+object-bottom-left          object-position: bottom left;
 object-bottom-right         object-position: bottom right;
+
 object-(<custom-property>)  object-position: var(<custom-property>);
 object-[<value>]            object-position: <value>;
 
@@ -664,6 +659,7 @@ overflow-hidden       overflow: hidden;
 overflow-clip         overflow: clip;
 overflow-visible      overflow: visible;
 overflow-scroll       overflow: scroll;
+
 overflow-x-auto       overflow-x: auto;
 overflow-y-auto       overflow-y: auto;
 overflow-x-hidden     overflow-x: hidden;
@@ -683,6 +679,7 @@ overflow-y-scroll     overflow-y: scroll;
 overscroll-auto         overscroll-behavior: auto;
 overscroll-contain      overscroll-behavior: contain;
 overscroll-none         overscroll-behavior: none;
+
 overscroll-x-auto       overscroll-behavior-x: auto;
 overscroll-x-contain    overscroll-behavior-x: contain;
 overscroll-x-none       overscroll-behavior-x: none;
@@ -695,10 +692,10 @@ overscroll-y-none       overscroll-behavior-y: none;
 
 /*     نحوه قرارگیری یک عنصر در سند       */
 
-static     position: static;
+static     position: static;  (default)
 fixed      position: fixed;
-absolute   position: absolute;
 relative   position: relative;
+absolute   position: absolute;
 sticky     position: sticky;
 
 ------------------------------------------- top / right / bottom / left -------------------------------------------------------------
@@ -712,88 +709,113 @@ inset-<fraction>           inset: calc(<fraction> * 100%);
 -inset-<fraction>          inset: calc(<fraction> * -100%);
 inset-px                   inset: 1px;
 -inset-px                  inset: -1px;
+
 inset-full                 inset: 100%;
 -inset-full                inset: -100%;
 inset-auto                 inset: auto;
+
 inset-(<custom-property>)  inset: var(<custom-property>);
 inset-[<value>]            inset: <value>;
+
 inset-x-<number>           inset-inline: calc(var(--spacing) * <number>);
 -inset-x-<number>          inset-inline: calc(var(--spacing) * -<number>);
 inset-x-<fraction>         inset-inline: calc(<fraction> * 100%);
 -inset-x-<fraction>        inset-inline: calc(<fraction> * -100%);
 inset-x-px                 inset-inline: 1px;
 -inset-x-px                inset-inline: -1px;
+
 inset-x-full               inset-inline: 100%;
 -inset-x-full              inset-inline: -100%;
 inset-x-auto               inset-inline: auto;
+
 inset-x-(<custom-property>) inset-inline: var(<custom-property>);
 inset-x-[<value>]          inset-inline: <value>;
+
 inset-y-<number>           inset-block: calc(var(--spacing) * <number>);
 -inset-y-<number>          inset-block: calc(var(--spacing) * -<number>);
 inset-y-<fraction>         inset-block: calc(<fraction> * 100%);
 -inset-y-<fraction>        inset-block: calc(<fraction> * -100%);
 inset-y-px                 inset-block: 1px;
 -inset-y-px                inset-block: -1px;
+
 inset-y-full               inset-block: 100%;
 -inset-y-full              inset-block: -100%;
 inset-y-auto               inset-block: auto;
+
 inset-y-(<custom-property>) inset-block: var(<custom-property>);
 inset-y-[<value>]          inset-block: <value>;
+--------------------------------------------------------------------------------------------------
 start-<number>             inset-inline-start: calc(var(--spacing) * <number>);
 -start-<number>            inset-inline-start: calc(var(--spacing) * -<number>);
 start-<fraction>           inset-inline-start: calc(<fraction> * 100%);
 -start-<fraction>          inset-inline-start: calc(<fraction> * -100%);
 start-px                   inset-inline-start: 1px;
 -start-px                  inset-inline-start: -1px;
+
 start-full                 inset-inline-start: 100%;
 -start-full                inset-inline-start: -100%;
 start-auto                 inset-inline-start: auto;
+
 start-(<custom-property>)  inset-inline-start: var(<custom-property>);
 start-[<value>]            inset-inline-start: <value>;
+--------------------------------------------------------------------------------------------------
 end-<number>               inset-inline-end: calc(var(--spacing) * <number>);
 -end-<number>              inset-inline-end: calc(var(--spacing) * -<number>);
 end-<fraction>             inset-inline-end: calc(<fraction> * 100%);
 -end-<fraction>            inset-inline-end: calc(<fraction> * -100%);
 end-px                     inset-inline-end: 1px;
 -end-px                    inset-inline-end: -1px;
+
 end-full                   inset-inline-end: 100%;
 -end-full                  inset-inline-end: -100%;
 end-auto                   inset-inline-end: auto;
+
 end-(<custom-property>)    inset-inline-end: var(<custom-property>);
 end-[<value>]              inset-inline-end: <value>;
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 top-<number>               top: calc(var(--spacing) * <number>);
 -top-<number>              top: calc(var(--spacing) * -<number>);
 top-<fraction>             top: calc(<fraction> * 100%);
 -top-<fraction>            top: calc(<fraction> * -100%);
 top-px                     top: 1px;
 -top-px                    top: -1px;
+
 top-full                   top: 100%;
 -top-full                  top: -100%;
 top-auto                   top: auto;
+
 top-(<custom-property>)    top: var(<custom-property>);
 top-[<value>]              top: <value>;
+--------------------------------------------------------------------------------------------------
 right-<number>             right: calc(var(--spacing) * <number>);
 -right-<number>            right: calc(var(--spacing) * -<number>);
 right-<fraction>           right: calc(<fraction> * 100%);
 -right-<fraction>          right: calc(<fraction> * -100%);
 right-px                   right: 1px;
 -right-px                  right: -1px;
+
 right-full                 right: 100%;
 -right-full                right: -100%;
+
 right-auto                 right: auto;
 right-(<custom-property>)  right: var(<custom-property>);
 right-[<value>]            right: <value>;
+--------------------------------------------------------------------------------------------------
 bottom-<number>            bottom: calc(var(--spacing) * <number>);
 -bottom-<number>           bottom: calc(var(--spacing) * -<number>);
 bottom-<fraction>          bottom: calc(<fraction> * 100%);
 -bottom-<fraction>         bottom: calc(<fraction> * -100%);
 bottom-px                  bottom: 1px;
 -bottom-px                 bottom: -1px;
+
 bottom-full                bottom: 100%;
 -bottom-full               bottom: -100%;
 bottom-auto                bottom: auto;
+
 bottom-(<custom-property>) bottom: var(<custom-property>);
 bottom-[<value>]           bottom: <value>;
+--------------------------------------------------------------------------------------------------
 left-<number>              left: calc(var(--spacing) * <number>);
 -left-<number>             left: calc(var(--spacing) * -<number>);
 left-<fraction>            left: calc(<fraction> * 100%);
