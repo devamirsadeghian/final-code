@@ -26,14 +26,32 @@ ol li a {}
 
 p>a {}
 
+.class_name h2 {}   /* هستند class_name که در h2 فقط تگ های */
 
-p::first-line {}
+--------------------------------------- Pseudo-elements  --------------------------------------------------
+--------------------------------------- Pseudo-elements  --------------------------------------------------
+/*     بخش خاصی از یک المان را استایل دهی کنی     */
+p::before
+p::after
+
 p::first-letter {}
+p::first-line {}
+
+p::selection
 
 
+--------------------------------------- Pseudo-class  --------------------------------------------------
+--------------------------------------- Pseudo-class  --------------------------------------------------
+/*     المان‌هایی را هدف می‌گیرند که در یک حالت خاص قرار دارند، بدون اینکه کلاس واقعی به آن‌ها داده شود     */
 p:hover {}
+p:focus {}
+
 p:visited {}
 p:active {}
+
+p:first-child {}
+p:nth-child {}
+p:last-child {}
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
 css {
@@ -58,29 +76,26 @@ css {
     font-family: sahel, iransans;
 
     
-    /*  url   position/size   repeat  */
-    background: #ff0022 url("addres.img") center/cover no-repeat;       // همه تنظیمات پس‌زمینه رو یک‌جا انجام بده
-    background-image: url('addres.img') center/cover no-repeat;         // فقط تصویر پس‌زمینه رو مشخص می‌کنه
+    /* همه موارد مربوط به بک گراند را شامل میشه */
+    background:              url("addres.img") center/cover no-repeat  #ff0022;    //  نمایش داده می‌شود fallback background به‌عنوان  #ff0022  اگر تصویر بارگذاری نشود، رنگ
 
-    background-color: red;
-    background-repeat: repeat no-repeat repeat-x repeat-y;
-    background-attachment: fixed scroll;
-    background-position: center left right top bottom 0px 0px;
-    background-size: cover contain auto;
+    
+    background-image:        url('addres.img') center/cover no-repeat;             //  فقط تصویر پس‌زمینه رو مشخص می‌کنه
+    background-color:        red;
+    background-repeat:       repeat no-repeat repeat-x repeat-y;
+    background-attachment:   fixed scroll;
+    background-position:     center left right top bottom 0px 0px;
+    background-size:         cover contain auto;
 
 
     /* اگر بدون فراخوانی عکس بود از رنگ های معمولی استفاده کن*/
+    /* اگر همراه فراخوانی عکس بود از رنگ های شفاف و کدر استفاده کن*/
     background: linear-gradient(red, blue, gray, green);
     background: linear-gradient(170deg, red, blue, green);
-
-
-    /* اگر همراه فراخوانی عکس بود از رنگ های شفاف و کدر استفاده کن*/
     background: linear-gradient(to left right bottom top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('addres.img');
 
-
-    /*         calc    %      px(ch em ex em)     سه معیاری برای عرض و ارتفاع */
-    /*         calc------>>>>>>  %   px( ch em ex em ) */
-
+    
+    /*         calc    %      px( ch  em  ex  em )     سه معیاری برای عرض و ارتفاع */
     width: 0px;
     height: 0px;
 
@@ -96,13 +111,14 @@ css {
     align: center left right;
     text-decoration: none;       /*خط زیر نوشته حذف میشن*/
 
-
+    
+    display: block;
     display: inline-block;
     display: none;
 
     visibility: hidden;
     opacity: 0 ta 1;
-
+    
 
     /*  . or #:both;     */
 
@@ -145,8 +161,6 @@ css {
     padding-left: 0px;
     padding-right: 0px;
 
-    box-sizing: border-box;  /*   padding  لغو  */
-
 
     position: relative;
     top: 0px;
@@ -182,9 +196,9 @@ css {
     /*  یعنی انواع ان any
     کردن select سه مدل 
 
-    div : any {}  ;   div : actived {}        div : visited {}      div : hover{}  ;       selector
-    div > p  {}   ;                                                                         child selector
-    p::any  {}    ;   p::first-letter {}      p::first-line {}                     ;       sodo  selector
+    div : any {}  ;   div : actived {}        div : visited {}      div : hover{}  ;      selector
+    div > p  {}   ;                                                                       child selector
+    p::any  {}    ;   p::first-letter {}      p::first-line {}                     ;      sodo  selector
     */
 
     cursor: pointer;  /*با رفتن روی ان کرسر تغییر کرده*/
@@ -262,7 +276,7 @@ css {
 
 
     :root {
-        --Danger: blue;
+        --Danger: red;
     }
 
     P {
