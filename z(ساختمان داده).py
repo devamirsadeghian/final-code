@@ -43,7 +43,8 @@ print(len(a))
 def myfunc():
   global x
   x = "fantastic"
-
+  print(x)
+  
 myfunc()
 
 -----------------------------------------------------------------------------------------------------------------
@@ -55,7 +56,6 @@ c = a + b        # Hello world amir
 
 price = 59
 txt = f"The price is {price} dollars"
-
 
 print(a[2])        # l
 print(a[2:10])     # llo worl
