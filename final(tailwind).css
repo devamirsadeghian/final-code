@@ -4,7 +4,7 @@ Class   :   مستقیم در تگ به کار میره
 Styles  : (بهتره )  برای کاستم کردن استایل ها بی نظیر است )  به عنوان ویژگی استایل در تگ به کار میره
 
 
-برخی جاها از #$ به عنوان اندازه  استفاده میشه مثلا به جای ۱ تا ۶     --varibale-2xs     --varibale-sm     --varibale-md      --varibale-2xl
+برخی جاها از #$ به عنوان اندازه  استفاده میشه مثلا به جای مقدار ۱ تا ۶     --varibale-2xs     --varibale-sm     --varibale-md      --varibale-2xl
 
 
 بهترین راه همزمان ریسپانسیو و استفاده از کلاس ها به شکل زیر است
@@ -50,9 +50,30 @@ sm:  = واکنش به صفحه
 @sm: = واکنش به کانتینر
 
 
+@       ==>>    html  هست نه استفاده مستقیم توی tailwind و تنظیم css  مخصوص نوشتن 
+@theme  ==>>   استفاده میشه css varibale رنگ ، فونت و ..  design token برای تعریف 
+
+
+
+|        مورد       |        `@` directives           |          class‌ها          |
+| ----------------- | ------------------------------- | ------------------------- |
+|    فایل           |    محل استفاده CSS              |      فایل HTML / JSX      |
+|   استایل‌دهی مستقیم       |     پیکربندی و ترکیب استایل‌ها   |          کاربرد    |
+|   ا |                 ❌ نه           |          ✅ بله HTML قابل استفاده در    |
+| هدف               |      ساخت و مدیریت استایل       | استفاده از استایل         |
+
+
 
 /*  فرق     max-sm    و    sm   */
 است max-width مبنا max-sm  ولی در sm است یعنی min-width  عکس یکدیگر اند و تلویند بر پایه
+
+
+
+offset-x → فاصله افقی
+offset-y → فاصله عمودی
+blur-radius → میزان تار شدن سایه
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +93,12 @@ lg	      @media (width >= 64rem)
 xl        @media (width >= 80rem)
 2xl	      @media (width >= 96rem)
 
+
+
+
+/* Container size reference */
+// By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
+
 /*     استاندارد نیست
 @3xs	       @container (width >= 16rem)
 @2xs	       @container (width >= 18rem)
@@ -90,25 +117,6 @@ xl        @media (width >= 80rem)
 
 
 
-/* Container size reference */
-// By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
-
-@3xs	                    	 @container (width >= 16rem) { … }
-@2xs                             @container (width >= 18rem) { … }
-@xs	                             @container (width >= 20rem) { … }
-@sm	                     	     @container (width >= 24rem) { … }
-@md                              @container (width >= 28rem) { … }
-@lg                      	     @container (width >= 32rem) { … }
-@xl                              @container (width >= 36rem) { … }
-@2xl	                         @container (width >= 42rem) { … }
-@3xl	                         @container (width >= 48rem) { … }
-@4xl	                    	 @container (width >= 56rem) { … }
-@5xl	                      	 @container (width >= 64rem) { … }
-@6xl	                       	 @container (width >= 72rem) { … }
-@7xl	                       	 @container (width >= 80rem) { … }
-                   
-              
-
 /*  ابزار  */
 hover	               @media (hover: hover) { &:hover }
 focus         	       &:focus
@@ -116,13 +124,13 @@ focus-within	       &:focus-within
 focus-visible	       &:focus-visible
 active	               &:active
 visited	               &:visited
-target	               &:target
+target	               &:target                                  // برای استایل دادن به المانی که در URL هدف (#id) قرار گرفته استفاده می‌ش               class="target:block hidden"
 *	                   :is(& > *)
 **	                   :is(& *)
-has-[...]	           &:has(...)
-group-[...]	           &:is(:where(.group)... *)
-peer-[...]	           &:is(:where(.peer)... ~ *)
-in-[...]	           :where(...) &
+has-[...]	           &:has(...)                                //   «اگه این المان چنین فرزندی داشت، این استایل رو اعمال کن»                           
+group-[...]	           &:is(:where(.group)... *)                 //    عکس بالایی
+peer-[...]	           &:is(:where(.peer)... ~ *)                //    عکس بالایی
+in-[...]	           :where(...) &                             //     یک variant انیمیشنیه که وقتی المان وارد صفحه (DOM / viewport) می‌شه فعال می‌شه
 not-[...]        	   &:not(...)
 inert	               &:is([inert], [inert] *)
 first	               &:first-child
@@ -133,10 +141,10 @@ even                   &:nth-child(even)
 first-of-type          &:first-of-type
 only-of-type	       &:only-of-type
 last-of-type           &:last-of-type
-nth-[...]	           &:nth-child(...)
-nth-last-[...]         &:nth-last-child(...)
-nth-of-type-[...]      &:nth-of-type(...)
-nth-last-of-type-[...] &:nth-last-of-type(...)
+nth-[...]	           &:nth-child(...)                 //  اُمین فرزند (یا الگوی مشخصی از فرزندها) اعمال کن n این استایل رو فقط روی
+nth-last-[...]         &:nth-last-child(...)            //  مانند بالایی  با این تفاوت که  شمارش از انتها انجام می‌شود
+nth-of-type-[...]      &:nth-of-type(...)               //  تمرکز می‌کنه نه صرفاً موقعیت فرزند  tag  روی نوع المان
+nth-last-of-type-[...] &:nth-last-of-type(...)          // مانند بالایی  با این تفاوت که  شمارش از انتها انجام می‌شود
 empty	               &:empty
 disabled          	   &:disabled
 enabled	               &:enabled
@@ -166,6 +174,7 @@ backdrop               &::backdrop
 placeholder	           &::placeholder
 
 
+
 dark	               @media (prefers-color-scheme: dark)
 motion-safe 	       @media (prefers-reduced-motion: no-preference)
 motion-reduce	       @media (prefers-reduced-motion: reduce)
@@ -186,6 +195,7 @@ print                  @media print
 supports-[…]	       @supports (…)
 
 
+
 aria-busy        	&[aria-busy="true"]
 aria-checked     	&[aria-checked="true"]
 aria-disabled       &[aria-disabled="true"]
@@ -202,6 +212,7 @@ ltr                 &:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
 open                &:is([open], :popover-open, :open)
 starting            @starting-style
 
+
 ------------------------------------------- Dark Mode -----------------------------------------------------------------
 ------------------------------------------- Dark Mode -----------------------------------------------------------------
                                   
@@ -213,7 +224,6 @@ dark:text-gray-400
 @custom-variant dark (&:where(.dark, .dark *));
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////  Theme Variables Namespaces  /////////////////////////////////////
@@ -221,26 +231,28 @@ dark:text-gray-400
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*                                           خیلی پر استفاده هستند              */
 
+
 --color-*	         Color utilities like bg-red-500, text-sky-300, and many more
 --font-*             Font family utilities like font-sans
 --text-*	         Font size utilities like text-xl
 --font-weight-*	     Font weight utilities like font-bold
---tracking-*	     Letter spacing utilities like tracking-wide         فاصله بین خطوط
---leading-*	         Line height utilities like leading-tight            ارتفاع خطوط
---breakpoint-*	     Responsive breakpoint variants like sm:*
---container-*  	     Container query variants like @sm:* and size utilities like max-w-md
+--tracking-*	     Letter spacing utilities like tracking-wide         //   فاصله بین خطوط
+--leading-*	         Line height utilities like leading-tight            //   ارتفاع خطوط
+--breakpoint-*	     Responsive breakpoint variants like sm:*            //   نقطه‌ای از عرض صفحه که استایل‌ها تغییر می‌کنند تا سایت روی موبایل، تبلت و دسکتاپ درست نمایش داده شود
+--container-*  	     Container query variants like  @sm:* and size utilities like max-w-md
 --spacing-*   	     Spacing and sizing utilities like px-4, max-h-16, and many more
 --radius-*           Border radius utilities like rounded-sm
 --shadow-*	         Box shadow utilities like shadow-md
 --inset-shadow-*	 Inset box shadow utilities like inset-shadow-xs
 --drop-shadow-*  	 Drop shadow filter utilities like drop-shadow-md
 --blur-*	         Blur filter utilities like blur-md
---perspective-*	     Perspective utilities like perspective-near
+--perspective-*	     Perspective utilities like perspective-near    // مشخص می‌کند که چقدر عمق سه‌بعدی روی یک عنصر نمایش داده شود
 --aspect-*	         Aspect ratio utilities like aspect-video
 --ease-*             Transition timing function utilities like ease-out
 --animate-*          Animation utilities like animate-spin
 
-                                  
+
+
 /* Default theme variables */
 @layer theme, base, components, utilities;
 @import "./theme.css" layer(theme);
@@ -292,7 +304,7 @@ dark:text-gray-400
   --text-base--line-height: calc(1.5 / 1);
   --text-9xl--line-height: 1;
 
-  
+
   /* font-weight-^      ^     ==>>    thin  extralight   light   normal   medium   semibold   bold  xtrabold   black   */
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
@@ -304,7 +316,7 @@ dark:text-gray-400
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
 
-  
+
   /* tracking-%       %     ==>>    tighter  tight   normal   wide   wider   widest   widest      */
   --tracking-tighter: -0.05em;
   --tracking-tight: -0.025em;
@@ -383,7 +395,9 @@ dark:text-gray-400
                                                                                   transform: rotate(360deg);
                                                                                 }
                                                                               }
+
     
+//  که بزرگ و شفاف می‌شود و محو می‌شود ping  ایجاد پالس یا ضربان
   --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;           @keyframes ping {
                                                                             75%,
                                                                             100% {
@@ -391,13 +405,16 @@ dark:text-gray-400
                                                                                     opacity: 0;
                                                                                 }
                                                                             }
-    
-  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;          @keyframes pulse {
+
+//  برای ایجاد اثر ضربان یا ضربه آرام  opacity  کاهش و افزایش مکرر شفافیت
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;          @keyframes pulse {
                                                                                 50% {
                                                                                     opacity: 0.5;
                                                                                 }
                                                                             }
+
     
+//  سرعت انیمیشن را تنظیم می‌کند
   --animate-bounce: bounce 1s infinite;                                     @keyframes bounce {
                                                                                 0%,
                                                                                 100% {
@@ -409,6 +426,9 @@ dark:text-gray-400
                                                                                     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
                                                                                 }
                                                                             }
+
+//  برای فونت است، نه کلاس آماده utility  ( شسشس )
+//  می‌توان از این متغیر استفاده کرد  font-family: 'Poppins', sans-serif;  به جای استفاده مستقیم از
   --font-poppins: Poppins, sans-serif;
 
 
@@ -426,23 +446,32 @@ bg-sky-400      bg-zinc-950
 
 
 
-/* Here's a full list of utilities that use your color palette: */
+/*   Here's a full list of utilities that use your color palette:   */
+/*         لیستی از ابزار هایی که از رنگ ها استفاده میکنند          */
 bg-*	         Sets the background color of an element
 text-*	         Sets the text color of an element
-decoration-*     Sets the text decoration color of an element
+decoration-*     Sets the text decoration color of an element  // کنترل می‌کنند که خط زیر، روی یا کنار متن وجود داشته باشد یا نه
 border-*	     Sets the border color of an element
 outline-*	     Sets the outline color of an element
 shadow-*	     Sets the color of box shadows
 inset-shadow-*   Sets the color of inset box shadows
-ring-*	         Sets the color of ring shadows
+ring-*	         Sets the color of ring shadows       //  تمرکز، حاشیه و افکت‌های زیبا روی المان‌ها است
 inset-ring-*     Sets the color of inset ring shadows
 accent-*	     Sets the accent color of form controls
 caret-*	         Sets the caret color in form controls
 fill-*	         Sets the fill color of SVG elements
 stroke-*	     Sets the stroke color of SVG elements
 
+------------------------------------------------------------------------------------
+    کلاس                                	توضیح
+decoration-none             	حذف تمام خطوط زیر متن 
+decoration-underline	        اضافه کردن خط زیر متن
+decoration-overline	           اضافه کردن خط بالای متن
+decoration-line-through     	اضافه کردن خط روی متن
 
 
+ring        ring-0        ring-1        ring-2         .....       ring-8
+فعال کردن
              
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -454,11 +483,11 @@ stroke-*	     Sets the stroke color of SVG elements
 ------------------------------------------- aspect-ratio -------------------------------------------------------------
 
 /*      کنترل نسبت ابعاد یک عنصر     */
-                                      
+
+aspect-auto              aspect-ratio: auto;
 aspect-<ratio>           aspect-ratio: <ratio>;
 aspect-square            aspect-ratio: 1 / 1;
 aspect-video             aspect-ratio: var(--aspect-video); /* 16 / 9 */
-aspect-auto              aspect-ratio: auto;
 aspect-(<custom-prope>)  aspect-ratio: var(<custom-property>);
 aspect-[<value>]         aspect-ratio: <value>;
 
@@ -537,7 +566,7 @@ box-decoration-slice      box-decoration-break: slice;
 /*        نحوه محاسبه اندازه کل یک عنصر توسط مرورگر      */
 
 box-border         box-sizing: border-box;            /* است content + padding + border عرض و ارتفاع شامل */
-box-content        box-sizing: content-box; (defult)  /* عرض و ارتفاع فقط شامل محتو است */
+box-content        box-sizing: content-box; (defult)  /* عرض و ارتفاع فقط شامل محتوی است */
 
 ------------------------------------------- display -------------------------------------------------------------
 ------------------------------------------- display -------------------------------------------------------------
@@ -547,6 +576,9 @@ box-content        box-sizing: content-box; (defult)  /* عرض و ارتفاع 
 inline               display: inline;
 block                display: block;
 inline-block         display: inline-block;
+flow                 display: flow-root;         // به صورت خودکار مدیریت کند container فاصله عمودی بین فرزندان یک 
+flow-col	         display: flow-col            چینش عمودی عناصر
+flow-row	         display: flow-row            چینش افقی عناصر
 flow-root            display: flow-root;
 flex                 display: flex;
 grid                 display: grid;
@@ -577,7 +609,7 @@ sr-only           position: absolute;
                   clip-path: inset(50%);
                   white-: nowrap;
                   border-width: 0;
-                                      
+
 
 not-sr-only       position: static;
                   width: auto;
@@ -602,10 +634,10 @@ float-none      float: none;;
 ------------------------------------------- clear -------------------------------------------------------------
 ------------------------------------------- clear -------------------------------------------------------------
 
-/*        نحوه‌ی قرارگیری محتوا در اطراف یک عنصر      */
+/*    میشه که باعث میشه تگ جا به جا بشه  float باعث لغو     */
 
-clear-left     clear: left;
-clear-right    clear: right;
+clear-left     clear: left;     //شده از سمت چپ کنارش قرار بگیرند و مجبور می‌شود زیر آن‌ها قرار بگیرد  float  این المان اجازه نمی‌دهد المان‌های
+clear-right    clear: right;    // ..
 clear-both     clear: both;
 clear-start    clear: inline-start;
 clear-end      clear: inline-end;
@@ -614,16 +646,16 @@ clear-none     clear: none;
 ------------------------------------------- isolation -------------------------------------------------------------
 ------------------------------------------- isolation -------------------------------------------------------------
 
-/*      آیا یک عنصر باید صریحاً یک زمینه انباشت جدید ایجاد کند یا خیر      */
+/*   متفاوت داریم و می‌خواهیم اثر آنها روی هم کنترل شود، استفاده می‌کنیم z-index  وقتی چند عنصر     */
                                       
-isolate           isolation: isolate;
-isolation-auto    isolation: auto;;
+isolate           isolation: isolate;     //  مستقل از بقیه می‌شود  container    المان‌ها داخل این  z-index   به این معنی که
+isolation-auto    isolation: auto;  (defult)
 
 ------------------------------------------- object-fit -------------------------------------------------------------
 ------------------------------------------- object-fit -------------------------------------------------------------
 
-/* چگونگی تغییر اندازه محتوای یک عنصر جایگزین شده        */
-                                      
+/*   است container  داخل  img , video  برای کنترل شیوه نمایش تصاویر، ویدیوها یا هر المان    */
+
 object-contain       object-fit: contain;
 object-cover         object-fit: cover;
 object-fill          object-fit: fill;
@@ -655,8 +687,8 @@ object-[<value>]            object-position: <value>;
 /*      نحوه‌ی مدیریت محتوایی که برای محفظه‌ی آن بیش از حد بزرگ است       */
                                       
 overflow-auto         overflow: auto;
-overflow-hidden       overflow: hidden;
-overflow-clip         overflow: clip;
+overflow-hidden       overflow: hidden;    // مانند پایینی ولی قدیمی 
+overflow-clip         overflow: clip;      // بریده شود scrollbars بیرون می‌رود، بدون اسکرول یا container  هر محتوایی که از مرز
 overflow-visible      overflow: visible;
 overflow-scroll       overflow: scroll;
 
@@ -701,9 +733,12 @@ sticky     position: sticky;
 ------------------------------------------- top / right / bottom / left -------------------------------------------------------------
 ------------------------------------------- top / right / bottom / left -------------------------------------------------------------
 
-/*     قرارگیری عناصر موقعیت‌یابی‌شده      */
+/*     را همزمان تنظیم می‌کند left و top و right و  bottom  مقدار  inset-<number>       */
+/*    داشته باشد   position   نکته : حتما باید المان            class="absolute inset-0"     class="absolute inset-4"     */
+/*     تفاوت اصلی inset و padding ::  خود المان جابه‌جا می‌شود inset ولی در       I    محتوا جابه‌جا می‌شود  padding          */
 
-inset-<number>             inset: calc(var(--spacing) * <number>);
+
+inset-<number>             inset: calc(var(--spacing) * <number>);      // inset-3
 -inset-<number>            inset: calc(var(--spacing) * -<number>);
 inset-<fraction>           inset: calc(<fraction> * 100%);
 -inset-<fraction>          inset: calc(<fraction> * -100%);
@@ -863,7 +898,9 @@ z-(<custom-property>)
 ------------------------------------------- flex-basis -------------------------------------------------------------
 ------------------------------------------- flex-basis -------------------------------------------------------------
 
-/*         flex اندازه اولیه آیتم‌های         */
+/*         اندازه اولیه یک آیتم فلکس قبل از پخش شدن فضا                 */
+/*         می‌گیرد  flex-basis  اندازه هر آیتم را از                     */
+/*         فضا را تقسیم می‌کند   flex-grow  و  flex-shrink   بعد طبق     */
 
 basis-<number>       flex-basis: calc(var(--spacing) * <number>);
 basis-<fraction>     flex-basis: calc(<fraction> * 100%);
@@ -1255,6 +1292,8 @@ space-   // فاصله مثبت
 space-x-num    // برای ایجاد فاصله افقی بین فرزندان مستقیم یک کانتینر
 mx-num         //    برای ایجاد فاصله افقی در هر فرزند باید اعمال بشه  
 
+space-x-*	فاصله افقی بین فرزندان
+space-y-*	فاصله عمودی بین فرزندان
 
 m-<number>                   margin: calc(var(--spacing) * <number>);
 -m-<number>                  margin: calc(var(--spacing) * -<number>);
@@ -3582,3 +3621,47 @@ stroke-red-50       stroke: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 stroke-<number>                    stroke-width: <number>;
 stroke-(length:<custom-property>)  stroke-width: var(<custom-property>);
 stroke-[<value>]                   stroke-width: <value>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------- واژه های پرتکرار و مخفف  -------------------------------------------------------------
+
+offset-x → فاصله افقی
+offset-y → فاصله عمودی
+blur-radius → میزان تار شدن سایه
+
+shadow → سایه خارج المان
+inset-shadow → سایه داخل المان
+
+animate-ping      که بزرگ و شفاف می‌شود و محو می‌شود ping  ایجاد پالس یا ضربان
+Poppins           یک فونت سنس‌سریف هندسی است
+
+
+
+
+
+
+
+
+
+
+
