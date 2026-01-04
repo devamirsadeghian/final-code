@@ -263,7 +263,9 @@ css {
 /*
     transform   حرکت کردن           transform  : translate  scale   rotate    skew
     transition  انیمسشن             transition : all     ease      0s   0s
-    animation   چند انیمشین         animation: identifier   0s    ease                 @keyframes identifier {}
+    animation   چند انیمشین         animation: identifier   0s    ease        @keyframes identifier {
+    
+                                                                                 }
 */
 
     @keyframes identifier {
