@@ -68,6 +68,8 @@ sm:  = واکنش به صفحه
 است max-width مبنا max-sm  ولی در sm است یعنی min-width  عکس یکدیگر اند و تلویند بر پایه
 
 
+order  :   عدد کمتر ، اولویت بیشتر
+
 
 offset-x → فاصله افقی
 offset-y → فاصله عمودی
@@ -75,9 +77,58 @@ blur-radius → میزان تار شدن سایه
 
 
 
+
+&&&&-<number>              &&&& <number>;                   &&&&-2
+&&&&-<fraction>            &&&& calc(<fraction> * 100%);    &&&&-4/9     ( کسر در مقدار ۱۰۰ ضرب شده)
+
+
+&&&&-auto                  &&&& auto;                       آماده
+&&&&-initial               &&&& 0 auto;                     آماده
+&&&&-none                  &&&& none;                       آماده
+
+
+&&&&-(<custom-property>)   &&&& var(<custom-property>);     &&&&-[3_1_0%]   &&&&-[3_1_48px]            ...  ( grow_shrink_basis  ترکیبی از)
+&&&&-[<value>]             &&&& <value>;                    &&&&-2                          ( بازه عدد مثبت ، صفر ، گاهی میتواند منفی باشد)  
+
+
+grow  	    (      مقدار میگیره      )   وقتی فضا هست، چقدر بزرگ بشه؟
+shrink	    (فقط فعال و غیر فعال میشه)       وقتی جا نیست، کوچیک بشه؟ 
+basis	                                         اندازه‌ی اولیه چقدره؟
+
+
+
+evenly   : از وسط  چیدمان میکنه
+between  : از گوشه چیدمان میکنه
+
+
+
+/*     افق    justify */
+justify-start
+justify-items-start    :          همه آیتم‌ها در ابتدای سلول خود قرار می‌گیرند
+justify-self-start     :    فقط آیتم مشخص شده در ابتدای سلول خود قرار میگیرد
+
+
+/*     عمودی   align  */
+content-start  :    کل بلوک
+items-start    :    همه آیتم‌ها
+self-start     :    یک آیتم خاص
+
+
+place-content-start  :    
+place-items-start    :    
+place-self-start     :    
+
+
+content  :  ( والد )    (هر آیتم)     کل محتوی ها با هم
+items    :  ( والد )    (کل بلوک)          هر محتوی جدا
+self     :  ( فرزند )  (یک آیتم خاص)       هر محتوی جدا
+
+
+revesre  :   منطق ها رو برعکس میکنه با شرایطی خاص
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////  Utility  /////////////////////////////////////////////
+/////////////////////////////////////////////////  Utility  //////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -730,12 +781,15 @@ relative   position: relative;
 absolute   position: absolute;
 sticky     position: sticky;
 
-------------------------------------------- top / right / bottom / left -------------------------------------------------------------
-------------------------------------------- top / right / bottom / left -------------------------------------------------------------
+------------------------------------------- inset / start / end / top / right / bottom / left -------------------------------------------------------------
+------------------------------------------- inset / start / end / top / right / bottom / left -------------------------------------------------------------
 
 /*     را همزمان تنظیم می‌کند left و top و right و  bottom  مقدار  inset-<number>       */
 /*    داشته باشد   position   نکته : حتما باید المان            class="absolute inset-0"     class="absolute inset-4"     */
 /*     تفاوت اصلی inset و padding ::  خود المان جابه‌جا می‌شود inset ولی در       I    محتوا جابه‌جا می‌شود  padding          */
+
+
+inset  start  end  top   bottom  left  right
 
 
 inset-<number>             inset: calc(var(--spacing) * <number>);      // inset-3
@@ -870,7 +924,7 @@ left-[<value>]             left: <value>;
                                       
 visible        visibility: visible;
 invisible      visibility: hidden;
-collapse       visibility: collapse;
+collapse       visibility: collapse;      //   ها یکی می‌شن border 
 
 ------------------------------------------- z-index -------------------------------------------------------------
 ------------------------------------------- z-index -------------------------------------------------------------
@@ -902,25 +956,26 @@ z-(<custom-property>)
 /*         می‌گیرد  flex-basis  اندازه هر آیتم را از                     */
 /*         فضا را تقسیم می‌کند   flex-grow  و  flex-shrink   بعد طبق     */
 
-basis-<number>       flex-basis: calc(var(--spacing) * <number>);
-basis-<fraction>     flex-basis: calc(<fraction> * 100%);
-basis-full           flex-basis: 100%;
-basis-auto           flex-basis: auto;
-basis-3xs            flex-basis: var(--container-3xs); /* 16rem (256px) */
-basis-2xs            flex-basis: var(--container-2xs); /* 18rem (288px) */
-basis-xs             flex-basis: var(--container-xs); /* 20rem (320px) */
-basis-sm             flex-basis: var(--container-sm); /* 24rem (384px) */
-basis-md             flex-basis: var(--container-md); /* 28rem (448px) */
-basis-lg             flex-basis: var(--container-lg); /* 32rem (512px) */
-basis-xl             flex-basis: var(--container-xl); /* 36rem (576px) */
-basis-2xl            flex-basis: var(--container-2xl); /* 42rem (672px) */
-basis-3xl            flex-basis: var(--container-3xl); /* 48rem (768px) */
-basis-4xl            flex-basis: var(--container-4xl); /* 56rem (896px) */
-basis-5xl            flex-basis: var(--container-5xl); /* 64rem (1024px) */
-basis-6xl            flex-basis: var(--container-6xl); /* 72rem (1152px) */
-basis-7xl            flex-basis: var(--container-7xl); /* 80rem (1280px) */
-basis-(<custom-property>)    flex-basis: var(<custom-property>);
-basis-[<value>]      flex-basis: <value>;
+
+/* basis-<number>       flex-basis: calc(var(--spacing) * <number>); */
+/* basis-<fraction>     flex-basis: calc(<fraction> * 100%); */
+/* basis-full           flex-basis: 100%; */
+/* basis-auto           flex-basis: auto; */
+/* basis-3xs            flex-basis: var(--container-3xs); /* 16rem (256px) */ */
+/* basis-2xs            flex-basis: var(--container-2xs); /* 18rem (288px) */ */
+/* basis-xs             flex-basis: var(--container-xs); /* 20rem (320px) */ */
+/* basis-sm             flex-basis: var(--container-sm); /* 24rem (384px) */ */
+/* basis-md             flex-basis: var(--container-md); /* 28rem (448px) */ */
+/* basis-lg             flex-basis: var(--container-lg); /* 32rem (512px) */ */
+/* basis-xl             flex-basis: var(--container-xl); /* 36rem (576px) */ */
+/* basis-2xl            flex-basis: var(--container-2xl); /* 42rem (672px) */ */
+/* basis-3xl            flex-basis: var(--container-3xl); /* 48rem (768px) */ */
+/* basis-4xl            flex-basis: var(--container-4xl); /* 56rem (896px) */ */
+/* basis-5xl            flex-basis: var(--container-5xl); /* 64rem (1024px) */ */
+/* basis-6xl            flex-basis: var(--container-6xl); /* 72rem (1152px) */ */
+/* basis-7xl            flex-basis: var(--container-7xl); /* 80rem (1280px) */ */
+/* basis-(<custom-property>)    flex-basis: var(<custom-property>); */
+/* basis-[<value>]      flex-basis: <value>; */
 
 ------------------------------------------- flex-direction -------------------------------------------------------------
 ------------------------------------------- flex-direction -------------------------------------------------------------
@@ -937,12 +992,9 @@ flex-col-reverse    flex-direction: column-reverse;
 
 /*      flex  نحوه‌ی چینش آیتم‌های         */
 
-flex-nowrap
-flex-wrap: nowrap;
-flex-wrap
-flex-wrap: wrap;
-flex-wrap-reverse
-flex-wrap: wrap-reverse;
+flex-nowrap   (default)    flex-wrap: nowrap;
+flex-wrap                  flex-wrap: wrap;
+flex-wrap-reverse          flex-wrap: wrap-reverse;
 
 ------------------------------------------- flex -------------------------------------------------------------
 ------------------------------------------- flex -------------------------------------------------------------
@@ -951,9 +1003,11 @@ flex-wrap: wrap-reverse;
 
 flex-<number>             flex: <number>;
 flex-<fraction>           flex: calc(<fraction> * 100%);
+
 flex-auto                 flex: auto;
 flex-initial              flex: 0 auto;
 flex-none                 flex: none;
+
 flex-(<custom-property>)  flex: var(<custom-property>);
 flex-[<value>]            flex: <value>;
 
@@ -998,7 +1052,7 @@ order-[<value>]       order: <value>;
 
 grid-cols-<number>               grid-template-columns: repeat(<number>, minmax(0, 1fr));
 grid-cols-none                   grid-template-columns: none;
-grid-cols-subgrid                grid-template-columns: subgrid;
+grid-cols-subgrid                grid-template-columns: subgrid;  // والد استفاده کند grid های (ستون/سطر) track  فرزند اجازه می‌دهد از grid  به (ستون‌های فرزند دقیقاً با ستون‌های والد align هستند)
 grid-cols-[<value>]              grid-template-columns: <value>;
 grid-cols-(<custom-property>)    grid-template-columns: var(<custom-property>);
 
@@ -1007,25 +1061,31 @@ grid-cols-(<custom-property>)    grid-template-columns: var(<custom-property>);
 
 /*         نحوه اندازه‌گذاری و قرارگیری عناصر در ستون‌های شبکه          */
 
-col-span-<number>               grid-column: span <number> / span <number>;
+col-<number>                    grid-column: <number>;
+-col-<number>                   grid-column: calc(<number> * -1);
+col-(<custom-property>)         grid-column: var(<custom-property>);
+col-[<value>]                   grid-column: <value>;
+
+
+col-span-<number>               grid-column: span <number> / span <number>;  ( تعداد ستون‌هایی که آیتم می‌خواهد اشغال کند و مقداری مثبت دارد) 
 col-span-full                   grid-column: 1 / -1;
 col-span-(<custom-property>)    grid-column: span var(<custom-property>) / span var(<custom-property>);
 col-span-[<value>]              grid-column: span <value> / span <value>;
+
+
 col-start-<number>              grid-column-start: <number>;
 -col-start-<number>             grid-column-start: calc(<number> * -1);
 col-start-auto                  grid-column-start: auto;
 col-start-(<custom-property>)   grid-column-start: var(<custom-property>);
 col-start-[<value>]             grid-column-start: <value>;
+
+
 col-end-<number>                grid-column-end: <number>;
 -col-end-<number>               grid-column-end: calc(<number> * -1);
 col-end-auto                    grid-column-end: auto;
 col-end-(<custom-property>)     grid-column-end: var(<custom-property>);
 col-end-[<value>]               grid-column-end: <value>;
 col-auto                        grid-column: auto;
-col-<number>                    grid-column: <number>;
--col-<number>                   grid-column: calc(<number> * -1);
-col-(<custom-property>)         grid-column: var(<custom-property>);
-col-[<value>]                   grid-column: <value>;
 
 ------------------------------------------- grid-template-rows -------------------------------------------------------------
 ------------------------------------------- grid-template-rows -------------------------------------------------------------
@@ -1043,25 +1103,31 @@ grid-rows-(<custom-property>)  grid-template-rows: var(<custom-property>);
 
 /*          ابزارهایی برای کنترل اندازه و قرارگیری عناصر در ردیف‌های شبکه          */
 
+row-<number>                  grid-row: <number>;
+-row-<number>                 grid-row: calc(<number> * -1);
+row-(<custom-property>)       grid-row: var(<custom-property>);
+row-[<value>]                 grid-row: <value>;
+
+
 row-span-<number>             grid-row: span <number> / span <number>;
 row-span-full                 grid-row: 1 / -1;
 row-span-(<custom-property>)  grid-row: span var(<custom-property>) / span var(<custom-property>);
 row-span-[<value>]            grid-row: span <value> / span <value>;
+
+
 row-start-<number>            grid-row-start: <number>;
 -row-start-<number>           grid-row-start: calc(<number> * -1);
 row-start-auto                grid-row-start: auto;
 row-start-(<custom-property>) grid-row-start: var(<custom-property>);
 row-start-[<value>]           grid-row-start: <value>;
+
+
 row-end-<number>              grid-row-end: <number>;
 -row-end-<number>             grid-row-end: calc(<number> * -1);
 row-end-auto                  grid-row-end: auto;
 row-end-(<custom-property>)   grid-row-end: var(<custom-property>);
 row-end-[<value>]             grid-row-end: <value>;
-row-aut                       grid-row: auto;
-row-<number>                  grid-row: <number>;
--row-<number>                 grid-row: calc(<number> * -1);
-row-(<custom-property>)       grid-row: var(<custom-property>);
-row-[<value>]                 grid-row: <value>;
+row-auto                      grid-row: auto;
 
 ------------------------------------------- grid-auto-flow -------------------------------------------------------------
 ------------------------------------------- grid-auto-flow -------------------------------------------------------------
@@ -1070,9 +1136,12 @@ row-[<value>]                 grid-row: <value>;
 
 grid-flow-row         grid-auto-flow: row;
 grid-flow-col         grid-auto-flow: column;
-grid-flow-dense       grid-auto-flow: dense;
+grid-flow-dense       grid-auto-flow: dense;          //  تلاش می‌کند هر جا جای خالی وجود دارد، آیتم‌ها را پر کند grid 
 grid-flow-row-dense   grid-auto-flow: row dense;
 grid-flow-col-dense   grid-auto-flow: column dense;
+
+/*             کمی پراکنده به نظر می‌رسد  layout  سقرار می‌گیرند جاهای خالی باقی می‌مانند و HTML   آیتم‌ها به ترتیب : dense بدون      */
+/*     جا بگیرند  HTML  سعی می‌کند جای خالی را پر کند آیتم‌های کوچکتر ممکن است قبل از آیتم‌های بعدی grid-flow-dense   : Grid  با     */
 
 ------------------------------------------- grid-auto-columns -------------------------------------------------------------
 ------------------------------------------- grid-auto-columns -------------------------------------------------------------
@@ -1106,9 +1175,11 @@ auto-rows-[<value>]    grid-auto-rows: <value>;
 gap-<number>               gap: calc(var(--spacing) * <value>);
 gap-(<custom-property>)    gap: var(<custom-property>);
 gap-[<value>]              gap: <value>;
+
 gap-x-<number>             column-gap: calc(var(--spacing) * <value>);
 gap-x-(<custom-property>)  column-gap: var(<custom-property>);
 gap-x-[<value>]            column-gap: <value>;
+
 gap-y-<number>             row-gap: calc(var(--spacing) * <value>);
 gap-y-(<custom-property>)  row-gap: var(<custom-property>);
 gap-y-[<value>]            row-gap: <value>;
@@ -1205,7 +1276,7 @@ self-baseline-last   align-self: last baseline;
 
 /*        کنترل همزمان نحوه‌ی ترازبندی و تنظیم محتوا       */
 
-place-content-center         place-content: center;
+place-content-center        place-content: center;
 place-content-center-safe   place-content: safe center;
 place-content-start         place-content: start;
 place-content-end           place-content: end;
@@ -3649,18 +3720,20 @@ offset-x → فاصله افقی
 offset-y → فاصله عمودی
 blur-radius → میزان تار شدن سایه
 
+
 shadow → سایه خارج المان
 inset-shadow → سایه داخل المان
 
+
 animate-ping      که بزرگ و شفاف می‌شود و محو می‌شود ping  ایجاد پالس یا ضربان
-Poppins           یک فونت سنس‌سریف هندسی است
+Poppins           یک فونت سنس‌ صریف هندسی است
+
+initial != shrink   عکس یکدیگر اند
+initial         //  CSS برگرد به مقدار پیش‌فرض تعریف‌شده در استاندارد
+shrink          //  کم بود، این آیتم اجازه داره اندازه‌ش کم بشه  container  اگر فضای   /* (shrink  فعال    --    shrink-0  غیر فعال ) */
 
 
-
-
-
-
-
+wrap      وقتی عرض یا فضا کم شد، آیتم‌ها به‌جای فشرده شدن، سطر جدید بسازن )                  پیچیدن   --   رفتن به خط بعد )
 
 
 
