@@ -1649,7 +1649,6 @@ w-5xl            width: var(--container-5xl); /* 64rem (1024px)  */
 w-6xl            width: var(--container-6xl); /* 72rem (1152px)  */
 w-7xl            width: var(--container-7xl); /* 80rem (1280px)  */
 
---------------------------------------------------------------------------
 
 w-px             width: 1px;     //  عرض دقیقاً ۱ پیکسل است
 w-auto           width: auto;    //  عرض به صورت خودکار تعیین می‌شود
@@ -1752,6 +1751,7 @@ size-[<value>]    width: <value>;
 ------------------------------------------- min-width / max-width -------------------------------------------------------------
 ------------------------------------------- min-width / max-width -------------------------------------------------------------
 
+
 min-w-<number>        min-width: calc(var(--spacing) * <number>);
 min-w-<fraction>      min-width: calc(<fraction> * 100%);
 
@@ -1795,6 +1795,10 @@ min-w-svh             min-width: 100svh; */
 /*         max , min تنها تفاوت      */
 min-w-auto            min-width: auto;             ((  ندارد )) 
 ((  ندارد ))                              max-w-none            max-width: none;
+
+
+
+
 
 ------------------------------------------- height -------------------------------------------------------------
 ------------------------------------------- height -------------------------------------------------------------
@@ -1973,6 +1977,8 @@ max-h-lh                   max-height: 1lh; */
 
 
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////  Typography  ///////////////////////////////////////////////
@@ -1980,6 +1986,8 @@ max-h-lh                   max-height: 1lh; */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*         کلاس‌های پایه‌ای تلویند         */
+------------------------------------------- font-family -------------------------------------------------------------
+------------------------------------------- font-family -------------------------------------------------------------
 
 font-sans      font-family: var(--font-sans); /* ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' */
 font-serif     font-family: var(--font-serif); /* ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif */
@@ -1987,7 +1995,10 @@ font-mono      font-family: var(--font-mono); /* ui-monospace, SFMono-Regular, M
 font-(family-name:<custom-property>)      font-family: var(<custom-property>);
 font-[<value>]                              font-family: <value>;
 
----------------------------------------------------------------------------------------
+
+
+------------------------------------------- font-size -------------------------------------------------------------
+------------------------------------------- font-size -------------------------------------------------------------
 
 text-xs       font-size: var(--text-xs); /* 0.75rem (12px) */ 
 text-sm       font-size: var(--text-sm); /* 0.875rem (14px) */ 
@@ -2006,20 +2017,31 @@ text-9xl      font-size: var(--text-9xl); /* 8rem (128px) */
 text-(length:<custom-property>)    font-size: var(<custom-property>);
 text-[<value>]                     font-size: <value>;
 
----------------------------------------------------------------------------------------
 
-ntialiased              -webkit-font-smoothing: antialiased;
+
+------------------------------------------- font-smoothing -------------------------------------------------------------
+------------------------------------------- font-smoothing -------------------------------------------------------------
+
+antialiased             -webkit-font-smoothing: antialiased;
                         -moz-osx-font-smoothing: grayscale;
 
 subpixel-antialiased    -webkit-font-smoothing: auto;
                         -moz-osx-font-smoothing: auto;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- font-style -------------------------------------------------------------
+------------------------------------------- font-style -------------------------------------------------------------
 
 italic            font-style: italic;
 not-italic      font-style: normal;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- font-weight -------------------------------------------------------------
+------------------------------------------- font-weight -------------------------------------------------------------
 
 font-thin                   font-weight: 100;
 font-extralight             font-weight: 200;
@@ -2030,10 +2052,15 @@ font-semibold               font-weight: 600;
 font-bold                   font-weight: 700;
 font-extrabold              font-weight: 800;
 font-black                  font-weight: 900;
+
 font-(<custom-property>)    font-weight: var(<custom-property>);
 font-[<value>]              font-weight: <value>;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- font-stretch عرض -------------------------------------------------------------
+------------------------------------------- font-stretch عرض -------------------------------------------------------------
 
 font-stretch-ultra-condensed       font-stretch: ultra-condensed; /* 50% */
 font-stretch-extra-condensed       font-stretch: extra-condensed; /* 62.5% */
@@ -2045,10 +2072,15 @@ font-stretch-expanded              font-stretch: expanded; /* 125% */
 font-stretch-extra-expanded        font-stretch: extra-expanded; /* 150% */
 font-stretch-ultra-expanded        font-stretch: ultra-expanded; /* 200% */
 font-stretch-<percentage>          font-stretch: <percentage>;
+
 font-stretch-(<custom-property>)   font-stretch: var(<custom-property>);
 font-stretch-[<value>]             font-stretch: <value>;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- font-variant-numeric    اعداد و ارقام داخل متن چگونه رندر ( قدرتی  ،  تناسبی  ،  عادی ) شوند -------------------------------------------------------------
+------------------------------------------- font-variant-numeric    اعداد و ارقام داخل متن چگونه رندر ( قدرتی  ،  تناسبی  ،  عادی ) شوند -------------------------------------------------------------
 
 normal-nums             font-variant-numeric: normal;
 ordinal                 font-variant-numeric: ordinal;
@@ -2060,7 +2092,11 @@ tabular-nums            font-variant-numeric: tabular-nums;
 diagonal-fractions      font-variant-numeric: diagonal-fractions;
 stacked-fractions       font-variant-numeric: stacked-fractions;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- letter-spacing    فاصله بین حروف -------------------------------------------------------------
+------------------------------------------- letter-spacing    فاصله بین حروف -------------------------------------------------------------
 
 tracking-tighter              letter-spacing: var(--tracking-tighter); /* -0.05em */
 tracking-tight                letter-spacing: var(--tracking-tight); /* -0.025em */
@@ -2071,32 +2107,45 @@ tracking-widest               letter-spacing: var(--tracking-widest); /* 0.1em *
 tracking-(<custom-proerty>)   letter-spacing: var(<custom-property>);
 tracking-[<value>]            letter-spacing: <value>;
 
----------------------------------------------------------------------------------------
+
+
+
+
+------------------------------------------- line-clamp  ...محدود کردن تعداد خطوط متن و ایجاد   -------------------------------------------------------------
+------------------------------------------- line-clamp  ...محدود کردن تعداد خطوط متن و ایجاد   -------------------------------------------------------------
 
 line-clamp-<number>           overflow: hidden;
                               display: -webkit-box;
                               -webkit-box-orient: vertical;
                               -webkit-line-clamp: <number>;
 
-
 line-clamp-none                overflow: visible;
                                display: block;
                                -webkit-box-orient: horizontal;
                                -webkit-line-clamp: unset;
-
 
 line-clamp-(<custom-property>) overflow: hidden;
                               display: -webkit-box;
                               -webkit-box-orient: vertical;
                               -webkit-line-clamp: var(<custom-property>);
 
-
 line-clamp-[<value>]           overflow: hidden;
                                display: -webkit-box;
                               -webkit-box-orient: vertical;
                               -webkit-line-clamp: <value>;
 
----------------------------------------------------------------------------------------
+
+     کلاس   	تعداد خطوط محدود    	توضیح
+line-clamp-1    	1	        فقط یک خط نمایش، بقیه …
+line-clamp-2	    2	        دو خط نمایش، بقیه     …
+line-clamp-3	    3	        سه خط نمایش، بقیه …
+    …             	…	                …
+line-clamp-none	بدون محدودیت	متن کامل نمایش داده می‌شود
+
+
+
+------------------------------------------- line-height   ارتفاع -------------------------------------------------------------
+------------------------------------------- line-height   ارتفاع -------------------------------------------------------------
 
 text-<size>/<number>              font-size: <size>;
 text-<size>/(<custom-property>)   font-size: <size>;
@@ -2106,18 +2155,27 @@ leading-<number>                  line-height: calc(var(--spacing) * <number>);
 leading-(<custom-property>)       line-height: var(<custom-property>);
 leading-[<value>]                 line-height: <value>;
 
----------------------------------------------------------------------------------------
+------------------------------------------- list-style-image   -------------------------------------------------------------
+------------------------------------------- list-style-image   -------------------------------------------------------------
 
 list-image-[<value>]              list-style-image: <value>;
 list-image-(<custom-property>)    list-style-image: var(<custom-property>);
 list-image-none                   list-style-image: none;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- list-style-position   -------------------------------------------------------------
+------------------------------------------- list-style-position   -------------------------------------------------------------
 
 list-inside       list-style-position: inside;
 list-outside      list-style-position: outside;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- list-style-type   -------------------------------------------------------------
+------------------------------------------- list-style-type   -------------------------------------------------------------
 
 list-disc                  list-style-type: disc;
 list-decimal               list-style-type: decimal;
@@ -2125,7 +2183,10 @@ list-none                  list-style-type: none;
 list-(<custom-property>)   list-style-type: var(<custom-property>);
 list-[<value>]             list-style-type: <value>;
 
----------------------------------------------------------------------------------------
+
+
+------------------------------------------- text-align   -------------------------------------------------------------
+------------------------------------------- text-align   -------------------------------------------------------------
 
 text-left        text-align: left;
 text-center      text-align: center;
@@ -2134,11 +2195,15 @@ text-justify     text-align: justify;
 text-start       text-align: start;
 text-end         text-align: end;
 
----------------------------------------------------------------------------------------
 
-text-inherit                color: inherit;
-text-current                color: currentColor;
-text-transparent            color: transparent;
+
+
+-------------------------------------------  color   -------------------------------------------------------------
+-------------------------------------------  color   -------------------------------------------------------------
+
+text-inherit                color: inherit;                //  رنگ والد را داشته باشد
+text-current                color: currentColor;           //  مرورگر می‌شود currentColor رنگ متن همان
+text-transparent            color: transparent;            //  رنگ متن شفاف
 text-black                  color: var(--color-black);
 text-white                  color: var(--color-white);
 
@@ -2149,18 +2214,28 @@ text-[<value>]              color: <value>;
 text-red-50                    color: var(--color-red-50); /* oklch(97.1% 0.013 */
 text-color-( 50 ta 950 )       color: var(--color-red-( 50 ta 950 )); /* oklch(97.1% 0.013 */
 
----------------------------------------------------------------------------------------
+
+
+
+
+------------------------------------------- text-decoration-line    -------------------------------------------------------------
+------------------------------------------- text-decoration-line    -------------------------------------------------------------
 
 underline            text-decoration-line: underline;
 overline             text-decoration-line: overline;
 line-through         text-decoration-line: line-through;
 no-underline         text-decoration-line: none;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- text-decoration-color  چه رنگی باشد underline, line-through, overline  رنگ خطوط تزئینی متن مثل  -------------------------------------------------------------
+------------------------------------------- text-decoration-color  چه رنگی باشد underline, line-through, overline  رنگ خطوط تزئینی متن مثل  -------------------------------------------------------------
 
 decoration-inherit                text-decoration-color: inherit;
 decoration-current                text-decoration-color: currentColor;
 decoration-transparent            text-decoration-color: transparent;
+
 decoration-black                  text-decoration-color: var(--color-black);
 decoration-white                  text-decoration-color: var(--color-white);
 
@@ -2171,15 +2246,24 @@ decoration-[<value>]              text-decoration-color: <value>;
 decoration-red-50                 text-decoration-color: var(--color-red-50); /* oklch(97.1% 0.013 */
 decoration-color-( 50 ta 950 )    text-decoration-color: var(--color-red-( 50 ta 950 )); /* oklch(97.1% 0.013 */
 
----------------------------------------------------------------------------------------
 
-decoration-solid       text-decoration-style: solid;
-decoration-double      text-decoration-style: double;
-decoration-dotted      text-decoration-style: dotted;
-decoration-dashed      text-decoration-style: dashed;
-decoration-wavy        text-decoration-style: wavy;
 
----------------------------------------------------------------------------------------
+
+
+------------------------------------------- text-decoration-style  تعیین سبک خط تزئینی متن -------------------------------------------------------------
+------------------------------------------- text-decoration-style  تعیین سبک خط تزئینی متن -------------------------------------------------------------
+
+decoration-solid       text-decoration-style: solid;     //  خط ساده و پیوسته
+decoration-double      text-decoration-style: double;    //  دو خط موازی زیر متن
+decoration-dotted      text-decoration-style: dotted;    //  خط نقطه‌چین
+decoration-dashed      text-decoration-style: dashed;    //  خط خط‌چین
+decoration-wavy        text-decoration-style: wavy;      //  خط موج‌دار
+
+
+
+
+------------------------------------------- text-decoration-thickness  ضخامت خطوط تزئینی متن -------------------------------------------------------------
+------------------------------------------- text-decoration-thickness  ضخامت خطوط تزئینی متن -------------------------------------------------------------
 
 decoration-<number>                    text-decoration-thickness: <number>px;
 decoration-from-font                   text-decoration-thickness: from-font;
@@ -2187,7 +2271,21 @@ decoration-auto                        text-decoration-thickness: auto;
 decoration-(length:<custom-property>)  text-decoration-thickness: var(<custom-property>);
 decoration-[<value>]                   text-decoration-thickness: <value>;
 
----------------------------------------------------------------------------------------
+
+
+کلاس  Tailwind            	CSS معادل                    	                    توضیح
+decoration-auto	  text-decoration-thickness: auto;  	ضخامت پیش‌فرض مرورگر
+decoration-0	  text-decoration-thickness: 0;        	بدون خط (مخفف)
+decoration-1	  text-decoration-thickness: 1px;    	خط ۱ پیکسل
+decoration-2	  text-decoration-thickness: 2px;    	خط ۲ پیکسل
+decoration-4	  text-decoration-thickness: 4px;    	خط ۴ پیکسل
+decoration-8	  text-decoration-thickness: 8px;    	خط ۸ پیکسل
+
+
+
+
+------------------------------------------- text-underline-offset    جابجایی موقعیت خط زیر متن  -------------------------------------------------------------
+------------------------------------------- text-underline-offset    جابجایی موقعیت خط زیر متن  -------------------------------------------------------------
 
 underline-offset-<number>              text-underline-offset: <number>px;
 -underline-offset-<number>             text-underline-offset: calc(<number>px * -1);
@@ -2195,14 +2293,32 @@ underline-offset-auto                  text-underline-offset: auto;
 underline-offset-(<custom-property>)   text-underline-offset: var(<custom-property>);
 underline-offset-[<value>]             text-underline-offset: <value>;
 
----------------------------------------------------------------------------------------
+
+
+کلاس Tailwind    	            CSS معادل                    	        توضیح
+underline-offset-auto	text-underline-offset: auto;	   پیش‌فرض مرورگر
+underline-offset-0	    text-underline-offset: 0px;	      خط دقیقا روی متن
+underline-offset-1	    text-underline-offset: 0.25rem;  	فاصله کوچک
+underline-offset-2	    text-underline-offset: 0.5rem;	    فاصله متوسط
+underline-offset-4	    text-underline-offset: 1rem;	    فاصله بیشتر
+underline-offset-8	    text-underline-offset: 2rem;	    فاصله زیاد
+    
+
+
+
+-------------------------------------------  text-transform    -------------------------------------------------------------
+-------------------------------------------  text-transform    -------------------------------------------------------------
 
 uppercase       text-transform: uppercase;
 lowercase       text-transform: lowercase;
 capitalize      text-transform: capitalize;
 normal-case     text-transform: none;
 
----------------------------------------------------------------------------------------
+
+
+
+------------------------------------------- text-overflow     رفتار محتوا وقتی از محدوده المان بیرون می‌رود  -------------------------------------------------------------
+------------------------------------------- text-overflow     رفتار محتوا وقتی از محدوده المان بیرون می‌رود  -------------------------------------------------------------
 
 truncate            overflow: hidden;
                     text-overflow: ellipsis;
@@ -2212,14 +2328,21 @@ truncate            overflow: hidden;
 text-ellipsis      text-overflow: ellipsis;
 text-clip          text-overflow: clip;
 
----------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------  text-wrap   -------------------------------------------------------------
+-------------------------------------------  text-wrap   -------------------------------------------------------------
 
 text-wrap         text-wrap: wrap;
 text-nowrap       text-wrap: nowrap;
 text-balance      text-wrap: balance;
 text-pretty       text-wrap: pretty;
 
----------------------------------------------------------------------------------------
+
+
+------------------------------------------- text-indent  چقدر خط اول یک پاراگراف از لبه المان فاصله داشته باشد -------------------------------------------------------------
+------------------------------------------- text-indent  چقدر خط اول یک پاراگراف از لبه المان فاصله داشته باشد -------------------------------------------------------------
 
 indent-<number>               text-indent: calc(var(--spacing) * <number>);
 -indent-<number>              text-indent: calc(var(--spacing) * -<number>);
@@ -2228,7 +2351,18 @@ indent-px                     text-indent: 1px;
 indent-(<custom-property>)    text-indent: var(<custom-property>);
 indent-[<value>]              text-indent: <value>;
 
----------------------------------------------------------------------------------------
+
+
+کلاس Tailwind	    CSS معادل            	توضیح
+indent-0	    text-indent: 0px;	      بدون تورفتگی
+indent-1	    text-indent: 0.25rem; 	  تورفتگی کوچک
+indent-2	    text-indent: 0.5rem;	 تورفتگی متوسط
+indent-4	    text-indent: 1rem;	     تورفتگی بزرگ
+indent-8	    text-indent: 2rem;	     تورفتگی خیلی بزرگ
+
+
+------------------------------------------- vertical-align   -------------------------------------------------------------
+------------------------------------------- vertical-align   -------------------------------------------------------------
 
 align-baseline             vertical-align: baseline;
 align-top                  vertical-align: top;
@@ -2241,34 +2375,56 @@ align-super                vertical-align: super;
 align-(<custom-property>)  vertical-align: var(<custom-property>);
 align-[<value>]            vertical-align: <value>;
 
----------------------------------------------------------------------------------------
 
-whitespace-normal          white-space: normal;
-whitespace-nowrap          white-space: nowrap;
-whitespace-pre             white-space: pre;
-whitespace-pre-line        white-space: pre-line;
-whitespace-pre-wrap        white-space: pre-wrap;
-whitespace-break-spaces    white-space: break-spaces;
 
----------------------------------------------------------------------------------------
 
-break-normal     word-break: normal;
-break-all        word-break: break-all;
-break-keep       word-break: keep-all;
 
----------------------------------------------------------------------------------------
+------------------------------------------- white-space  رفتار فاصله‌ها و شکست خطوط در متن -------------------------------------------------------------
+------------------------------------------- white-space  رفتار فاصله‌ها و شکست خطوط در متن -------------------------------------------------------------
+
+whitespace-normal          white-space: normal;        //  خطوط به صورت طبیعی شکسته می‌شوند و فاصله‌ها یکسان می‌شوند
+whitespace-nowrap          white-space: nowrap;        //  متن در یک خط نمایش داده می‌شود، شکست خط ندارد و در صورت طولانی بودن اسکرول ایجاد می‌شود
+whitespace-pre             white-space: pre;           //  مام فاصله‌ها و خطوط حفظ می‌شوند (مثل تگ <pre>)
+whitespace-pre-line        white-space: pre-line;      //  خطوط جدید حفظ می‌شوند، اما فاصله‌ها نرمال می‌شوند
+whitespace-pre-wrap        white-space: pre-wrap;      //  خطوط و فاصله‌ها حفظ می‌شوند، و متن طولانی در صورت نیاز به خط بعد شکسته می‌شود
+whitespace-break-spaces    white-space: break-spaces;  //  خطوط و فاصله‌ها حفظ می‌شوند، متن طولانی wrap می‌شود و فاصله‌های سفید طولانی حفظ می‌شوند
+
+
+
+
+
+------------------------------------------- word-break  نحوه شکستن کلمات طولانی در متن -------------------------------------------------------------
+------------------------------------------- word-break  نحوه شکستن کلمات طولانی در متن -------------------------------------------------------------
+
+break-normal     word-break: normal;        //  رفتار پیش‌فرض مرورگر، کلمات فقط در جاهای مناسب شکسته می‌شوند
+break-all        word-break: break-all;     //  اگر کلمه طولانی باشد و از المان خارج شود، در خط بعد شکسته می‌شود
+break-keep       word-break: keep-all;      //  کلمات طولانی در هر نقطه می‌توانند شکسته شوند تا از overflow جلوگیری شود
+
+
+
+
+------------------------------------------- overflow-wrap  چگونگی شکستن کلمات طولانی هنگام رسیدن به لبه المان -------------------------------------------------------------
+------------------------------------------- overflow-wrap  چگونگی شکستن کلمات طولانی هنگام رسیدن به لبه المان -------------------------------------------------------------
 
 wrap-break-word    overflow-wrap: break-word;
 wrap-anywhere      overflow-wrap: anywhere;
 wrap-normal        overflow-wrap: normal;
 
----------------------------------------------------------------------------------------
+
+
+
+
+------------------------------------------- hyphens   کردن کلمات طولانی از خط تیره استفاده کند یا نه wrap کردن -------------------------------------------------------------
+------------------------------------------- hyphens   کردن کلمات طولانی از خط تیره استفاده کند یا نه wrap کردن -------------------------------------------------------------
 
 hyphens-none       hyphens: none;
 hyphens-manual     hyphens: manual;
 hyphens-auto       hyphens: auto;
 
----------------------------------------------------------------------------------------
+
+
+------------------------------------------- color  استفاده می‌شود after:: و after::  ها pseudo-element است و معمولاً برای css property  مربوط به -------------------------------------------------------------
+------------------------------------------- color  استفاده می‌شود after:: و after::  ها pseudo-element است و معمولاً برای css property  مربوط به -------------------------------------------------------------
 
 content-[<value>]              content: <value>;
 content-(<custom-property>)    content: var(<custom-property>);
