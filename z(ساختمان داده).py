@@ -847,7 +847,27 @@ class SinglyLinkedList: # کلاس لیست پیوندی یکطرفه
                 current = current.next   #به نود بعدی می‌رویم
             current.next = new_node      # نود جدید را به انتهای لیست وصل می‌کنیم
         self.size += 1
-                    
+
+  def delete(self, data):
+    if self.head == None:
+        return
+
+    if self.head.data == data:
+        self.head = self.head.next
+        return
+
+    current = self.head
+    prev = None
+
+    while current:
+        if current.data == data:
+            prev.next = current.next
+            return
+        prev = current
+        current = current.next
+
+  
+  
     def delete(self, data):        #
         if self.head.data == data: #اگر مقدار نود اول برابر data باشد
             self.head = self.head.next     #
@@ -904,6 +924,13 @@ print()
 obj.reverseLink()
 obj.printList()
 
+
+
+فقط به جلو می‌توان حرکت کرد
+همیشه آدرس نود بعدی را نگه می‌دارد  next
+دارد next = NULL  آخرین نود، مقدار
+
+
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
@@ -945,6 +972,12 @@ obj.printList()
 obj.deleteNode(3)
 print()
 obj.printList()
+
+
+
+وسط لیست: prev و next هر دو آدرس دارند
+اول لیست: prev = NULL
+آخر لیست: next = NULL
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
@@ -1146,4 +1179,43 @@ Min-Heap: (  پدر≤ فرزندان ) مقدار هر گره کوچک‌تر �
 # اگر وقتت کمه:
 # تمرین‌های ۲، ۶، ۷، ۱۰ ← خیلی پرتکرار
 # حفظ کردن تفاوت‌ها (BST / Binary Tree / Heap / AVL)
+
+
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+
+class Node:
+ def __init__ (self, data=None):
+ self.data = data
+ self.next = None
+
+
+class singlylinklist:
+  def append(self, data):
+   node = Node(data)
+   if self.head:
+     self.head.next = node
+     self.head = node
+   else:
+     self.tail = node
+     self.head = node
+
+  def delete(self, data):
+   current = self.tail
+   prev = self.tail
+   while current:
+     if current.data == data:
+      if current == self.tail:
+       self.tail = current.next
+     else:
+       prev.next = current.next
+       self.count -= 1
+     return
+       prev = current
+       current = current.next
 
