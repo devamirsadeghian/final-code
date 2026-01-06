@@ -12,6 +12,7 @@ ressponsive:class
     md:flex
     sm:grow
 
+-------------------------------------------------------------------------------------------------------------
 
 /*  فرق   @theme    و    root:   */
 root: {
@@ -22,10 +23,9 @@ root: {
       local   ( روی برخی فایل ها اعمال میشه )
 }
 
-
+-------------------------------------------------------------------------------------------------------------
 
 *  sm - md - lg - xl - 2xl
-
 
 
 #  (  s  e   )
@@ -43,88 +43,97 @@ root: {
 ###  (  s  e  t  b  r  l  ss   se  ee  es  tl  rl  br  bl )
 ###  ( start  end  top  botton  right  left  start/start stert/end  ...)
 
-
+-------------------------------------------------------------------------------------------------------------
 
 /*  فرق   @sm    و    sm:   */
 sm:  = واکنش به صفحه
 @sm: = واکنش به کانتینر
 
+-------------------------------------------------------------------------------------------------------------
 
 @       ==>>    html  هست نه استفاده مستقیم توی tailwind و تنظیم css  مخصوص نوشتن 
 @theme  ==>>   استفاده میشه css varibale رنگ ، فونت و ..  design token برای تعریف 
 
-
-
-|        مورد       |        `@` directives           |          class‌ها          |
+-------------------------------------------------------------------------------------------------------------
+|       class       |         `@` directives          |           مورد            |
 | ----------------- | ------------------------------- | ------------------------- |
 |    فایل           |    محل استفاده CSS              |      فایل HTML / JSX      |
 |   استایل‌دهی مستقیم       |     پیکربندی و ترکیب استایل‌ها   |          کاربرد    |
 |   ا |                 ❌ نه           |          ✅ بله HTML قابل استفاده در    |
 | هدف               |      ساخت و مدیریت استایل       | استفاده از استایل         |
-
-
+-------------------------------------------------------------------------------------------------------------
 
 /*  فرق     max-sm    و    sm   */
 است max-width مبنا max-sm  ولی در sm است یعنی min-width  عکس یکدیگر اند و تلویند بر پایه
 
+-------------------------------------------------------------------------------------------------------------
 
 order  :   عدد کمتر ، اولویت بیشتر
 
+-------------------------------------------------------------------------------------------------------------
 
 offset-x → فاصله افقی
 offset-y → فاصله عمودی
 blur-radius → میزان تار شدن سایه
 
-
-
+-------------------------------------------------------------------------------------------------------------
 
 &&&&-<number>              &&&& <number>;                   &&&&-2
 &&&&-<fraction>            &&&& calc(<fraction> * 100%);    &&&&-4/9     ( کسر در مقدار ۱۰۰ ضرب شده)
-
-
-&&&&-auto                  &&&& auto;                       آماده
-&&&&-initial               &&&& 0 auto;                     آماده
-&&&&-none                  &&&& none;                       آماده
 
 
 &&&&-(<custom-property>)   &&&& var(<custom-property>);     &&&&-[3_1_0%]   &&&&-[3_1_48px]            ...  ( grow_shrink_basis  ترکیبی از)
 &&&&-[<value>]             &&&& <value>;                    &&&&-2                          ( بازه عدد مثبت ، صفر ، گاهی میتواند منفی باشد)  
 
 
+&&&&-auto                  &&&& auto;                       آماده
+&&&&-initial               &&&& 0 auto;                     آماده
+&&&&-none                  &&&& none;                       آماده
+
+-------------------------------------------------------------------------------------------------------------
+
+basis	                                         اندازه‌ی اولیه چقدره؟
 grow  	    (      مقدار میگیره      )   وقتی فضا هست، چقدر بزرگ بشه؟
 shrink	    (فقط فعال و غیر فعال میشه)       وقتی جا نیست، کوچیک بشه؟ 
-basis	                                         اندازه‌ی اولیه چقدره؟
 
-
+-------------------------------------------------------------------------------------------------------------
 
 evenly   : از وسط  چیدمان میکنه
 between  : از گوشه چیدمان میکنه
 
+-------------------------------------------------------------------------------------------------------------
 
+justify :  افقی
+align   :  عمودی
+place   :  هر دو
+
+content  :  ( والد )   (کل بلوک)             ا                                      (روی همه ایتم ها ولی در محتوی کلی اعمال میشه)        کل محتوی ها با هم
+items    :  ( والد )   (همه آیتم کل بلوک)        ا                                                                             (روی همه ایتم ها ولی در محتوی خود اعمال میشه)         هر محتوی جدا
+self     :  ( فرزند )  (یک آیتم خاص)             ا                                                                             (روی  یک  ایتم  خاص  در محتوی خود اعمال میشه)         هر محتوی جدا
+
+-------------------------------------------------------------------------------------------------------------
 
 /*     افق    justify */
-justify-start
-justify-items-start    :          همه آیتم‌ها در ابتدای سلول خود قرار می‌گیرند
-justify-self-start     :    فقط آیتم مشخص شده در ابتدای سلول خود قرار میگیرد
+justify-##  (content)
+justify-items-##    :          همه آیتم‌ها در ابتدای سلول خود قرار می‌گیرند
+justify-self-##     :    فقط آیتم مشخص شده در ابتدای سلول خود قرار میگیرد
 
 
 /*     عمودی   align  */
-content-start  :    کل بلوک
-items-start    :    همه آیتم‌ها
-self-start     :    یک آیتم خاص
+content-##  :    کل بلوک
+items-##    :    همه آیتم‌ها
+self-##     :    یک آیتم خاص
 
 
-place-content-start  :    
-place-items-start    :    
-place-self-start     :    
+/*     هر دو با هم   place  */
+place-content-##  :    
+place-items-##    :    
+place-self-##     :    
 
+----------------------------------------------------------------------------------------------------------------------
 
-content  :  ( والد )    (هر آیتم)     کل محتوی ها با هم
-items    :  ( والد )    (کل بلوک)          هر محتوی جدا
-self     :  ( فرزند )  (یک آیتم خاص)       هر محتوی جدا
-
-
-revesre  :   منطق ها رو برعکس میکنه با شرایطی خاص
+revesre  :   منطق ها رو برعکس میکنه با شرایطی خاص  flex   در
+space    :  ( چون فاصله «بین آیتم‌ها» معنی دارد، نه برای هر ۴ جهت همزمان) فقط برای ایجاد فاصله بین آیتم‌ها هستند، نه دور یک آیتم، و فقط در یک محور کار می‌کنند
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -146,7 +155,6 @@ xl        @media (width >= 80rem)
 
 
 
-
 /* Container size reference */
 // By default, Tailwind includes container sizes ranging from 16rem (256px) to 80rem (1280px):
 
@@ -165,7 +173,6 @@ xl        @media (width >= 80rem)
 @6xl	       @container (width >= 72rem)
 @7xl	       @container (width >= 80rem)
 @min-[...]	   @container (width >= ...) */
-
 
 
 /*  ابزار  */
@@ -1232,7 +1239,7 @@ justify-self-stretch       justify-self: stretch;
 
 /*         flex و grid   نحوه قرارگیری ردیف‌ها در کانتینرهای چند ردیفی       */
 
-content-normal       align-content: normal;
+content-normal      align-content: normal;
 content-center      align-content: center;
 content-start       align-content: flex-start;
 content-end         align-content: flex-end;
@@ -1316,38 +1323,57 @@ place-self-stretch       place-self: stretch;
 ------------------------------------------- padding -------------------------------------------------------------
 ------------------------------------------- padding -------------------------------------------------------------
 
+/* p#$-...    (میتواند باشد یا نباشد  ##) */
+/*  مقدار مثبت */
+
 p-<number>                 padding: calc(var(--spacing) * <number>);
 p-px                       padding: 1px;
 p-(<custom-property>)      padding: var(<custom-property>);
 p-[<value>]                padding: <value>;
+
+
 px-<number>                padding-inline: calc(var(--spacing) * <number>);
 px-px                      padding-inline: 1px;
 px-(<custom-property>)     padding-inline: var(<custom-property>);
 px-[<value>]               padding-inline: <value>;
+
+
 py-<number>                padding-block: calc(var(--spacing) * <number>);
 py-px                      padding-block: 1px;
 py-(<custom-property>)     padding-block: var(<custom-property>);
 py-[<value>]               padding-block: <value>;
+
+
 ps-<number>                padding-inline-start: calc(var(--spacing) * <number>);
 ps-px                      padding-inline-start: 1px;
 ps-(<custom-property>)     padding-inline-start: var(<custom-property>);
 ps-[<value>]               padding-inline-start: <value>;
+
+
 pe-<number>                padding-inline-end: calc(var(--spacing) * <number>);
 pe-px                      padding-inline-end: 1px;
 pe-(<custom-property>)     padding-inline-end: var(<custom-property>);
 pe-[<value>]               padding-inline-end: <value>;
+
+
 pt-<number>                padding-top: calc(var(--spacing) * <number>);
 pt-px                      padding-top: 1px;
 pt-(<custom-property>)     padding-top: var(<custom-property>);
 pt-[<value>]               padding-top: <value>;
+
+
 pr-<number>                padding-right: calc(var(--spacing) * <number>);
 pr-px                      padding-right: 1px;
 pr-(<custom-property>)     padding-right: var(<custom-property>);
 pr-[<value>]               padding-right: <value>;
+
+
 pb-<number>                padding-bottom: calc(var(--spacing) * <number>);
 pb-px                      padding-bottom: 1px;
 pb-(<custom-property>)     padding-bottom: var(<custom-property>);
 pb-[<value>]               padding-bottom: <value>;
+
+
 pl-<number>                padding-left: calc(var(--spacing) * <number>);
 pl-px                      padding-left: 1px;
 pl-(<custom-property>)     padding-left: var(<custom-property>);
@@ -1356,8 +1382,9 @@ pl-[<value>]               padding-left: <value>;
 ------------------------------------------- margin -------------------------------------------------------------
 ------------------------------------------- margin -------------------------------------------------------------
 
-space-   // فاصله مثبت
--space-  // فاصله منفی
+/* m#$-...    (میتواند باشد یا نباشد  ##) */
+/*  مقدار مثبت ،  منفی */
+
 
 /* نیز میشوند  m  mx  my mt  mr  mb  ml   شامل موارد  */
 space-x-num    // برای ایجاد فاصله افقی بین فرزندان مستقیم یک کانتینر
@@ -1368,70 +1395,137 @@ space-y-*	فاصله عمودی بین فرزندان
 
 m-<number>                   margin: calc(var(--spacing) * <number>);
 -m-<number>                  margin: calc(var(--spacing) * -<number>);
-m-auto                       margin: auto;
 m-px                         margin: 1px;
 -m-px                        margin: -1px;
+
+m-auto                       margin: auto;
+
 m-(<custom-property>)        margin: var(<custom-property>);
 m-[<value>]                  margin: <value>;
+
+----------------------------------------------------------------------------------------------
+
 mx-<number>                  margin-inline: calc(var(--spacing) * <number>);
 -mx-<number>                 margin-inline: calc(var(--spacing) * -<number>);
-mx-auto                      margin-inline: auto;
 mx-px                        margin-inline: 1px;
 -mx-px                       margin-inline: -1px;
+
+mx-auto                      margin-inline: auto;
+
 mx-(<custom-property>)       margin-inline: var(<custom-property>);
 mx-[<value>]                 margin-inline: <value>;
+
+----------------------------------------------------------------------------------------------
+
 my-<number>                  margin-block: calc(var(--spacing) * <number>);
 -my-<number>                 margin-block: calc(var(--spacing) * -<number>);
-my-auto                      margin-block: auto;
 my-px                        margin-block: 1px;
 -my-px                       margin-block: -1px;
+
+my-auto                      margin-block: auto;
+
 my-(<custom-property>)       margin-block: var(<custom-property>);
 my-[<value>]                 margin-block: <value>;
+
+----------------------------------------------------------------------------------------------
+
 ms-<number>                  margin-inline-start: calc(var(--spacing) * <number>);
 -ms-<number>                 margin-inline-start: calc(var(--spacing) * -<number>);
-ms-auto                      margin-inline-start: auto;
 ms-px                        margin-inline-start: 1px;
 -ms-px                       margin-inline-start: -1px;
+
+ms-auto                      margin-inline-start: auto;
+
 ms-(<custom-property>)       margin-inline-start: var(<custom-property>);
 ms-[<value>]                 margin-inline-start: <value>;
+
+----------------------------------------------------------------------------------------------
+
 me-<number>                  margin-inline-end: calc(var(--spacing) * <number>);
 -me-<number>                 margin-inline-end: calc(var(--spacing) * -<number>);
-me-auto                      margin-inline-end: auto;
 me-px                        margin-inline-end: 1px;
 -me-px                       margin-inline-end: -1px;
+
+me-auto                      margin-inline-end: auto;
+
 me-(<custom-property>)       margin-inline-end: var(<custom-property>);
 me-[<value>]                 margin-inline-end: <value>;
+
+----------------------------------------------------------------------------------------------
+
 mt-<number>                  margin-top: calc(var(--spacing) * <number>);
 -mt-<number>                 margin-top: calc(var(--spacing) * -<number>);
-mt-auto                      margin-top: auto;
 mt-px                        margin-top: 1px;
 -mt-px                       margin-top: -1px;
+
+mt-auto                      margin-top: auto;
+
 mt-(<custom-property>)       margin-top: var(<custom-property>);
 mt-[<value>]                 margin-top: <value>;
+
+----------------------------------------------------------------------------------------------
+
 mr-<number>                  margin-right: calc(var(--spacing) * <number>);
 -mr-<number>                 margin-right: calc(var(--spacing) * -<number>);
-mr-auto                      margin-right: auto;
 mr-px                        margin-right: 1px;
 -mr-px                       margin-right: -1px;
+
+mr-auto                      margin-right: auto;
+
 mr-(<custom-property>)       margin-right: var(<custom-property>);
 mr-[<value>]                 margin-right: <value>;
+
+----------------------------------------------------------------------------------------------
+
 mb-<number>                  margin-bottom: calc(var(--spacing) * <number>);
 -mb-<number>                 margin-bottom: calc(var(--spacing) * -<number>);
-mb-auto                      margin-bottom: auto;
 mb-px                        margin-bottom: 1px;
 -mb-px                       margin-bottom: -1px;
+
+mb-auto                      margin-bottom: auto;
+
 mb-(<custom-property>)       margin-bottom: var(<custom-property>);
 mb-[<value>]                 margin-bottom: <value>;
+
+----------------------------------------------------------------------------------------------
+
 ml-<number>                  margin-left: calc(var(--spacing) * <number>);
 -ml-<number>                 margin-left: calc(var(--spacing) * -<number>);
-ml-auto                      margin-left: auto;
 ml-px                        argin-left: 1px;
 -ml-px                       margin-left: -1px;
+
+ml-auto                      margin-left: auto;
+
 ml-(<custom-property>)       margin-left: var(<custom-property>);
 ml-[<value>]                 margin-left: <value>;
 
+----------------------------------------------------------------------------------------------
+/*   فقط در  یک راستا    اعمال میشه    */
+/*   اعمال میشه  x/y  فقط در راستای   */
+
+/* X */
+space-x-<number>
+-space-x-<number>
+space-x-px
+-space-x-px
+space-x-(<custom-property>)
+space-x-[<value>]
 
 
+/* y */
+space-y-<number>
+-space-y-<number>
+space-y-px
+-space-y-px
+space-y-(<custom-property>)
+space-y-[<value>]
+
+
+/*  عکس  */
+space-x-reverse
+space-y-reverse
+
+-----------------------------------------------------------------
 
 space-x-<number>     & > :not(:last-child) {
                     --tw-space-x-reverse: 0;
@@ -1539,105 +1633,129 @@ space-y-reverse         & > :not(:last-child)) {
 
 w-<number>       width: calc(var(--spacing) * <number>);
 w-<fraction>     width: calc(<fraction> * 100%);
-w-3xs            width: var(--container-3xs); /* 16rem (256px) */
-w-2xs            width: var(--container-2xs); /* 18rem (288px) */
-w-xs             width: var(--container-xs); /* 20rem (320px) */
-w-sm             width: var(--container-sm); /* 24rem (384px) */
-w-md             width: var(--container-md); /* 28rem (448px) */
-w-lg             width: var(--container-lg); /* 32rem (512px) */
-w-xl             width: var(--container-xl); /* 36rem (576px) */
-w-2xl            width: var(--container-2xl); /* 42rem (672px) */
-w-3xl            width: var(--container-3xl); /* 48rem (768px) */
-w-4xl            width: var(--container-4xl); /* 56rem (896px) */
-w-5xl            width: var(--container-5xl); /* 64rem (1024px) */
-w-6xl            width: var(--container-6xl); /* 72rem (1152px) */
-w-7xl            width: var(--container-7xl); /* 80rem (1280px) */
-w-auto           width: auto;
-w-px             width: 1px;
-w-full           width: 100%;
-w-screen         width: 100vw;
+
+
+w-3xs            width: var(--container-3xs); /* 16rem (256px)   */
+w-2xs            width: var(--container-2xs); /* 18rem (288px)   */
+w-xs             width: var(--container-xs); /* 20rem (320px)    */
+w-sm             width: var(--container-sm); /* 24rem (384px)    */
+w-md             width: var(--container-md); /* 28rem (448px)    */
+w-lg             width: var(--container-lg); /* 32rem (512px)    */
+w-xl             width: var(--container-xl); /* 36rem (576px)    */
+w-2xl            width: var(--container-2xl); /* 42rem (672px)   */
+w-3xl            width: var(--container-3xl); /* 48rem (768px)   */
+w-4xl            width: var(--container-4xl); /* 56rem (896px)   */
+w-5xl            width: var(--container-5xl); /* 64rem (1024px)  */
+w-6xl            width: var(--container-6xl); /* 72rem (1152px)  */
+w-7xl            width: var(--container-7xl); /* 80rem (1280px)  */
+
+--------------------------------------------------------------------------
+
+w-px             width: 1px;     //  عرض دقیقاً ۱ پیکسل است
+w-auto           width: auto;    //  عرض به صورت خودکار تعیین می‌شود
+w-full           width: 100%;    //  عرض المان برابر ۱۰۰٪ عرض والد می‌شود
+w-screen         width: 100vw;   //  عرض المان برابر کل عرض صفحه
+w-fit            width: fit-content;  // عرض المان دقیقاً به اندازه محتوای داخلی آن تنظیم می‌شود
+
+
+w-min            width: min-content;
+w-max            width: max-content;
+
+w-(<custom-property>)  width: var(<custom-property>);
+w-[<value>]            width: <value>;
+
+/* 
 w-dvw            width: 100dvw;
 w-dvh            width: 100dvh;
 w-lvw            width: 100lvw;
 w-lvh            width: 100lvh;
 w-svw            width: 100svw;
-w-svh            width: 100svh;
-w-min            width: min-content;
-w-max            width: max-content;
-w-fit            width: fit-content;
+w-svh            width: 100svh; */
+
+--------------------------------------------------------------------------
+
+size-<number>
+size-<fraction>
 
 
-w-(<custom-property>)  width: var(<custom-property>);
-w-[<value>]            width: <value>;
+size-px
+size-auto
+size-full
+size-fit
+
+size-min
+size-max
+
+size-(<custom-property>)
+size-[<value>]
+
+
+/* 
+size-dvw
+size-dvh
+size-lvw
+size-lvh
+size-svw
+size-svh */
+
 
 
 size-<number>     width: calc(var(--spacing) * <number>);
                   height: calc(var(--spacing) * <number>);
 
-
 size-<fraction>   width: calc(<fraction> * 100%);
                   height: calc(<fraction> * 100%);
-
 
 size-auto         width: auto;
                   height: auto;
 
-
 size-px           width: 1px;
                   height: 1px;
-
 
 size-full         width: 100%;
                   height: 100%;
 
-
 size-dvw          width: 100dvw;
                   height: 100dvw;
-
 
 size-dvh          width: 100dvh;
                   height: 100dvh;
 
-
 size-lvw          width: 100lvw;
                   height: 100lvw;
-
 
 size-lvh          width: 100lvh;
                   height: 100lvh;
 
-
 size-svw          width: 100svw;
                   height: 100svw;
-
 
 size-svh          width: 100svh;
                   height: 100svh;
 
-
 size-min          width: min-content;
                   height: min-content;
-
 
 size-max          width: max-content;
                   height: max-content;
 
-
 size-fit          width: fit-content;
                   height: fit-content;
-
 
 size-(<custom-property>)      width: var(<custom-property>);
                               height: var(<custom-property>);
 
-
 size-[<value>]    width: <value>;
                   height: <value>;
 
----------------------------------------------------------------------------------------
+
+------------------------------------------- min-width / max-width -------------------------------------------------------------
+------------------------------------------- min-width / max-width -------------------------------------------------------------
 
 min-w-<number>        min-width: calc(var(--spacing) * <number>);
 min-w-<fraction>      min-width: calc(<fraction> * 100%);
+
+
 min-w-3xs             min-width: var(--container-3xs); /* 16rem (256px) */
 min-w-2xs             min-width: var(--container-2xs); /* 18rem (288px) */
 min-w-xs              min-width: var(--container-xs); /* 20rem (320px) */
@@ -1656,19 +1774,22 @@ min-w-7xl             min-width: var(--container-7xl); /* 80rem (1280px) */
 min-w-px              min-width: 1px;
 min-w-full            min-width: 100%;
 min-w-screen          min-width: 100vw;
+min-w-fit             min-width: fit-content;
+
+min-w-min             min-width: min-content;
+min-w-max             min-width: max-content;
+
+min-w-(<custom-property>)      min-width: var(<custom-property>);
+min-w-[<value>]       min-width: <value>;
+
+/* 
 min-w-dvw             min-width: 100dvw;
 min-w-dvh             min-width: 100dvh;
 min-w-lvw             min-width: 100lvw;
 min-w-lvh             min-width: 100lvh;
 min-w-svw             min-width: 100svw;
-min-w-svh             min-width: 100svh;
-min-w-min             min-width: min-content;
-min-w-max             min-width: max-content;
-min-w-fit             min-width: fit-content;
+min-w-svh             min-width: 100svh; */
 
-
-min-w-(<custom-property>)      min-width: var(<custom-property>);
-min-w-[<value>]       min-width: <value>;
 
 
 /*         max , min تنها تفاوت      */
@@ -1680,23 +1801,54 @@ min-w-auto            min-width: auto;             ((  ندارد ))
 
 h-<number>             height: calc(var(--spacing) * <number>);
 h-<fraction>           height: calc(<fraction> * 100%);
+
+
 h-auto                 height: auto;
 h-px                   height: 1px;
 h-full                 height: 100%;
 h-screen               height: 100vh;
+
+h-min                  height: min-content;
+h-max                  height: max-content;
+h-fit                  height: fit-content;
+
+h-(<custom-property>)  height: var(<custom-property>);
+h-[<value>]            height: <value>;
+
+/* 
 h-dvh                  height: 100dvh;
 h-dvw                  height: 100dvw;
 h-lvh                  height: 100lvh;
 h-lvw                  height: 100lvw;
 h-svh                  height: 100svh;
 h-svw                  height: 100svw;
-h-min                  height: min-content;
-h-max                  height: max-content;
-h-fit                  height: fit-content;
-h-lh                   height: 1lh;
-h-(<custom-property>)  height: var(<custom-property>);
-h-[<value>]            height: <value>;
+h-lh                   height: 1lh;    */
 
+--------------------------------------------------------------------------
+
+size-<number>
+size-<fraction>
+
+
+size-px
+size-auto
+size-full
+size-fit
+
+size-min
+size-max
+
+size-(<custom-property>)
+size-[<value>]
+
+
+/* 
+size-dvw
+size-dvh
+size-lvw
+size-lvh
+size-svw
+size-svh */
 
 size-<number>        width: calc(var(--spacing) * <number>);
                      height: calc(var(--spacing) * <number>);
@@ -1764,46 +1916,60 @@ size-[<value>]      width: <value>;
 
 min-h-<number>           min-height: calc(var(--spacing) * <number>);
 min-h-<fraction>         min-height: calc(<fraction> * 100%);
+
 min-h-px                 min-height: 1px;
+min-h-auto               min-height: auto;
 min-h-full               min-height: 100%;
 min-h-screen             min-height: 100vh;
-min-h-dvh                min-height: 100dvh;
+
+min-h-min                min-height: min-content;
+min-h-max                min-height: max-content;
+min-h-fit                min-height: fit-content;
+
+min-h-(<custom-propety>)      min-height: var(<custom-property>);
+min-h-[<value>]         min-height: <value>;
+
+
+
+/* min-h-dvh                min-height: 100dvh;
 min-h-dvw                min-height: 100dvw;
 min-h-lvh                min-height: 100lvh;
 min-h-lvw                min-height: 100lvw;
 min-h-svw                min-height: 100svw;
 min-h-svh                min-height: 100svh;
-min-h-auto               min-height: auto;
-min-h-min                min-height: min-content;
-min-h-max                min-height: max-content;
-min-h-fit                min-height: fit-content;
-min-h-lh                 min-height: 1lh;
-min-h-(<custom-propety>)      min-height: var(<custom-property>);
-min-h-[<value>]         min-height: <value>;
+
+min-h-lh                 min-height: 1lh; */
+
 
 ---------------------------------------------------------------------------------------
 
 max-h-<number>             max-height: calc(var(--spacing) * <number>);
 max-h-<fraction>           max-height: calc(<fraction> * 100%);
+
 max-h-none                 max-height: none;
+
 max-h-px                   max-height: 1px;
 max-h-full                 max-height: 100%;
 max-h-screen               max-height: 100vh;
+
+max-h-min                  max-height: min-content;
+max-h-max                  max-height: max-content;
+max-h-fit                  max-height: fit-content;
+
+
+max-h-(<custom-propety>)   max-height: var(<custom-property>);
+max-h-[<value>]            max-height: <value>;
+
+
+/* 
 max-h-dvh                  max-height: 100dvh;
 max-h-dvw                  max-height: 100dvw;
 max-h-lvh                  max-height: 100lvh;
 max-h-lvw                  max-height: 100lvw;
 max-h-svh                  max-height: 100svh;
 max-h-svw                  max-height: 100svw;
-max-h-min                  max-height: min-content;
-max-h-max                  max-height: max-content;
-max-h-fit                  max-height: fit-content;
-max-h-lh                   max-height: 1lh;
-max-h-(<custom-propety>)   max-height: var(<custom-property>);
-max-h-[<value>]            max-height: <value>;
 
-
-
+max-h-lh                   max-height: 1lh; */
 
 
 
