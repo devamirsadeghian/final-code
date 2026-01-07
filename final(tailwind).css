@@ -40,7 +40,7 @@ root: {
 #$  (  x  y  top  botton  right  left )
 
 
-###  (  s  e  t  b  r  l  ss   se  ee  es  tl  rl  br  bl )
+###  (  s  e  t  b  r  l          ss   se  ee  es  tl  rl  br  bl )
 ###  ( start  end  top  botton  right  left  start/start stert/end  ...)
 
 -------------------------------------------------------------------------------------------------------------
@@ -132,8 +132,13 @@ place-self-##     :
 
 ----------------------------------------------------------------------------------------------------------------------
 
-revesre  :   منطق ها رو برعکس میکنه با شرایطی خاص  flex   در
-space    :  ( چون فاصله «بین آیتم‌ها» معنی دارد، نه برای هر ۴ جهت همزمان) فقط برای ایجاد فاصله بین آیتم‌ها هستند، نه دور یک آیتم، و فقط در یک محور کار می‌کنند
+revesre        :    منطق ها رو برعکس میکنه با شرایطی خاص  flex   در
+space  (margin): ( چون فاصله «بین آیتم‌ها» معنی دارد، نه برای هر ۴ جهت همزمان) فقط برای ایجاد فاصله بین آیتم‌ها هستند، نه دور یک آیتم، و فقط در یک محور کار می‌کنند
+divide (border):  ( grid و flex این کلاس‌ها روی فرزندها اعمال می‌شوند و نیاز به) - خطوط جداکننده  عمودی / افقی بین عناصر فرزند
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2441,105 +2446,141 @@ content-none                   content: none;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bg-fixed            background-attachment: fixed;
-bg-local            background-attachment: local;
-bg-scroll           background-attachment: scroll;
+origin → نقطه شروع رسم
+clip → محدوده‌ای که پس‌زمینه داخل آن نمایش داده می‌شود
 
 
+/* حتماً باید حداقل یکی از این‌ها را داشته باشی و گرنه گرادینت دیده نمی‌شود  (تعیین رنگ‌های گرادینت) */
+from-*           //             رنگ شروع  گرادینت  -    اولین رنگ در جهت گرادینت 
+via-* (اختیاری)  //  رنگ میانی گرادینت  -   برای نرم‌تر شدن یا چندرنگ شدن گرادینت
+to-*             //              رنگ پایان گرادینت  -   آخرین رنگ در جهت گرادینت
 
-bg-clip-border       background-clip: border-box;
-bg-clip-padding      background-clip: padding-box;
-bg-clip-content      background-clip: content-box;
-bg-clip-text         background-clip: text;
+----------------------------------------------------------------------------------------------------------
 
+bg-linear-to-r 	خطی
+bg-radial	    شعاعی
+bg-conic	    مخروطی
 
-
-
-bg-inherit          background-color: inherit;
-bg-current          background-color: currentColor;
-bg-transparent      background-color: transparent;
-bg-black            background-color: var(--color-black); /* #000 */
-bg-white            background-color: var(--color-white); /* #fff */
-
+----------------------------------------------------------------------------------------------------------
 
 bg-color-( 50 ta 950 )    background-color: var(--color-color-( 50 ta 950 ); /* oklch(97.1 ) */
-
                                                 
 bg-(<custom-property>)    background-color: var(<custom-property>);
 bg-[<value>]              background-color: <value>;
 
-
 bg-[<value>]                     background-image: <value>;
 bg-(image:<custom-property>)     background-image: var(<custom-property>);
+
 bg-none                          background-image: none;
-bg-linear-to-t                   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-bg-linear-to-tr                  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-bg-linear-to-r                   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-bg-linear-to-br                  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-bg-linear-to-b                   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-bg-linear-to-bl                  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
-bg-linear-to-l                   background-image: linear-gradient(to left, var(--tw-gradient-stops));
-bg-linear-to-tl                  background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+
+----------------------------------------------------------------------------------------------------------
+
+bg-fixed            background-attachment: fixed;           //  می‌چسبد viewport  به 
+bg-local            background-attachment: local;           //  تصویر پس‌زمینه همراه با محتوای داخل عنصر اسکرول می‌شود
+bg-scroll           background-attachment: scroll;          //  فقط با صفحه اسکرول می‌شود
+
+bg-clip-border       background-clip: border-box; (default) //  هم کشیده می‌شود border پس‌ زمینه زیر
+bg-clip-padding      background-clip: padding-box;          //  شفاف داری عالیه border وقتی که
+bg-clip-content      background-clip: content-box;          //  بدون پس‌زمینه می‌مانند border , padding
+bg-clip-text         background-clip: text;                 //  پس‌زمینه فقط داخل متن دیده می‌شود (I با گرادینت استفاده می‌شود )
+
+bg-inherit          background-color: inherit;              // رنگ پس‌زمینه را از عنصر والد می‌گیرد
+bg-current          background-color: currentColor;         // رنگ متن) همان عنصر می‌شود) color برابر با مقدار
+bg-transparent      background-color: transparent;          // کاملاً شفاف
+bg-black            background-color: var(--color-black);
+bg-white            background-color: var(--color-white);
+
+----------------------------------------------------------------------------------------------------------
+
+bg-linear-to-t                   background-image: linear-gradient(to top, var(--tw-gradient-stops));           // پایین → بالا
+bg-linear-to-r                   background-image: linear-gradient(to right, var(--tw-gradient-stops));         // چپ → راست
+bg-linear-to-b                   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));        // بالا → پایین
+bg-linear-to-l                   background-image: linear-gradient(to left, var(--tw-gradient-stops));          // راست → چپ
+
+bg-linear-to-tr                  background-image: linear-gradient(to top right, var(--tw-gradient-stops));     // پایین‌ چپ → بالا‌ راست
+bg-linear-to-br                  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));  // بالا‌ چپ → پایین‌ راست
+bg-linear-to-bl                  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));   // بالا‌راست → پایین‌چپ
+bg-linear-to-tl                  background-image: linear-gradient(to top left, var(--tw-gradient-stops));      // پایین‌ راست → بالا‌ چپ
+
 bg-linear-<angle>                background-image: linear-gradient(<angle> in oklab, var(--tw-gradient-stops));
 -bg-linear-<angle>               background-image: linear-gradient(-<angle> in oklab, var(--tw-gradient-stops));
 bg-linear-(<custom-property>)    background-image: linear-gradient(var(--tw-gradient-stops, var(<custom-property>)));
 bg-linear-[<value>]              background-image: linear-gradient(var(--tw-gradient-stops, <value>));
-bg-radial                        background-image: radial-gradient(in oklab, var(--tw-gradient-stops));
+
+----------------------------------------------------------------------------------------------------------
+
+bg-radial                        background-image: radial-gradient(in oklab, var(--tw-gradient-stops));  // ساخت گرادینت شعاعی که از مرکز شروع شده
 bg-radial-(<custom-property>)    background-image: radial-gradient(var(--tw-gradient-stops,  var(<custom-property>)));
 bg-radial-[<value>]              background-image: radial-gradient(var(--tw-gradient-stops, <value>));
-bg-conic-<angle>                 background-image: conic-gradient(from <angle> in oklab, var(--tw-gradient-stops));
+
+----------------------------------------------------------------------------------------------------------
+
+bg-conic-<angle>                 background-image: conic-gradient(from <angle> in oklab, var(--tw-gradient-stops));     // مخروطی
 -bg-conic-<angle>                background-image: conic-gradient(from -<angle> in oklab, var(--tw-gradient-stops));
 bg-conic-(<custom-property>)     background-image: var(<custom-property>);
 bg-conic-[<value>]               background-image: <value>;
+
+/* <div class="h-40 bg-radial from-blue-400 to-purple-600"></div> */
+/* <div class="h-40 bg-radial from-yellow-300 via-orange-400 to-red-500"></div> */
+
+----------------------------------------------------------------------------------------------------------
+
 from-<color>                     --tw-gradient-from: <color>;
 from-<percentage>                --tw-gradient-from-position: <percentage>;
 from-(<custom-property>)         --tw-gradient-from: var(<custom-property>);
 from-[<value>]                   --tw-gradient-from: <value>;
+
 via-<color>                      --tw-gradient-via: <color>;
 via-<percentage>                 --tw-gradient-via-position: <percentage>;
 via-(<custom-property>)          --tw-gradient-via: var(<custom-property>);
 via-[<value>]                    --tw-gradient-via: <value>;
+
 to-<color>                       --tw-gradient-to: <color>;
 to-<percentage>                  --tw-gradient-to-position: <percentage>;
 to-(<custom-property>)           --tw-gradient-to: var(<custom-property>);
 to-[<value>]                     --tw-gradient-to: <value>;
 
+----------------------------------------------------------------------------------------------------------
+
+bg-origin-border     background-origin: border-box ;   // شروع می‌شود border  از لبه بیرونی           (default) 
+bg-origin-padding    background-origin: padding-box;  // شروع می‌شود border  از داخل
+bg-origin-content    background-origin: content-box;  // شروع می‌شود content  فقط از
+
+/* <div class="h-40 w-40 rounded-full bg-conic from-red-500 via-yellow-400 to-blue-500"></div> */
 
 
-bg-origin-border       background-origin: border-box;
-bg-origin-padding      background-origin: padding-box;
-bg-origin-content      background-origin: content-box;
 
+------------------------------------------ background-position ----------------------------------------------------------------
+------------------------------------------ background-position ----------------------------------------------------------------
 
+/* تصویر یا گرادینت کجا قرار بگیرد */
 
-
-bg-top-left                      background-position: top left;
 bg-top                          background-position: top;
-bg-top-right                    background-position: top right;
 bg-left                         background-position: left;
-bg-center                       background-position: center;
+bg-center                       background-position: center;  (default) 
 bg-right                        background-position: right;
-bg-bottom-left                  background-position: bottom left;
 bg-bottom                       background-position: bottom;
+
+bg-top-left                     background-position: top left;
+bg-top-right                    background-position: top right;
+bg-bottom-left                  background-position: bottom left;
 bg-bottom-right                 background-position: bottom right;
+
 bg-position-(<custom-roperty>)  background-position: var(<custom-property>);
 bg-position-[<value>]           background-position: <value>;
 
-
+----------------------------------------------------------------------------------------------------------
 
 bg-repeat              background-repeat: repeat;
 bg-repeat-x            background-repeat: repeat-x;
 bg-repeat-y            background-repeat: repeat-y;
-bg-repeat-space        background-repeat: space;
-bg-repeat-round        background-repeat: round;
+bg-repeat-space        background-repeat: space;     //  تصویر با اندازه اصلی خودش تکرار   -    تکراری با فاصله مساوی کشیده می‌شود
+bg-repeat-round        background-repeat: round;     //  تکراری و تغییر اندازه یافته تا دقیقاً کل فضای عنصر را پر کند   -   کمی کشیده یا کوچک شود تا تعداد تکرارها دقیقاً مساوی
 bg-no-repeat           background-repeat: no-repeat;
 
-
-
-
-bg-auto                        background-size: auto;
-bg-cover                       background-size: cover;
-bg-contain                     background-size: contain;
+bg-auto                        background-size: auto;     // همان اندازه اصلی خودش باقی می‌ماند // هیچ تغییر سایزی روی تصویر اعمال نمی‌شود
+bg-cover                       background-size: cover;    // کل عنصر را می‌پوشاند // صویر ممکن است برش بخورد تا نسبت تصویر حفظ شود
+bg-contain                     background-size: contain;  // تصویر تماماً داخل عنصر جا می‌گیرد // نسبت تصویر حفظ می‌شود // ممکن است فضای خالی در اطراف باقی بماند
 bg-size-(<custom-property>)    background-size: var(<custom-property>);
 bg-size-[<value>]              background-size: <value>;
 
@@ -2567,8 +2608,10 @@ rounded-##-xl                    border-radius: var(--radius-xl); /* 0.75rem (12
 rounded-##-2xl                   border-radius: var(--radius-2xl); /* 1rem (16px) */
 rounded-##-3xl                   border-radius: var(--radius-3xl); /* 1.5rem (24px) */
 rounded-##-4xl                   border-radius: var(--radius-4xl); /* 2rem (32px) */
+
 rounded-##-none                  border-radius: 0;
 rounded-##-full                  border-radius: calc(infinity * 1px);
+
 rounded-##-(<custom-property>)   border-radius: var(<custom-property>);
 rounded-##-[<value>]             border-radius: <value>;
 
@@ -2612,6 +2655,27 @@ border-#                               border-inline-width: 1px;
 border-#-<number>                      border-inline-width: <number>px;
 border-#-(length:<custom-property>)    border-inline-width: var(<custom-property>);
 border-#-[<value>]                     border-inline-width: <value>;
+
+
+
+/*  خلاصه  */
+/*   grid و flex این کلاس‌ها روی فرزندها اعمال می‌شوند و نیاز به   */
+divide-x-num                         // بین فرزندها vertical خط جداکننده عمودی
+divide-x
+divide-x-<number>                    
+divide-x-(length:<custom-property>)
+divide-x-[<value>]
+
+divide-y-num                         // بین فرزندها horizon خط جداکننده افقی
+divide-y 
+divide-y-<number>
+divide-y-(length:<custom-property>)
+divide-y-[<value>]
+
+divide-x-reverse
+divide-y-reverse
+
+
 
 
 
@@ -2659,12 +2723,22 @@ divide-y-reverse      --tw-divide-y-reverse: 1;
 border-inherit          border-color: inherit;
 border-current          border-color: currentColor;
 border-transparent      border-color: transparent;
-border-black            border-color: var(--color-black); /* #000 */
-border-white            border-color: var(--color-white); /* #fff */
+border-black            border-color: var(--color-black);
+border-white            border-color: var(--color-white);
 
 /* #$ میتونه باشه یا نه */
 border-#$-color-( 50 ta 950 )  border-#$-color: var(--color-slate-950);
                                      همین کلمه کالر
+
+
+/*  خلاصه  */
+divide-inherit
+divide-current
+divide-transparent
+divide-black
+divide-white 
+divide-color-( 50 ta 950 )
+
 
 
 divide-inherit            & > :not(:last-child) {
@@ -2696,12 +2770,13 @@ divide-color-( 50 ta 950 )        & > :not(:last-child) {
 ------------------------------------------- border-style -------------------------------------------------------------
 ------------------------------------------- border-style -------------------------------------------------------------
 
-border-solid       border-style: solid;
-border-dashed      border-style: dashed;
-border-dotted      border-style: dotted;
-border-double      border-style: double;
-border-hidden      border-style: hidden;
-border-none        border-style: none;
+/*  خلاصه  */
+border-solid       border-style: solid;   // خط ساده و پیوسته
+border-dashed      border-style: dashed;  // خط خط‌چین
+border-dotted      border-style: dotted;  // خط نقطه‌نقطه
+border-double      border-style: double;  // خط دو خط موازی
+border-hidden      border-style: hidden;  // خط مخفی         (روی جداکننده  display:none  خط مخفی برای مواقع خاص، مشابه)
+border-none        border-style: none;    // 
 
 
 divide-solid       & > :not(:last-child) {
@@ -2728,13 +2803,17 @@ divide-none      & > :not(:last-child) {
                     border-style: none;
 }
 
-------------------------------------------- outline-width -------------------------------------------------------------
-------------------------------------------- outline-width -------------------------------------------------------------
+
+
+------------------------------------------- outline-width  کنترل حاشیه بیرونی -------------------------------------------------------------
+------------------------------------------- outline-width  کنترل حاشیه بیرونی -------------------------------------------------------------
 
 outline                             outline-width: 1px;
 outline-<number>                    outline-width: <number>px;
 outline-(length:<custom-property>)  outline-width: var(<custom-property>);
 outline-[<value>]                   outline-width: <value>;
+
+
 
 
 ------------------------------------------- outline-color -------------------------------------------------------------
@@ -2750,6 +2829,8 @@ outline-white            outline-color: var(--color-white); /* #fff */
 outline-color-(50 ta 950)         outline-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
 
+
+
 ------------------------------------------- outline-style -------------------------------------------------------------
 ------------------------------------------- outline-style -------------------------------------------------------------
 
@@ -2762,6 +2843,7 @@ outline-hidden      outline: 2px solid transparent;
                     outline-offset: 2px;
 
 
+
 ------------------------------------------- outline-offset -------------------------------------------------------------
 ------------------------------------------- outline-offset -------------------------------------------------------------
 
@@ -2771,6 +2853,16 @@ outline-offset-(<custom-property>)    outline-offset: var(<custom-property>);
 outline-offset-[<value>]              outline-offset: <value>;
 
 
+/*   مثال   */
+outline-offset-0	outline-offset: 0px;	هیچ فاصله‌ای ندارد
+outline-offset-1	outline-offset: 1px;	    فاصله 1px
+outline-offset-2	outline-offset: 2px;	    فاصله 2px
+
+
+/*  مثال
+<button class="outline outline-blue-500 outline-offset-2 px-4 py-2">
+  Outline Offset 2px
+</button> */
 
 
 
@@ -2781,11 +2873,11 @@ outline-offset-[<value>]              outline-offset: <value>;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-------------------------------------------- box-shadow -------------------------------------------------------------
-------------------------------------------- box-shadow -------------------------------------------------------------
+------------------------------------------- box-shadow  کنترل سایه جعبه یک عنصر   -------------------------------------------------------------
+------------------------------------------- box-shadow  کنترل سایه جعبه یک عنصر   -------------------------------------------------------------
+
 
 /*         کنترل سایه جعبه یک عنصر        */
-
 shadow-2xs      box-shadow: var(--shadow-2xs); /* 0 1px rgb(0 0 0 / 0.05) */
 shadow-xs       box-shadow: var(--shadow-xs); /* 0 1px 2px 0 rgb(0 0 0 / 0.05) */
 shadow-sm       box-shadow: var(--shadow-sm); /* 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) */
@@ -2807,7 +2899,10 @@ shadow-white           --tw-shadow-color: var(--color-white); /* #fff */
 
 shadow-red-(50 ta 950) --tw-shadow-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
-----------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------  inset-shadow سایه داخل عنصر --------------------------------------------------------------------------
+---------------------------------------------------  inset-shadow سایه داخل عنصر --------------------------------------------------------------------------
 
 inset-shadow-2xs                   box-shadow: var(--inset-shadow-2xs); /* inset 0 1px rgb(0 0 0 / 0.05) */
 inset-shadow-xs                    box-shadow: var(--inset-shadow-xs); /* inset 0 1px 1px rgb(0 0 0 / 0.05) */
@@ -2825,7 +2920,35 @@ inset-shadow-white        --tw-inset-shadow-color: var(--color-white); /* #fff *
 
 inset-shadow-red-(50 ta 950)  --tw-inset-shadow-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
-----------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------  text-shadow سایه متن --------------------------------------------------------------------------
+---------------------------------------------------  text-shadow سایه متن --------------------------------------------------------------------------
+
+text-shadow-2xs           text-shadow: var(--text-shadow-2xs); /* 0px 1px 0px rgb(0 0 0 / 0.15) */
+text-shadow-xs            text-shadow: var(--text-shadow-xs); /* 0px 1px 1px rgb(0 0 0 / 0.2) */
+text-shadow-sm            text-shadow: var(--text-shadow-sm); /* 0px 1px 0px rgb(0 0 0 / 0.075), 0px 1px 1px rgb(0 0 0 / 0.075), 0px 2px 2px rgb(0 0 0 / 0.075) */
+text-shadow-md            text-shadow: var(--text-shadow-md); /* 0px 1px 1px rgb(0 0 0 / 0.1), 0px 1px 2px rgb(0 0 0 / 0.1), 0px 2px 4px rgb(0 0 0 / 0.1) */
+text-shadow-lg            text-shadow: var(--text-shadow-lg); /* 0px 1px 2px rgb(0 0 0 / 0.1), 0px 3px 2px rgb(0 0 0 / 0.1), 0px 4px 8px rgb(0 0 0 / 0.1) */
+text-shadow-(<custom-property>)            text-shadow: var(<custom-property>);
+text-shadow-(color:<custom-property>)      --tw-shadow-color var(<custom-property>);
+text-shadow-[<value>]                      text-shadow: <value>;
+
+
+text-shadow-none    text-shadow: none;
+
+
+text-shadow-inherit            --tw-shadow-color inherit;
+text-shadow-current            --tw-shadow-color currentColor;
+text-shadow-transparent        --tw-shadow-color transparent;
+text-shadow-black              --tw-text-shadow-color var(--color-black); /* #000 */
+text-shadow-white              --tw-text-shadow-color var(--color-white); /* #fff */
+text-shadow-red-(50 ta 950)    --tw-text-shadow-color var(--color-red-50);
+
+------------------------------------------- ring     یا تاکید focus برای ---------------------------------------------------------------------------------
+------------------------------------------- ring     یا تاکید focus برای ---------------------------------------------------------------------------------
+
+/*   هستند، با کنترل رنگ، ضخامت و فاصله.  outline   یجاد حلقه یا بیرون‌خط دور عنصر استفاده می‌شوند و جایگزین خوبی برای  */
 
 ring                       --tw-ring-shadow: 0 0 0 1px;
 ring-<number>              --tw-ring-shadow: 0 0 0 <number>px;
@@ -2839,7 +2962,10 @@ ring-white                 --tw-ring-color: var(--color-white); /* #fff */
 
 ring-red-(50 ta 950)        --tw-ring-color: var(--color-red-50); /* oklch(97.1% 0.013 17.38) */
 
-----------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------- inset-ring      داشت inset حالت  -----------------------------------------------------------------------
+----------------------------------------------------- inset-ring      داشت inset حالت  -----------------------------------------------------------------------
 
 inset-ring                     --tw-inset-ring-shadow: inset 0 0 0 1px
 inset-ring-<number>            --tw-inset-ring-shadow: inset 0 0 0 <number>px
@@ -2853,8 +2979,19 @@ inset-ring-white               --tw-inset-ring-color: var(--color-white); /* #ff
 
 inset-ring-red-(50 ta 950)     --tw-inset-ring-color: var(--color-red-(50 ta 950)); /* oklch(97.1% 0.013 17.38) */
 
--------------------------------------------  -------------------------------------------------------------
--------------------------------------------  -------------------------------------------------------------
+
+
+
+
+/*   نکته   */
+
+/*   ضخامت حلقه را مشخص کرد (ring, ring-2, ring-4)                             */
+/*   رنگ حلقه را انتخاب کرد (ring-blue-500, ring-red-400)                      */
+/*   فاصله بین عنصر و حلقه را تعیین کرد (ring-offset-2, ring-offset-white)     */
+/*   حالت inset داشت (ring-inset)                                              */
+
+
+----------------------------------------------------------------------------------------------------------------------------
 
 /*        کنترل سایه یک عنصر متنی         */
 
@@ -2885,6 +3022,15 @@ inset-ring-red-(50 ta 950)     --tw-inset-ring-color: var(--color-red-(50 ta 950
 opacity-<number>              opacity: <number>%;
 opacity-(<custom-property>)   opacity: var(<custom-property>);
 opacity-[<value>]             opacity: <value>;
+
+
+
+/* 
+<button class="bg-indigo-500     opacity-100   ...">
+<button class="bg-indigo-500     opacity-75   ...">
+<button class="bg-indigo-500     opacity-50   ...">
+<button class="bg-indigo-500     opacity-25   ..."> */
+
 
 ------------------------------------------- mix-blend-mode -------------------------------------------------------------
 ------------------------------------------- mix-blend-mode -------------------------------------------------------------
@@ -4023,19 +4169,6 @@ stroke-[<value>]                   stroke-width: <value>;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ------------------------------------------- واژه های پرتکرار و مخفف  -------------------------------------------------------------
 
 offset-x → فاصله افقی
@@ -4056,7 +4189,3 @@ shrink          //  کم بود، این آیتم اجازه داره انداز
 
 
 wrap      وقتی عرض یا فضا کم شد، آیتم‌ها به‌جای فشرده شدن، سطر جدید بسازن )                  پیچیدن   --   رفتن به خط بعد )
-
-
-
-
