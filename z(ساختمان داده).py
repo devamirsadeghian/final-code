@@ -848,23 +848,8 @@ class SinglyLinkedList: # کلاس لیست پیوندی یکطرفه
             current.next = new_node      # نود جدید را به انتهای لیست وصل می‌کنیم
         self.size += 1
 
-  def delete(self, data):
-    if self.head == None:
-        return
 
-    if self.head.data == data:
-        self.head = self.head.next
-        return
-
-    current = self.head
-    prev = None
-
-    while current:
-        if current.data == data:
-            prev.next = current.next
-            return
-        prev = current
-        current = current.next
+  
 
   
   
@@ -926,9 +911,152 @@ obj.printList()
 
 
 
-فقط به جلو می‌توان حرکت کرد
+
+
+(برگشت نداره) فقط به جلو می‌توان حرکت کرد
 همیشه آدرس نود بعدی را نگه می‌دارد  next
 دارد next = NULL  آخرین نود، مقدار
+
+
+
+
+# 1
+def delete_node(head, x):
+    # اگر لیست خالی باشد
+    if head is None:
+        return head
+
+    # اگر نود اول باید حذف شود
+    if head.data == x:
+        return head.next
+
+    # پیدا کردن نود قبلی
+    current = head
+    while current.next is not None and current.next.data != x:
+        current = current.next
+
+    # اگر نود پیدا شد
+    if current.next is not None:
+        current.next = current.next.next
+
+    return head
+
+
+
+
+# 2
+
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.size = 0
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+        self.size += 1
+
+    def delete(self, data):
+        if self.head is None:
+            return  # لیست خالی
+
+        # حذف نود اول
+        if self.head.data == data:
+            self.head = self.head.next
+            self.size -= 1
+            return
+
+        prev = self.head
+        current = self.head.next
+
+        while current:
+            if current.data == data:
+                prev.next = current.next
+                self.size -= 1
+                return
+            prev = current
+            current = current.next
+
+    def printList(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+    def reverse(self):
+        prev = None
+        current = self.head
+
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+
+        self.head = prev
+
+    def maximum(self):
+        if self.head is None:
+            return None
+
+        current = self.head
+        max_value = current.data
+
+        while current:
+            if current.data > max_value:
+                max_value = current.data
+            current = current.next
+
+        return max_value
+
+    def minimum(self):
+        if self.head is None:
+            return None
+
+        current = self.head
+        min_value = current.data
+
+        while current:
+            if current.data < min_value:
+                min_value = current.data
+            current = current.next
+
+        return min_value
+
+
+
+
+lst = SinglyLinkedList()
+lst.append(10)
+lst.append(20)
+lst.append(30)
+lst.append(5)
+
+lst.printList()        # 10 -> 20 -> 30 -> 5 -> None
+lst.delete(20)
+lst.printList()        # 10 -> 30 -> 5 -> None
+
+print(lst.maximum())  # 30
+print(lst.minimum())  # 5
+
+lst.reverse()
+lst.printList()       # 5 -> 30 -> 10 -> None
+
+
+
 
 
 --------------------------------------------------------------------------------------------
@@ -974,10 +1102,159 @@ print()
 obj.printList()
 
 
-
 وسط لیست: prev و next هر دو آدرس دارند
 اول لیست: prev = NULL
 آخر لیست: next = NULL
+
+
+
+
+
+# 1
+
+data → داده
+next → نود بعدی
+prev → نود قبلی
+
+
+
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.size = 0
+
+    # اضافه کردن به انتهای لیست
+    def append(self, data):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+            new_node.prev = current
+
+        self.size += 1
+
+    # حذف نود بر اساس مقدار
+    def delete(self, data):
+        if self.head is None:
+            return
+
+        # حذف نود اول
+        if self.head.data == data:
+            if self.head.next:
+                self.head = self.head.next
+                self.head.prev = None
+            else:
+                self.head = None
+            self.size -= 1
+            return
+
+        current = self.head.next
+        while current:
+            if current.data == data:
+                if current.next:
+                    current.next.prev = current.prev
+                current.prev.next = current.next
+                self.size -= 1
+                return
+            current = current.next
+
+    # چاپ لیست از ابتدا
+    def printList(self):
+        current = self.head
+        while current:
+            print(current.data, end=" <-> ")
+            current = current.next
+        print("None")
+
+    # برعکس کردن ترتیب لیست
+    def reverse(self):
+        current = self.head
+        prev_node = None
+
+        while current:
+            prev_node = current.prev
+            current.prev = current.next
+            current.next = prev_node
+            current = current.prev
+
+        if prev_node:
+            self.head = prev_node.prev
+
+    # پیدا کردن بیشترین مقدار
+    def maximum(self):
+        if self.head is None:
+            return None
+
+        current = self.head
+        max_value = current.data
+
+        while current:
+            if current.data > max_value:
+                max_value = current.data
+            current = current.next
+
+        return max_value
+
+    # پیدا کردن کمترین مقدار
+    def minimum(self):
+        if self.head is None:
+            return None
+
+        current = self.head
+        min_value = current.data
+
+        while current:
+            if current.data < min_value:
+                min_value = current.data
+            current = current.next
+
+        return min_value
+
+
+
+
+
+
+
+
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(5)
+
+dll.printList()      # 10 <-> 20 <-> 30 <-> 5 <-> None
+
+dll.delete(20)
+dll.printList()      # 10 <-> 30 <-> 5 <-> None
+
+print(dll.maximum())  # 30
+print(dll.minimum())  # 5
+
+dll.reverse()
+dll.printList()      # 5 <-> 30 <-> 10 <-> None
+
+
+
+
+
+
+
+
+
+
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
